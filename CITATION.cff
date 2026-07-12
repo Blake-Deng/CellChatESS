@@ -7,6 +7,8 @@ authors:
     given-names: "Zifeng"
     email: "zifengd8@gmail.com"
 version: 0.1.1
+doi: 10.5281/zenodo.21320634
+url: "https://doi.org/10.5281/zenodo.21320634"
 date-released: 2026-07-12
 license: GPL-3.0
 repository-code: "https://github.com/Blake-Deng/CellChatESS"

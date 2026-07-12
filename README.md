@@ -1,5 +1,7 @@
 # CellChatESS
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21320634.svg)](https://doi.org/10.5281/zenodo.21320634)
+
 **Efficient Signal Streaming (ESS) for CellChat-compatible communication inference.**
 
 CellChatESS accelerates the triMean communication-probability workflow without changing the CellChat probability model. The repository is intentionally compact: the package source, a self-contained PBMC3k example, and the validation summaries needed to inspect the method are all at the top level.
@@ -103,3 +105,4 @@ CellChatESS currently targets single-dataset, non-spatial RNA workflows using `t
 ## Citation
 
 Deng Z. CellChatESS: Efficient Signal Streaming for CellChat inference. Version 0.1.1.
+DOI: https://doi.org/10.5281/zenodo.21320634
