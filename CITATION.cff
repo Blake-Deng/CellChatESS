@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use CellChatESS, please cite this software."
+title: "CellChatESS: Expression-Supported Streaming for efficient CellChat inference"
+type: software
+authors:
+  - family-names: "Deng"
+    given-names: "Zifeng"
+    email: "zifengd8@gmail.com"
+version: 0.1.0
+date-released: 2026-07-12
+license: GPL-3.0
+repository-code: "https://github.com/Blake-Deng/CellChatESS"

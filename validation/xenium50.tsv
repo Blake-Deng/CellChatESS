@@ -1,0 +1,3 @@
+method	cells	groups	lr	nboot	core_elapsed_sec	wall_elapsed_sec	peak_rss_kb	peak_rss_gib	status
+Original CellChat R	1156091	2357	627	100	51172.5843	51686	281128968	268.105	ok
+ESS	1156091	2357	627	100	1257.7194	1756.68	117178728	111.750	ok

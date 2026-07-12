@@ -1,0 +1,28 @@
+{
+  "title": "CellChatESS: Expression-Supported Streaming for efficient CellChat inference",
+  "upload_type": "software",
+  "description": "CellChatESS implements Expression-Supported Streaming (ESS), an Rcpp acceleration method for triMean-based CellChat RNA workflows. ESS projects expression data to genes used by ligand-receptor, complex and cofactor calculations, evaluates sender-receiver pairs from observed expression support and streams bootstrap summaries while preserving the CellChat probability model and object interface.",
+  "creators": [
+    {
+      "name": "Deng, Zifeng",
+      "affiliation": "Hainan Bielefeld University of Applied Sciences"
+    }
+  ],
+  "version": "0.1.0",
+  "license": "GPL-3.0",
+  "keywords": [
+    "CellChat",
+    "cell-cell communication",
+    "Rcpp",
+    "Expression-Supported Streaming",
+    "single-cell RNA sequencing",
+    "Xenium"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Blake-Deng/CellChatESS",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

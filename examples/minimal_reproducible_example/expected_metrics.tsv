@@ -1,0 +1,6 @@
+metric	acceptance
+prob_max_abs_diff_vs_original	<=1e-12
+pval_max_abs_diff_vs_original	0
+pathway_max_abs_diff_vs_original	<=1e-12
+weight_max_abs_diff_vs_original	<=1e-12
+count_identical	TRUE
