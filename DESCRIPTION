@@ -1,11 +1,11 @@
 Package: CellChatESS
 Type: Package
-Title: Expression-Supported Streaming for Efficient CellChat Inference
-Version: 0.1.0
+Title: Efficient Signal Streaming for CellChat Inference
+Version: 0.1.1
 Authors@R: person("DENG", "Zifeng", role = c("aut", "cre"), email = "zifengd8@gmail.com")
 Author: DENG Zifeng [aut, cre]
 Maintainer: DENG Zifeng <zifengd8@gmail.com>
-Description: Implements Expression-Supported Streaming (ESS), an Rcpp
+Description: Implements Efficient Signal Streaming (ESS), an Rcpp
     acceleration method for triMean-based CellChat RNA workflows. ESS projects
     expression data to genes used by ligand-receptor, complex and cofactor
     calculations, evaluates sender-receiver pairs from observed expression

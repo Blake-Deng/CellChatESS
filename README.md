@@ -1,6 +1,6 @@
 # CellChatESS
 
-**Expression-Supported Streaming (ESS) for efficient, CellChat-compatible communication inference.**
+**Efficient Signal Streaming (ESS) for CellChat-compatible communication inference.**
 
 CellChatESS accelerates the triMean communication-probability workflow without changing the CellChat probability model. The repository is intentionally compact: the package source, a self-contained PBMC3k example, and the validation summaries needed to inspect the method are all at the top level.
 
@@ -102,4 +102,4 @@ CellChatESS currently targets single-dataset, non-spatial RNA workflows using `t
 
 ## Citation
 
-Deng Z. CellChatESS: Expression-Supported Streaming for efficient CellChat inference. Version 0.1.0.
+Deng Z. CellChatESS: Efficient Signal Streaming for CellChat inference. Version 0.1.1.

@@ -1,20 +1,20 @@
 {
-  "title": "CellChatESS: Expression-Supported Streaming for efficient CellChat inference",
+  "title": "CellChatESS: Efficient Signal Streaming for CellChat inference",
   "upload_type": "software",
-  "description": "CellChatESS implements Expression-Supported Streaming (ESS), an Rcpp acceleration method for triMean-based CellChat RNA workflows. ESS projects expression data to genes used by ligand-receptor, complex and cofactor calculations, evaluates sender-receiver pairs from observed expression support and streams bootstrap summaries while preserving the CellChat probability model and object interface.",
+  "description": "CellChatESS implements Efficient Signal Streaming (ESS), an Rcpp acceleration method for triMean-based CellChat RNA workflows. ESS projects expression data to genes used by ligand-receptor, complex and cofactor calculations, evaluates sender-receiver pairs from observed expression support and streams bootstrap summaries while preserving the CellChat probability model and object interface.",
   "creators": [
     {
       "name": "Deng, Zifeng",
       "affiliation": "Hainan Bielefeld University of Applied Sciences"
     }
   ],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "GPL-3.0",
   "keywords": [
     "CellChat",
     "cell-cell communication",
     "Rcpp",
-    "Expression-Supported Streaming",
+    "Efficient Signal Streaming",
     "single-cell RNA sequencing",
     "Xenium"
   ],

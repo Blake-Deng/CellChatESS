@@ -2,7 +2,7 @@
 
 ## Overview
 
-Expression-Supported Streaming (ESS) is an Rcpp implementation of the triMean-based CellChat communication-probability workflow. It preserves the CellChat object contract and probability equations while changing data preparation, quantile evaluation and supported-pair execution.
+Efficient Signal Streaming (ESS) is an Rcpp implementation of the triMean-based CellChat communication-probability workflow. It preserves the CellChat object contract and probability equations while changing data preparation, quantile evaluation and supported-pair execution.
 
 ## CellChat Quantities
 

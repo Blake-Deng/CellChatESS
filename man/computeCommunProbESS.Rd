@@ -1,6 +1,6 @@
 \name{computeCommunProbESS}
 \alias{computeCommunProbESS}
-\title{Expression-Supported Streaming CellChat Communication Probability}
+\title{Efficient Signal Streaming for CellChat Communication Probability}
 \usage{
 computeCommunProbESS(object, type = "triMean", raw.use = TRUE,
   population.size = FALSE, nboot = 100, seed.use = 1L, Kh = 0.5,
@@ -16,7 +16,7 @@ computeCommunProbESS(object, type = "triMean", raw.use = TRUE,
 \item{Kh}{Hill function parameter.}
 \item{n}{Hill function exponent.}
 \item{distance.use}{Only non-spatial workflows are supported.}
-\item{algorithm}{\code{"ess"} runs Expression-Supported Streaming; \code{"dense"} runs the dense Rcpp comparator.}
+\item{algorithm}{\code{"ess"} runs Efficient Signal Streaming; \code{"dense"} runs the dense Rcpp comparator.}
 }
 \value{A CellChat object containing communication probability and p-value tensors.}
 \description{
