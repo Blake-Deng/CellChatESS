@@ -156,4 +156,4 @@ CellChatESS currently targets single-dataset, non-spatial RNA workflows using `t
 ## Citation
 
 Deng Z. CellChatESS: Efficient Signal Streaming for CellChat inference. Version 0.2.0.
-DOI: https://doi.org/10.5281/zenodo.21320633
+DOI: https://doi.org/10.5281/zenodo.21466853
