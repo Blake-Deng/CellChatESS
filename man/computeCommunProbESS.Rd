@@ -4,7 +4,8 @@
 \usage{
 computeCommunProbESS(object, type = "triMean", raw.use = TRUE,
   population.size = FALSE, nboot = 100, seed.use = 1L, Kh = 0.5,
-  n = 1, distance.use = NULL, algorithm = c("ess", "dense"))
+  n = 1, distance.use = NULL, threads = 1L,
+  algorithm = c("ess", "dense"))
 }
 \arguments{
 \item{object}{A preprocessed single-dataset CellChat object.}
@@ -16,6 +17,9 @@ computeCommunProbESS(object, type = "triMean", raw.use = TRUE,
 \item{Kh}{Hill function parameter.}
 \item{n}{Hill function exponent.}
 \item{distance.use}{Only non-spatial workflows are supported.}
+\item{threads}{Positive integer controlling native threads for
+\code{algorithm = "ess"}. One uses the serial fast path; values greater than
+one use OpenMP when available. The effective count is capped by \code{nboot}.}
 \item{algorithm}{\code{"ess"} runs Efficient Signal Streaming; \code{"dense"} runs the dense Rcpp comparator.}
 }
 \value{A CellChat object containing communication probability and p-value tensors.}

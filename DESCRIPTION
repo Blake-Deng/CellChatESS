@@ -1,7 +1,7 @@
 Package: CellChatESS
 Type: Package
 Title: Efficient Signal Streaming for CellChat Inference
-Version: 0.1.1
+Version: 0.2.0
 Authors@R: person("DENG", "Zifeng", role = c("aut", "cre"), email = "zifengd8@gmail.com")
 Author: DENG Zifeng [aut, cre]
 Maintainer: DENG Zifeng <zifengd8@gmail.com>
@@ -9,8 +9,9 @@ Description: Implements Efficient Signal Streaming (ESS), an Rcpp
     acceleration method for triMean-based CellChat RNA workflows. ESS projects
     expression data to genes used by ligand-receptor, complex and cofactor
     calculations, evaluates sender-receiver pairs from observed expression
-    support, and streams bootstrap summaries while preserving the CellChat
-    probability model and object interface.
+    support, streams bootstrap summaries, and optionally parallelizes
+    bootstrap permutations with OpenMP while preserving a serial fast path,
+    the CellChat probability model, and the object interface.
 License: GPL-3 + file LICENSE
 URL: https://github.com/Blake-Deng/CellChatESS
 BugReports: https://github.com/Blake-Deng/CellChatESS/issues
@@ -22,4 +23,5 @@ Imports:
     methods
 LinkingTo:
     Rcpp
+SystemRequirements: OpenMP (optional)
 RoxygenNote: 7.3.2

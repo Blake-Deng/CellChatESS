@@ -18,4 +18,5 @@
 ^\.r-review-lib$
 ^examples$
 ^validation$
+^reviewer$
 ^METHODS\.md$

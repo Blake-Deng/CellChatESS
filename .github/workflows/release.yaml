@@ -26,4 +26,6 @@ jobs:
         with:
           name: CellChatESS ${{ github.ref_name }}
           body_path: NEWS.md
-          files: CellChatESS_*.tar.gz
+          files: |
+            CellChatESS_*.tar.gz
+            reviewer/CellChatESS_Reviewer_MiniRepo_*.zip

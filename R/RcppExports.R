@@ -13,8 +13,8 @@ cellchat_prob_from_avg_cpp <- function(avg, avgBoot, ligandIdx, receptorIdx, coA
     .Call(`_CellChatESS_cellchat_prob_from_avg_cpp`, avg, avgBoot, ligandIdx, receptorIdx, coAIdx, coIIdx, agonistIdx, antagonistIdx, hasAgonist, hasAntagonist, Kh, n_power)
 }
 
-cellchat_prob_ess_cpp <- function(data, group, groupBoot, avg, ligandIdx, receptorIdx, coAIdx, coIIdx, agonistIdx, antagonistIdx, hasAgonist, hasAntagonist, Kh, n_power) {
-    .Call(`_CellChatESS_cellchat_prob_ess_cpp`, data, group, groupBoot, avg, ligandIdx, receptorIdx, coAIdx, coIIdx, agonistIdx, antagonistIdx, hasAgonist, hasAntagonist, Kh, n_power)
+cellchat_prob_ess_cpp <- function(data, group, groupBoot, avg, ligandIdx, receptorIdx, coAIdx, coIIdx, agonistIdx, antagonistIdx, hasAgonist, hasAntagonist, Kh, n_power, threads) {
+    .Call(`_CellChatESS_cellchat_prob_ess_cpp`, data, group, groupBoot, avg, ligandIdx, receptorIdx, coAIdx, coIIdx, agonistIdx, antagonistIdx, hasAgonist, hasAntagonist, Kh, n_power, threads)
 }
 
 pathway_sum_cpp <- function(prob, pval, pathway, n_pathways, thresh) {

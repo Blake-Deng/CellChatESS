@@ -3,6 +3,9 @@
 #include <cmath>
 #include <limits>
 #include <vector>
+#ifdef _OPENMP
+#include <omp.h>
+#endif
 using namespace Rcpp;
 
 static inline double quantile_type7_sorted(const std::vector<double>& x, double p) {
@@ -426,7 +429,8 @@ List cellchat_prob_ess_cpp(
     LogicalVector hasAgonist,
     LogicalVector hasAntagonist,
     double Kh,
-    double n_power) {
+    double n_power,
+    int threads) {
 
   const int G = data.nrow();
   const int C = data.ncol();
@@ -436,6 +440,11 @@ List cellchat_prob_ess_cpp(
   const int KK = K * K;
   const R_xlen_t KK_x = static_cast<R_xlen_t>(KK);
   const double Kh_n = std::pow(Kh, n_power);
+  const int requested_threads = std::max(1, threads);
+  int threads_used = 1;
+#ifdef _OPENMP
+  threads_used = std::min(requested_threads, std::max(1, nboot));
+#endif
 
   std::vector< std::vector<int> > boot_cells(nboot * K);
   for (int b = 0; b < nboot; ++b) {
@@ -469,7 +478,8 @@ List cellchat_prob_ess_cpp(
   NumericVector prob(Dimension(K, K, nLR));
   NumericVector pval(Dimension(K, K, nLR));
   std::vector<double> L(K), R(K), ago(K), ant(K);
-  std::vector<double> Lb(K), Rb(K), agoB(K), antB(K);
+  // Reuse serial scratch buffers across LR interactions.
+  std::vector<double> Lb_serial(K), Rb_serial(K), agoB_serial(K), antB_serial(K);
   std::vector<int> gene_to_local(G, -1);
 
   long long active_pairs = 0;
@@ -565,8 +575,20 @@ List cellchat_prob_ess_cpp(
     }
 
     std::vector<int> reject(active_idx.size(), 0);
-    std::vector<double> bootAvg(lr_genes.size() * K, NA_REAL);
-    for (int b = 0; b < nboot; ++b) {
+    long long lr_boot_tri_mean_evals = 0;
+    long long lr_cache_hits = 0;
+
+    auto process_bootstrap = [&](
+      const int b,
+      std::vector<double>& bootAvg,
+      std::vector<double>& Lb,
+      std::vector<double>& Rb,
+      std::vector<double>& agoB,
+      std::vector<double>& antB,
+      std::vector<int>& reject_local,
+      long long& tri_mean_evals_local,
+      long long& cache_hits_local
+    ) {
       std::fill(bootAvg.begin(), bootAvg.end(), NA_REAL);
       for (int local = 0; local < static_cast<int>(lr_genes.size()); ++local) {
         const int gene0 = lr_genes[local];
@@ -579,9 +601,9 @@ List cellchat_prob_ess_cpp(
           if (!tri_seen[cache_idx]) {
             tri_cache[cache_idx] = tri_mean_gene_cells(data, gene0, boot_cells[b * K + k]);
             tri_seen[cache_idx] = 1;
-            boot_tri_mean_evals += 1;
+            tri_mean_evals_local += 1;
           } else {
-            cache_hits += 1;
+            cache_hits_local += 1;
           }
           bootAvg[local * K + k] = tri_cache[cache_idx];
         }
@@ -613,9 +635,57 @@ List cellchat_prob_ess_cpp(
           p1 = dataLR_n / (Kh_n + dataLR_n);
         }
         const double val = p1 * agoB[s] * agoB[r] * antB[s] * antB[r];
-        if (val - pnull[idx] > 0.0) reject[j] += 1;
+        if (val - pnull[idx] > 0.0) reject_local[j] += 1;
+      }
+    };
+
+    if (threads_used == 1) {
+      // Avoid OpenMP setup overhead for the default single-thread path.
+      std::vector<double> bootAvg(lr_genes.size() * K, NA_REAL);
+      // bootAvg is LR-sized; the K-sized buffers are reused across LRs.
+      for (int b = 0; b < nboot; ++b) {
+        process_bootstrap(
+          b, bootAvg, Lb_serial, Rb_serial, agoB_serial, antB_serial, reject,
+          lr_boot_tri_mean_evals, lr_cache_hits
+        );
+      }
+    } else {
+      std::vector< std::vector<int> > reject_by_thread(
+        threads_used, std::vector<int>(active_idx.size(), 0)
+      );
+
+#ifdef _OPENMP
+#pragma omp parallel num_threads(threads_used) reduction(+:lr_boot_tri_mean_evals,lr_cache_hits)
+#endif
+      {
+        int thread_id = 0;
+#ifdef _OPENMP
+        thread_id = omp_get_thread_num();
+#endif
+        std::vector<int>& reject_local = reject_by_thread[thread_id];
+        std::vector<double> bootAvg(lr_genes.size() * K, NA_REAL);
+        std::vector<double> Lb(K), Rb(K), agoB(K), antB(K);
+
+#ifdef _OPENMP
+#pragma omp for schedule(static)
+#endif
+        for (int b = 0; b < nboot; ++b) {
+          process_bootstrap(
+            b, bootAvg, Lb, Rb, agoB, antB, reject_local,
+            lr_boot_tri_mean_evals, lr_cache_hits
+          );
+        }
+      }
+
+      for (int thread_id = 0; thread_id < threads_used; ++thread_id) {
+        for (int j = 0; j < static_cast<int>(active_idx.size()); ++j) {
+          reject[j] += reject_by_thread[thread_id][j];
+        }
       }
     }
+
+    boot_tri_mean_evals += lr_boot_tri_mean_evals;
+    cache_hits += lr_cache_hits;
 
     for (int j = 0; j < static_cast<int>(active_idx.size()); ++j) {
       const int idx = active_idx[j];
@@ -640,7 +710,8 @@ List cellchat_prob_ess_cpp(
     Named("cache_genes") = static_cast<double>(U),
     Named("cache_slots") = static_cast<double>(static_cast<long long>(U) * static_cast<long long>(K) * static_cast<long long>(nboot)),
     Named("streamed_lr") = static_cast<double>(streamed_lr),
-    Named("max_lr_genes") = static_cast<double>(max_lr_genes)
+    Named("max_lr_genes") = static_cast<double>(max_lr_genes),
+    Named("threads_used") = threads_used
   );
 }
 

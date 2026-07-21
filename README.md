@@ -1,6 +1,6 @@
 # CellChatESS
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21320634.svg)](https://doi.org/10.5281/zenodo.21320634)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21320633.svg)](https://doi.org/10.5281/zenodo.21320633)
 
 **Efficient Signal Streaming (ESS) for CellChat-compatible communication inference.**
 
@@ -40,11 +40,41 @@ cellchat <- computeCommunProbESS(
   cellchat,
   nboot = 100,
   seed.use = 1L,
+  threads = 1L,
   algorithm = "ess"
 )
 cellchat <- computeCommunProbPathwayESS(cellchat)
 cellchat <- aggregateNetESS(cellchat)
 ```
+
+### Thread control
+
+`threads = 1L` uses a true serial fast path and does not enter an OpenMP
+parallel region. Values greater than one use OpenMP across bootstrap
+permutations within each ligand-receptor interaction:
+
+```r
+cellchat <- computeCommunProbESS(
+  cellchat,
+  nboot = 100,
+  seed.use = 1L,
+  threads = 4L,
+  algorithm = "ess"
+)
+
+cellchat@options$CellChatESS[c("threads_requested", "threads_used")]
+```
+
+The requested thread count is capped by `nboot`. Builds without OpenMP
+automatically use one thread. The dense Rcpp comparator remains serial.
+
+### Benchmark interpretation
+
+CellChatESS supports optional conditional OpenMP beginning with v0.2.0. The
+principal runtime and memory results reported in the accompanying manuscript
+use **one thread per method** under the same runner and hardware environment.
+The four-thread measurements are reported separately as a resource-sensitivity
+analysis and are not used to calculate the manuscript's primary speedups.
 
 For the dense Rcpp comparator:
 
@@ -77,6 +107,20 @@ Across all 216 ESS versus original CellChat comparisons:
 - aggregate counts: exact in 216/216 runs;
 - pathway and aggregate-weight differences: floating-point precision only.
 
+### Four-thread sensitivity analysis
+
+The conditional-OpenMP implementation was additionally run on all 216 prepared
+objects using four native threads and one BLAS thread.
+
+| Threads | Successful runs | Median workflow time | Median peak RSS |
+|---:|---:|---:|---:|
+| 1 | 216/216 | 5.801 s | 1.060 GiB |
+| 4 | 216/216 | 2.660 s | 1.058 GiB |
+
+The paired median 1-to-4-thread speedup was 2.11-fold. Probability, p-value,
+pathway, aggregate-weight and count outputs were exactly identical to the
+one-thread CellChatESS references for all 216 objects.
+
 ### Xenium 50-grid stress test
 
 The largest test contained 1,156,091 cells, 2357 groups and 627 ligand-receptor interactions.
@@ -89,6 +133,13 @@ The largest test contained 1,156,091 cells, 2357 groups and 627 ligand-receptor 
 The complete ESS tensor was compared against the independently validated reference result. Probability, p-value, weight, count and pathway-probability arrays were identical to that reference. Relative to original CellChat, probability differences remained at floating-point precision; five of 3,483,266,523 p-values differed by `0.01`, and none crossed the `0.05` significance threshold.
 
 See [validation/VALIDATION.md](validation/VALIDATION.md) and the TSV files in `validation/`.
+
+## Reviewer mini repository
+
+A self-contained reviewer bundle containing the package source, prepared PBMC3k
+object, original CellChat reference, one-command serial/OpenMP check and expected
+outputs is attached to the v0.2.0 GitHub Release as
+`CellChatESS_Reviewer_MiniRepo_v0.2.0.zip`.
 
 ## Repository Map
 
@@ -104,5 +155,5 @@ CellChatESS currently targets single-dataset, non-spatial RNA workflows using `t
 
 ## Citation
 
-Deng Z. CellChatESS: Efficient Signal Streaming for CellChat inference. Version 0.1.1.
-DOI: https://doi.org/10.5281/zenodo.21320634
+Deng Z. CellChatESS: Efficient Signal Streaming for CellChat inference. Version 0.2.0.
+DOI: https://doi.org/10.5281/zenodo.21320633

@@ -1,8 +1,13 @@
 computeCommunProbESS <- function(object, type = "triMean", raw.use = TRUE, population.size = FALSE,
                                      nboot = 100, seed.use = 1L, Kh = 0.5, n = 1,
                                      distance.use = NULL,
+                                     threads = 1L,
                                      algorithm = c("ess", "dense")) {
   algorithm <- match.arg(algorithm)
+  threads <- as.integer(threads)
+  if (length(threads) != 1L || is.na(threads) || threads < 1L) {
+    stop("threads must be one positive integer.", call. = FALSE)
+  }
   check_supported_object(object, type, population.size, distance.use)
 
   ptm <- Sys.time()
@@ -112,7 +117,8 @@ computeCommunProbESS <- function(object, type = "triMean", raw.use = TRUE, popul
       hasAgonist = hasAgonist,
       hasAntagonist = hasAntagonist,
       Kh = Kh,
-      n_power = n
+      n_power = n,
+      threads = threads
     )
   } else {
     avg_boot <- group_tri_mean_boot_cpp(data.use, group_boot, K)$avg_boot
@@ -160,7 +166,9 @@ computeCommunProbESS <- function(object, type = "triMean", raw.use = TRUE, popul
     cache_genes = res$cache_genes %||% NA_real_,
     cache_slots = res$cache_slots %||% NA_real_,
     streamed_lr = res$streamed_lr %||% NA_real_,
-    max_lr_genes = res$max_lr_genes %||% NA_real_
+    max_lr_genes = res$max_lr_genes %||% NA_real_,
+    threads_requested = threads,
+    threads_used = res$threads_used %||% 1L
   )
   object
 }

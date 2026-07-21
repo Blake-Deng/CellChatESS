@@ -59,8 +59,8 @@ BEGIN_RCPP
 END_RCPP
 }
 // cellchat_prob_ess_cpp
-List cellchat_prob_ess_cpp(NumericMatrix data, IntegerVector group, IntegerMatrix groupBoot, NumericMatrix avg, IntegerMatrix ligandIdx, IntegerMatrix receptorIdx, IntegerMatrix coAIdx, IntegerMatrix coIIdx, IntegerMatrix agonistIdx, IntegerMatrix antagonistIdx, LogicalVector hasAgonist, LogicalVector hasAntagonist, double Kh, double n_power);
-RcppExport SEXP _CellChatESS_cellchat_prob_ess_cpp(SEXP dataSEXP, SEXP groupSEXP, SEXP groupBootSEXP, SEXP avgSEXP, SEXP ligandIdxSEXP, SEXP receptorIdxSEXP, SEXP coAIdxSEXP, SEXP coIIdxSEXP, SEXP agonistIdxSEXP, SEXP antagonistIdxSEXP, SEXP hasAgonistSEXP, SEXP hasAntagonistSEXP, SEXP KhSEXP, SEXP n_powerSEXP) {
+List cellchat_prob_ess_cpp(NumericMatrix data, IntegerVector group, IntegerMatrix groupBoot, NumericMatrix avg, IntegerMatrix ligandIdx, IntegerMatrix receptorIdx, IntegerMatrix coAIdx, IntegerMatrix coIIdx, IntegerMatrix agonistIdx, IntegerMatrix antagonistIdx, LogicalVector hasAgonist, LogicalVector hasAntagonist, double Kh, double n_power, int threads);
+RcppExport SEXP _CellChatESS_cellchat_prob_ess_cpp(SEXP dataSEXP, SEXP groupSEXP, SEXP groupBootSEXP, SEXP avgSEXP, SEXP ligandIdxSEXP, SEXP receptorIdxSEXP, SEXP coAIdxSEXP, SEXP coIIdxSEXP, SEXP agonistIdxSEXP, SEXP antagonistIdxSEXP, SEXP hasAgonistSEXP, SEXP hasAntagonistSEXP, SEXP KhSEXP, SEXP n_powerSEXP, SEXP threadsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -78,7 +78,8 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< LogicalVector >::type hasAntagonist(hasAntagonistSEXP);
     Rcpp::traits::input_parameter< double >::type Kh(KhSEXP);
     Rcpp::traits::input_parameter< double >::type n_power(n_powerSEXP);
-    rcpp_result_gen = Rcpp::wrap(cellchat_prob_ess_cpp(data, group, groupBoot, avg, ligandIdx, receptorIdx, coAIdx, coIIdx, agonistIdx, antagonistIdx, hasAgonist, hasAntagonist, Kh, n_power));
+    Rcpp::traits::input_parameter< int >::type threads(threadsSEXP);
+    rcpp_result_gen = Rcpp::wrap(cellchat_prob_ess_cpp(data, group, groupBoot, avg, ligandIdx, receptorIdx, coAIdx, coIIdx, agonistIdx, antagonistIdx, hasAgonist, hasAntagonist, Kh, n_power, threads));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -115,7 +116,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_CellChatESS_group_tri_mean_cpp", (DL_FUNC) &_CellChatESS_group_tri_mean_cpp, 3},
     {"_CellChatESS_group_tri_mean_boot_cpp", (DL_FUNC) &_CellChatESS_group_tri_mean_boot_cpp, 3},
     {"_CellChatESS_cellchat_prob_from_avg_cpp", (DL_FUNC) &_CellChatESS_cellchat_prob_from_avg_cpp, 12},
-    {"_CellChatESS_cellchat_prob_ess_cpp", (DL_FUNC) &_CellChatESS_cellchat_prob_ess_cpp, 14},
+    {"_CellChatESS_cellchat_prob_ess_cpp", (DL_FUNC) &_CellChatESS_cellchat_prob_ess_cpp, 15},
     {"_CellChatESS_pathway_sum_cpp", (DL_FUNC) &_CellChatESS_pathway_sum_cpp, 5},
     {"_CellChatESS_aggregate_net_cpp", (DL_FUNC) &_CellChatESS_aggregate_net_cpp, 3},
     {NULL, NULL, 0}
