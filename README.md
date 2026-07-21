@@ -1,6 +1,7 @@
 # CellChatESS
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21320633.svg)](https://doi.org/10.5281/zenodo.21320633)
+[![Reviewer bundle](https://img.shields.io/badge/reviewer_bundle-v0.2.0-2F5F9E)](https://github.com/Blake-Deng/CellChatESS/releases/download/v0.2.0/CellChatESS_Reviewer_MiniRepo_v0.2.0.zip)
 
 **Efficient Signal Streaming (ESS) for CellChat-compatible communication inference.**
 
@@ -18,6 +19,21 @@ ESS combines four implementation ideas:
 The final CellChat-compatible `K x K x nLR` probability and p-value tensors remain dense. ESS reduces avoidable work and intermediate memory; it does not claim to remove the intrinsic quadratic sender-receiver output term.
 
 ## Reviewer Quick Start
+
+For the shortest reproducibility path, download the self-contained
+[reviewer mini repository](https://github.com/Blake-Deng/CellChatESS/releases/download/v0.2.0/CellChatESS_Reviewer_MiniRepo_v0.2.0.zip)
+and run:
+
+```sh
+unzip CellChatESS_Reviewer_MiniRepo_v0.2.0.zip
+cd CellChatESS_Reviewer_MiniRepo_v0.2.0
+Rscript run_review_demo.R
+```
+
+The script checks one- and four-thread execution against the bundled original
+CellChat reference and reports a single PASS/FAIL result.
+
+To install directly from GitHub instead:
 
 ```r
 remotes::install_github("Blake-Deng/CellChatESS")
