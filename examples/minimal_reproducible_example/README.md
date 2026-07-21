@@ -1,16 +1,42 @@
-# Minimal Reproducible Example
+# Minimal reproducible example for CellChatESS v0.2.0
 
-This directory is self-contained and uses a 3.7 MB prepared PBMC3k CellChat object.
+This is the repository-integrated version of the 21 July 2026 reviewer demo. It
+tests the central conditional-OpenMP claim on a prepared PBMC3k CellChat object:
 
-- `run_ess.R` runs ESS and checks all outputs against original CellChat.
-- `run_three_method_comparison.R` compares original CellChat R, dense Rcpp and ESS.
-- `expected_metrics.tsv` defines numerical acceptance thresholds.
+> `threads = 1L` uses the serial fast path; `threads = 4L` requests OpenMP;
+> both paths produce identical CellChat-compatible outputs.
 
-From the repository root:
+## One-command validation
+
+Prerequisites are R (>= 4.1), Rcpp and CellChat. From the repository root, run:
 
 ```sh
-Rscript examples/minimal_reproducible_example/run_ess.R
-Rscript examples/minimal_reproducible_example/run_three_method_comparison.R
+Rscript examples/minimal_reproducible_example/run_review_demo.R
 ```
 
-Both scripts use `nboot = 100` and `seed.use = 1`. Results are written under `results/`.
+The script installs the current repository source into the private
+`.example_lib/` directory, leaving the user's normal R library unchanged. It
+runs the one- and four-thread configurations with `nboot = 100` and
+`seed.use = 1L`, compares both with the bundled original CellChat reference,
+and writes machine-readable results under `results/`.
+
+Expected final message:
+
+```text
+PASS: serial and OpenMP results are identical; both match original CellChat.
+```
+
+On a build without OpenMP, the four-thread request safely falls back to one
+thread and the numerical checks still run.
+
+## Included files
+
+- `run_review_demo.R`: complete install, execution and validation workflow.
+- `data/`: prepared PBMC3k CellChat object and original CellChat reference.
+- `expected/acceptance.tsv`: explicit numerical acceptance criteria.
+- `results/`: validated v0.2.0 outputs and session information.
+- `REVIEWER_CHECKLIST.md`: short code-review route.
+
+The manuscript's principal runtime and memory comparisons remain controlled
+one-thread comparisons. This example's four-thread execution is a
+resource-sensitivity validation of the optional v0.2.0 implementation.

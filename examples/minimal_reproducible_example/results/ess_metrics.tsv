@@ -1,2 +1,0 @@
-method	elapsed_sec	prob_max_abs_diff_vs_original	pval_max_abs_diff_vs_original	pathway_max_abs_diff_vs_original	weight_max_abs_diff_vs_original	count_identical	n_genes_full	n_genes_kernel
-ESS	0.774	1.38777878078145e-17	0	6.93889390390723e-18	6.93889390390723e-18	TRUE	997	994

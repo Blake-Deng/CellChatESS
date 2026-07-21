@@ -1,4 +1,0 @@
-method	elapsed_sec	prob_max_abs_diff	pval_max_abs_diff	pathway_max_abs_diff	weight_max_abs_diff	count_identical
-Original CellChat R	78.452	0	0	0	0	TRUE
-Dense Rcpp	1.831	1.38777878078145e-17	0	6.93889390390723e-18	6.93889390390723e-18	TRUE
-ESS	0.646000000000001	1.38777878078145e-17	0	6.93889390390723e-18	6.93889390390723e-18	TRUE

@@ -1,0 +1,2 @@
+prob_exact_1t_vs_4t	pval_exact_1t_vs_4t	pathway_exact_1t_vs_4t	weight_exact_1t_vs_4t	count_exact_1t_vs_4t	serial_path_reported_one_thread	requested_four_threads_used	speedup_1t_over_4t
+TRUE	TRUE	TRUE	TRUE	TRUE	TRUE	TRUE	1.06302521008403

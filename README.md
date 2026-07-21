@@ -40,14 +40,14 @@ remotes::install_github("Blake-Deng/CellChatESS")
 library(CellChatESS)
 ```
 
-Run the bundled example after cloning:
+Run the repository-integrated v0.2.0 validation after cloning:
 
 ```sh
-Rscript examples/minimal_reproducible_example/run_ess.R
-Rscript examples/minimal_reproducible_example/run_three_method_comparison.R
+Rscript examples/minimal_reproducible_example/run_review_demo.R
 ```
 
-The first command runs ESS only. The second compares original CellChat R, dense Rcpp and ESS from the same prepared PBMC3k object.
+This one command checks the serial and conditional-OpenMP paths against each
+other and against the bundled original CellChat reference.
 
 ## API
 

@@ -3,4 +3,9 @@ prob_max_abs_diff_vs_original	<=1e-12
 pval_max_abs_diff_vs_original	0
 pathway_max_abs_diff_vs_original	<=1e-12
 weight_max_abs_diff_vs_original	<=1e-12
-count_identical	TRUE
+count_identical_vs_original	TRUE
+prob_exact_1t_vs_4t	TRUE
+pval_exact_1t_vs_4t	TRUE
+pathway_exact_1t_vs_4t	TRUE
+weight_exact_1t_vs_4t	TRUE
+count_exact_1t_vs_4t	TRUE
