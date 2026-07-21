@@ -33,12 +33,34 @@ Rscript run_review_demo.R
 The script checks one- and four-thread execution against the bundled original
 CellChat reference and reports a single PASS/FAIL result.
 
-To install directly from GitHub instead:
+## Installation and compatibility
+
+CellChatESS v0.2.0 was validated with **CellChat 1.6.1**. Install that
+CellChat version first from the archived official repository, then install
+CellChatESS:
 
 ```r
-remotes::install_github("Blake-Deng/CellChatESS")
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+if (!requireNamespace("remotes", quietly = TRUE))
+  install.packages("remotes")
+
+# Use Bioconductor repositories when resolving CellChat dependencies.
+options(repos = BiocManager::repositories())
+
+# The archived upstream commit below contains CellChat 1.6.1.
+remotes::install_github(
+  "sqjin/CellChat@e4f68625b074247d619c2e488d33970cc531e17c"
+)
+stopifnot(packageVersion("CellChat") == "1.6.1")
+
+remotes::install_github("Blake-Deng/CellChatESS@v0.2.0")
 library(CellChatESS)
 ```
+
+The validated scope is summarized under [Scope](#scope). Other CellChat
+versions or workflow branches should be checked against a reference result
+before production use.
 
 Run the repository-integrated v0.2.0 validation after cloning:
 
@@ -109,11 +131,17 @@ cellchat_dense <- computeCommunProbESS(
 
 Twelve real single-cell datasets were evaluated at six cell-scale settings with three repeats. Each method used `nboot = 100`, `seed.use = 1` and `min.cells = 10`.
 
-| Method | Successful runs | Median elapsed time | Median peak RSS |
+| Method | Successful runs | Median core elapsed time | Median peak RSS |
 |---|---:|---:|---:|
-| Original CellChat R | 216/216 | 848.78 s | 1.861 GiB |
-| Dense Rcpp | 216/216 | 38.80 s | 1.159 GiB |
+| Original CellChat R | 216/216 | 426.58 s | 1.861 GiB |
+| Dense Rcpp | 216/216 | 35.96 s | 1.159 GiB |
 | ESS | 216/216 | 5.18 s | 1.060 GiB |
+
+Core runtime and peak RSS were measured in separate passes. Runtime values
+come from the matched core-computation benchmark on common prepared objects;
+peak RSS was collected for each method in an independent process using
+`/usr/bin/time -v`. Elapsed times observed during the RSS pass are not used in
+the runtime summary.
 
 Across all 216 ESS versus original CellChat comparisons:
 
@@ -167,7 +195,10 @@ outputs is attached to the v0.2.0 GitHub Release as
 
 ## Scope
 
-CellChatESS currently targets single-dataset, non-spatial RNA workflows using `type = "triMean"`, `population.size = FALSE` and `raw.use = TRUE` or a compatible projected expression matrix.
+CellChatESS was validated with CellChat 1.6.1 and currently targets
+single-dataset, non-spatial RNA workflows using `type = "triMean"`,
+`population.size = FALSE` and `raw.use = TRUE` or a compatible projected
+expression matrix.
 
 ## Citation
 

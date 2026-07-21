@@ -2,13 +2,13 @@
 
 ## Design
 
-Each paired method used the same prepared CellChat object with `nboot = 100`, `seed.use = 1` and `min.cells = 10`. Peak RSS was measured in an independent process using `/usr/bin/time -v`.
+Each paired method used the same prepared CellChat object with `nboot = 100`, `seed.use = 1` and `min.cells = 10`. Core runtime and peak RSS were collected in separate measurement passes. The runtime summary uses matched core-computation timings; peak RSS was measured for each method in an independent process using `/usr/bin/time -v`. Elapsed times from the RSS pass are not used as runtime results.
 
 ## 216 Matched Experiments
 
 The benchmark comprises 12 real datasets, six target cell scales and three repeats. Original CellChat R, dense Rcpp and ESS completed all 216 runs.
 
-ESS median elapsed time was 5.18 seconds, compared with 38.80 seconds for dense Rcpp and 848.78 seconds for original CellChat R. ESS median peak RSS was 1.060 GiB, compared with 1.159 GiB and 1.861 GiB, respectively.
+ESS median core elapsed time was 5.18 seconds, compared with 35.96 seconds for dense Rcpp and 426.58 seconds for original CellChat R. ESS median peak RSS was 1.060 GiB, compared with 1.159 GiB and 1.861 GiB, respectively.
 
 For ESS versus original CellChat, the maximum probability difference was `1.39e-16`, the minimum Pearson correlation was `1.0`, p-values were exact, aggregate counts were exact in all 216 runs, and pathway/weight differences were limited to floating-point precision.
 
