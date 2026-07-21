@@ -203,4 +203,4 @@ expression matrix.
 ## Citation
 
 Deng Z. CellChatESS: Efficient Signal Streaming for CellChat inference. Version 0.2.1.
-All-version DOI: https://doi.org/10.5281/zenodo.21320633
+DOI: https://doi.org/10.5281/zenodo.21470360
