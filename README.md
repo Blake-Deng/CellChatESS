@@ -1,7 +1,7 @@
 # CellChatESS
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21320633.svg)](https://doi.org/10.5281/zenodo.21320633)
-[![Reviewer bundle](https://img.shields.io/badge/reviewer_bundle-v0.2.0-2F5F9E)](https://github.com/Blake-Deng/CellChatESS/releases/download/v0.2.0/CellChatESS_Reviewer_MiniRepo_v0.2.0.zip)
+[![Reviewer bundle](https://img.shields.io/badge/reviewer_bundle-v0.2.1-2F5F9E)](https://github.com/Blake-Deng/CellChatESS/releases/download/v0.2.1/CellChatESS_Reviewer_MiniRepo_v0.2.1.zip)
 
 **Efficient Signal Streaming (ESS) for CellChat-compatible communication inference.**
 
@@ -21,12 +21,12 @@ The final CellChat-compatible `K x K x nLR` probability and p-value tensors rema
 ## Reviewer Quick Start
 
 For the shortest reproducibility path, download the self-contained
-[reviewer mini repository](https://github.com/Blake-Deng/CellChatESS/releases/download/v0.2.0/CellChatESS_Reviewer_MiniRepo_v0.2.0.zip)
+[reviewer mini repository](https://github.com/Blake-Deng/CellChatESS/releases/download/v0.2.1/CellChatESS_Reviewer_MiniRepo_v0.2.1.zip)
 and run:
 
 ```sh
-unzip CellChatESS_Reviewer_MiniRepo_v0.2.0.zip
-cd CellChatESS_Reviewer_MiniRepo_v0.2.0
+unzip CellChatESS_Reviewer_MiniRepo_v0.2.1.zip
+cd CellChatESS_Reviewer_MiniRepo_v0.2.1
 Rscript run_review_demo.R
 ```
 
@@ -35,7 +35,7 @@ CellChat reference and reports a single PASS/FAIL result.
 
 ## Installation and compatibility
 
-CellChatESS v0.2.0 was validated with **CellChat 1.6.1**. Install that
+CellChatESS v0.2.1 was validated with **CellChat 1.6.1**. Install that
 CellChat version first from the archived official repository, then install
 CellChatESS:
 
@@ -54,7 +54,7 @@ remotes::install_github(
 )
 stopifnot(packageVersion("CellChat") == "1.6.1")
 
-remotes::install_github("Blake-Deng/CellChatESS@v0.2.0")
+remotes::install_github("Blake-Deng/CellChatESS@v0.2.1")
 library(CellChatESS)
 ```
 
@@ -62,7 +62,7 @@ The validated scope is summarized under [Scope](#scope). Other CellChat
 versions or workflow branches should be checked against a reference result
 before production use.
 
-Run the repository-integrated v0.2.0 validation after cloning:
+Run the repository-integrated v0.2.1 validation after cloning:
 
 ```sh
 Rscript examples/minimal_reproducible_example/run_review_demo.R
@@ -182,8 +182,8 @@ See [validation/VALIDATION.md](validation/VALIDATION.md) and the TSV files in `v
 
 A self-contained reviewer bundle containing the package source, prepared PBMC3k
 object, original CellChat reference, one-command serial/OpenMP check and expected
-outputs is attached to the v0.2.0 GitHub Release as
-`CellChatESS_Reviewer_MiniRepo_v0.2.0.zip`.
+outputs is attached to the v0.2.1 GitHub Release as
+`CellChatESS_Reviewer_MiniRepo_v0.2.1.zip`.
 
 ## Repository Map
 
@@ -202,5 +202,5 @@ expression matrix.
 
 ## Citation
 
-Deng Z. CellChatESS: Efficient Signal Streaming for CellChat inference. Version 0.2.0.
-DOI: https://doi.org/10.5281/zenodo.21466853
+Deng Z. CellChatESS: Efficient Signal Streaming for CellChat inference. Version 0.2.1.
+All-version DOI: https://doi.org/10.5281/zenodo.21320633

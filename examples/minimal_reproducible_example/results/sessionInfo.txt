@@ -18,7 +18,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base
 
 other attached packages:
- [1] CellChatESS_0.2.0    CellChat_1.6.1       ggplot2_4.0.3
+ [1] CellChatESS_0.2.1    CellChat_1.6.1       ggplot2_4.0.3
  [4] igraph_2.3.3         dplyr_1.2.1          synchronicity_1.3.10
  [7] bigmemory_4.6.6      Biobase_2.70.0       BiocGenerics_0.56.0
 [10] generics_0.1.4

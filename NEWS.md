@@ -1,3 +1,14 @@
+# CellChatESS 0.2.1
+
+- Documentation- and metadata-only patch release; the R/C++ implementation,
+  exported API and numerical algorithm are unchanged from v0.2.0.
+- Aligns the 216-object validation summary with the matched core-computation
+  timings reported in the manuscript.
+- Separates core-runtime and independent-process peak-RSS measurement
+  descriptions.
+- Pins the validated CellChat 1.6.1 installation to the archived upstream
+  commit and includes the complete GPL-3 license text.
+
 # CellChatESS 0.2.0
 
 - Adds an optional `threads` argument to `computeCommunProbESS()`.

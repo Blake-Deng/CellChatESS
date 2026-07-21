@@ -1,4 +1,4 @@
-# Minimal reproducible example for CellChatESS v0.2.0
+# Minimal reproducible example for CellChatESS v0.2.1
 
 This is the repository-integrated version of the 21 July 2026 reviewer demo. It
 tests the central conditional-OpenMP claim on a prepared PBMC3k CellChat object:
@@ -34,9 +34,9 @@ thread and the numerical checks still run.
 - `run_review_demo.R`: complete install, execution and validation workflow.
 - `data/`: prepared PBMC3k CellChat object and original CellChat reference.
 - `expected/acceptance.tsv`: explicit numerical acceptance criteria.
-- `results/`: validated v0.2.0 outputs and session information.
+- `results/`: validated v0.2.1 outputs and session information.
 - `REVIEWER_CHECKLIST.md`: short code-review route.
 
 The manuscript's principal runtime and memory comparisons remain controlled
 one-thread comparisons. This example's four-thread execution is a
-resource-sensitivity validation of the optional v0.2.0 implementation.
+resource-sensitivity validation of the optional v0.2.1 implementation.
