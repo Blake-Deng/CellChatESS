@@ -1,0 +1,1 @@
+matrix_nonzero is the count of nonzero entries in data.signaling. f_LR = sum_l |{(s,r): L_l(s)>0 and R_adj_l(r)>0}|/(nLR*K^2). f_union is the count of distinct supported group pairs divided by K^2.

@@ -1,0 +1,6 @@
+lr_name	source_group	target_group
+CSF1_CSF1R	Group_Grid_3_32	Group_Grid_12_50
+LAMA3_CD44	Group_Grid_17_26	Group_Grid_2_45
+LAMA3_CD44	Group_Grid_25_16	Group_Grid_2_45
+LAMC1_CD44	Group_Grid_12_50	Group_Grid_10_19
+LAMC2_CD44	Group_Grid_12_50	Group_Grid_10_19

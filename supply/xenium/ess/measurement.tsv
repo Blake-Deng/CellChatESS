@@ -1,0 +1,2 @@
+"method"	"inference_function_elapsed_sec"	"aggregateNet_elapsed_sec"	"input_file_bytes"	"input_expression_object_bytes"	"probability_object_bytes"	"pvalue_object_bytes"	"probability_payload_bytes"	"pvalue_payload_bytes"	"count_object_bytes"	"output_rds_bytes"	"cells"	"signaling_genes"	"K"	"n_LR"	"nboot"	"seed_use"	"threads"
+"ess"	1282.588	473.844	371491648	959610184	27866570912	27866570912	27866132184	27866132184	44834688	1089499736	1156091	648	2357	627	100	1	1

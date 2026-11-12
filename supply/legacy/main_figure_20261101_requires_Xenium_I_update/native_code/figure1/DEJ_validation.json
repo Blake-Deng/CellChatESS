@@ -1,0 +1,15 @@
+{
+  "Original CellChat_legacy_aggregate_max_abs_difference": 4.440892098500626e-15,
+  "CellChatESS_legacy_aggregate_max_abs_difference": 4.440892098500626e-15,
+  "legacy_bubble_max_abs_probability_difference": 5.273559366969494e-16,
+  "network_edges_per_method": 81,
+  "bubble_points_per_method": 73,
+  "bubble_pairs": 24,
+  "selected_LR": 16,
+  "bubble_probability_max_abs_difference": 5.551115123125783e-17,
+  "bubble_pvalues_elementwise_exact": true,
+  "inference_rerun": false,
+  "display_mapping_basis": "Nine distinct group sizes plus agreement with all 81 legacy network weights and all 146 legacy bubble records. Display annotations retained from the original figure; no new cell-type annotation.",
+  "network_definition": "Sum probabilities over all 1128 LR after setting p >= 0.05 to zero, matching aggregateNet default.",
+  "bubble_definition": "Original fixed set of 16 LR and three senders; probability > 0 and p < 0.05, re-evaluated on each new result."
+}

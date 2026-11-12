@@ -1,0 +1,163 @@
+"engine"	"source_id"	"target_id"	"count"
+"Original CellChat"	"Cluster_0"	"Cluster_0"	28
+"Original CellChat"	"Cluster_1"	"Cluster_0"	12
+"Original CellChat"	"Cluster_2"	"Cluster_0"	20
+"Original CellChat"	"Cluster_3"	"Cluster_0"	38
+"Original CellChat"	"Cluster_4"	"Cluster_0"	23
+"Original CellChat"	"Cluster_5"	"Cluster_0"	16
+"Original CellChat"	"Cluster_6"	"Cluster_0"	36
+"Original CellChat"	"Cluster_7"	"Cluster_0"	10
+"Original CellChat"	"Cluster_8"	"Cluster_0"	27
+"Original CellChat"	"Cluster_0"	"Cluster_1"	34
+"Original CellChat"	"Cluster_1"	"Cluster_1"	17
+"Original CellChat"	"Cluster_2"	"Cluster_1"	29
+"Original CellChat"	"Cluster_3"	"Cluster_1"	44
+"Original CellChat"	"Cluster_4"	"Cluster_1"	29
+"Original CellChat"	"Cluster_5"	"Cluster_1"	24
+"Original CellChat"	"Cluster_6"	"Cluster_1"	38
+"Original CellChat"	"Cluster_7"	"Cluster_1"	13
+"Original CellChat"	"Cluster_8"	"Cluster_1"	32
+"Original CellChat"	"Cluster_0"	"Cluster_2"	38
+"Original CellChat"	"Cluster_1"	"Cluster_2"	25
+"Original CellChat"	"Cluster_2"	"Cluster_2"	43
+"Original CellChat"	"Cluster_3"	"Cluster_2"	48
+"Original CellChat"	"Cluster_4"	"Cluster_2"	33
+"Original CellChat"	"Cluster_5"	"Cluster_2"	31
+"Original CellChat"	"Cluster_6"	"Cluster_2"	38
+"Original CellChat"	"Cluster_7"	"Cluster_2"	21
+"Original CellChat"	"Cluster_8"	"Cluster_2"	29
+"Original CellChat"	"Cluster_0"	"Cluster_3"	39
+"Original CellChat"	"Cluster_1"	"Cluster_3"	31
+"Original CellChat"	"Cluster_2"	"Cluster_3"	52
+"Original CellChat"	"Cluster_3"	"Cluster_3"	47
+"Original CellChat"	"Cluster_4"	"Cluster_3"	43
+"Original CellChat"	"Cluster_5"	"Cluster_3"	41
+"Original CellChat"	"Cluster_6"	"Cluster_3"	38
+"Original CellChat"	"Cluster_7"	"Cluster_3"	32
+"Original CellChat"	"Cluster_8"	"Cluster_3"	38
+"Original CellChat"	"Cluster_0"	"Cluster_4"	27
+"Original CellChat"	"Cluster_1"	"Cluster_4"	19
+"Original CellChat"	"Cluster_2"	"Cluster_4"	46
+"Original CellChat"	"Cluster_3"	"Cluster_4"	29
+"Original CellChat"	"Cluster_4"	"Cluster_4"	30
+"Original CellChat"	"Cluster_5"	"Cluster_4"	38
+"Original CellChat"	"Cluster_6"	"Cluster_4"	33
+"Original CellChat"	"Cluster_7"	"Cluster_4"	22
+"Original CellChat"	"Cluster_8"	"Cluster_4"	35
+"Original CellChat"	"Cluster_0"	"Cluster_5"	18
+"Original CellChat"	"Cluster_1"	"Cluster_5"	6
+"Original CellChat"	"Cluster_2"	"Cluster_5"	16
+"Original CellChat"	"Cluster_3"	"Cluster_5"	27
+"Original CellChat"	"Cluster_4"	"Cluster_5"	24
+"Original CellChat"	"Cluster_5"	"Cluster_5"	13
+"Original CellChat"	"Cluster_6"	"Cluster_5"	39
+"Original CellChat"	"Cluster_7"	"Cluster_5"	12
+"Original CellChat"	"Cluster_8"	"Cluster_5"	35
+"Original CellChat"	"Cluster_0"	"Cluster_6"	29
+"Original CellChat"	"Cluster_1"	"Cluster_6"	29
+"Original CellChat"	"Cluster_2"	"Cluster_6"	32
+"Original CellChat"	"Cluster_3"	"Cluster_6"	29
+"Original CellChat"	"Cluster_4"	"Cluster_6"	42
+"Original CellChat"	"Cluster_5"	"Cluster_6"	33
+"Original CellChat"	"Cluster_6"	"Cluster_6"	66
+"Original CellChat"	"Cluster_7"	"Cluster_6"	33
+"Original CellChat"	"Cluster_8"	"Cluster_6"	47
+"Original CellChat"	"Cluster_0"	"Cluster_7"	16
+"Original CellChat"	"Cluster_1"	"Cluster_7"	3
+"Original CellChat"	"Cluster_2"	"Cluster_7"	19
+"Original CellChat"	"Cluster_3"	"Cluster_7"	32
+"Original CellChat"	"Cluster_4"	"Cluster_7"	27
+"Original CellChat"	"Cluster_5"	"Cluster_7"	18
+"Original CellChat"	"Cluster_6"	"Cluster_7"	43
+"Original CellChat"	"Cluster_7"	"Cluster_7"	7
+"Original CellChat"	"Cluster_8"	"Cluster_7"	28
+"Original CellChat"	"Cluster_0"	"Cluster_8"	21
+"Original CellChat"	"Cluster_1"	"Cluster_8"	15
+"Original CellChat"	"Cluster_2"	"Cluster_8"	15
+"Original CellChat"	"Cluster_3"	"Cluster_8"	25
+"Original CellChat"	"Cluster_4"	"Cluster_8"	29
+"Original CellChat"	"Cluster_5"	"Cluster_8"	20
+"Original CellChat"	"Cluster_6"	"Cluster_8"	37
+"Original CellChat"	"Cluster_7"	"Cluster_8"	15
+"Original CellChat"	"Cluster_8"	"Cluster_8"	33
+"CellChatESS"	"Cluster_0"	"Cluster_0"	28
+"CellChatESS"	"Cluster_1"	"Cluster_0"	12
+"CellChatESS"	"Cluster_2"	"Cluster_0"	20
+"CellChatESS"	"Cluster_3"	"Cluster_0"	38
+"CellChatESS"	"Cluster_4"	"Cluster_0"	23
+"CellChatESS"	"Cluster_5"	"Cluster_0"	16
+"CellChatESS"	"Cluster_6"	"Cluster_0"	36
+"CellChatESS"	"Cluster_7"	"Cluster_0"	10
+"CellChatESS"	"Cluster_8"	"Cluster_0"	27
+"CellChatESS"	"Cluster_0"	"Cluster_1"	34
+"CellChatESS"	"Cluster_1"	"Cluster_1"	17
+"CellChatESS"	"Cluster_2"	"Cluster_1"	29
+"CellChatESS"	"Cluster_3"	"Cluster_1"	44
+"CellChatESS"	"Cluster_4"	"Cluster_1"	29
+"CellChatESS"	"Cluster_5"	"Cluster_1"	24
+"CellChatESS"	"Cluster_6"	"Cluster_1"	38
+"CellChatESS"	"Cluster_7"	"Cluster_1"	13
+"CellChatESS"	"Cluster_8"	"Cluster_1"	32
+"CellChatESS"	"Cluster_0"	"Cluster_2"	38
+"CellChatESS"	"Cluster_1"	"Cluster_2"	25
+"CellChatESS"	"Cluster_2"	"Cluster_2"	43
+"CellChatESS"	"Cluster_3"	"Cluster_2"	48
+"CellChatESS"	"Cluster_4"	"Cluster_2"	33
+"CellChatESS"	"Cluster_5"	"Cluster_2"	31
+"CellChatESS"	"Cluster_6"	"Cluster_2"	38
+"CellChatESS"	"Cluster_7"	"Cluster_2"	21
+"CellChatESS"	"Cluster_8"	"Cluster_2"	29
+"CellChatESS"	"Cluster_0"	"Cluster_3"	39
+"CellChatESS"	"Cluster_1"	"Cluster_3"	31
+"CellChatESS"	"Cluster_2"	"Cluster_3"	52
+"CellChatESS"	"Cluster_3"	"Cluster_3"	47
+"CellChatESS"	"Cluster_4"	"Cluster_3"	43
+"CellChatESS"	"Cluster_5"	"Cluster_3"	41
+"CellChatESS"	"Cluster_6"	"Cluster_3"	38
+"CellChatESS"	"Cluster_7"	"Cluster_3"	32
+"CellChatESS"	"Cluster_8"	"Cluster_3"	38
+"CellChatESS"	"Cluster_0"	"Cluster_4"	27
+"CellChatESS"	"Cluster_1"	"Cluster_4"	19
+"CellChatESS"	"Cluster_2"	"Cluster_4"	46
+"CellChatESS"	"Cluster_3"	"Cluster_4"	29
+"CellChatESS"	"Cluster_4"	"Cluster_4"	30
+"CellChatESS"	"Cluster_5"	"Cluster_4"	38
+"CellChatESS"	"Cluster_6"	"Cluster_4"	33
+"CellChatESS"	"Cluster_7"	"Cluster_4"	22
+"CellChatESS"	"Cluster_8"	"Cluster_4"	35
+"CellChatESS"	"Cluster_0"	"Cluster_5"	18
+"CellChatESS"	"Cluster_1"	"Cluster_5"	6
+"CellChatESS"	"Cluster_2"	"Cluster_5"	16
+"CellChatESS"	"Cluster_3"	"Cluster_5"	27
+"CellChatESS"	"Cluster_4"	"Cluster_5"	24
+"CellChatESS"	"Cluster_5"	"Cluster_5"	13
+"CellChatESS"	"Cluster_6"	"Cluster_5"	39
+"CellChatESS"	"Cluster_7"	"Cluster_5"	12
+"CellChatESS"	"Cluster_8"	"Cluster_5"	35
+"CellChatESS"	"Cluster_0"	"Cluster_6"	29
+"CellChatESS"	"Cluster_1"	"Cluster_6"	29
+"CellChatESS"	"Cluster_2"	"Cluster_6"	32
+"CellChatESS"	"Cluster_3"	"Cluster_6"	29
+"CellChatESS"	"Cluster_4"	"Cluster_6"	42
+"CellChatESS"	"Cluster_5"	"Cluster_6"	33
+"CellChatESS"	"Cluster_6"	"Cluster_6"	66
+"CellChatESS"	"Cluster_7"	"Cluster_6"	33
+"CellChatESS"	"Cluster_8"	"Cluster_6"	47
+"CellChatESS"	"Cluster_0"	"Cluster_7"	16
+"CellChatESS"	"Cluster_1"	"Cluster_7"	3
+"CellChatESS"	"Cluster_2"	"Cluster_7"	19
+"CellChatESS"	"Cluster_3"	"Cluster_7"	32
+"CellChatESS"	"Cluster_4"	"Cluster_7"	27
+"CellChatESS"	"Cluster_5"	"Cluster_7"	18
+"CellChatESS"	"Cluster_6"	"Cluster_7"	43
+"CellChatESS"	"Cluster_7"	"Cluster_7"	7
+"CellChatESS"	"Cluster_8"	"Cluster_7"	28
+"CellChatESS"	"Cluster_0"	"Cluster_8"	21
+"CellChatESS"	"Cluster_1"	"Cluster_8"	15
+"CellChatESS"	"Cluster_2"	"Cluster_8"	15
+"CellChatESS"	"Cluster_3"	"Cluster_8"	25
+"CellChatESS"	"Cluster_4"	"Cluster_8"	29
+"CellChatESS"	"Cluster_5"	"Cluster_8"	20
+"CellChatESS"	"Cluster_6"	"Cluster_8"	37
+"CellChatESS"	"Cluster_7"	"Cluster_8"	15
+"CellChatESS"	"Cluster_8"	"Cluster_8"	33

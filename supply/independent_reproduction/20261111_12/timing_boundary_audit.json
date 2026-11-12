@@ -1,0 +1,150 @@
+{
+  "核查时间": "2026-11-12T23:06:27+08:00",
+  "服务器": "reproduction_server_20261111",
+  "本轮独立复现目录": "/data/dzf/CellChatESS_reproduction_20261111_XBLoQr",
+  "操作范围": "只读服务器证据，本文件保存在本地，未修改服务器、运行结果或稿件。",
+  "证据路径": {
+    "旧运行归档": "/data/dzf/CellChatESS_reproduction_20261111_XBLoQr/repository/supply/xenium",
+    "本轮运行": "/data/dzf/CellChatESS_reproduction_20261111_XBLoQr/results/xenium",
+    "旧运行实际计时脚本": "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/reproduction/run_xenium_paired_worker.R",
+    "本轮实际计时脚本": "/data/dzf/CellChatESS_reproduction_20261111_XBLoQr/repository/supply/xenium/scripts/run_xenium_paired_worker.R",
+    "每种方法每次运行所核对文件": [
+      "command.json",
+      "run_metadata.json",
+      "stage_events.tsv",
+      "active_compute_function.R",
+      "upstream_function_identity.tsv",
+      "thread_environment.txt",
+      "external_software_versions.txt",
+      "sessionInfo_before.txt"
+    ]
+  },
+  "计时脚本": {
+    "旧新脚本字节完全一致": true,
+    "两份脚本共同SHA256": "857f712c4647db3e2e3399ecf4a992b4db13c13dea2d41153d11decdded18b81",
+    "边界行号": {
+      "计时前gc": 170,
+      "独立记录before_inference": 171,
+      "推断elapsed计时开始": 173,
+      "原始CellChat调用": 175,
+      "ESS调用": 178,
+      "推断elapsed计时结束": 182,
+      "独立记录after_inference": 185,
+      "聚合elapsed计时开始": 197,
+      "aggregateNet调用": 198,
+      "聚合elapsed计时结束": 199,
+      "结果保存saveRDS": 208
+    },
+    "推断耗时所覆盖范围": "各自完整推断函数调用，包含函数内部转换和初始化。",
+    "推断计时之外的操作": [
+      "进程启动",
+      "包加载",
+      "输入读取和检查",
+      "worker在第170行执行的gc",
+      "aggregateNet",
+      "结果保存"
+    ],
+    "全进程计时": "旧新command.json均为/usr/bin/time -v包裹Rscript --vanilla和同一worker，从进程启动到退出，包含输入检查、推断、聚合与gzip保存。"
+  },
+  "软件和输入比较": {
+    "输入SHA256相同": "cc6155a5de127ba34b8a26e7f69e7bffc704448f976107253711623d2a88de37",
+    "输入内容与身份逐字段相同": [
+      "cells",
+      "signaling_genes",
+      "groups",
+      "n_LR",
+      "expression_matrix_file_bytes",
+      "expression_matrix_object_bytes",
+      "prepared_CellChat_object_bytes",
+      "cell_identifiers_and_group_labels_aligned",
+      "database_serialized_sha256",
+      "LRsig_serialized_sha256",
+      "cell_names_sha256",
+      "cell_group_labels_sha256",
+      "group_order_sha256",
+      "LR_order_sha256"
+    ],
+    "两种方法各自旧新参数完全一致": true,
+    "共同参数": {
+      "type": "triMean",
+      "raw.use": true,
+      "population.size": false,
+      "nboot": 100,
+      "seed.use": 1,
+      "Kh": 0.5,
+      "n": 1,
+      "threads": 1,
+      "future_workers": 1
+    },
+    "ESS参数algorithm": "ess",
+    "ESS实际使用线程旧新均为": 1,
+    "推断后随机数状态SHA256相同": "1209379031938cd5c48726c3ec978d0f7e378df9c44ab7b6febdd3081e6865a2",
+    "旧新相同环境项": [
+      "package_versions",
+      "rng_kind_before_call",
+      "blas_lapack",
+      "r_version",
+      "platform"
+    ],
+    "下列文件逐字节相同": [
+      "active_compute_function.R",
+      "upstream_function_identity.tsv",
+      "thread_environment.txt",
+      "external_software_versions.txt",
+      "sessionInfo_before.txt"
+    ],
+    "原始CellChat实际函数体SHA256相同": "594e2515bd0dba323ccdc3c05702c4bb57c93e7995a029cdad5f9347a2c126e9",
+    "ESS实际R函数体SHA256相同": "575adea06106cbcdcff5291553c4d0e635e09d3b02d8f4d9e341447bb3f796c5",
+    "原始CellChat源码SHA256相同": "edf75f668a1527207c0d1a89316416becbbf7977a28f7226621d661366bd2cfe",
+    "ESS_R源码SHA256相同": "ef6a07988481361a83df5fd8f3db2c693c59681877d9391e0853d03e69a4acda",
+    "ESS_DLL_SHA256相同": "c46577016d28829e5dcd1c694b3f185a762a6f925bf05cfe0721981030085752",
+    "metadata内source_function_identity的差异字段": "源码路径、安装DLL路径变化，函数体、源码与DLL哈希未变。"
+  },
+  "内部计时与独立阶段计时交叉核对": [
+    {
+      "方法": "原始CellChat",
+      "旧运行": {
+        "内部推断耗时_秒": 17186.512,
+        "独立阶段推断耗时_秒": 17186.513267993927,
+        "独立阶段减内部计时_秒": 0.0012679939281952102,
+        "内部聚合耗时_秒": 385.509,
+        "独立阶段聚合耗时_秒": 385.51020789146423,
+        "独立聚合阶段减内部计时_秒": 0.0012078914642188465
+      },
+      "本轮运行": {
+        "内部推断耗时_秒": 17673.659,
+        "独立阶段推断耗时_秒": 17673.65946507454,
+        "独立阶段减内部计时_秒": 0.0004650745395338163,
+        "内部聚合耗时_秒": 420.818,
+        "独立阶段聚合耗时_秒": 420.81912207603455,
+        "独立聚合阶段减内部计时_秒": 0.0011220760345622693
+      },
+      "本轮推断耗时相对旧运行变化_百分比": 2.8344727539828973
+    },
+    {
+      "方法": "CellChatESS",
+      "旧运行": {
+        "内部推断耗时_秒": 1282.588,
+        "独立阶段推断耗时_秒": 1282.588079214096,
+        "独立阶段减内部计时_秒": 7.921409610389674e-05,
+        "内部聚合耗时_秒": 473.844,
+        "独立阶段聚合耗时_秒": 473.84408617019653,
+        "独立聚合阶段减内部计时_秒": 8.617019653911484e-05
+      },
+      "本轮运行": {
+        "内部推断耗时_秒": 1717.707,
+        "独立阶段推断耗时_秒": 1717.708065032959,
+        "独立阶段减内部计时_秒": 0.0010650329588770546,
+        "内部聚合耗时_秒": 550.919,
+        "独立阶段聚合耗时_秒": 550.9184150695801,
+        "独立聚合阶段减内部计时_秒": -0.0005849304199045946
+      },
+      "本轮推断耗时相对旧运行变化_百分比": 33.9250796046743
+    }
+  ],
+  "本文件未核查的事项": [
+    "历史运行时其他作业的CPU调度情况",
+    "历史运行时CPU频率、NUMA位置和内存带宽",
+    "耗时变化的唯一原因"
+  ]
+}

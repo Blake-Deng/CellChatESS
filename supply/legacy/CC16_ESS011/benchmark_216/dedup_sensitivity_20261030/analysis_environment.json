@@ -1,0 +1,7 @@
+{
+  "python": "3.13.13",
+  "pandas": "3.0.5",
+  "numpy": "2.4.6",
+  "no_inference_or_timing_rerun": true,
+  "original_bootstrap_all_10000_resamples_verified": true
+}

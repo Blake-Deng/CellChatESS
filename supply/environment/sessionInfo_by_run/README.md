@@ -1,0 +1,1 @@
+The server file manifest maps each original before/after sessionInfo path to its exact bytes and SHA256. There are 432 original-versus-ESS method processes and 576 three-method processes. Each shared byte stream is stored once under contents/.

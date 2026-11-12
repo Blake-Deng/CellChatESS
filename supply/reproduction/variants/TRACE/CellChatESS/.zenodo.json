@@ -1,0 +1,28 @@
+{
+  "title": "CellChatESS: Efficient Signal Streaming for CellChat inference",
+  "upload_type": "software",
+  "description": "CellChatESS 0.2.2 release candidate for triMean-based non-spatial CellChat inference. The revised core study uses pinned CellChat 2.2.0.9001 and direct AutoZyme comparison. Includes the direct single-effective-gene expression path, finite non-negative input validation, and optional OpenMP. Historical 1.6.1/0.1.1 evidence is tracked separately. Deposition is pending author review.",
+  "creators": [
+    {
+      "name": "Deng, Zifeng",
+      "affiliation": "Hainan Bielefeld University of Applied Sciences"
+    }
+  ],
+  "version": "0.2.2",
+  "license": "GPL-3.0",
+  "keywords": [
+    "CellChat",
+    "cell-cell communication",
+    "Rcpp",
+    "Efficient Signal Streaming",
+    "single-cell RNA sequencing",
+    "Xenium"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Blake-Deng/CellChatESS",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

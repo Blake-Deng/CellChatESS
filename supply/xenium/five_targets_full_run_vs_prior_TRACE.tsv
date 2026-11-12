@@ -1,0 +1,6 @@
+lr_name	source_group	target_group	prior_trace_target_found	original_observed_probability_hex_matches	ESS_observed_probability_hex_matches	original_pvalue_matches	ESS_pvalue_matches
+CSF1_CSF1R	Group_Grid_3_32	Group_Grid_12_50	True	True	True	True	True
+LAMA3_CD44	Group_Grid_17_26	Group_Grid_2_45	True	True	True	True	True
+LAMA3_CD44	Group_Grid_25_16	Group_Grid_2_45	True	True	True	True	True
+LAMC1_CD44	Group_Grid_12_50	Group_Grid_10_19	True	True	True	True	True
+LAMC2_CD44	Group_Grid_12_50	Group_Grid_10_19	True	True	True	True	True

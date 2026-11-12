@@ -1,0 +1,12 @@
+result	figures	CellChat	CellChatESS	AutoZyme	build	scope	candidate_commit
+Primary216	Figure1A,F;R1A;S_A/B/K	2.2.0.9001	0.2.2	none	production	216/432	139a61c33d4c09568f48f4afd0a16dc57bb22f4f
+Three-method192	Figure1B,G,H;R1B;S_E/K	2.2.0.9001	0.2.2	0.3.1	production,AutoZyme activation	192/576	139a61c33d4c09568f48f4afd0a16dc57bb22f4f
+A0-A5	Figure1C;S_C;TableR1	2.2.0.9001	0.2.2	none	A1R-only;A2dense;A3no-cache/no-prune;A4no-prune;A5production	18validation+54timing	139a61c33d4c09568f48f4afd0a16dc57bb22f4f
+Maximum retention A4/A5	R1C;S_D	2.2.0.9001	0.2.2	none	controlled A4 /productionA5	3validation+6timing	139a61c33d4c09568f48f4afd0a16dc57bb22f4f
+Earlier rep1 retention test	S_D2	2.2.0.9001	0.2.2	none	controlled A4 /productionA5	retained separately;8.645%	139a61c33d4c09568f48f4afd0a16dc57bb22f4f
+Structure/guards	S_F	1.6.1 and2.2.0.9001	0.2.2	none	production	26+5each	139a61c33d4c09568f48f4afd0a16dc57bb22f4f
+Xenium targettrace	S_G	1.6.1 and2.2.0.9001	0.2.2	none	TRACE	500each	139a61c33d4c09568f48f4afd0a16dc57bb22f4f
+Xenium resources	Figure1I;R1D;S_H;TableR2	2.2.0.9001	0.2.2	none	PROFILE	627LR	139a61c33d4c09568f48f4afd0a16dc57bb22f4f
+OpenMP	parallel validation	1.6.1 and2.2.0.9001	0.2.2	none	production OpenMP+teamprobe	actualteam4	139a61c33d4c09568f48f4afd0a16dc57bb22f4f
+Historical benchmark	historicalSupplement	1.6.1	0.1.1	historical only	archived	216notnew	historical/unconfirmed
+Historical biologicalobjects	Figure1D/E/J	archived1.6.1reference	unable to confirm	none	sparse_stream savedobject	K9;no relabel	historical/unconfirmed

@@ -1,0 +1,10 @@
+{
+  "method": "original",
+  "status": "COMPLETED",
+  "exit_code": 0,
+  "safety_stop_reason": null,
+  "elapsed_sec": 18096.38903691899,
+  "R_pid": 580026,
+  "MemAvailable_GiB_at_end": 728.5182800292969,
+  "result_rds_exists": true
+}

@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETED",
+  "method_processes_completed": 432,
+  "full_run": true,
+  "baseline": "CellChat 2.2.0.9001",
+  "failures": [],
+  "attempts": [
+    "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/results/new/primary216",
+    "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/results/new/primary216_continuation_01"
+  ]
+}

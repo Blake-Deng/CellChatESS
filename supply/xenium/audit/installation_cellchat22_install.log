@@ -1,0 +1,575 @@
+* installing *source* package ‘CellChat’ ...
+** this is package ‘CellChat’ version ‘2.2.0.9001’
+** using staged installation
+** libs
+using C++ compiler: ‘x86_64-conda-linux-gnu-c++ (conda-forge gcc 15.2.0-19) 15.2.0’
+x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/home/dzf/miniforge3/envs/cellchat-acceleration/lib/R/include" -DNDEBUG  -I'/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/Rcpp/include' -I'/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /home/dzf/miniforge3/envs/cellchat-acceleration/include -I/home/dzf/miniforge3/envs/cellchat-acceleration/include -Wl,-rpath-link,/home/dzf/miniforge3/envs/cellchat-acceleration/lib    -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /home/dzf/miniforge3/envs/cellchat-acceleration/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/home/dzf/miniforge3/envs/cellchat-acceleration=/usr/local/src/conda-prefix   -c CellChat_Rcpp.cpp -o CellChat_Rcpp.o
+x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/home/dzf/miniforge3/envs/cellchat-acceleration/lib/R/include" -DNDEBUG  -I'/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/Rcpp/include' -I'/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /home/dzf/miniforge3/envs/cellchat-acceleration/include -I/home/dzf/miniforge3/envs/cellchat-acceleration/include -Wl,-rpath-link,/home/dzf/miniforge3/envs/cellchat-acceleration/lib    -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /home/dzf/miniforge3/envs/cellchat-acceleration/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/home/dzf/miniforge3/envs/cellchat-acceleration=/usr/local/src/conda-prefix   -c RcppExports.cpp -o RcppExports.o
+In file included from /data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/Core:205,
+                 from /data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/Dense:1,
+                 from /data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/RcppEigenForward.h:28,
+                 from /data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/RcppEigen.h:25,
+                 from CellChat_Rcpp.cpp:1:
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:46:40: warning: ignoring attributes on template argument '__m128i' [-Wignored-attributes]
+   46 | typedef eigen_packet_wrapper<__m128i, 0> Packet4i;
+      |                                        ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:47:40: warning: ignoring attributes on template argument '__m128i' [-Wignored-attributes]
+   47 | typedef eigen_packet_wrapper<__m128i, 1> Packet16b;
+      |                                        ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:49:39: warning: ignoring attributes on template argument '__m128' [-Wignored-attributes]
+   49 | template<> struct is_arithmetic<__m128>  { enum { value = true }; };
+      |                                       ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:50:40: warning: ignoring attributes on template argument '__m128i' [-Wignored-attributes]
+   50 | template<> struct is_arithmetic<__m128i> { enum { value = true }; };
+      |                                        ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:51:40: warning: ignoring attributes on template argument '__m128d' [-Wignored-attributes]
+   51 | template<> struct is_arithmetic<__m128d> { enum { value = true }; };
+      |                                        ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:222:43: warning: ignoring attributes on template argument 'Eigen::internal::Packet4f' {aka '__m128'} [-Wignored-attributes]
+  222 | template<> struct unpacket_traits<Packet4f> {
+      |                                           ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:228:43: warning: ignoring attributes on template argument 'Eigen::internal::Packet2d' {aka '__m128d'} [-Wignored-attributes]
+  228 | template<> struct unpacket_traits<Packet2d> {
+      |                                           ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:1124:34: warning: ignoring attributes on template argument 'Eigen::internal::Packet4f' {aka '__m128'} [-Wignored-attributes]
+ 1124 | ptranspose(PacketBlock<Packet4f,4>& kernel) {
+      |                                  ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:1129:34: warning: ignoring attributes on template argument 'Eigen::internal::Packet2d' {aka '__m128d'} [-Wignored-attributes]
+ 1129 | ptranspose(PacketBlock<Packet2d,2>& kernel) {
+      |                                  ^
+In file included from /data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/Core:174:
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/Default/ConjHelper.h:16:60: warning: ignoring attributes on template argument 'Eigen::internal::Packet4f' {aka '__m128'} [-Wignored-attributes]
+   16 |   struct conj_helper<PACKET_REAL, PACKET_CPLX, false, false> {          \
+      |                                                            ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/Complex.h:173:1: note: in expansion of macro 'EIGEN_MAKE_CONJ_HELPER_CPLX_REAL'
+  173 | EIGEN_MAKE_CONJ_HELPER_CPLX_REAL(Packet2cf,Packet4f)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/Default/ConjHelper.h:29:60: warning: ignoring attributes on template argument 'Eigen::internal::Packet4f' {aka '__m128'} [-Wignored-attributes]
+   29 |   struct conj_helper<PACKET_CPLX, PACKET_REAL, false, false> {          \
+      |                                                            ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/Complex.h:173:1: note: in expansion of macro 'EIGEN_MAKE_CONJ_HELPER_CPLX_REAL'
+  173 | EIGEN_MAKE_CONJ_HELPER_CPLX_REAL(Packet2cf,Packet4f)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/Core:205,
+                 from /data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/Dense:1,
+                 from /data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/RcppEigenForward.h:28,
+                 from /data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/RcppEigen.h:25,
+                 from RcppExports.cpp:4:
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:46:40: warning: ignoring attributes on template argument '__m128i' [-Wignored-attributes]
+   46 | typedef eigen_packet_wrapper<__m128i, 0> Packet4i;
+      |                                        ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:47:40: warning: ignoring attributes on template argument '__m128i' [-Wignored-attributes]
+   47 | typedef eigen_packet_wrapper<__m128i, 1> Packet16b;
+      |                                        ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:49:39: warning: ignoring attributes on template argument '__m128' [-Wignored-attributes]
+   49 | template<> struct is_arithmetic<__m128>  { enum { value = true }; };
+      |                                       ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:50:40: warning: ignoring attributes on template argument '__m128i' [-Wignored-attributes]
+   50 | template<> struct is_arithmetic<__m128i> { enum { value = true }; };
+      |                                        ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:51:40: warning: ignoring attributes on template argument '__m128d' [-Wignored-attributes]
+   51 | template<> struct is_arithmetic<__m128d> { enum { value = true }; };
+      |                                        ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/Default/ConjHelper.h:16:60: warning: ignoring attributes on template argument 'Eigen::internal::Packet2d' {aka '__m128d'} [-Wignored-attributes]
+   16 |   struct conj_helper<PACKET_REAL, PACKET_CPLX, false, false> {          \
+      |                                                            ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/Complex.h:298:1: note: in expansion of macro 'EIGEN_MAKE_CONJ_HELPER_CPLX_REAL'
+  298 | EIGEN_MAKE_CONJ_HELPER_CPLX_REAL(Packet1cd,Packet2d)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/Default/ConjHelper.h:29:60: warning: ignoring attributes on template argument 'Eigen::internal::Packet2d' {aka '__m128d'} [-Wignored-attributes]
+   29 |   struct conj_helper<PACKET_CPLX, PACKET_REAL, false, false> {          \
+      |                                                            ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/Complex.h:298:1: note: in expansion of macro 'EIGEN_MAKE_CONJ_HELPER_CPLX_REAL'
+  298 | EIGEN_MAKE_CONJ_HELPER_CPLX_REAL(Packet1cd,Packet2d)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:222:43: warning: ignoring attributes on template argument 'Eigen::internal::Packet4f' {aka '__m128'} [-Wignored-attributes]
+  222 | template<> struct unpacket_traits<Packet4f> {
+      |                                           ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:228:43: warning: ignoring attributes on template argument 'Eigen::internal::Packet2d' {aka '__m128d'} [-Wignored-attributes]
+  228 | template<> struct unpacket_traits<Packet2d> {
+      |                                           ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:1124:34: warning: ignoring attributes on template argument 'Eigen::internal::Packet4f' {aka '__m128'} [-Wignored-attributes]
+ 1124 | ptranspose(PacketBlock<Packet4f,4>& kernel) {
+      |                                  ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:1129:34: warning: ignoring attributes on template argument 'Eigen::internal::Packet2d' {aka '__m128d'} [-Wignored-attributes]
+ 1129 | ptranspose(PacketBlock<Packet2d,2>& kernel) {
+      |                                  ^
+In file included from /data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/Core:174:
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/Default/ConjHelper.h:16:60: warning: ignoring attributes on template argument 'Eigen::internal::Packet4f' {aka '__m128'} [-Wignored-attributes]
+   16 |   struct conj_helper<PACKET_REAL, PACKET_CPLX, false, false> {          \
+      |                                                            ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/Complex.h:173:1: note: in expansion of macro 'EIGEN_MAKE_CONJ_HELPER_CPLX_REAL'
+  173 | EIGEN_MAKE_CONJ_HELPER_CPLX_REAL(Packet2cf,Packet4f)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/Default/ConjHelper.h:29:60: warning: ignoring attributes on template argument 'Eigen::internal::Packet4f' {aka '__m128'} [-Wignored-attributes]
+   29 |   struct conj_helper<PACKET_CPLX, PACKET_REAL, false, false> {          \
+      |                                                            ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/Complex.h:173:1: note: in expansion of macro 'EIGEN_MAKE_CONJ_HELPER_CPLX_REAL'
+  173 | EIGEN_MAKE_CONJ_HELPER_CPLX_REAL(Packet2cf,Packet4f)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/Default/ConjHelper.h:16:60: warning: ignoring attributes on template argument 'Eigen::internal::Packet2d' {aka '__m128d'} [-Wignored-attributes]
+   16 |   struct conj_helper<PACKET_REAL, PACKET_CPLX, false, false> {          \
+      |                                                            ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/Complex.h:298:1: note: in expansion of macro 'EIGEN_MAKE_CONJ_HELPER_CPLX_REAL'
+  298 | EIGEN_MAKE_CONJ_HELPER_CPLX_REAL(Packet1cd,Packet2d)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/Default/ConjHelper.h:29:60: warning: ignoring attributes on template argument 'Eigen::internal::Packet2d' {aka '__m128d'} [-Wignored-attributes]
+   29 |   struct conj_helper<PACKET_CPLX, PACKET_REAL, false, false> {          \
+      |                                                            ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/arch/SSE/Complex.h:298:1: note: in expansion of macro 'EIGEN_MAKE_CONJ_HELPER_CPLX_REAL'
+  298 | EIGEN_MAKE_CONJ_HELPER_CPLX_REAL(Packet1cd,Packet2d)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/Core:165:
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h: In instantiation of 'struct Eigen::internal::find_best_packet<float, 4>':
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/Matrix.h:22:57:   required from 'struct Eigen::internal::traits<Eigen::Matrix<float, 4, 1> >'
+   22 |   typedef typename find_best_packet<_Scalar,size>::type PacketScalar;
+      |                                                         ^~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:266:49:   required from 'struct Eigen::internal::traits<Eigen::Quaternion<float> >'
+  266 |     Alignment = internal::traits<Coefficients>::Alignment,
+      |                                                 ^~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Geometry/arch/Geometry_SIMD.h:24:46:   required from here
+   24 |     ResAlignment = traits<Quaternion<float> >::Alignment
+      |                                              ^~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:44: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<float>::type' {aka '__m128'} [-Wignored-attributes]
+  190 |          bool Stop = Size==Dynamic || (Size%unpacket_traits<PacketType>::size)==0 || is_same<PacketType,typename unpacket_traits<PacketType>::half>::value>
+      |                                       ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<float>::type' {aka '__m128'} [-Wignored-attributes]
+  190 |          bool Stop = Size==Dynamic || (Size%unpacket_traits<PacketType>::size)==0 || is_same<PacketType,typename unpacket_traits<PacketType>::half>::value>
+      |                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<float>::type' {aka '__m128'} [-Wignored-attributes]
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument 'Eigen::internal::unpacket_traits<__vector(4) float>::half' {aka '__m128'} [-Wignored-attributes]
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:208:88: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<float>::type' {aka '__m128'} [-Wignored-attributes]
+  208 |   typedef typename find_best_packet_helper<Size,typename packet_traits<T>::type>::type type;
+      |                                                                                        ^~~~
+In file included from /data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/Core:271:
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h: In instantiation of 'class Eigen::DenseCoeffsBase<Eigen::Matrix<float, 4, 1>, 0>':
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:302:7:   required from 'class Eigen::DenseCoeffsBase<Eigen::Matrix<float, 4, 1>, 1>'
+  302 | class DenseCoeffsBase<Derived, WriteAccessors> : public DenseCoeffsBase<Derived, ReadOnlyAccessors>
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:555:7:   required from 'class Eigen::DenseCoeffsBase<Eigen::Matrix<float, 4, 1>, 3>'
+  555 | class DenseCoeffsBase<Derived, DirectWriteAccessors>
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseBase.h:41:34:   required from 'class Eigen::DenseBase<Eigen::Matrix<float, 4, 1> >'
+   41 | template<typename Derived> class DenseBase
+      |                                  ^~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/MatrixBase.h:48:34:   required from 'class Eigen::MatrixBase<Eigen::Matrix<float, 4, 1> >'
+   48 | template<typename Derived> class MatrixBase
+      |                                  ^~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/PlainObjectBase.h:98:7:   required from 'class Eigen::PlainObjectBase<Eigen::Matrix<float, 4, 1> >'
+   98 | class PlainObjectBase : public internal::dense_xpr_base<Derived>::type
+      |       ^~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/Matrix.h:178:7:   required from 'class Eigen::Matrix<float, 4, 1>'
+  178 | class Matrix
+      |       ^~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:46:50:   required from 'class Eigen::QuaternionBase<Eigen::Quaternion<float> >'
+   46 |   typedef typename Coefficients::CoeffReturnType CoeffReturnType;
+      |                                                  ^~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:273:7:   required from 'class Eigen::Quaternion<float>'
+  273 | class Quaternion : public QuaternionBase<Quaternion<_Scalar,_Options> >
+      |       ^~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Geometry/arch/Geometry_SIMD.h:27:3:   required from here
+   27 |   {
+      |   ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:56:30: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<float>::type' {aka '__m128'} [-Wignored-attributes]
+   56 |                      >::type PacketReturnType;
+      |                              ^~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h: In instantiation of 'struct Eigen::internal::find_best_packet<double, 4>':
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/Matrix.h:22:57:   required from 'struct Eigen::internal::traits<Eigen::Matrix<double, 4, 1> >'
+   22 |   typedef typename find_best_packet<_Scalar,size>::type PacketScalar;
+      |                                                         ^~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:266:49:   required from 'struct Eigen::internal::traits<Eigen::Quaternion<double> >'
+  266 |     Alignment = internal::traits<Coefficients>::Alignment,
+      |                                                 ^~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Geometry/arch/Geometry_SIMD.h:98:47:   required from here
+   98 |     ResAlignment = traits<Quaternion<double> >::Alignment
+      |                                               ^~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:44: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+  190 |          bool Stop = Size==Dynamic || (Size%unpacket_traits<PacketType>::size)==0 || is_same<PacketType,typename unpacket_traits<PacketType>::half>::value>
+      |                                       ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+  190 |          bool Stop = Size==Dynamic || (Size%unpacket_traits<PacketType>::size)==0 || is_same<PacketType,typename unpacket_traits<PacketType>::half>::value>
+      |                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument 'Eigen::internal::unpacket_traits<__vector(2) double>::half' {aka '__m128d'} [-Wignored-attributes]
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:208:88: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+  208 |   typedef typename find_best_packet_helper<Size,typename packet_traits<T>::type>::type type;
+      |                                                                                        ^~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h: In instantiation of 'class Eigen::DenseCoeffsBase<Eigen::Matrix<double, 4, 1>, 0>':
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:302:7:   required from 'class Eigen::DenseCoeffsBase<Eigen::Matrix<double, 4, 1>, 1>'
+  302 | class DenseCoeffsBase<Derived, WriteAccessors> : public DenseCoeffsBase<Derived, ReadOnlyAccessors>
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:555:7:   required from 'class Eigen::DenseCoeffsBase<Eigen::Matrix<double, 4, 1>, 3>'
+  555 | class DenseCoeffsBase<Derived, DirectWriteAccessors>
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseBase.h:41:34:   required from 'class Eigen::DenseBase<Eigen::Matrix<double, 4, 1> >'
+   41 | template<typename Derived> class DenseBase
+      |                                  ^~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/MatrixBase.h:48:34:   required from 'class Eigen::MatrixBase<Eigen::Matrix<double, 4, 1> >'
+   48 | template<typename Derived> class MatrixBase
+      |                                  ^~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/PlainObjectBase.h:98:7:   required from 'class Eigen::PlainObjectBase<Eigen::Matrix<double, 4, 1> >'
+   98 | class PlainObjectBase : public internal::dense_xpr_base<Derived>::type
+      |       ^~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/Matrix.h:178:7:   required from 'class Eigen::Matrix<double, 4, 1>'
+  178 | class Matrix
+      |       ^~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:46:50:   required from 'class Eigen::QuaternionBase<Eigen::Quaternion<double> >'
+   46 |   typedef typename Coefficients::CoeffReturnType CoeffReturnType;
+      |                                                  ^~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:273:7:   required from 'class Eigen::Quaternion<double>'
+  273 | class Quaternion : public QuaternionBase<Quaternion<_Scalar,_Options> >
+      |       ^~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Geometry/arch/Geometry_SIMD.h:102:3:   required from here
+  102 |   {
+      |   ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:56:30: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+   56 |                      >::type PacketReturnType;
+      |                              ^~~~~~~~~~~~~~~~
+In file included from /data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/Core:165:
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h: In instantiation of 'struct Eigen::internal::find_best_packet<float, 4>':
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/Matrix.h:22:57:   required from 'struct Eigen::internal::traits<Eigen::Matrix<float, 4, 1> >'
+   22 |   typedef typename find_best_packet<_Scalar,size>::type PacketScalar;
+      |                                                         ^~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:266:49:   required from 'struct Eigen::internal::traits<Eigen::Quaternion<float> >'
+  266 |     Alignment = internal::traits<Coefficients>::Alignment,
+      |                                                 ^~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Geometry/arch/Geometry_SIMD.h:24:46:   required from here
+   24 |     ResAlignment = traits<Quaternion<float> >::Alignment
+      |                                              ^~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:44: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<float>::type' {aka '__m128'} [-Wignored-attributes]
+  190 |          bool Stop = Size==Dynamic || (Size%unpacket_traits<PacketType>::size)==0 || is_same<PacketType,typename unpacket_traits<PacketType>::half>::value>
+      |                                       ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<float>::type' {aka '__m128'} [-Wignored-attributes]
+  190 |          bool Stop = Size==Dynamic || (Size%unpacket_traits<PacketType>::size)==0 || is_same<PacketType,typename unpacket_traits<PacketType>::half>::value>
+      |                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<float>::type' {aka '__m128'} [-Wignored-attributes]
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument 'Eigen::internal::unpacket_traits<__vector(4) float>::half' {aka '__m128'} [-Wignored-attributes]
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:208:88: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<float>::type' {aka '__m128'} [-Wignored-attributes]
+  208 |   typedef typename find_best_packet_helper<Size,typename packet_traits<T>::type>::type type;
+      |                                                                                        ^~~~
+In file included from /data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/Core:271:
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h: In instantiation of 'class Eigen::DenseCoeffsBase<Eigen::Matrix<float, 4, 1>, 0>':
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:302:7:   required from 'class Eigen::DenseCoeffsBase<Eigen::Matrix<float, 4, 1>, 1>'
+  302 | class DenseCoeffsBase<Derived, WriteAccessors> : public DenseCoeffsBase<Derived, ReadOnlyAccessors>
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:555:7:   required from 'class Eigen::DenseCoeffsBase<Eigen::Matrix<float, 4, 1>, 3>'
+  555 | class DenseCoeffsBase<Derived, DirectWriteAccessors>
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseBase.h:41:34:   required from 'class Eigen::DenseBase<Eigen::Matrix<float, 4, 1> >'
+   41 | template<typename Derived> class DenseBase
+      |                                  ^~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/MatrixBase.h:48:34:   required from 'class Eigen::MatrixBase<Eigen::Matrix<float, 4, 1> >'
+   48 | template<typename Derived> class MatrixBase
+      |                                  ^~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/PlainObjectBase.h:98:7:   required from 'class Eigen::PlainObjectBase<Eigen::Matrix<float, 4, 1> >'
+   98 | class PlainObjectBase : public internal::dense_xpr_base<Derived>::type
+      |       ^~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/Matrix.h:178:7:   required from 'class Eigen::Matrix<float, 4, 1>'
+  178 | class Matrix
+      |       ^~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:46:50:   required from 'class Eigen::QuaternionBase<Eigen::Quaternion<float> >'
+   46 |   typedef typename Coefficients::CoeffReturnType CoeffReturnType;
+      |                                                  ^~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:273:7:   required from 'class Eigen::Quaternion<float>'
+  273 | class Quaternion : public QuaternionBase<Quaternion<_Scalar,_Options> >
+      |       ^~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Geometry/arch/Geometry_SIMD.h:27:3:   required from here
+   27 |   {
+      |   ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:56:30: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<float>::type' {aka '__m128'} [-Wignored-attributes]
+   56 |                      >::type PacketReturnType;
+      |                              ^~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h: In instantiation of 'struct Eigen::internal::find_best_packet<double, 4>':
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/Matrix.h:22:57:   required from 'struct Eigen::internal::traits<Eigen::Matrix<double, 4, 1> >'
+   22 |   typedef typename find_best_packet<_Scalar,size>::type PacketScalar;
+      |                                                         ^~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:266:49:   required from 'struct Eigen::internal::traits<Eigen::Quaternion<double> >'
+  266 |     Alignment = internal::traits<Coefficients>::Alignment,
+      |                                                 ^~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Geometry/arch/Geometry_SIMD.h:98:47:   required from here
+   98 |     ResAlignment = traits<Quaternion<double> >::Alignment
+      |                                               ^~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:44: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+  190 |          bool Stop = Size==Dynamic || (Size%unpacket_traits<PacketType>::size)==0 || is_same<PacketType,typename unpacket_traits<PacketType>::half>::value>
+      |                                       ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+  190 |          bool Stop = Size==Dynamic || (Size%unpacket_traits<PacketType>::size)==0 || is_same<PacketType,typename unpacket_traits<PacketType>::half>::value>
+      |                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument 'Eigen::internal::unpacket_traits<__vector(2) double>::half' {aka '__m128d'} [-Wignored-attributes]
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:208:88: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+  208 |   typedef typename find_best_packet_helper<Size,typename packet_traits<T>::type>::type type;
+      |                                                                                        ^~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h: In instantiation of 'class Eigen::DenseCoeffsBase<Eigen::Matrix<double, 4, 1>, 0>':
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:302:7:   required from 'class Eigen::DenseCoeffsBase<Eigen::Matrix<double, 4, 1>, 1>'
+  302 | class DenseCoeffsBase<Derived, WriteAccessors> : public DenseCoeffsBase<Derived, ReadOnlyAccessors>
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:555:7:   required from 'class Eigen::DenseCoeffsBase<Eigen::Matrix<double, 4, 1>, 3>'
+  555 | class DenseCoeffsBase<Derived, DirectWriteAccessors>
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseBase.h:41:34:   required from 'class Eigen::DenseBase<Eigen::Matrix<double, 4, 1> >'
+   41 | template<typename Derived> class DenseBase
+      |                                  ^~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/MatrixBase.h:48:34:   required from 'class Eigen::MatrixBase<Eigen::Matrix<double, 4, 1> >'
+   48 | template<typename Derived> class MatrixBase
+      |                                  ^~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/PlainObjectBase.h:98:7:   required from 'class Eigen::PlainObjectBase<Eigen::Matrix<double, 4, 1> >'
+   98 | class PlainObjectBase : public internal::dense_xpr_base<Derived>::type
+      |       ^~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/Matrix.h:178:7:   required from 'class Eigen::Matrix<double, 4, 1>'
+  178 | class Matrix
+      |       ^~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:46:50:   required from 'class Eigen::QuaternionBase<Eigen::Quaternion<double> >'
+   46 |   typedef typename Coefficients::CoeffReturnType CoeffReturnType;
+      |                                                  ^~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:273:7:   required from 'class Eigen::Quaternion<double>'
+  273 | class Quaternion : public QuaternionBase<Quaternion<_Scalar,_Options> >
+      |       ^~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Geometry/arch/Geometry_SIMD.h:102:3:   required from here
+  102 |   {
+      |   ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:56:30: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+   56 |                      >::type PacketReturnType;
+      |                              ^~~~~~~~~~~~~~~~
+In file included from /data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/SparseCore:37,
+                 from /data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/Sparse:26,
+                 from /data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/RcppEigenForward.h:29:
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseMatrixBase.h: In instantiation of 'class Eigen::SparseMatrixBase<Eigen::SparseMatrix<double, 0, int> >':
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseCompressedBase.h:36:7:   required from 'class Eigen::SparseCompressedBase<Eigen::SparseMatrix<double, 0, int> >'
+   36 | class SparseCompressedBase
+      |       ^~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseMatrix.h:96:7:   required from 'class Eigen::SparseMatrix<double, 0, int>'
+   96 | class SparseMatrix
+      |       ^~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/unsupported/Eigen/src/IterativeSolvers/ConstrainedConjGrad.h:61:25:   required from here
+   61 |   typedef Triplet<double> T;
+      |                         ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseMatrixBase.h:47:30: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+   47 |                      >::type PacketReturnType;
+      |                              ^~~~~~~~~~~~~~~~
+In file included from /data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/SparseCore:37,
+                 from /data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/Sparse:26,
+                 from /data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/RcppEigenForward.h:29:
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseMatrixBase.h: In instantiation of 'class Eigen::SparseMatrixBase<Eigen::SparseMatrix<double, 0, int> >':
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseCompressedBase.h:36:7:   required from 'class Eigen::SparseCompressedBase<Eigen::SparseMatrix<double, 0, int> >'
+   36 | class SparseCompressedBase
+      |       ^~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseMatrix.h:96:7:   required from 'class Eigen::SparseMatrix<double, 0, int>'
+   96 | class SparseMatrix
+      |       ^~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/unsupported/Eigen/src/IterativeSolvers/ConstrainedConjGrad.h:61:25:   required from here
+   61 |   typedef Triplet<double> T;
+      |                         ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseMatrixBase.h:47:30: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+   47 |                      >::type PacketReturnType;
+      |                              ^~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h: In instantiation of 'struct Eigen::internal::find_best_packet<double, -1>':
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/Matrix.h:22:57:   required from 'struct Eigen::internal::traits<Eigen::Matrix<double, -1, -1> >'
+   22 |   typedef typename find_best_packet<_Scalar,size>::type PacketScalar;
+      |                                                         ^~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/PlainObjectBase.h:98:7:   required from 'class Eigen::PlainObjectBase<Eigen::Matrix<double, -1, -1> >'
+   98 | class PlainObjectBase : public internal::dense_xpr_base<Derived>::type
+      |       ^~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/Matrix.h:178:7:   required from 'class Eigen::Matrix<double, -1, -1>'
+  178 | class Matrix
+      |       ^~~~~~
+CellChat_Rcpp.cpp:9:79:   required from here
+    9 | Eigen::SparseMatrix<double> ComputeSNN(Eigen::MatrixXd nn_ranked, double prune) {
+      |                                                                               ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:44: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+  190 |          bool Stop = Size==Dynamic || (Size%unpacket_traits<PacketType>::size)==0 || is_same<PacketType,typename unpacket_traits<PacketType>::half>::value>
+      |                                       ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+  190 |          bool Stop = Size==Dynamic || (Size%unpacket_traits<PacketType>::size)==0 || is_same<PacketType,typename unpacket_traits<PacketType>::half>::value>
+      |                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument 'Eigen::internal::unpacket_traits<__vector(2) double>::half' {aka '__m128d'} [-Wignored-attributes]
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:208:88: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+  208 |   typedef typename find_best_packet_helper<Size,typename packet_traits<T>::type>::type type;
+      |                                                                                        ^~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h: In instantiation of 'class Eigen::DenseCoeffsBase<Eigen::Matrix<double, -1, -1>, 0>':
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:302:7:   required from 'class Eigen::DenseCoeffsBase<Eigen::Matrix<double, -1, -1>, 1>'
+  302 | class DenseCoeffsBase<Derived, WriteAccessors> : public DenseCoeffsBase<Derived, ReadOnlyAccessors>
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:555:7:   required from 'class Eigen::DenseCoeffsBase<Eigen::Matrix<double, -1, -1>, 3>'
+  555 | class DenseCoeffsBase<Derived, DirectWriteAccessors>
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseBase.h:41:34:   required from 'class Eigen::DenseBase<Eigen::Matrix<double, -1, -1> >'
+   41 | template<typename Derived> class DenseBase
+      |                                  ^~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/MatrixBase.h:48:34:   required from 'class Eigen::MatrixBase<Eigen::Matrix<double, -1, -1> >'
+   48 | template<typename Derived> class MatrixBase
+      |                                  ^~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/PlainObjectBase.h:98:7:   required from 'class Eigen::PlainObjectBase<Eigen::Matrix<double, -1, -1> >'
+   98 | class PlainObjectBase : public internal::dense_xpr_base<Derived>::type
+      |       ^~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/Matrix.h:178:7:   required from 'class Eigen::Matrix<double, -1, -1>'
+  178 | class Matrix
+      |       ^~~~~~
+CellChat_Rcpp.cpp:9:79:   required from here
+    9 | Eigen::SparseMatrix<double> ComputeSNN(Eigen::MatrixXd nn_ranked, double prune) {
+      |                                                                               ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:56:30: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+   56 |                      >::type PacketReturnType;
+      |                              ^~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseMatrixBase.h: In instantiation of 'class Eigen::SparseMatrixBase<Eigen::Transpose<Eigen::SparseMatrix<double, 0, int> > >':
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseCompressedBase.h:36:7:   required from 'class Eigen::SparseCompressedBase<Eigen::Transpose<Eigen::SparseMatrix<double, 0, int> > >'
+   36 | class SparseCompressedBase
+      |       ^~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseTranspose.h:22:9:   required from 'class Eigen::internal::SparseTransposeImpl<Eigen::SparseMatrix<double, 0, int>, 1024>'
+   22 |   class SparseTransposeImpl<MatrixType,CompressedAccessBit>
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseTranspose.h:45:37:   required from 'class Eigen::TransposeImpl<Eigen::SparseMatrix<double, 0, int>, Eigen::Sparse>'
+   45 | template<typename MatrixType> class TransposeImpl<MatrixType,Sparse>
+      |                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/Transpose.h:52:37:   required from 'class Eigen::Transpose<Eigen::SparseMatrix<double, 0, int> >'
+   52 | template<typename MatrixType> class Transpose
+      |                                     ^~~~~~~~~
+CellChat_Rcpp.cpp:20:29:   required from here
+   20 |   SNN = SNN * (SNN.transpose());
+      |                ~~~~~~~~~~~~~^~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseMatrixBase.h:47:30: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+   47 |                      >::type PacketReturnType;
+      |                              ^~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseMatrixBase.h: In instantiation of 'class Eigen::SparseMatrixBase<Eigen::Product<Eigen::SparseMatrix<double, 0, int>, Eigen::Transpose<Eigen::SparseMatrix<double, 0, int> >, 2> >':
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/Product.h:145:7:   required from 'class Eigen::ProductImpl<Eigen::SparseMatrix<double, 0, int>, Eigen::Transpose<Eigen::SparseMatrix<double, 0, int> >, 2, Eigen::Sparse>'
+  145 | class ProductImpl : public internal::generic_xpr_base<Product<Lhs,Rhs,Option>, MatrixXpr, StorageKind>::type
+      |       ^~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/Product.h:71:7:   required from 'class Eigen::Product<Eigen::SparseMatrix<double, 0, int>, Eigen::Transpose<Eigen::SparseMatrix<double, 0, int> >, 2>'
+   71 | class Product : public ProductImpl<_Lhs,_Rhs,Option,
+      |       ^~~~~~~
+CellChat_Rcpp.cpp:20:31:   required from here
+   20 |   SNN = SNN * (SNN.transpose());
+      |                               ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseMatrixBase.h:47:30: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+   47 |                      >::type PacketReturnType;
+      |                              ^~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h: In instantiation of 'struct Eigen::internal::find_best_packet<double, -1>':
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/Matrix.h:22:57:   required from 'struct Eigen::internal::traits<Eigen::Matrix<double, -1, -1> >'
+   22 |   typedef typename find_best_packet<_Scalar,size>::type PacketScalar;
+      |                                                         ^~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/PlainObjectBase.h:98:7:   required from 'class Eigen::PlainObjectBase<Eigen::Matrix<double, -1, -1> >'
+   98 | class PlainObjectBase : public internal::dense_xpr_base<Derived>::type
+      |       ^~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/Matrix.h:178:7:   required from 'class Eigen::Matrix<double, -1, -1>'
+  178 | class Matrix
+      |       ^~~~~~
+RcppExports.cpp:22:61:   required from here
+   22 |     rcpp_result_gen = Rcpp::wrap(ComputeSNN(nn_ranked, prune));
+      |                                                             ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:44: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+  190 |          bool Stop = Size==Dynamic || (Size%unpacket_traits<PacketType>::size)==0 || is_same<PacketType,typename unpacket_traits<PacketType>::half>::value>
+      |                                       ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+  190 |          bool Stop = Size==Dynamic || (Size%unpacket_traits<PacketType>::size)==0 || is_same<PacketType,typename unpacket_traits<PacketType>::half>::value>
+      |                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument 'Eigen::internal::unpacket_traits<__vector(2) double>::half' {aka '__m128d'} [-Wignored-attributes]
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:208:88: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+  208 |   typedef typename find_best_packet_helper<Size,typename packet_traits<T>::type>::type type;
+      |                                                                                        ^~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h: In instantiation of 'class Eigen::DenseCoeffsBase<Eigen::Matrix<double, -1, -1>, 0>':
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:302:7:   required from 'class Eigen::DenseCoeffsBase<Eigen::Matrix<double, -1, -1>, 1>'
+  302 | class DenseCoeffsBase<Derived, WriteAccessors> : public DenseCoeffsBase<Derived, ReadOnlyAccessors>
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:555:7:   required from 'class Eigen::DenseCoeffsBase<Eigen::Matrix<double, -1, -1>, 3>'
+  555 | class DenseCoeffsBase<Derived, DirectWriteAccessors>
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseBase.h:41:34:   required from 'class Eigen::DenseBase<Eigen::Matrix<double, -1, -1> >'
+   41 | template<typename Derived> class DenseBase
+      |                                  ^~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/MatrixBase.h:48:34:   required from 'class Eigen::MatrixBase<Eigen::Matrix<double, -1, -1> >'
+   48 | template<typename Derived> class MatrixBase
+      |                                  ^~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/PlainObjectBase.h:98:7:   required from 'class Eigen::PlainObjectBase<Eigen::Matrix<double, -1, -1> >'
+   98 | class PlainObjectBase : public internal::dense_xpr_base<Derived>::type
+      |       ^~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/Matrix.h:178:7:   required from 'class Eigen::Matrix<double, -1, -1>'
+  178 | class Matrix
+      |       ^~~~~~
+RcppExports.cpp:22:61:   required from here
+   22 |     rcpp_result_gen = Rcpp::wrap(ComputeSNN(nn_ranked, prune));
+      |                                                             ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:56:30: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+   56 |                      >::type PacketReturnType;
+      |                              ^~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseMatrixBase.h: In instantiation of 'class Eigen::SparseMatrixBase<Eigen::SparseMatrix<double, 1, int> >':
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseCompressedBase.h:36:7:   required from 'class Eigen::SparseCompressedBase<Eigen::SparseMatrix<double, 1, int> >'
+   36 | class SparseCompressedBase
+      |       ^~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseMatrix.h:96:7:   required from 'class Eigen::SparseMatrix<double, 1, int>'
+   96 | class SparseMatrix
+      |       ^~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseMatrix.h:1040:66:   required from 'void Eigen::internal::set_from_triplets(const InputIterator&, const InputIterator&, SparseMatrixType&, DupFunctor) [with InputIterator = __gnu_cxx::__normal_iterator<Eigen::Triplet<double>*, std::vector<Eigen::Triplet<double> > >; SparseMatrixType = Eigen::SparseMatrix<double, 0, int>; DupFunctor = scalar_sum_op<double, double>]'
+ 1040 |   SparseMatrix<Scalar,IsRowMajor?ColMajor:RowMajor,StorageIndex> trMat(mat.rows(),mat.cols());
+      |                                                                  ^~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseMatrix.h:1110:92:   required from 'void Eigen::SparseMatrix<_Scalar, _Flags, _StorageIndex>::setFromTriplets(const InputIterators&, const InputIterators&) [with InputIterators = __gnu_cxx::__normal_iterator<Eigen::Triplet<double>*, std::vector<Eigen::Triplet<double> > >; _Scalar = double; int _Options = 0; _StorageIndex = int]'
+ 1110 |   internal::set_from_triplets<InputIterators, SparseMatrix<Scalar,_Options,_StorageIndex> >(begin, end, *this, internal::scalar_sum_op<Scalar,Scalar>());
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CellChat_Rcpp.cpp:19:22:   required from here
+   19 |   SNN.setFromTriplets(tripletList.begin(), tripletList.end());
+      |   ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseMatrixBase.h:47:30: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+   47 |                      >::type PacketReturnType;
+      |                              ^~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h: In instantiation of 'class Eigen::DenseCoeffsBase<Eigen::SparseMatrix<double, 1, int>, 0>':
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseCompressedBase.h:336:80:   required from 'struct Eigen::internal::evaluator<Eigen::SparseCompressedBase<Eigen::SparseMatrix<double, 1, int> > >'
+  336 |   typedef typename DenseCoeffsBase<Derived,ReadOnlyAccessors>::CoeffReturnType CoeffReturnType;
+      |                                                                                ^~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseMatrix.h:1505:8:   required from 'struct Eigen::internal::evaluator<Eigen::SparseMatrix<double, 1, int> >'
+ 1505 | struct evaluator<SparseMatrix<_Scalar,_Options,_StorageIndex> >
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseMatrix.h:1181:93:   required from 'Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex>& Eigen::SparseMatrix<_Scalar, _Flags, _StorageIndex>::operator=(const Eigen::SparseMatrixBase<OtherDerived>&) [with OtherDerived = Eigen::SparseMatrix<double, 1, int>; _Scalar = double; int _Options = 0; _StorageIndex = int]'
+ 1181 |   const bool needToTranspose = (Flags & RowMajorBit) != (internal::evaluator<OtherDerived>::Flags & RowMajorBit);
+      |                                                                                             ^~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseMatrix.h:1063:7:   required from 'void Eigen::internal::set_from_triplets(const InputIterator&, const InputIterator&, SparseMatrixType&, DupFunctor) [with InputIterator = __gnu_cxx::__normal_iterator<Eigen::Triplet<double>*, std::vector<Eigen::Triplet<double> > >; SparseMatrixType = Eigen::SparseMatrix<double, 0, int>; DupFunctor = scalar_sum_op<double, double>]'
+ 1063 |   mat = trMat;
+      |   ~~~~^~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseMatrix.h:1110:92:   required from 'void Eigen::SparseMatrix<_Scalar, _Flags, _StorageIndex>::setFromTriplets(const InputIterators&, const InputIterators&) [with InputIterators = __gnu_cxx::__normal_iterator<Eigen::Triplet<double>*, std::vector<Eigen::Triplet<double> > >; _Scalar = double; int _Options = 0; _StorageIndex = int]'
+ 1110 |   internal::set_from_triplets<InputIterators, SparseMatrix<Scalar,_Options,_StorageIndex> >(begin, end, *this, internal::scalar_sum_op<Scalar,Scalar>());
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CellChat_Rcpp.cpp:19:22:   required from here
+   19 |   SNN.setFromTriplets(tripletList.begin(), tripletList.end());
+      |   ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:56:30: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+   56 |                      >::type PacketReturnType;
+      |                              ^~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h: In instantiation of 'class Eigen::DenseCoeffsBase<Eigen::SparseMatrix<double, 0, int>, 0>':
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseCompressedBase.h:336:80:   required from 'struct Eigen::internal::evaluator<Eigen::SparseCompressedBase<Eigen::SparseMatrix<double, 0, int> > >'
+  336 |   typedef typename DenseCoeffsBase<Derived,ReadOnlyAccessors>::CoeffReturnType CoeffReturnType;
+      |                                                                                ^~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseMatrix.h:1505:8:   required from 'struct Eigen::internal::evaluator<Eigen::SparseMatrix<double, 0, int> >'
+ 1505 | struct evaluator<SparseMatrix<_Scalar,_Options,_StorageIndex> >
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseUtil.h:121:8:   required from 'struct Eigen::internal::plain_object_eval<Eigen::SparseMatrix<double, 0, int>, Eigen::Sparse>'
+  121 | struct plain_object_eval<T,Sparse>
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseProduct.h:71:53:   required from 'static void Eigen::internal::generic_product_impl<Lhs, Rhs, Eigen::SparseShape, Eigen::SparseShape, ProductType>::evalTo(Dest&, const Lhs&, const Rhs&, Eigen::SparseShape) [with Dest = Eigen::SparseMatrix<double, 0, int>; Lhs = Eigen::SparseMatrix<double, 0, int>; Rhs = Eigen::Transpose<Eigen::SparseMatrix<double, 0, int> >; int ProductType = 8]'
+   71 |     typedef typename nested_eval<Lhs,Dynamic>::type LhsNested;
+      |                                                     ^~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseProduct.h:43:11:   required from 'static void Eigen::internal::generic_product_impl<Lhs, Rhs, Eigen::SparseShape, Eigen::SparseShape, ProductType>::evalTo(Dest&, const Lhs&, const Rhs&) [with Dest = Eigen::SparseMatrix<double, 0, int>; Lhs = Eigen::SparseMatrix<double, 0, int>; Rhs = Eigen::Transpose<Eigen::SparseMatrix<double, 0, int> >; int ProductType = 8]'
+   43 |     evalTo(dst, lhs, rhs, typename evaluator_traits<Dest>::Shape());
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/SparseCore/SparseProduct.h:174:51:   required from 'Eigen::SparseMatrix<_Scalar, _Options, _StorageIndex>& Eigen::SparseMatrix<_Scalar, _Flags, _StorageIndex>::operator=(const Eigen::Product<Lhs, Rhs, 2>&) [with Lhs = Eigen::SparseMatrix<double, 0, int>; Rhs = Eigen::Transpose<Eigen::SparseMatrix<double, 0, int> >; _Scalar = double; int _Options = 0; _StorageIndex = int]'
+  174 |   internal::generic_product_impl<Lhs, Rhs>::evalTo(dst,src.lhs(),src.rhs());
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+CellChat_Rcpp.cpp:20:31:   required from here
+   20 |   SNN = SNN * (SNN.transpose());
+      |                               ^
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:56:30: warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type' {aka '__m128d'} [-Wignored-attributes]
+   56 |                      >::type PacketReturnType;
+      |                              ^~~~~~~~~~~~~~~~
+x86_64-conda-linux-gnu-c++ -std=gnu++17 -shared -L/home/dzf/miniforge3/envs/cellchat-acceleration/lib/R/lib -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/home/dzf/miniforge3/envs/cellchat-acceleration/lib -Wl,-rpath-link,/home/dzf/miniforge3/envs/cellchat-acceleration/lib -L/home/dzf/miniforge3/envs/cellchat-acceleration/lib -o CellChat.so CellChat_Rcpp.o RcppExports.o -L/home/dzf/miniforge3/envs/cellchat-acceleration/lib/R/lib -lR
+installing to /home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/cellchat22/00LOCK-CellChat-75253cd0c9e68410e6e721a6d3a0419a1d7e358f/00new/CellChat/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (CellChat)

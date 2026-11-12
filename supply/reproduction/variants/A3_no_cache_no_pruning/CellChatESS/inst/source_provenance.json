@@ -1,0 +1,40 @@
+{
+  "version": "0.2.2",
+  "status": "unpublished_local_candidate",
+  "reference_CellChat_version": "2.2.0.9001",
+  "reference_CellChat_repo": "jinworks/CellChat",
+  "reference_CellChat_commit": "75253cd0c9e68410e6e721a6d3a0419a1d7e358f",
+  "public_ESS_reference_commit": "551d1d01e303ba7bc0b6870a1d422297ce918bee",
+  "repository_history_note": "Standalone local candidate commit; public repository and its branch/history were not modified. Historical server singleton candidate is retained in surrounding audit/reference materials.",
+  "numeric_source_id": "bb3bb6310b4af2d5ec000ace97d61339680b0e2a940508da3e072bb553f8417b",
+  "numeric_files": [
+    {
+      "path": "R/RcppExports.R",
+      "sha256": "d312c8d10e11e629ca84b55e9846a18d2dd7a95dfea288bb7314e8cc3b384784"
+    },
+    {
+      "path": "R/accel_cellchat.R",
+      "sha256": "ef6a07988481361a83df5fd8f3db2c693c59681877d9391e0853d03e69a4acda"
+    },
+    {
+      "path": "R/utils.R",
+      "sha256": "02f877552e034a8a9f14ba813c44a4d569db1081c1c7456a422ecd775db98161"
+    },
+    {
+      "path": "src/Makevars",
+      "sha256": "b4b0b086fb1c12a3e30347f8bbe143c1528ec135f29b70403bd35fb6226a89be"
+    },
+    {
+      "path": "src/Makevars.win",
+      "sha256": "b4b0b086fb1c12a3e30347f8bbe143c1528ec135f29b70403bd35fb6226a89be"
+    },
+    {
+      "path": "src/RcppExports.cpp",
+      "sha256": "7cd7be43f5be5559dcbc6c773cbfbd990fd9533ca8a3d43db2c4a10dd53b1b20"
+    },
+    {
+      "path": "src/cellchat_prob_cpp.cpp",
+      "sha256": "952e3c02c4c52f9190f1ef6b2345cec795f8c9d5fd3e9970fc15231375f59b87"
+    }
+  ]
+}

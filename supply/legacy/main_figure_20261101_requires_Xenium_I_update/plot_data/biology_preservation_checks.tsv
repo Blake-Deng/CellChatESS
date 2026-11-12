@@ -1,0 +1,2 @@
+n_groups	n_LR	probability_elements	representative_max_abs_difference	pvalue_different_elements	count_different_elements	aggregate_weight_max_difference	sender_order	CellChat_version	CellChatESS_version	data_source	compute_new_inference
+9	1128	91368	5.5511151231257827e-17	0	0	1.1102230246251565e-16	Malignant-4;Malignant-5;Macrophage	2.2.0.9001	0.2.2	saved new final-candidate outputs	False

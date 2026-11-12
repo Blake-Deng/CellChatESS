@@ -1,0 +1,9 @@
+[
+  "/home/dzf/miniforge3/envs/cellchat-acceleration/bin/R",
+  "CMD",
+  "INSTALL",
+  "--preclean",
+  "--clean",
+  "--library=/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/autozyme",
+  "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/extracted/AutoZyme_0.3.1/autozyme-718541d9489596c7c1d75f52e9b3a8b2a429d1f9/autozyme_r"
+]

@@ -1,0 +1,35 @@
+{
+  "git_commit": "139a61c33d4c09568f48f4afd0a16dc57bb22f4f",
+  "git_tree": "62fb33d233e8b2296eca11b7eefade7745429e10",
+  "source_matches_recovered_git": true,
+  "tarball_different_tree_files": [
+    "DESCRIPTION"
+  ],
+  "candidate_source_manifest_sha256": "52fbb08f6b520e1e18c6b022b16edba5205f1bff36b991e4626fae47fe484956",
+  "source_tarball_sha256": "a88b5e600add26404f893583c5a4f690d97c1958b402e03a436b6c99b691fae4",
+  "upstream_commits": {
+    "CellChat_2.2.0.9001_provenance": {
+      "repo": "jinworks/CellChat",
+      "commit": "75253cd0c9e68410e6e721a6d3a0419a1d7e358f",
+      "archive_url": "https://codeload.github.com/jinworks/CellChat/tar.gz/75253cd0c9e68410e6e721a6d3a0419a1d7e358f",
+      "bytes": 29281894,
+      "sha256": "52a90ce9f121acd58c9e5b2542956de0f3d81ac9b10906454847946f289e0739"
+    },
+    "CellChat_1.6.1_provenance": {
+      "repo": "sqjin/CellChat",
+      "version": "1.6.1",
+      "commit": "e4f68625b074247d619c2e488d33970cc531e17c",
+      "archive_url": "https://codeload.github.com/sqjin/CellChat/tar.gz/e4f68625b074247d619c2e488d33970cc531e17c",
+      "sha256": "c4ba472f86b08ba2857c1b997d6dc8edd2e7a9d67ca00814eb95a60ea23b8e7f",
+      "bytes": 17177491,
+      "scope": "New pinned reference source. Exact commit of historical 1.6.1 runs is unconfirmed; do not retrospectively identify them with this source."
+    },
+    "AutoZyme_0.3.1_provenance": {
+      "repo": "ElliotXie/autozyme",
+      "commit": "718541d9489596c7c1d75f52e9b3a8b2a429d1f9",
+      "archive_url": "https://codeload.github.com/ElliotXie/autozyme/tar.gz/718541d9489596c7c1d75f52e9b3a8b2a429d1f9",
+      "sha256": "3236b573dc6e0728d9468219c7fed0d8dab2cb1eef7b4a094b9818c8efa0a687",
+      "bytes": 18077535
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "status": "NEW_CC22_RESULTS",
+  "primary": {
+    "pooled_median": 27.477142463471342,
+    "pooled_dataset_cluster_bootstrap_95CI": [
+      22.306467632508543,
+      38.466079769447944
+    ],
+    "median_of_dataset_medians": 24.541983162292386,
+    "median_of_dataset_medians_bootstrap_95CI": [
+      20.43187061150771,
+      33.03247748974366
+    ],
+    "datasets": 12,
+    "records": 216,
+    "bootstrap_replicates": 10000,
+    "seed": 20261026,
+    "generator": "numpy.random.default_rng / PCG64"
+  },
+  "autozyme": {
+    "pooled_median": 1.7525525210084065,
+    "pooled_dataset_cluster_bootstrap_95CI": [
+      1.5273888674497922,
+      2.3782221674943713
+    ],
+    "median_of_dataset_medians": 2.006604694799908,
+    "median_of_dataset_medians_bootstrap_95CI": [
+      1.368116459983244,
+      3.1952873492328937
+    ],
+    "datasets": 12,
+    "records": 192,
+    "bootstrap_replicates": 100000,
+    "seed": 20261027,
+    "generator": "numpy.random.default_rng / PCG64",
+    "ess_faster_blocks": 191,
+    "autozyme_faster_blocks": 1,
+    "tied_blocks": 0
+  },
+  "deduplicated_primary": {
+    "pooled_median": 38.7592715231788,
+    "pooled_dataset_cluster_bootstrap_95CI": [
+      30.93216012896292,
+      46.86064392119173
+    ],
+    "median_of_dataset_medians": 36.02984614399606,
+    "median_of_dataset_medians_bootstrap_95CI": [
+      26.784499501933542,
+      43.10858819160431
+    ],
+    "datasets": 12,
+    "records": 129,
+    "bootstrap_replicates": 10000,
+    "seed": 20261026,
+    "generator": "numpy.random.default_rng / PCG64",
+    "definition": "For each dataset/input SHA256, take the median of paired Original/ESS ratios; repeated full inputs are timing repeats. Never divide independent method-time medians."
+  },
+  "numerical": {
+    "autozyme/autozyme_vs_original/count": {
+      "max_absolute_difference": 0.0,
+      "different_elements_summed_over_runs": 0,
+      "all_elementwise_exact": true
+    },
+    "autozyme/autozyme_vs_original/prob": {
+      "max_absolute_difference": 1.11022302462516e-16,
+      "different_elements_summed_over_runs": 231882,
+      "all_elementwise_exact": false
+    },
+    "autozyme/autozyme_vs_original/pval": {
+      "max_absolute_difference": 0.0,
+      "different_elements_summed_over_runs": 0,
+      "all_elementwise_exact": true
+    },
+    "autozyme/ess_vs_original/count": {
+      "max_absolute_difference": 0.0,
+      "different_elements_summed_over_runs": 0,
+      "all_elementwise_exact": true
+    },
+    "autozyme/ess_vs_original/prob": {
+      "max_absolute_difference": 1.11022302462516e-16,
+      "different_elements_summed_over_runs": 222534,
+      "all_elementwise_exact": false
+    },
+    "autozyme/ess_vs_original/pval": {
+      "max_absolute_difference": 0.0,
+      "different_elements_summed_over_runs": 0,
+      "all_elementwise_exact": true
+    },
+    "primary/ess_vs_original/count": {
+      "max_absolute_difference": 0.0,
+      "different_elements_summed_over_runs": 0,
+      "all_elementwise_exact": true
+    },
+    "primary/ess_vs_original/prob": {
+      "max_absolute_difference": 1.11022302462516e-16,
+      "different_elements_summed_over_runs": 334629,
+      "all_elementwise_exact": false
+    },
+    "primary/ess_vs_original/pval": {
+      "max_absolute_difference": 0.0,
+      "different_elements_summed_over_runs": 0,
+      "all_elementwise_exact": true
+    }
+  },
+  "median_peak_RSS_GiB": {
+    "autozyme": 1.2207660675048828,
+    "ess": 0.9818267822265624,
+    "original": 1.7967109680175781
+  },
+  "candidate_source_manifest_sha256": "52fbb08f6b520e1e18c6b022b16edba5205f1bff36b991e4626fae47fe484956"
+}

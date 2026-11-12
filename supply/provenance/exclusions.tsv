@@ -1,0 +1,8 @@
+category	reason	manifest
+Prepared expression inputs and large RDS outputs	Not in this compact repository; retain original paths, SHA256 and server-side manifests for matching/retrieval	supply/provenance/EXCLUDED_LARGE_OBJECTS.tsv
+Compiled R package binaries and object files	Platform-specific .so/.o/.dll files are excluded; rebuild from pinned source	supply/provenance/candidate_source_manifest.tsv
+Duplicate upstream source archives and duplicate ESS tarballs	Pin repository commit/archive URL/SHA256; download exact upstream sources with make_workspace.py --fetch-upstream	supply/provenance/upstream
+Duplicate per-run function dumps and DLL lists	Retain each measurement/GNU time/command/numerical comparison and one full representative record per method/stage; per-run R sessions are recoverable via environment/sessionInfo_by_run/index.tsv	supply/provenance/copy_provenance.tsv
+Interrupted initial primary campaign directories	Keep the final merged 216-pair run only; resolved input and continuation provenance remain in that directory	supply/results/primary216_merged/provenance.json
+Old main-folder S_H/I maps	Superseded PROFILE and version-map records retained only under clearly labeled legacy	supply/legacy/README.md
+Repeated Markdown renderings of TSV tables	Full-precision TSV files are the canonical data; concise Word contains selected important tables	supply/data

@@ -1,0 +1,23 @@
+	Command being timed: "/home/dzf/miniforge3/envs/cellchat-acceleration/bin/Rscript --vanilla /home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/reproduction/run_xenium_paired_worker.R ess /data/dzf/Xenium_Prime_Human_Ovary_FF/benchmark/prepared_xenium_ovary_full_grid50.rds cc6155a5de127ba34b8a26e7f69e7bffc704448f976107253711623d2a88de37 /home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/results/new/xenium_paired_full627_20261101_strict05_unrestricted/ess /home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/cellchat22 /home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/ess022 /home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_dependencies /home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/extracted/CellChat_2.2.0.9001/CellChat-75253cd0c9e68410e6e721a6d3a0419a1d7e358f/R/modeling.R /home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/software/CellChatESS/R/accel_cellchat.R"
+	User time (seconds): 1817.15
+	System time (seconds): 429.30
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 37:31.84
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 208267292
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 19
+	Minor (reclaiming a frame) page faults: 199539770
+	Voluntary context switches: 1403
+	Involuntary context switches: 4333
+	Swaps: 0
+	File system inputs: 786048
+	File system outputs: 2128912
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

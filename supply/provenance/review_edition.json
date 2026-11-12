@@ -1,0 +1,15 @@
+{
+  "package_version": "0.2.2",
+  "computational_commit": "139a61c33d4c09568f48f4afd0a16dc57bb22f4f",
+  "computational_tree": "62fb33d233e8b2296eca11b7eefade7745429e10",
+  "numeric_source_id": "bb3bb6310b4af2d5ec000ace97d61339680b0e2a940508da3e072bb553f8417b",
+  "evidence_baseline_local_commit": "97128be1a1c3a78aaa6160fcbee31e0a5e4a4dea",
+  "input_ledger_records": 216,
+  "distinct_inputs": 129,
+  "routine_method_processes": 1008,
+  "session_info_records": 2016,
+  "unique_session_info_byte_streams": 3,
+  "final_figure_sha256": "1ad5e7f875addb963248fc51fac6d5cc65890d43b8602bd2b37cb416bac8b188",
+  "separate_large_inputs_required": true,
+  "metadata": "Review edition with final artwork and additional run evidence; final inventory generated after assembly."
+}

@@ -1,0 +1,9 @@
+{
+  "rscript": "/home/dzf/miniforge3/envs/cellchat-acceleration/bin/Rscript",
+  "ess_library": "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/ess022",
+  "cellchat_22_library": "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/cellchat22",
+  "autozyme_library": "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/autozyme",
+  "cellchat_16_library": "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/cellchat16",
+  "dependency_library": "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_dependencies",
+  "ess_source_id": "bb3bb6310b4af2d5ec000ace97d61339680b0e2a940508da3e072bb553f8417b"
+}

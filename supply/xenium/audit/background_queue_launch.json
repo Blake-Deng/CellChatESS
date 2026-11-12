@@ -1,0 +1,13 @@
+{
+  "pid": 421001,
+  "command": [
+    "/home/dzf/miniforge3/bin/python3",
+    "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/reproduction/finish_xenium_background_queue.py",
+    "--output",
+    "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/results/new/xenium_paired_full627_20261101_strict03"
+  ],
+  "launched_epoch": 1793532473.466197,
+  "start_new_session": true,
+  "stdin": "DEVNULL",
+  "purpose": "Finalize existing queue only; no duplicate inference"
+}

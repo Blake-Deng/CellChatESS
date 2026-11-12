@@ -1,0 +1,18 @@
+[STAGE] process_initialized method=ess
+Warning message:
+In readRDS(input) :
+  strings not representable in native encoding will be translated to UTF-8
+            used   (Mb) gc trigger   (Mb)  max used   (Mb)
+Ncells   5947044  317.7   11285660  602.8   6396983  341.7
+Vcells 247055418 1884.9  337097274 2571.9 280843516 2142.7
+[STAGE] before_inference input_expression_object_bytes=959610184
+Warning message:
+In asMethod(object) :
+  sparse->dense coercion: allocating vector of size 4.6 GiB
+[STAGE] after_inference function_elapsed_sec=1282.588000000
+[STAGE] before_aggregateNet prob_object_bytes=27866570912;pval_object_bytes=27866570912
+[STAGE] after_aggregateNet aggregate_elapsed_sec=473.844000000;count_bytes=44834688
+[STAGE] before_saveRDS compression=gzip;output_fields=prob,pval,count,groups,lr_names,parameters
+[STAGE] after_saveRDS output_bytes=1089499736
+[STAGE] worker_complete all result files written
+Completed ess; inference_sec=1282.588000000; aggregateNet_sec=473.844000000; output=/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/results/new/xenium_paired_full627_20261101_strict05_unrestricted/ess/result.rds

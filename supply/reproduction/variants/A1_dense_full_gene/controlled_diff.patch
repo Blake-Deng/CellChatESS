@@ -1,0 +1,31 @@
+--- final/DESCRIPTION
++++ A1_dense_full_gene/DESCRIPTION
+@@ -29,3 +29,4 @@
+     Rcpp
+ SystemRequirements: OpenMP (optional)
+ RoxygenNote: 7.3.2
++Config/CellChatESS/Build: A1_dense_full_gene
+--- final/R/accel_cellchat.R
++++ A1_dense_full_gene/R/accel_cellchat.R
+@@ -81,18 +81,9 @@
+   agonist_idx[!hasAgonist, ] <- 0L
+   antagonist_idx[!hasAntagonist, ] <- 0L
+   n_genes_full <- nrow(data.use)
+-  kernel_input <- subset_indexed_matrix(
+-    data.use,
+-    list(
+-      ligand = ligand_idx,
+-      receptor = receptor_idx,
+-      coA = coA_idx,
+-      coI = coI_idx,
+-      agonist = agonist_idx,
+-      antagonist = antagonist_idx
+-    ),
+-    "No LR/complex/cofactor genes are present in the signaling matrix."
+-  )
++  kernel_input <- list(data = as.matrix(data.use), indices = list(
++    ligand=ligand_idx, receptor=receptor_idx, coA=coA_idx, coI=coI_idx,
++    agonist=agonist_idx, antagonist=antagonist_idx))
+   data.use <- kernel_input$data
+   ligand_idx <- kernel_input$indices$ligand
+   receptor_idx <- kernel_input$indices$receptor

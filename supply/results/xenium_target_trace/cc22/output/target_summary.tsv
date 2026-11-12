@@ -1,0 +1,6 @@
+"lr_name"	"source_group"	"target_group"	"lr1"	"pair0"	"original_pvalue"	"ESS_pvalue"	"original_count"	"ESS_count"	"original_Pobs"	"ESS_Pobs"	"original_Pobs_hex"	"ESS_Pobs_hex"	"original_reject_count"	"ESS_reject_count"
+"CSF1_CSF1R"	"Group_Grid_3_32"	"Group_Grid_12_50"	1	420648	0.55	0.55	55	55	"0.0066836308070305859"	"0.0066836308070305859"	"0x1.b604b7bc178eap-8"	"0x1.b604b7bc178eap-8"	55	55
+"LAMA3_CD44"	"Group_Grid_17_26"	"Group_Grid_2_45"	2	1346248	0.6	0.6	60	60	"0.051898326898552324"	"0.051898326898552324"	"0x1.a926ae17e280ep-5"	"0x1.a926ae17e280ep-5"	60	60
+"LAMA3_CD44"	"Group_Grid_25_16"	"Group_Grid_2_45"	2	1346681	0.56	0.56	56	56	"0.05324220677168226"	"0.05324220677168226"	"0x1.b429001b3d664p-5"	"0x1.b429001b3d664p-5"	56	56
+"LAMC1_CD44"	"Group_Grid_12_50"	"Group_Grid_10_19"	3	110957	0.82	0.82	82	82	"0.0064904606955402703"	"0.0064904606955402703"	"0x1.a95bdc6c5ea03p-8"	"0x1.a95bdc6c5ea03p-8"	82	82
+"LAMC2_CD44"	"Group_Grid_12_50"	"Group_Grid_10_19"	4	110957	0.57	0.57	57	57	"0.0064904606955402703"	"0.0064904606955402703"	"0x1.a95bdc6c5ea03p-8"	"0x1.a95bdc6c5ea03p-8"	57	57

@@ -1,0 +1,7 @@
+useDynLib(CellChatESS, .registration = TRUE)
+importFrom(Rcpp, sourceCpp)
+importFrom(methods, slot)
+export(computeCommunProbESS)
+export(computeCommunProbPathwayESS)
+export(aggregateNetESS)
+export(computeAveExprESS)

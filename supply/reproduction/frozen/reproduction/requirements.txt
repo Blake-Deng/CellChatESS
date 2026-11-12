@@ -1,0 +1,7 @@
+numpy>=2.0
+pandas>=2.2
+matplotlib>=3.10
+scipy
+tabulate
+PyMuPDF
+Pillow

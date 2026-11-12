@@ -13,5 +13,5 @@ computeCommunProbPathwayESS(object = NULL, net = NULL, pairLR.use = NULL,
 }
 \value{A CellChat object, or a list when \code{object} is \code{NULL}.}
 \description{
-Rcpp helper for aggregating ligand-receptor communication probabilities by pathway.
+Rcpp helper for aggregating ligand-receptor communication probabilities by pathway. Entries at the threshold are retained. Output dimensions follow the pinned CellChat reference, including dropping the pathway dimension when a single pathway remains.
 }

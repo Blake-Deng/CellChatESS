@@ -1,0 +1,7 @@
+{
+  "pid": 580026,
+  "proc_start_ticks": "574566981",
+  "requested_interval_sec": 1.0,
+  "source": "/proc/<PID>/status; no smoothing or interpolation",
+  "clocks": "Unix epoch start/end timestamps plus monotonic elapsed time"
+}

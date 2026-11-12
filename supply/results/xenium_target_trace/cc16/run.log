@@ -1,0 +1,14 @@
+Warning message:
+In readRDS(a[1]) :
+  strings not representable in native encoding will be translated to UTF-8
+            used   (Mb) gc trigger                (Mb)  max used
+Ncells   5785838  309.0   10623118  567.39999999999998   6155741
+Vcells 142554240 1087.7  280546952 2140.50000000000000 255875079
+                      (Mb)
+Ncells  328.80000000000001
+Vcells 1952.20000000000005
+triMean is used for calculating the average gene expression per cell group. 
+[1] ">>> Run CellChat on sc/snRNA-seq data <<< [2026-11-01 07:44:24.663234]"
+  |                                                                              |                                                                      |   0%  |                                                                              |==================                                                    |  25%  |                                                                              |===================================                                   |  50%  |                                                                              |====================================================                  |  75%  |                                                                              |======================================================================| 100%
+[1] ">>> CellChat inference is done. Parameter values are stored in `object@options$parameter` <<< [2026-11-01 07:53:44.506304]"
+DIRECT TRACE COMPLETED: 500 decisions; differences are retained rather than hidden.

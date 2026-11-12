@@ -1,0 +1,28 @@
+{
+  "pipeline": {
+    "status": "RESULTS_READY",
+    "stage": "finished",
+    "pvalue_different_elements": "0",
+    "aggregate_counts_identical": "TRUE",
+    "finished_epoch": 1793567769.03004,
+    "scope": "Only this frozen Xenium input, sources, parameters and actual conditions."
+  },
+  "methods": {
+    "original": {
+      "status": "COMPLETED",
+      "complete": true,
+      "result_hash_matches": true,
+      "evidence": "original/run_status.json"
+    },
+    "ess": {
+      "status": "COMPLETED",
+      "complete": true,
+      "result_hash_matches": true,
+      "evidence": "ess/run_status.json"
+    }
+  },
+  "both_complete_and_output_hashes_verified": true,
+  "full_comparison_completed": true,
+  "scope": "Only this frozen input, source builds and actual conditions; no universal identity claim",
+  "large_file_policy": "Large original outputs remain in place; hashes and paths are indexed, not omitted from verification"
+}

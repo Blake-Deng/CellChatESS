@@ -1,0 +1,14 @@
+{
+  "timestamp_epoch": 1793545528.8955545,
+  "MemAvailable_GiB": 406.9972686767578,
+  "data_free_bytes": 61080963592192,
+  "home_free_bytes": 2344864309248,
+  "unrelated_processes_over_10GiB": [
+    {
+      "pid": "406772",
+      "rss_gib": "545.179",
+      "comm": "python"
+    }
+  ],
+  "policy": "start only at >= 0.0 GiB available; stop this job below 0.0 GiB"
+}

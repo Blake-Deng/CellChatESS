@@ -4,11 +4,18 @@ computeCommunProbESS <- function(object, type = "triMean", raw.use = TRUE, popul
                                      threads = 1L,
                                      algorithm = c("ess", "dense")) {
   algorithm <- match.arg(algorithm)
+  if (!is.numeric(threads) || length(threads) != 1L || !is.finite(threads) ||
+      threads < 1 || threads != floor(threads) || threads > .Machine$integer.max) {
+    stop("threads must be one positive integer.", call. = FALSE)
+  }
   threads <- as.integer(threads)
   if (length(threads) != 1L || is.na(threads) || threads < 1L) {
     stop("threads must be one positive integer.", call. = FALSE)
   }
   check_supported_object(object, type, population.size, distance.use)
+  if (!is.logical(raw.use) || length(raw.use) != 1L || is.na(raw.use)) {
+    stop("raw.use must be TRUE or FALSE.", call. = FALSE)
+  }
 
   ptm <- Sys.time()
   data <- if (raw.use) {
@@ -21,6 +28,8 @@ computeCommunProbESS <- function(object, type = "triMean", raw.use = TRUE, popul
   }
 
   if (!length(data)) stop("No signaling data found in object@data.signaling.", call. = FALSE)
+  validate_inference_input(object, data, raw.use, nboot, seed.use, Kh, n)
+  validate_nonnegative_finite_expression(data)
   max_data <- max(data)
   if (!is.finite(max_data) || max_data <= 0) {
     stop("Signaling expression matrix has no positive finite values.", call. = FALSE)
@@ -189,7 +198,8 @@ computeCommunProbPathwayESS <- function(object = NULL, net = NULL, pairLR.use = 
   if (length(pathways.sig)) {
     idx <- order(apply(prob.pathways.sig, 3, sum), decreasing = TRUE)
     pathways.sig <- pathways.sig[idx]
-    prob.pathways.sig <- prob.pathways.sig[, , idx, drop = FALSE]
+    # Match CellChat 2.2.0.9001, including its single-pathway dimension drop.
+    prob.pathways.sig <- prob.pathways.sig[, , idx]
   }
 
   if (is.null(object)) {

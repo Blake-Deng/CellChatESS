@@ -1,0 +1,2 @@
+"structure"	"lr_index"	"lr_name"	"n_genes_full"	"n_genes_reduced"	"normalization_max"	"normalization_anchor_gene"	"probability_max_abs_diff"	"pvalue_max_abs_diff"	"probability_exact"	"pvalue_exact"
+"multimeric_receptor_with_modifiers"	1	"TGFB1_TGFBR1_TGFBR2"	995	17	7.71378937638806	"SPP1"	0	0	TRUE	TRUE

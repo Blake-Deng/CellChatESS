@@ -1,35 +1,20 @@
+# CellChatESS 0.2.2
+
+- Support the CellChat 2.2.0.9001 non-spatial RNA workflow using triMean and population.size = FALSE.
+- Use cell-group summaries directly for single-gene ligands and receptors, resolving the five diagnosed Xenium p-value differences. Preserve CellChat's permutation sequence and strict bootstrap comparison rule.
+- Align complex, cofactor, agonist, antagonist and pathway calculations with the pinned CellChat reference.
+- Validate finite nonnegative expression input, cell identities, LR fields and scalar arguments. Check sparse expression matrices without densification.
+- Retain optional OpenMP parallelism and the serial inference path.
+- Provide manuscript results, pinned environments, source identities and a complete independent replay covering 216 main pairs, 192 three-method blocks, 627 Xenium LR interactions, 216 legacy pairs and reconstruction of 129 distinct inputs.
+
 # CellChatESS 0.2.1
 
-- Documentation- and metadata-only patch release; the R/C++ implementation,
-  exported API and numerical algorithm are unchanged from v0.2.0.
-- Aligns the 216-object validation summary with the matched core-computation
-  timings reported in the manuscript.
-- Separates core-runtime and independent-process peak-RSS measurement
-  descriptions.
-- Pins the validated CellChat 1.6.1 installation to the archived upstream
-  commit and includes the complete GPL-3 license text.
+Documentation and metadata revision of 0.2.0.
 
 # CellChatESS 0.2.0
 
-- Adds an optional `threads` argument to `computeCommunProbESS()`.
-- Uses a true serial fast path when `threads = 1L`, without entering an
-  OpenMP parallel region.
-- Uses deterministic OpenMP parallelism across bootstrap permutations when
-  `threads > 1L`.
-- Records `threads_requested` and `threads_used` in
-  `object@options$CellChatESS`.
-- Preserves exact probability, p-value, pathway, weight and count outputs
-  between one- and four-thread execution across the 216-object validation.
+Optional threads argument and OpenMP bootstrap parallelism.
 
 # CellChatESS 0.1.1
 
-- Refines the ESS expansion to Efficient Signal Streaming.
-- Avoids broad generality wording and keeps the method framed as computationally efficient within the dense CellChat output boundary.
-
-# CellChatESS 0.1.0
-
-- Introduces Efficient Signal Streaming (ESS).
-- Projects signaling data to ligand-receptor, complex and cofactor genes before dense conversion.
-- Uses adaptive triMean quantile evaluation.
-- Evaluates expression-supported sender-receiver combinations.
-- Includes a self-contained PBMC3k example and large-scale validation summaries.
+Original manuscript benchmark version.

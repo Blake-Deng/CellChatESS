@@ -1,0 +1,9 @@
+panel	file	columns	definition	environment
+1A	figures/plot_data/A_primary_pairs_216.tsv	original; ess; original_over_ess; dataset_id; scale	216 paired external inference calls	CC22 / ESS022
+1B	figures/plot_data/B_autozyme_pairs_192.tsv	autozyme; ess; autozyme_over_ess; dataset_id; block	192 blocks; per-dataset medians for R1B	CC22 / AZ031 / ESS022
+1C	figures/plot_data/C_ablation_stage_medians.tsv	stage; scale; median_sec	median of three external calls/stage/input	CC22 controlled derivatives
+1D/E	figures/plot_data/Figure1D_original_weights.tsv; figures/plot_data/Figure1E_ess_weights.tsv; DEJ_group_display_mapping.tsv	sender; receiver; weight; cluster_id; cells	Saved new inference outputs; aggregateNet-default filtering (p < 0.05); common scales	CellChat 2.2.0.9001 / final CellChatESS 0.2.2
+1F	figures/plot_data/F_representative_probabilities.tsv	original; ESS; difference	new 10X1krep1,K12	CC22 / ESS022
+1G/H	figures/plot_data/GH_peak_RSS_pairs_192.tsv	original; autozyme; ess; ess_minus_autozyme_GiB	GNU full-process peak RSS	CC22 / AZ031 / ESS022
+1I	summary_final.json: xenium	elapsed_sec; full_process_wall_sec; peak_RSS_GiB; input_bytes; probability_payload_bytes; pvalue_payload_bytes	Absolute full Xenium inference resources from the returned, previously audited server run	CC22 / final-derived PROFILE
+1J	figures/plot_data/J_bubble_scores.tsv; J_preserved_*_order.tsv	probability; pvalue; visualization_score; pair_rank; lr_rank; engine	Saved new outputs; fixed 16 LR and three senders; probability > 0 and p < 0.05; full group names	CellChat 2.2.0.9001 / final CellChatESS 0.2.2

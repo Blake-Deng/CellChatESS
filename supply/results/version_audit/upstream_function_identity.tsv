@@ -1,0 +1,10 @@
+"function_name"	"unmodified_source_match"
+"computeCommunProb"	TRUE
+"triMean"	TRUE
+"computeExpr_LR"	TRUE
+"computeExpr_complex"	TRUE
+"computeExpr_coreceptor"	TRUE
+"computeExpr_agonist"	TRUE
+"computeExpr_antagonist"	TRUE
+"aggregateNet"	TRUE
+"computeCommunProbPathway"	TRUE

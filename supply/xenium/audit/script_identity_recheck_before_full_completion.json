@@ -1,0 +1,47 @@
+[
+  {
+    "path": "scripts/compare_xenium_paired_full627.R",
+    "copy_sha256_matches": true,
+    "live_matches_copy": true
+  },
+  {
+    "path": "scripts/diagnose_xenium_paired_differences.py",
+    "copy_sha256_matches": true,
+    "live_matches_copy": true
+  },
+  {
+    "path": "scripts/execute_xenium_strict_pipeline.py",
+    "copy_sha256_matches": true,
+    "live_matches_copy": true
+  },
+  {
+    "path": "scripts/finalize_xenium_paired.py",
+    "copy_sha256_matches": true,
+    "live_matches_copy": true
+  },
+  {
+    "path": "scripts/plot_xenium_paired_rss.R",
+    "copy_sha256_matches": true,
+    "live_matches_copy": true
+  },
+  {
+    "path": "scripts/run_xenium_paired_full627.py",
+    "copy_sha256_matches": true,
+    "live_matches_copy": true
+  },
+  {
+    "path": "scripts/run_xenium_paired_worker.R",
+    "copy_sha256_matches": true,
+    "live_matches_copy": true
+  },
+  {
+    "path": "scripts/sample_process_resources.py",
+    "copy_sha256_matches": true,
+    "live_matches_copy": true
+  },
+  {
+    "path": "scripts/xenium_five_targets.tsv",
+    "copy_sha256_matches": true,
+    "live_matches_copy": true
+  }
+]

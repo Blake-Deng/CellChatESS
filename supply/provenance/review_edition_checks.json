@@ -1,0 +1,15 @@
+{
+  "built_root_R_package": true,
+  "built_package_version": "0.2.2",
+  "installed_in_fresh_private_R_library": true,
+  "package_load": true,
+  "input_validation_test": "PASS",
+  "single_gene_alignment_test": "PASS",
+  "Linux_benchmark_reexecuted": false,
+  "native_worker_threads_observed_in_packaging_check": 1,
+  "frozen_workspace_reconstructed": true,
+  "main_figure_rebuild": "External to package. Same word inventory and rendered positions outside the two replacement D/E tissue subtitles at 72 dpi. Font antialiasing differs in those subtitles. The supplied Figure1.pdf is the original final manuscript-art file.",
+  "s7b_same_unordered_rows_as_source": true,
+  "session_info_before_after_indexed_for_all_1008_core_method_runs": true,
+  "frozen_baseline_29_files_verified": true
+}

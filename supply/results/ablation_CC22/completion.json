@@ -1,0 +1,46 @@
+{
+  "status": "COMPLETED",
+  "expected_method_processes": {
+    "validation": 18,
+    "timing": 54,
+    "high_retention_validation": 3,
+    "high_retention_timing": 6
+  },
+  "actual_method_processes": {
+    "validation": 18,
+    "timing": 54,
+    "high_retention_validation": 3,
+    "high_retention_timing": 6
+  },
+  "failures": [],
+  "baseline": "2.2.0.9001",
+  "candidate_commit": "139a61c33d4c09568f48f4afd0a16dc57bb22f4f",
+  "within_experiment_concurrency": 1,
+  "validation_excluded_from_performance_statistics": true,
+  "stage_orders": [
+    [
+      "A0",
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5"
+    ],
+    [
+      "A5",
+      "A4",
+      "A3",
+      "A2",
+      "A1",
+      "A0"
+    ],
+    [
+      "A3",
+      "A4",
+      "A5",
+      "A0",
+      "A1",
+      "A2"
+    ]
+  ]
+}

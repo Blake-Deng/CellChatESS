@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "source_package": "CellChatESS_0.2.2.tar.gz",
+  "source_package_sha256": "de77e274803e29cf18c3f2d45a52ce32f48f57258a582deb043427574840dc54",
+  "R_version": "4.5.3",
+  "CellChat_version": "2.2.0.9001",
+  "CellChatESS_version": "0.2.2",
+  "linux_R_CMD_check": "Status: OK",
+  "linux_R_CMD_check_errors": 0,
+  "linux_R_CMD_check_warnings": 0,
+  "linux_R_CMD_check_notes": 0,
+  "PBMC3k_demo": {
+    "status": "PASS",
+    "threads_requested": [
+      1,
+      4
+    ],
+    "threads_used": [
+      1,
+      4
+    ],
+    "maximum_probability_absolute_difference_vs_original": 6.93889390390723e-18,
+    "empirical_pvalues_identical_vs_original": true,
+    "aggregate_counts_identical_vs_original": true,
+    "pathway_probability_maximum_difference": 0,
+    "aggregate_weight_maximum_difference": 0,
+    "all_outputs_identical_between_thread_requests": true
+  },
+  "server_validation_directory": "/data/dzf/CellChatESS_reproduction_20261111_XBLoQr/results/release_pbmc_demo_20261112",
+  "prepared_PBMC3k_input_sha256": "1305076852f518a6cb57064e8f3678ea3b6c902290206a2463e1d07f2ca817c2"
+}

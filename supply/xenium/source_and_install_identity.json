@@ -1,0 +1,143 @@
+{
+  "CellChat_commit": "75253cd0c9e68410e6e721a6d3a0419a1d7e358f",
+  "CellChat_archive_sha256": "52a90ce9f121acd58c9e5b2542956de0f3d81ac9b10906454847946f289e0739",
+  "CellChat_modeling_R_sha256": "edf75f668a1527207c0d1a89316416becbbf7977a28f7226621d661366bd2cfe",
+  "ESS_commit": "139a61c33d4c09568f48f4afd0a16dc57bb22f4f",
+  "ESS_tree": "62fb33d233e8b2296eca11b7eefade7745429e10",
+  "ESS_source_manifest_sha256": "52fbb08f6b520e1e18c6b022b16edba5205f1bff36b991e4626fae47fe484956",
+  "ESS_tarball_sha256": "a88b5e600add26404f893583c5a4f690d97c1958b402e03a436b6c99b691fae4",
+  "ESS_installed_DLL_path": "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/ess022/CellChatESS/libs/CellChatESS.so",
+  "ESS_installed_DLL_sha256": "c46577016d28829e5dcd1c694b3f185a762a6f925bf05cfe0721981030085752",
+  "ESS_expected_DLL_sha256": "c46577016d28829e5dcd1c694b3f185a762a6f925bf05cfe0721981030085752",
+  "ESS_git_HEAD": "139a61c33d4c09568f48f4afd0a16dc57bb22f4f",
+  "ESS_git_worktree_status": "",
+  "CellChat_installed_library": "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/cellchat22",
+  "ESS_installed_library": "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/ess022",
+  "ESS_installed_DLL_matches_expected": true,
+  "ESS_git_HEAD_matches_audit": true,
+  "ESS_git_worktree_clean": true,
+  "ESS_source_manifest_recomputed_sha256": "52fbb08f6b520e1e18c6b022b16edba5205f1bff36b991e4626fae47fe484956",
+  "ESS_source_files_revalidated": [
+    {
+      "file": ".Rbuildignore",
+      "matches": true
+    },
+    {
+      "file": ".github/workflows/R-CMD-check.yaml",
+      "matches": true
+    },
+    {
+      "file": ".github/workflows/release.yaml",
+      "matches": true
+    },
+    {
+      "file": ".gitignore",
+      "matches": true
+    },
+    {
+      "file": ".zenodo.json",
+      "matches": true
+    },
+    {
+      "file": "CHANGES_FROM_V0.1.1.md",
+      "matches": true
+    },
+    {
+      "file": "CITATION.cff",
+      "matches": true
+    },
+    {
+      "file": "DESCRIPTION",
+      "matches": true
+    },
+    {
+      "file": "LICENSE",
+      "matches": true
+    },
+    {
+      "file": "METHODS.md",
+      "matches": true
+    },
+    {
+      "file": "NAMESPACE",
+      "matches": true
+    },
+    {
+      "file": "NEWS.md",
+      "matches": true
+    },
+    {
+      "file": "R/RcppExports.R",
+      "matches": true
+    },
+    {
+      "file": "R/accel_cellchat.R",
+      "matches": true
+    },
+    {
+      "file": "R/utils.R",
+      "matches": true
+    },
+    {
+      "file": "README.md",
+      "matches": true
+    },
+    {
+      "file": "SUPPORTED_WORKFLOWS.md",
+      "matches": true
+    },
+    {
+      "file": "inst/ESS_SOURCE_ID",
+      "matches": true
+    },
+    {
+      "file": "inst/source_provenance.json",
+      "matches": true
+    },
+    {
+      "file": "man/aggregateNetESS.Rd",
+      "matches": true
+    },
+    {
+      "file": "man/computeAveExprESS.Rd",
+      "matches": true
+    },
+    {
+      "file": "man/computeCommunProbESS.Rd",
+      "matches": true
+    },
+    {
+      "file": "man/computeCommunProbPathwayESS.Rd",
+      "matches": true
+    },
+    {
+      "file": "src/Makevars",
+      "matches": true
+    },
+    {
+      "file": "src/Makevars.win",
+      "matches": true
+    },
+    {
+      "file": "src/RcppExports.cpp",
+      "matches": true
+    },
+    {
+      "file": "src/cellchat_prob_cpp.cpp",
+      "matches": true
+    },
+    {
+      "file": "tests/test_expression_input_validation.R",
+      "matches": true
+    },
+    {
+      "file": "tests/test_single_gene_alignment.R",
+      "matches": true
+    }
+  ],
+  "ESS_tarball_recomputed_sha256": "a88b5e600add26404f893583c5a4f690d97c1958b402e03a436b6c99b691fae4",
+  "CellChat_archive_recomputed_sha256": "52a90ce9f121acd58c9e5b2542956de0f3d81ac9b10906454847946f289e0739",
+  "CellChat_extracted_R_src_files_checked": 12,
+  "CellChat_extracted_R_src_archive_mismatches": [],
+  "all_revalidated_source_and_archive_hashes_match": true
+}

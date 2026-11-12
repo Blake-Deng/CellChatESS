@@ -1,0 +1,36 @@
+{
+  "status": "COMPLETED",
+  "records": [
+    {
+      "CellChat": "1.6.1",
+      "ESS": "0.2.2",
+      "build": "TRACE",
+      "input_sha256": "cc6155a5de127ba34b8a26e7f69e7bffc704448f976107253711623d2a88de37",
+      "dll_sha256": "713a1a47eab864ae8e01f9c3cb4331003ee5fad5c04c3bcee54d5ae8a2465750",
+      "exit_code": 0,
+      "status": "COMPLETED",
+      "evidence": "results/new/xenium_target_trace/cc16",
+      "comparisons": "500",
+      "different_decisions": "0",
+      "pvalue_different_targets": "0",
+      "permutations_equal": "TRUE",
+      "conclusion": "all target decisions equal"
+    },
+    {
+      "CellChat": "2.2.0.9001",
+      "ESS": "0.2.2",
+      "build": "TRACE",
+      "input_sha256": "cc6155a5de127ba34b8a26e7f69e7bffc704448f976107253711623d2a88de37",
+      "dll_sha256": "713a1a47eab864ae8e01f9c3cb4331003ee5fad5c04c3bcee54d5ae8a2465750",
+      "exit_code": 0,
+      "status": "COMPLETED",
+      "evidence": "results/new/xenium_target_trace/cc22",
+      "comparisons": "500",
+      "different_decisions": "0",
+      "pvalue_different_targets": "0",
+      "permutations_equal": "TRUE",
+      "conclusion": "all target decisions equal"
+    }
+  ],
+  "scope": "Five actual Xenium entries, four LR rows, 100 bootstrap decisions each per CellChat version. Not a 627-LR numerical comparison."
+}

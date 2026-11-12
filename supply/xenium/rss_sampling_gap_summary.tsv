@@ -1,0 +1,3 @@
+method	n_samples	requested_interval_sec	median_sample_spacing_sec	maximum_sample_gap_sec	gaps_over_2_sec	gaps_over_5_sec	sampling_has_no_interpolation
+Original CellChat	18085	1	1.0001459121704102	1.0021312236785889	0	0	True
+CellChatESS	2247	1	1.0001471042633057	1.001023769378662	0	0	True

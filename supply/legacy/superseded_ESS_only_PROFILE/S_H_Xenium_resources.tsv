@@ -1,0 +1,34 @@
+resource	value	source
+status	COMPLETED	results/new/xenium_profile/completion.json
+R_exit_code	0	results/new/xenium_profile/completion.json
+sampler_exit_code	0	results/new/xenium_profile/completion.json
+actual_R_pid	4178968	results/new/xenium_profile/completion.json
+scope	ESS full 627-LR absolute resource profile only; no new Original speedup	results/new/xenium_profile/completion.json
+peak_RSS_GiB	111.79359436035156	results/new/xenium_profile/completion.json
+full_process_wall_sec	1527.48	results/new/xenium_profile/completion.json
+exit_status	0	results/new/xenium_profile/completion.json
+engine	CellChatESS_0.2.2_profiled	results/new/xenium_profile/completion.json
+elapsed_sec	1105.366	results/new/xenium_profile/completion.json
+cells	1156091	results/new/xenium_profile/completion.json
+signaling_genes	648	results/new/xenium_profile/completion.json
+groups	2357	results/new/xenium_profile/completion.json
+n_lr	627	results/new/xenium_profile/completion.json
+nboot	100	results/new/xenium_profile/completion.json
+seed_use	1	results/new/xenium_profile/completion.json
+input_bytes	959610184	results/new/xenium_profile/completion.json
+probability_bytes	27866570912	results/new/xenium_profile/completion.json
+pvalue_bytes	27866570912	results/new/xenium_profile/completion.json
+probability_payload_bytes	27866132184	results/new/xenium_profile/completion.json
+pvalue_payload_bytes	27866132184	results/new/xenium_profile/completion.json
+threads_used	1	results/new/xenium_profile/completion.json
+output_file_bytes	1084421971	results/new/xenium_profile/completion.json
+CellChat_version	2.2.0.9001	results/new/xenium_profile/completion.json
+CellChatESS_version	0.2.2	results/new/xenium_profile/completion.json
+output_path	/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/results/new/xenium_profile/result.rds	results/new/xenium_profile/completion.json
+output_file_sha256	44384fb2ae1ff16a0b7a61da088be13ef7bc9f1fb90a3dcf7454f66aa93633f9	results/new/xenium_profile/completion.json
+sample_count	1528	results/new/xenium_profile/rss_samples.tsv; stage_events.tsv
+sampled_peak_RSS_GiB	111.79550552368164	results/new/xenium_profile/rss_samples.tsv; stage_events.tsv
+max_sampling_gap_sec	1.000427001953125	results/new/xenium_profile/rss_samples.tsv; stage_events.tsv
+median_sampling_interval_sec	1.000140869140625	results/new/xenium_profile/rss_samples.tsv; stage_events.tsv
+sampling_gaps_over_2_sec	0	results/new/xenium_profile/rss_samples.tsv; stage_events.tsv
+time_zero	Immediately before inference function call	results/new/xenium_profile/rss_samples.tsv; stage_events.tsv

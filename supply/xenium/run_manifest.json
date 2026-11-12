@@ -1,0 +1,45 @@
+{
+  "created_epoch": 1793545529.439808,
+  "scope": "strict paired Original CellChat 2.2.0.9001 vs final CellChatESS 0.2.2",
+  "input_path": "/data/dzf/Xenium_Prime_Human_Ovary_FF/benchmark/prepared_xenium_ovary_full_grid50.rds",
+  "expected_input_sha256": "cc6155a5de127ba34b8a26e7f69e7bffc704448f976107253711623d2a88de37",
+  "smoke_input_path": "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/validation/local_smoke/data/pbmc3k_prepared_cellchat.rds",
+  "smoke_input_sha256": "1305076852f518a6cb57064e8f3678ea3b6c902290206a2463e1d07f2ca817c2",
+  "parameters": {
+    "type": "triMean",
+    "raw.use": true,
+    "population.size": false,
+    "nboot": 100,
+    "seed.use": 1,
+    "Kh": 0.5,
+    "n": 1,
+    "ESS_algorithm": "ess",
+    "ESS_threads": 1,
+    "future_workers": 1
+  },
+  "method_order": [
+    "original",
+    "ess"
+  ],
+  "independent_R_processes": true,
+  "concurrent_method_processes": 1,
+  "same_R_read_save_worker": "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/reproduction/run_xenium_paired_worker.R",
+  "serialization": {
+    "compress": "gzip",
+    "version": 3,
+    "fields": [
+      "prob",
+      "pval",
+      "count",
+      "groups",
+      "lr_names",
+      "parameters"
+    ]
+  },
+  "timer_definitions": {
+    "inference": "proc.time elapsed around requested computeCommunProb call; excludes startup, package load, input read, aggregateNet and serialization",
+    "full_process": "GNU time -v around Rscript from process launch through input read, inference, aggregateNet, serialization and process exit"
+  },
+  "input_sha256_verified_before_and_inside_each_R_process": true,
+  "AutoZyme": "not activated and its R library is excluded"
+}

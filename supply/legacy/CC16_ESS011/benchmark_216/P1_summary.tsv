@@ -1,0 +1,2 @@
+n_pairs	max_abs_prob_diff	pvalue_unequal_elements	aggregate_count_exact_pairs	CellChat	CellChatESS	environment
+216	1.3877787807814499e-16	0	216	1.6.1	0.1.1	CellChat 1.6.1; CellChatESS 0.1.1

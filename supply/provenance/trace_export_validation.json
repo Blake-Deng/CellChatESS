@@ -1,0 +1,38 @@
+[
+  {
+    "environment": "cc16",
+    "comparisons": 500,
+    "targets": 5,
+    "different_decisions": 0,
+    "source_files": [
+      "results/new/xenium_target_trace/cc16/output/original_direct_trace.tsv",
+      "results/new/xenium_target_trace/cc16/output/ess_direct_trace.tsv"
+    ],
+    "source_sha256": [
+      "ddc38e32335378b99dcd23f65dacf0b17fe1acafcdc212d9ee783a9b7257b744",
+      "d5d9b991eb04bc31fb580a02b19f03e322f115360157c29275d70ea7e9f37e59"
+    ],
+    "output": "supplementary/S_G2_direct_decisions_cc16.tsv",
+    "hex_decimal_roundtrip": "PASS",
+    "strict_comparison_recheck": "PASS",
+    "final_counts_and_pvalues": "PASS"
+  },
+  {
+    "environment": "cc22",
+    "comparisons": 500,
+    "targets": 5,
+    "different_decisions": 0,
+    "source_files": [
+      "results/new/xenium_target_trace/cc22/output/original_direct_trace.tsv",
+      "results/new/xenium_target_trace/cc22/output/ess_direct_trace.tsv"
+    ],
+    "source_sha256": [
+      "0f1969ac46c8441a7e63fa981ab2377b1d5f649b3a523d482e57f71d64b88563",
+      "d5d9b991eb04bc31fb580a02b19f03e322f115360157c29275d70ea7e9f37e59"
+    ],
+    "output": "supplementary/S_G2_direct_decisions_cc22.tsv",
+    "hex_decimal_roundtrip": "PASS",
+    "strict_comparison_recheck": "PASS",
+    "final_counts_and_pvalues": "PASS"
+  }
+]

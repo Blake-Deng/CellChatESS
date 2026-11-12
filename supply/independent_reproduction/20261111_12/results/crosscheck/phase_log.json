@@ -1,0 +1,68 @@
+[
+  {
+    "stage": "record_and_array_comparison",
+    "argv": [
+      "/usr/bin/python3",
+      "/data/dzf/CellChatESS_reproduction_20261111_XBLoQr/orchestration/compare/core_audit.py",
+      "--repo",
+      "/data/dzf/CellChatESS_reproduction_20261111_XBLoQr/repository",
+      "--primary",
+      "/data/dzf/CellChatESS_reproduction_20261111_XBLoQr/workspace/results/new/primary216",
+      "--autozyme",
+      "/data/dzf/CellChatESS_reproduction_20261111_XBLoQr/workspace/results/new/autozyme192",
+      "--out",
+      "/data/dzf/CellChatESS_reproduction_20261111_XBLoQr/results/crosscheck/core",
+      "--rscript",
+      "/home/dzf/miniforge3/envs/cellchat-acceleration/bin/Rscript"
+    ],
+    "started": 1794469625.8575776,
+    "log": "/data/dzf/CellChatESS_reproduction_20261111_XBLoQr/results/crosscheck/record_and_array_comparison_1794469625857573421.log",
+    "exit_code": 0,
+    "elapsed_s": 112.26293301582336
+  },
+  {
+    "stage": "fresh_tables_figures_and_uncertainty",
+    "argv": [
+      "/home/dzf/miniforge3/bin/python",
+      "/data/dzf/CellChatESS_reproduction_20261111_XBLoQr/orchestration/compare/fresh_figures.py",
+      "--root",
+      "/data/dzf/CellChatESS_reproduction_20261111_XBLoQr"
+    ],
+    "started": 1794469738.1211963,
+    "log": "/data/dzf/CellChatESS_reproduction_20261111_XBLoQr/results/crosscheck/fresh_tables_figures_and_uncertainty_1794469738121188528.log",
+    "exit_code": 0,
+    "elapsed_s": 42.36559534072876
+  },
+  {
+    "stage": "historical_CC16_ESS011_216",
+    "argv": [
+      "/usr/bin/python3",
+      "/data/dzf/CellChatESS_reproduction_20261111_XBLoQr/orchestration/compare/extended.py",
+      "legacy",
+      "--root",
+      "/data/dzf/CellChatESS_reproduction_20261111_XBLoQr",
+      "--jobs",
+      "8"
+    ],
+    "started": 1794469780.4876466,
+    "log": "/data/dzf/CellChatESS_reproduction_20261111_XBLoQr/results/crosscheck/historical_CC16_ESS011_216_1794469780487640430.log",
+    "exit_code": 0,
+    "elapsed_s": 12997.627958774567
+  },
+  {
+    "stage": "regenerate_129_prepared_inputs",
+    "argv": [
+      "/usr/bin/python3",
+      "/data/dzf/CellChatESS_reproduction_20261111_XBLoQr/orchestration/compare/extended.py",
+      "prep",
+      "--root",
+      "/data/dzf/CellChatESS_reproduction_20261111_XBLoQr",
+      "--jobs",
+      "2"
+    ],
+    "started": 1794482778.1415815,
+    "log": "/data/dzf/CellChatESS_reproduction_20261111_XBLoQr/results/crosscheck/regenerate_129_prepared_inputs_1794482778141577460.log",
+    "exit_code": 0,
+    "elapsed_s": 11604.144946098328
+  }
+]

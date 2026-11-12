@@ -135,25 +135,45 @@ List group_tri_mean_boot_cpp(NumericMatrix data, IntegerMatrix groupBoot, int K)
   return List::create(Named("avg_boot") = out);
 }
 
-static inline double avg_expr_matrix(const NumericMatrix& avg, const IntegerMatrix& idx, int row, int k) {
+// Resolve the gene/complex distinction once, before any OpenMP region.
+static inline std::vector<unsigned char> direct_gene_flags(const IntegerMatrix& index) {
+  std::vector<unsigned char> flags(index.nrow(), 1);
+  if (index.hasAttribute("direct_gene")) {
+    LogicalVector direct = index.attr("direct_gene");
+    if (direct.size() != index.nrow()) stop("Invalid direct-gene metadata");
+    for (int i = 0; i < index.nrow(); ++i) flags[i] = direct[i] == TRUE;
+  }
+  return flags;
+}
+
+static inline double avg_expr_matrix(const NumericMatrix& avg, const IntegerMatrix& idx, int row, int k, bool direct_gene = true) {
   double sum_log = 0.0;
+  double single_value = NA_REAL;
   int n = 0;
   for (int j = 0; j < idx.ncol(); ++j) {
     const int g = idx(row, j) - 1;
     if (g < 0) continue;
     const double x = avg(g, k);
     if (NumericVector::is_na(x)) continue;
-    sum_log += std::log(x);
+    // A single gene uses the group summary directly, as in CellChat.
+    // For multiple components, retain the original log-sum order.
+    if (n == 0) {
+      single_value = x;
+    } else {
+      if (n == 1) sum_log += std::log(single_value);
+      sum_log += std::log(x);
+    }
     ++n;
   }
   if (n == 0) return NA_REAL;
-  if (n == 1) return std::exp(sum_log);
+  if (n == 1) return direct_gene ? single_value : std::exp(std::log(single_value));
   return std::exp(sum_log / static_cast<double>(n));
 }
 
 static inline double avg_expr_boot(const NumericVector& avgBoot, int G, int K,
-                                   const IntegerMatrix& idx, int row, int k, int b) {
+                                   const IntegerMatrix& idx, int row, int k, int b, bool direct_gene = true) {
   double sum_log = 0.0;
+  double single_value = NA_REAL;
   int n = 0;
   const int boot_offset = G * K * b;
   for (int j = 0; j < idx.ncol(); ++j) {
@@ -161,11 +181,18 @@ static inline double avg_expr_boot(const NumericVector& avgBoot, int G, int K,
     if (g < 0) continue;
     const double x = avgBoot[g + G * k + boot_offset];
     if (NumericVector::is_na(x)) continue;
-    sum_log += std::log(x);
+    // A single gene uses the group summary directly, as in CellChat.
+    // For multiple components, retain the original log-sum order.
+    if (n == 0) {
+      single_value = x;
+    } else {
+      if (n == 1) sum_log += std::log(single_value);
+      sum_log += std::log(x);
+    }
     ++n;
   }
   if (n == 0) return NA_REAL;
-  if (n == 1) return std::exp(sum_log);
+  if (n == 1) return direct_gene ? single_value : std::exp(std::log(single_value));
   return std::exp(sum_log / static_cast<double>(n));
 }
 
@@ -260,6 +287,8 @@ List cellchat_prob_from_avg_cpp(
   const int K = dims[1];
   const int nboot = dims[2];
   const int nLR = ligandIdx.nrow();
+  const auto ligand_direct = direct_gene_flags(ligandIdx);
+  const auto receptor_direct = direct_gene_flags(receptorIdx);
   const int KK = K * K;
   const R_xlen_t KK_x = static_cast<R_xlen_t>(KK);
   const double Kh_n = std::pow(Kh, n_power);
@@ -272,8 +301,8 @@ List cellchat_prob_from_avg_cpp(
 
   for (int lr = 0; lr < nLR; ++lr) {
     for (int k = 0; k < K; ++k) {
-      L[k] = avg_expr_matrix(avg, ligandIdx, lr, k);
-      R[k] = avg_expr_matrix(avg, receptorIdx, lr, k);
+      L[k] = avg_expr_matrix(avg, ligandIdx, lr, k, ligand_direct[lr]);
+      R[k] = avg_expr_matrix(avg, receptorIdx, lr, k, receptor_direct[lr]);
       const double coA = coreceptor_factor_matrix(avg, coAIdx, lr, k);
       const double coI = coreceptor_factor_matrix(avg, coIIdx, lr, k);
       R[k] = R[k] * coA / coI;
@@ -291,7 +320,7 @@ List cellchat_prob_from_avg_cpp(
           const double dataLR_n = std::pow(dataLR, n_power);
           p1 = dataLR_n / (Kh_n + dataLR_n);
         }
-        double val = p1 * ago[s] * ago[r] * ant[s] * ant[r];
+        double val = p1 * (ago[s] * ago[r]) * (ant[s] * ant[r]);
         const int idx = s + K * r;
         pnull[idx] = val;
         prob[static_cast<R_xlen_t>(idx) + KK_x * lr] = val;
@@ -307,8 +336,8 @@ List cellchat_prob_from_avg_cpp(
     std::vector<int> reject(KK, 0);
     for (int b = 0; b < nboot; ++b) {
       for (int k = 0; k < K; ++k) {
-        Lb[k] = avg_expr_boot(avgBoot, G, K, ligandIdx, lr, k, b);
-        Rb[k] = avg_expr_boot(avgBoot, G, K, receptorIdx, lr, k, b);
+        Lb[k] = avg_expr_boot(avgBoot, G, K, ligandIdx, lr, k, b, ligand_direct[lr]);
+        Rb[k] = avg_expr_boot(avgBoot, G, K, receptorIdx, lr, k, b, receptor_direct[lr]);
         const double coA = coreceptor_factor_boot(avgBoot, G, K, coAIdx, lr, k, b);
         const double coI = coreceptor_factor_boot(avgBoot, G, K, coIIdx, lr, k, b);
         Rb[k] = Rb[k] * coA / coI;
@@ -323,7 +352,7 @@ List cellchat_prob_from_avg_cpp(
             const double dataLR_n = std::pow(dataLR, n_power);
             p1 = dataLR_n / (Kh_n + dataLR_n);
           }
-          const double val = p1 * agoB[s] * agoB[r] * antB[s] * antB[r];
+          const double val = p1 * (agoB[s] * agoB[r]) * (antB[s] * antB[r]);
           const int idx = s + K * r;
           if (val - pnull[idx] > 0.0) reject[idx] += 1;
         }
@@ -361,8 +390,9 @@ static inline void add_index_genes(std::vector<int>& genes, const IntegerMatrix&
 static inline double avg_expr_local(const std::vector<double>& bootAvg,
                                     const std::vector<int>& gene_to_local,
                                     const IntegerMatrix& idx,
-                                    int row, int k, int K) {
+                                    int row, int k, int K, bool direct_gene = true) {
   double sum_log = 0.0;
+  double single_value = NA_REAL;
   int n = 0;
   for (int j = 0; j < idx.ncol(); ++j) {
     const int g0 = idx(row, j) - 1;
@@ -371,11 +401,18 @@ static inline double avg_expr_local(const std::vector<double>& bootAvg,
     if (local < 0) continue;
     const double val = bootAvg[local * K + k];
     if (NumericVector::is_na(val)) continue;
-    sum_log += std::log(val);
+    // A single gene uses the group summary directly, as in CellChat.
+    // For multiple components, retain the original log-sum order.
+    if (n == 0) {
+      single_value = val;
+    } else {
+      if (n == 1) sum_log += std::log(single_value);
+      sum_log += std::log(val);
+    }
     ++n;
   }
   if (n == 0) return NA_REAL;
-  if (n == 1) return std::exp(sum_log);
+  if (n == 1) return direct_gene ? single_value : std::exp(std::log(single_value));
   return std::exp(sum_log / static_cast<double>(n));
 }
 
@@ -437,6 +474,8 @@ List cellchat_prob_ess_cpp(
   const int K = Rcpp::max(group);
   const int nboot = groupBoot.ncol();
   const int nLR = ligandIdx.nrow();
+  const auto ligand_direct = direct_gene_flags(ligandIdx);
+  const auto receptor_direct = direct_gene_flags(receptorIdx);
   const int KK = K * K;
   const R_xlen_t KK_x = static_cast<R_xlen_t>(KK);
   const double Kh_n = std::pow(Kh, n_power);
@@ -499,8 +538,8 @@ List cellchat_prob_ess_cpp(
     }
 
     for (int k = 0; k < K; ++k) {
-      L[k] = avg_expr_matrix(avg, ligandIdx, lr, k);
-      R[k] = avg_expr_matrix(avg, receptorIdx, lr, k);
+      L[k] = avg_expr_matrix(avg, ligandIdx, lr, k, ligand_direct[lr]);
+      R[k] = avg_expr_matrix(avg, receptorIdx, lr, k, receptor_direct[lr]);
       if (simple_lr) {
         ago[k] = 1.0;
         ant[k] = 1.0;
@@ -534,7 +573,7 @@ List cellchat_prob_ess_cpp(
         const double dataLR = L[s] * R[r];
         const double dataLR_n = std::pow(dataLR, n_power);
         const double p1 = dataLR_n / (Kh_n + dataLR_n);
-        const double val = p1 * ago[s] * ago[r] * ant[s] * ant[r];
+        const double val = p1 * (ago[s] * ago[r]) * (ant[s] * ant[r]);
         const int idx = s + K * r;
         pnull[idx] = val;
         prob[static_cast<R_xlen_t>(idx) + lr_offset] = val;
@@ -610,8 +649,8 @@ List cellchat_prob_ess_cpp(
       }
 
       for (int k : active_groups) {
-        Lb[k] = avg_expr_local(bootAvg, gene_to_local, ligandIdx, lr, k, K);
-        Rb[k] = avg_expr_local(bootAvg, gene_to_local, receptorIdx, lr, k, K);
+        Lb[k] = avg_expr_local(bootAvg, gene_to_local, ligandIdx, lr, k, K, ligand_direct[lr]);
+        Rb[k] = avg_expr_local(bootAvg, gene_to_local, receptorIdx, lr, k, K, receptor_direct[lr]);
         if (simple_lr) {
           agoB[k] = 1.0;
           antB[k] = 1.0;
@@ -634,7 +673,7 @@ List cellchat_prob_ess_cpp(
           const double dataLR_n = std::pow(dataLR, n_power);
           p1 = dataLR_n / (Kh_n + dataLR_n);
         }
-        const double val = p1 * agoB[s] * agoB[r] * antB[s] * antB[r];
+        const double val = p1 * (agoB[s] * agoB[r]) * (antB[s] * antB[r]);
         if (val - pnull[idx] > 0.0) reject_local[j] += 1;
       }
     };

@@ -1,0 +1,78 @@
+{
+  "timestamp": "2026-11-12 23:00:45 CST",
+  "remote_root": "/data/dzf/CellChatESS_reproduction_20261111_XBLoQr",
+  "core": {
+    "time": "2026-11-12T02:58:19.946968+08:00",
+    "phase": "CORE_PAIRED_RUNS_VERIFIED",
+    "method_processes": 1008
+  },
+  "followup": {
+    "state": "ALL_PHASES_RETURNED_SUCCESSFULLY",
+    "stage": "review_results"
+  },
+  "xenium": {
+    "stage": "COMPLETED",
+    "phase": "all"
+  },
+  "campaigns": {
+    "primary_smoke": {
+      "started": 2,
+      "completed": 2,
+      "last_event_epoch": 1794408549.4020247,
+      "final": {
+        "status": "COMPLETED",
+        "method_processes_completed": 2,
+        "full_run": false,
+        "baseline": "CellChat 2.2.0.9001",
+        "failures": []
+      },
+      "numeric_check": {
+        "max_probability_delta": 5.55111512312578e-17,
+        "different_pvals": 0,
+        "different_counts": 0,
+        "comparisons": 1
+      }
+    },
+    "primary216": {
+      "started": 432,
+      "completed": 432,
+      "last_event_epoch": 1794414009.056057,
+      "final": {
+        "status": "COMPLETED",
+        "method_processes_completed": 432,
+        "full_run": true,
+        "baseline": "CellChat 2.2.0.9001",
+        "failures": []
+      },
+      "numeric_check": {
+        "max_probability_delta": 1.11022302462516e-16,
+        "different_pvals": 0,
+        "different_counts": 0,
+        "comparisons": 216
+      }
+    },
+    "autozyme192": {
+      "started": 576,
+      "completed": 576,
+      "last_event_epoch": 1794423498.9684827,
+      "final": {
+        "status": "COMPLETED",
+        "method_processes_completed": 576,
+        "full_run": true,
+        "baseline": "CellChat 2.2.0.9001",
+        "failures": []
+      },
+      "numeric_check": {
+        "max_probability_delta": 1.11022302462516e-16,
+        "different_pvals": 0,
+        "different_counts": 0,
+        "comparisons": 384
+      }
+    }
+  },
+  "aux_last_log": "PHASE PASS audit",
+  "crosscheck_stage": "regenerate_129_prepared_inputs",
+  "legacy_progress": 216,
+  "prepared_input_regenerations": 129,
+  "final_report_path": "/data/dzf/CellChatESS_reproduction_20261111_XBLoQr/results/crosscheck/REPORT.md"
+}

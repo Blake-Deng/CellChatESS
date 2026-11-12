@@ -1,0 +1,81 @@
+--- final/DESCRIPTION
++++ A3_no_cache_no_pruning/DESCRIPTION
+@@ -29,3 +29,4 @@
+     Rcpp
+ SystemRequirements: OpenMP (optional)
+ RoxygenNote: 7.3.2
++Config/CellChatESS/Build: A3_no_cache_no_pruning
+--- final/src/cellchat_prob_cpp.cpp
++++ A3_no_cache_no_pruning/src/cellchat_prob_cpp.cpp
+@@ -511,8 +511,8 @@
+ 
+   // Layout: [bootstrap][gene][group]. The innermost group dimension is
+   // contiguous, matching the ESS access pattern for one LR gene.
+-  std::vector<double> tri_cache(static_cast<size_t>(U) * K * nboot, NA_REAL);
+-  std::vector<unsigned char> tri_seen(static_cast<size_t>(U) * K * nboot, 0);
++  std::vector<double> tri_cache; // Cache disabled in A3.
++  std::vector<unsigned char> tri_seen;
+ 
+   NumericVector prob(Dimension(K, K, nLR));
+   NumericVector pval(Dimension(K, K, nLR));
+@@ -563,8 +563,8 @@
+     active_groups.reserve(K);
+ 
+     for (int k = 0; k < K; ++k) {
+-      if (L[k] > 0.0) active_senders.push_back(k);
+-      if (R[k] > 0.0) active_receivers.push_back(k);
++      active_senders.push_back(k);
++      active_receivers.push_back(k);
+     }
+     active_idx.reserve(active_senders.size() * active_receivers.size());
+ 
+@@ -577,7 +577,7 @@
+         const int idx = s + K * r;
+         pnull[idx] = val;
+         prob[static_cast<R_xlen_t>(idx) + lr_offset] = val;
+-        if (val != 0.0) {
++        { // Unpruned diagnostic comparator: retain every observed pair.
+           active_idx.push_back(idx);
+           if (!group_seen[s]) {
+             group_seen[s] = 1;
+@@ -631,20 +631,9 @@
+       std::fill(bootAvg.begin(), bootAvg.end(), NA_REAL);
+       for (int local = 0; local < static_cast<int>(lr_genes.size()); ++local) {
+         const int gene0 = lr_genes[local];
+-        const int cache_gene = gene_to_cache[gene0];
+-        if (cache_gene < 0) continue;
+-        const size_t cache_base = static_cast<size_t>(K) *
+-          (static_cast<size_t>(cache_gene) + static_cast<size_t>(U) * static_cast<size_t>(b));
+         for (int k : active_groups) {
+-          const size_t cache_idx = cache_base + static_cast<size_t>(k);
+-          if (!tri_seen[cache_idx]) {
+-            tri_cache[cache_idx] = tri_mean_gene_cells(data, gene0, boot_cells[b * K + k]);
+-            tri_seen[cache_idx] = 1;
+-            tri_mean_evals_local += 1;
+-          } else {
+-            cache_hits_local += 1;
+-          }
+-          bootAvg[local * K + k] = tri_cache[cache_idx];
++          bootAvg[local * K + k] = tri_mean_gene_cells(data, gene0, boot_cells[b * K + k]);
++          tri_mean_evals_local += 1;
+         }
+       }
+ 
+@@ -728,7 +717,7 @@
+ 
+     for (int j = 0; j < static_cast<int>(active_idx.size()); ++j) {
+       const int idx = active_idx[j];
+-      pval[static_cast<R_xlen_t>(idx) + lr_offset] = static_cast<double>(reject[j]) / static_cast<double>(nboot);
++      pval[static_cast<R_xlen_t>(idx) + lr_offset] = pnull[idx] == 0.0 ? 1.0 : static_cast<double>(reject[j]) / static_cast<double>(nboot);
+     }
+ 
+     for (int g0 : lr_genes) {
+@@ -747,7 +736,7 @@
+     Named("boot_tri_mean_evals") = static_cast<double>(boot_tri_mean_evals),
+     Named("cache_hits") = static_cast<double>(cache_hits),
+     Named("cache_genes") = static_cast<double>(U),
+-    Named("cache_slots") = static_cast<double>(static_cast<long long>(U) * static_cast<long long>(K) * static_cast<long long>(nboot)),
++    Named("cache_slots") = 0.0,
+     Named("streamed_lr") = static_cast<double>(streamed_lr),
+     Named("max_lr_genes") = static_cast<double>(max_lr_genes),
+     Named("threads_used") = threads_used

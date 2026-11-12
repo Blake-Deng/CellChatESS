@@ -1,0 +1,3 @@
+estimand	estimate	ci95_lower	ci95_upper	n_datasets	n_paired_runs	bootstrap_replicates	bootstrap_seed	bootstrap_unit	percentile_method	timing_scope
+median_of_216_paired_inference_call_ratios	70.82114860987087	52.34893617021276	93.45990029505444	12	216	10000	20261026	dataset; retain 18 paired runs per sampled dataset	linear interpolation	common_external_inference_call
+median_of_12_dataset_medians	65.34798850746779	51.91103288891848	86.06372638586868	12	216	10000	20261026	dataset; retain 18 paired runs per sampled dataset	linear interpolation	common_external_inference_call

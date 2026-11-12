@@ -1,0 +1,12 @@
+--- audit_xenium_paired_delivery_before_background_queue.py
++++ audit_xenium_paired_delivery.py
+@@ -90,7 +90,8 @@
+               '终止后的静态文件 SHA256：`terminal_SHA256_manifest.tsv`。动态日志和状态文件另列，不冒称已冻结。', '']
+     (root / 'DELIVERY_INDEX_CN.md').write_text('\n'.join(lines))
+     excluded = {'terminal_SHA256_manifest.tsv', 'SHA256_manifest.tsv', 'delivery_audit.log',
+-                'finalization.log', 'pipeline.log', 'pipeline_status.json'}
++                'finalization.log', 'pipeline.log', 'pipeline_status.json',
++                'background_queue.log', 'background_queue_status.json'}
+     entries = []
+     large = []
+     for path in sorted(root.rglob('*')):

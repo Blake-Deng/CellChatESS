@@ -1,0 +1,13 @@
+dataset_id	original_timing_records	full_input_timing_records	distinct_inputs	full_inputs
+3CA_data__10X	18	9	10	1
+3CA_data__EGAS00001004422	18	3	16	1
+3CA_data__Group1	18	6	13	1
+3CA_data__Group2	18	6	13	1
+3CA_data__PRJNA289244	18	15	4	1
+3CA_data__PRJNA395045	18	3	16	1
+3CA_data__PRJNA490728	18	12	7	1
+3CA_data__PRJNA593551	18	12	7	1
+3CA_data__PRJNA638151	18	3	16	1
+3CA_data__SmartSeq2	18	12	7	1
+normal_control__Sample5	18	9	10	1
+normal_control__Sample8	18	9	10	1

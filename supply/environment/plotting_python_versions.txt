@@ -1,0 +1,7 @@
+numpy==2.4.6
+pandas==3.0.5
+matplotlib==3.11.1
+scipy==1.18.0
+tabulate==0.10.0
+PyMuPDF==1.28.2
+Pillow==12.3.0

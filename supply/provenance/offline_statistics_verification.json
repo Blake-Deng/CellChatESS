@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "source": "reproduction/summarize_and_plot.py executed from staged delivery",
+  "inference_rerun": false,
+  "results": "Exact equality of independently regenerated summary.json, including 10000/100000 resamples, numerical summaries, RSS and 129-input sensitivity",
+  "reference": "results/new/core22_statistics/summary.json"
+}

@@ -1,0 +1,8 @@
+object	theoretical_payload_bytes	theoretical_payload_GiB	formula	source	measurement_type
+one_dense_output_payload	27866132184	25.952357970178127	8*nLR*K^2	CellChat modeling.R:203-204; ESS cellchat_prob_cpp.cpp:296-297	Derived allocation payload only; NOT measured R object.size or RSS; not summed as live peak.
+two_dense_output_payloads	55732264368	51.904715940356255	16*nLR*K^2	CellChat modeling.R:203-204; ESS cellchat_prob_cpp.cpp:296-297	Derived allocation payload only; NOT measured R object.size or RSS; not summed as live peak.
+original_dense_signal_matrix_payload	5993175744	5.581579864025116	8*G*C	CellChat modeling.R:75	Derived allocation payload only; NOT measured R object.size or RSS; not summed as live peak.
+original_normalized_signal_matrix_payload	5993175744	5.581579864025116	8*G*C	CellChat modeling.R:111	Derived allocation payload only; NOT measured R object.size or RSS; not summed as live peak.
+original_integer_permutation_payload	462436400	0.43067745864391327	4*C*nboot	CellChat modeling.R:207	Derived allocation payload only; NOT measured R object.size or RSS; not summed as live peak.
+original_bootstrap_group_summary_payload	1221868800	1.1379539966583252	8*G*K*nboot	CellChat modeling.R:208-217	Derived allocation payload only; NOT measured R object.size or RSS; not summed as live peak.
+original_one_LR_Pboot_matrix_payload	4444359200	4.139132052659988	8*K^2*nboot	CellChat modeling.R:302	Derived allocation payload only; NOT measured R object.size or RSS; not summed as live peak.

@@ -1,0 +1,13 @@
+claim	value_or_scope	status	evidence
+CellChat upstream commit	75253cd0c9e68410e6e721a6d3a0419a1d7e358f	CONFIRMED	source_and_install_identity.json
+Final ESS commit	139a61c33d4c09568f48f4afd0a16dc57bb22f4f	CONFIRMED	source_and_install_identity.json
+Input SHA256	cc6155a5de127ba34b8a26e7f69e7bffc704448f976107253711623d2a88de37	CONFIRMED	original/run_identity_before.json
+Official CellChat functions unmodified / AutoZyme not loaded	All checked loaded bodies match pinned upstream; AutoZyme namespace not loaded	CONFIRMED	original/upstream_function_identity.tsv; original/run_identity_before.json
+Paired smoke probability difference	6.9388939039072284e-18	CONFIRMED: SMOKE ONLY	smoke/comparison_retry01/full627_comparison_summary.tsv
+Paired smoke p/count equality	p-value and count identical	CONFIRMED: SMOKE ONLY	smoke/comparison_retry01/full627_comparison_summary.tsv
+Full627 probability agreement	Await both completed full outputs	PENDING	comparison/full627_comparison_summary.tsv
+Full627 p/count equality	Await both completed full outputs	PENDING	comparison/full627_comparison_summary.tsv
+Paired timing/RSS ratios	Await both completed independent-process runs	PENDING	R2_xenium_memory_time_comparison.tsv
+Each dense output payload	8 * 627 * 2357^2 = 27866132184 bytes	DERIVED: PAYLOAD ONLY	audit/theoretical_allocation_payloads.tsv
+Original temporary allocations	Source-derived theoretical payloads; live temporary object sizes not measured in clean timing build	LIMITATION	audit/theoretical_allocation_payloads.tsv; audit/frozen_source_excerpts.md
+Prior TRACE and PROFILE	Distinct instrumented builds and restricted scope; not the new full pair	AUXILIARY ONLY	auxiliary/

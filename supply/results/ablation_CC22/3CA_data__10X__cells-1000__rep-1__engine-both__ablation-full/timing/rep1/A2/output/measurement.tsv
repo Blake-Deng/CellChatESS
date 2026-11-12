@@ -1,0 +1,2 @@
+"stage"	"inference_call_sec"	"cells"	"K"	"nLR"	"CellChat"	"ESS"	"build"	"library"	"input"
+"A2"	1.446	1000	12	1253	"2.2.0.9001"	"0.2.2"	"final_candidate"	"/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/ess022"	"/data/dzf/home_migrated_20261003/cellchat_acceleration/results/runs/checkpoints/3CA_data__10X__cells-1000__rep-1__engine-both__ablation-full/prepared_cellchat.rds"

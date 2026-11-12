@@ -1,0 +1,3 @@
+analysis	n_records_or_inputs	n_datasets	median_speedup	ci95_lower	ci95_upper	bootstrap_replicates	bootstrap_seed	bootstrap_unit	ci_method
+original_216_paired_timing_records	216	12	70.821148609870875	52.34893617021276	93.459900295054439	10000	20261026	12 datasets sampled with replacement; retain all records/inputs in each selected dataset	percentile 2.5/97.5; linear interpolation
+one_median_ratio_per_distinct_input_129	129	12	102.1789052069426	74.93761996161227	120.78562826174227	10000	20261026	12 datasets sampled with replacement; retain all records/inputs in each selected dataset	percentile 2.5/97.5; linear interpolation

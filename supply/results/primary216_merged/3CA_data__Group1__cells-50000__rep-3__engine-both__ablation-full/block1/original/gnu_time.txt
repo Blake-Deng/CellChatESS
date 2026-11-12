@@ -1,0 +1,23 @@
+	Command being timed: "/home/dzf/miniforge3/envs/cellchat-acceleration/bin/Rscript --vanilla /home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/reproduction/inference_worker.R original /data/dzf/home_migrated_20261003/cellchat_acceleration/results/runs/checkpoints/3CA_data__Group1__cells-50000__rep-3__engine-both__ablation-full/prepared_cellchat.rds /home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/results/new/primary216/3CA_data__Group1__cells-50000__rep-3__engine-both__ablation-full/block1/original 2.2.0.9001 /home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/ess022 /home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/cellchat22 /home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/autozyme 1 52fbb08f6b520e1e18c6b022b16edba5205f1bff36b991e4626fae47fe484956 521f79de39212d823a67202e9143d5687b346bb9a83d7d30979def78063bea0c"
+	User time (seconds): 95.95
+	System time (seconds): 3.45
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:39.47
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2926236
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1886483
+	Voluntary context switches: 85
+	Involuntary context switches: 522
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 7840
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

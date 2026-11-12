@@ -1,0 +1,315 @@
+{
+  "status": "NEW_CC22_RESULTS",
+  "primary": {
+    "pooled_median": 27.477142463471342,
+    "pooled_dataset_cluster_bootstrap_95CI": [
+      22.306467632508543,
+      38.466079769447944
+    ],
+    "median_of_dataset_medians": 24.541983162292386,
+    "median_of_dataset_medians_bootstrap_95CI": [
+      20.43187061150771,
+      33.03247748974366
+    ],
+    "datasets": 12,
+    "records": 216,
+    "bootstrap_replicates": 10000,
+    "seed": 20261026,
+    "generator": "numpy.random.default_rng / PCG64"
+  },
+  "autozyme": {
+    "pooled_median": 1.7525525210084065,
+    "pooled_dataset_cluster_bootstrap_95CI": [
+      1.5273888674497922,
+      2.3782221674943713
+    ],
+    "median_of_dataset_medians": 2.006604694799908,
+    "median_of_dataset_medians_bootstrap_95CI": [
+      1.368116459983244,
+      3.1952873492328937
+    ],
+    "datasets": 12,
+    "records": 192,
+    "bootstrap_replicates": 100000,
+    "seed": 20261027,
+    "generator": "numpy.random.default_rng / PCG64",
+    "ess_faster_blocks": 191,
+    "autozyme_faster_blocks": 1,
+    "tied_blocks": 0
+  },
+  "deduplicated_primary": {
+    "pooled_median": 38.7592715231788,
+    "pooled_dataset_cluster_bootstrap_95CI": [
+      30.93216012896292,
+      46.86064392119173
+    ],
+    "median_of_dataset_medians": 36.02984614399606,
+    "median_of_dataset_medians_bootstrap_95CI": [
+      26.784499501933542,
+      43.10858819160431
+    ],
+    "datasets": 12,
+    "records": 129,
+    "bootstrap_replicates": 10000,
+    "seed": 20261026,
+    "generator": "numpy.random.default_rng / PCG64",
+    "definition": "For each dataset/input SHA256, take the median of paired Original/ESS ratios; repeated full inputs are timing repeats. Never divide independent method-time medians."
+  },
+  "numerical": {
+    "autozyme/autozyme_vs_original/count": {
+      "max_absolute_difference": 0.0,
+      "different_elements_summed_over_runs": 0,
+      "all_elementwise_exact": true
+    },
+    "autozyme/autozyme_vs_original/prob": {
+      "max_absolute_difference": 1.11022302462516e-16,
+      "different_elements_summed_over_runs": 231882,
+      "all_elementwise_exact": false
+    },
+    "autozyme/autozyme_vs_original/pval": {
+      "max_absolute_difference": 0.0,
+      "different_elements_summed_over_runs": 0,
+      "all_elementwise_exact": true
+    },
+    "autozyme/ess_vs_original/count": {
+      "max_absolute_difference": 0.0,
+      "different_elements_summed_over_runs": 0,
+      "all_elementwise_exact": true
+    },
+    "autozyme/ess_vs_original/prob": {
+      "max_absolute_difference": 1.11022302462516e-16,
+      "different_elements_summed_over_runs": 222534,
+      "all_elementwise_exact": false
+    },
+    "autozyme/ess_vs_original/pval": {
+      "max_absolute_difference": 0.0,
+      "different_elements_summed_over_runs": 0,
+      "all_elementwise_exact": true
+    },
+    "primary/ess_vs_original/count": {
+      "max_absolute_difference": 0.0,
+      "different_elements_summed_over_runs": 0,
+      "all_elementwise_exact": true
+    },
+    "primary/ess_vs_original/prob": {
+      "max_absolute_difference": 1.11022302462516e-16,
+      "different_elements_summed_over_runs": 334629,
+      "all_elementwise_exact": false
+    },
+    "primary/ess_vs_original/pval": {
+      "max_absolute_difference": 0.0,
+      "different_elements_summed_over_runs": 0,
+      "all_elementwise_exact": true
+    }
+  },
+  "median_peak_RSS_GiB": {
+    "autozyme": 1.2207660675048828,
+    "ess": 0.9818267822265624,
+    "original": 1.7967109680175781
+  },
+  "candidate_source_manifest_sha256": "52fbb08f6b520e1e18c6b022b16edba5205f1bff36b991e4626fae47fe484956",
+  "representative": {
+    "input": "3CA_data__10X__cells-1000__rep-1__engine-both__ablation-full",
+    "max_abs_difference": 5.55111512312578e-17,
+    "n_elements": 180432,
+    "nonzero_original": 2899,
+    "K": 12,
+    "cells": 1000
+  },
+  "xenium": {
+    "status": "COMPLETED",
+    "R_exit_code": 0,
+    "sampler_exit_code": 0,
+    "actual_R_pid": 4178968,
+    "scope": "ESS full 627-LR absolute resource profile only; no new Original speedup",
+    "peak_RSS_GiB": 111.79359436035156,
+    "full_process_wall_sec": 1527.48,
+    "exit_status": 0,
+    "engine": "CellChatESS_0.2.2_profiled",
+    "elapsed_sec": "1105.366",
+    "cells": "1156091",
+    "signaling_genes": "648",
+    "groups": "2357",
+    "n_lr": "627",
+    "nboot": "100",
+    "seed_use": "1",
+    "input_bytes": "959610184",
+    "probability_bytes": "27866570912",
+    "pvalue_bytes": "27866570912",
+    "probability_payload_bytes": "27866132184",
+    "pvalue_payload_bytes": "27866132184",
+    "threads_used": "1",
+    "output_file_bytes": "1084421971",
+    "CellChat_version": "2.2.0.9001",
+    "CellChatESS_version": "0.2.2",
+    "output_path": "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/results/new/xenium_profile/result.rds",
+    "output_file_sha256": "44384fb2ae1ff16a0b7a61da088be13ef7bc9f1fb90a3dcf7454f66aa93633f9",
+    "sample_count": 1528,
+    "sampled_peak_RSS_GiB": 111.79550552368164,
+    "max_sampling_gap_sec": 1.000427001953125,
+    "median_sampling_interval_sec": 1.000140869140625,
+    "sampling_gaps_over_2_sec": 0,
+    "time_zero": "Immediately before inference function call"
+  },
+  "high_retention_median_speedup": 1.8315640481245576,
+  "memory_ESS_lower_than_AutoZyme_blocks": 192,
+  "ablation_numerical": {
+    "count": {
+      "max_abs_difference": 0.0,
+      "different_elements": 0
+    },
+    "prob": {
+      "max_abs_difference": 1.11022302462516e-16,
+      "different_elements": 103172
+    },
+    "pval": {
+      "max_abs_difference": 0.0,
+      "different_elements": 0
+    }
+  },
+  "feature_ranges": {
+    "cells": {
+      "min": 1000.0,
+      "max": 100335.0
+    },
+    "K": {
+      "min": 7.0,
+      "max": 36.0
+    },
+    "nLR": {
+      "min": 384.0,
+      "max": 1849.0
+    },
+    "matrix_sparsity": {
+      "min": 0.841808425275827,
+      "max": 0.957274975272008
+    },
+    "f_LR": {
+      "min": 0.0049632045860186,
+      "max": 0.0916183877259891
+    },
+    "f_union": {
+      "min": 0.85207100591716,
+      "max": 1.0
+    },
+    "min_group_cells": {
+      "min": 12.0,
+      "max": 264.0
+    },
+    "median_group_cells": {
+      "min": 37.5,
+      "max": 2549.5
+    },
+    "max_group_cells": {
+      "min": 144.0,
+      "max": 11129.0
+    }
+  },
+  "descriptive_correlations": [
+    {
+      "analysis": "Spearman, records",
+      "feature": "matrix_nonzero",
+      "control": "",
+      "n": 216,
+      "rho": -0.7451625961142049,
+      "interpretation": "Descriptive; scales and timing repeats nested in datasets"
+    },
+    {
+      "analysis": "Spearman, records",
+      "feature": "signaling_gene_cell_elements",
+      "control": "",
+      "n": 216,
+      "rho": -0.49685775581139,
+      "interpretation": "Descriptive; scales and timing repeats nested in datasets"
+    },
+    {
+      "analysis": "Spearman, records",
+      "feature": "input_R_object_bytes",
+      "control": "",
+      "n": 216,
+      "rho": -0.7441880032859962,
+      "interpretation": "Descriptive; scales and timing repeats nested in datasets"
+    },
+    {
+      "analysis": "Spearman, records",
+      "feature": "positive_L_Radj_triples",
+      "control": "",
+      "n": 216,
+      "rho": -0.6586599345873235,
+      "interpretation": "Descriptive; scales and timing repeats nested in datasets"
+    },
+    {
+      "analysis": "Spearman, records",
+      "feature": "f_LR",
+      "control": "",
+      "n": 216,
+      "rho": -0.3792780494497108,
+      "interpretation": "Descriptive; scales and timing repeats nested in datasets"
+    },
+    {
+      "analysis": "Spearman, dataset medians",
+      "feature": "f_LR",
+      "control": "",
+      "n": 12,
+      "rho": -0.7622377622377624,
+      "interpretation": "12 dataset-level medians"
+    },
+    {
+      "analysis": "Partial rank, records",
+      "feature": "f_LR",
+      "control": "input_R_object_bytes",
+      "n": 216,
+      "rho": -0.7105122037403334,
+      "interpretation": "Pearson correlation of average-rank residuals after intercept + control rank"
+    },
+    {
+      "analysis": "Spearman, feature and scale",
+      "feature": "f_LR",
+      "control": "input_R_object_bytes",
+      "n": 216,
+      "rho": -0.12322914431490356,
+      "interpretation": "Association of retained fraction with the scale covariate"
+    },
+    {
+      "analysis": "Partial rank, records",
+      "feature": "f_LR",
+      "control": "matrix_nonzero",
+      "n": 216,
+      "rho": -0.7122056725179796,
+      "interpretation": "Pearson correlation of average-rank residuals after intercept + control rank"
+    },
+    {
+      "analysis": "Spearman, feature and scale",
+      "feature": "f_LR",
+      "control": "matrix_nonzero",
+      "n": 216,
+      "rho": -0.12352001525880359,
+      "interpretation": "Association of retained fraction with the scale covariate"
+    },
+    {
+      "analysis": "Partial rank, records",
+      "feature": "f_LR",
+      "control": "signaling_gene_cell_elements",
+      "n": 216,
+      "rho": -0.8182621524443308,
+      "interpretation": "Pearson correlation of average-rank residuals after intercept + control rank"
+    },
+    {
+      "analysis": "Spearman, feature and scale",
+      "feature": "f_LR",
+      "control": "signaling_gene_cell_elements",
+      "n": 216,
+      "rho": -0.48584246616243093,
+      "interpretation": "Association of retained fraction with the scale covariate"
+    }
+  ],
+  "record_audit": {
+    "primary_pairs": 216,
+    "primary_method_processes": 432,
+    "autozyme_blocks": 192,
+    "autozyme_method_processes": 576,
+    "distinct_primary_inputs": 129,
+    "repeated_full_timing_records": 99,
+    "full_dataset_scale_combinations": 33
+  }
+}

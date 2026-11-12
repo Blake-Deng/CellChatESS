@@ -1,0 +1,10 @@
+{
+  "R_CMD_build": "PASS",
+  "build_archive_bytes": 31319,
+  "supply_files_in_R_tarball": 0,
+  "portable_workspace_reconstruction": "PASS",
+  "portable_supplement_plot_reconstruction": "PASS",
+  "portable_figure_PNG_byte_identical": true,
+  "computation_reexecuted": false,
+  "upstream_download_reexecuted": false
+}

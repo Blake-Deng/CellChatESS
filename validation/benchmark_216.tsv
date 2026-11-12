@@ -1,4 +1,0 @@
-method	n_runs	median_core_elapsed_sec	median_peak_rss_gib	prob_max_abs_diff_vs_original	prob_min_pearson_vs_original	pval_max_abs_diff_vs_original
-Original CellChat R	216	426.583	1.860754	0	1	0
-Dense Rcpp	216	35.9635	1.159145	1.38777878078145e-16	1	0
-ESS	216	5.178511	1.059710	1.38777878078145e-16	1	0

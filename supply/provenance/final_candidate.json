@@ -1,0 +1,19 @@
+{
+  "version": "0.2.2",
+  "release_status": "unpublished_local_candidate",
+  "git_commit": "139a61c33d4c09568f48f4afd0a16dc57bb22f4f",
+  "git_tree": "62fb33d233e8b2296eca11b7eefade7745429e10",
+  "git_branch": "revision/0.2.2-cellchat22",
+  "git_history": "Standalone local candidate repository; public main is unchanged. Public reference commit is recorded in inst/source_provenance.json.",
+  "numeric_source_id": "bb3bb6310b4af2d5ec000ace97d61339680b0e2a940508da3e072bb553f8417b",
+  "source_tarball": "software/CellChatESS_0.2.2.tar.gz",
+  "source_tarball_sha256": "a88b5e600add26404f893583c5a4f690d97c1958b402e03a436b6c99b691fae4",
+  "git_bundle": "software/CellChatESS_0.2.2_local.bundle",
+  "git_bundle_sha256": "5e335ad1065e4a401f3d82c6dab323be275993684954e7811bbfefebc5b4708b",
+  "candidate_source_manifest_sha256": "52fbb08f6b520e1e18c6b022b16edba5205f1bff36b991e4626fae47fe484956",
+  "local_R": "4.5.2",
+  "local_platform": "macOS-27.0.1-arm64-arm-64bit",
+  "local_OpenMP_actual_threads": 1,
+  "full_server_reproduction": "NOT_RUN",
+  "tests_numeric_source_matches_final": true
+}

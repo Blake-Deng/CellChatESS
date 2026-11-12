@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "supply_files": 5499,
+  "supply_bytes": 56062541,
+  "baseline_source_files_verified": 29,
+  "unchanged_computational_source": true,
+  "baseline_commit": "139a61c33d4c09568f48f4afd0a16dc57bb22f4f",
+  "baseline_tree": "62fb33d233e8b2296eca11b7eefade7745429e10",
+  "documentary_changes_allowed": [
+    ".Rbuildignore",
+    ".zenodo.json",
+    "CITATION.cff",
+    "NEWS.md",
+    "README.md"
+  ],
+  "errors": [],
+  "note": "Verifies deposited records; does not rerun the scientific computations or recover excluded large RDS outputs."
+}

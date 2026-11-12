@@ -1,0 +1,339 @@
+--- /home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/audit/xenium_strict03_script_baseline/run_xenium_paired_full627.py	2026-11-01 17:43:36.198664280 +0800
++++ /home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/reproduction/run_xenium_paired_full627.py	2026-11-01 17:44:23.106143722 +0800
+@@ -1,7 +1,7 @@
+ #!/usr/bin/env python3
+ """Sequential, independent-process Original-vs-final-ESS Xenium run with safety guards."""
+ from __future__ import annotations
+-import argparse, csv, hashlib, json, os, signal, subprocess, sys, time
++import argparse, csv, hashlib, json, os, signal, subprocess, sys, time, shutil, tarfile
+ from pathlib import Path
+ 
+ ROOT=Path(__file__).resolve().parents[1]
+@@ -13,6 +13,10 @@
+ ESS_DLL_EXPECTED='c46577016d28829e5dcd1c694b3f185a762a6f925bf05cfe0721981030085752'
+ MIN_START_GIB=350.0
+ ABORT_AVAILABLE_GIB=180.0
++STOP_SIGNAL=None
++def request_stop(signum, frame):
++    global STOP_SIGNAL
++    STOP_SIGNAL=signum
+ 
+ def sha(path:Path)->str:
+     h=hashlib.sha256()
+@@ -89,8 +93,9 @@
+                   cwd=ROOT,env=env,stdout=sampler_log,stderr=subprocess.STDOUT,start_new_session=True)
+                 (out/'actual_process.json').write_text(json.dumps({'gnu_time_wrapper_pid':p.pid,'R_pid':rpid},indent=2)+'\n')
+         avail=available_gib()
+-        if avail<abort_floor:
+-            stop_reason=f'MemAvailable fell below safety floor {abort_floor:.1f} GiB (observed {avail:.1f} GiB)'
++        if avail<abort_floor or STOP_SIGNAL is not None:
++            stop_reason=(f'Controller received signal {STOP_SIGNAL}' if STOP_SIGNAL is not None else
++              f'MemAvailable fell below safety floor {abort_floor:.1f} GiB (observed {avail:.1f} GiB)')
+             try:os.killpg(p.pid,signal.SIGTERM)
+             except ProcessLookupError:pass
+             try:p.wait(timeout=60)
+@@ -108,7 +113,7 @@
+         try:sampler.wait(timeout=70)
+         except subprocess.TimeoutExpired:sampler.terminate();sampler.wait()
+         if sampler_log:sampler_log.close()
+-    state={'method':method,'status':'COMPLETED' if rc==0 and not stop_reason else ('ABORTED_RESOURCE_GUARD' if stop_reason else 'FAILED'),
++    state={'method':method,'status':'COMPLETED' if rc==0 and not stop_reason else ('INTERRUPTED' if STOP_SIGNAL is not None else ('ABORTED_RESOURCE_GUARD' if stop_reason else 'FAILED')),
+       'exit_code':rc,'safety_stop_reason':stop_reason,'elapsed_sec':time.monotonic()-start,'R_pid':rpid,
+       'MemAvailable_GiB_at_end':available_gib(),'result_rds_exists':(out/'result.rds').is_file()}
+     (out/'run_status.json').write_text(json.dumps(state,indent=2)+'\n')
+@@ -129,8 +134,35 @@
+     checks['ESS_installed_DLL_matches_expected']=checks['ESS_installed_DLL_sha256']==ESS_DLL_EXPECTED
+     checks['ESS_git_HEAD_matches_audit']=checks['ESS_git_HEAD']==checks['ESS_commit']
+     checks['ESS_git_worktree_clean']=not bool(checks['ESS_git_worktree_status'])
++    manifest=ROOT/'audit/candidate_source_manifest.tsv'
++    checks['ESS_source_manifest_recomputed_sha256']=sha(manifest)
++    checks['ESS_source_files_revalidated']=[]
++    with manifest.open(newline='') as f:
++        for row in csv.DictReader(f,delimiter='\t'):
++            p=ROOT/'software/CellChatESS'/row['path']
++            ok=p.is_file() and sha(p)==row['sha256'] and p.stat().st_size==int(row['size_bytes'])
++            checks['ESS_source_files_revalidated'].append({'file':row['path'],'matches':ok})
++    tar=ROOT/'software/CellChatESS_0.2.2.tar.gz'
++    checks['ESS_tarball_recomputed_sha256']=sha(tar)
++    archive=ROOT/'upstream/CellChat-75253cd0c9e68410e6e721a6d3a0419a1d7e358f.tar.gz'
++    checks['CellChat_archive_recomputed_sha256']=sha(archive)
++    with tarfile.open(archive,'r:gz') as tf:
++        mismatches=[];checked=0
++        for member in tf.getmembers():
++            rel=Path(*Path(member.name).parts[1:])
++            if member.isfile() and len(rel.parts)>1 and rel.parts[0] in ('R','src'):
++                p=ccsource.parents[1]/rel
++                if not p.is_file() or hashlib.sha256(tf.extractfile(member).read()).hexdigest()!=sha(p):mismatches.append(str(rel))
++                checked+=1
++    checks['CellChat_extracted_R_src_files_checked']=checked
++    checks['CellChat_extracted_R_src_archive_mismatches']=mismatches
++    checks['all_revalidated_source_and_archive_hashes_match']=(
++      checks['ESS_source_manifest_recomputed_sha256']==checks['ESS_source_manifest_sha256'] and
++      checks['ESS_tarball_recomputed_sha256']==checks['ESS_tarball_sha256'] and
++      checks['CellChat_archive_recomputed_sha256']==checks['CellChat_archive_sha256'] and
++      all(x['matches'] for x in checks['ESS_source_files_revalidated']) and not mismatches and checked>0)
+     (out/'source_and_install_identity.json').write_text(json.dumps(checks,indent=2)+'\n')
+-    if not (checks['ESS_installed_DLL_matches_expected'] and checks['ESS_git_HEAD_matches_audit'] and checks['ESS_git_worktree_clean']):
++    if not (checks['ESS_installed_DLL_matches_expected'] and checks['ESS_git_HEAD_matches_audit'] and checks['ESS_git_worktree_clean'] and checks['all_revalidated_source_and_archive_hashes_match']):
+         raise RuntimeError('Static source/install identity verification failed; see source_and_install_identity.json')
+     return checks
+ def run_compare(out:Path,expected_lr:int)->int:
+@@ -145,6 +177,7 @@
+     (out/'comparison_status.json').write_text(json.dumps({'status':'COMPLETED' if rc==0 else 'FAILED','exit_code':rc},indent=2)+'\n')
+     return rc
+ def main()->int:
++    signal.signal(signal.SIGTERM,request_stop);signal.signal(signal.SIGINT,request_stop)
+     ap=argparse.ArgumentParser()
+     ap.add_argument('--output',type=Path,default=ROOT/'results/new/xenium_paired_full627_20261101_strict01')
+     ap.add_argument('--smoke-only',action='store_true',help='run only the paired small-input smoke')
+@@ -156,6 +189,7 @@
+     if not a.smoke_only and available_gib()<MIN_START_GIB:
+         raise SystemExit(f'BLOCKED before full run: MemAvailable={available_gib():.1f} GiB < {MIN_START_GIB:.1f} GiB')
+     if not a.resume_after_smoke:out.mkdir(parents=True)
++    if shutil.disk_usage(out).free<200*1024**3:raise SystemExit('BLOCKED: less than 200 GiB free disk for results')
+     snapshot(out,'before_full' if a.resume_after_smoke else 'before')
+     verify_static(out)
+     if sha(PBMC)!=PBMC_SHA:raise SystemExit('PBMC smoke input hash mismatch')
+@@ -214,7 +248,7 @@
+         if method=='original' and state['status']!='COMPLETED' and available_gib()<MIN_START_GIB:
+             blocked={'method':'ess','status':'BLOCKED_RESOURCE_AFTER_original_failure','MemAvailable_GiB':available_gib()}
+             (out/'ess').mkdir(exist_ok=True);(out/'ess/run_status.json').write_text(json.dumps(blocked,indent=2)+'\n');states.append(blocked);break
+-        if state['status']=='ABORTED_RESOURCE_GUARD':break
++        if state['status'] in ('ABORTED_RESOURCE_GUARD','INTERRUPTED'):break
+     (out/'method_run_status.json').write_text(json.dumps(states,indent=2)+'\n')
+     if len(states)==2 and all(x.get('status')=='COMPLETED' for x in states):
+         if sha(INPUT)!=EXPECTED_INPUT_SHA:raise SystemExit('Input changed after runs; will not compare')
+--- /home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/audit/xenium_strict03_script_baseline/run_xenium_paired_worker.R	2026-11-01 17:43:36.198737457 +0800
++++ /home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/reproduction/run_xenium_paired_worker.R	2026-11-01 17:44:00.074231260 +0800
+@@ -4,7 +4,7 @@
+ a <- commandArgs(trailingOnly = TRUE)
+ if (length(a) != 9L) stop(paste(
+   'usage: METHOD INPUT INPUT_SHA OUTPUT_DIR CELLCHAT_LIB ESS_LIB DEP_LIB',
+-  'CELLCHAT_MODELING_R ESS_ACCEL_R EXPECTED_ESS_DLL_SHA'))
++  'CELLCHAT_MODELING_R ESS_ACCEL_R'))
+ method <- match.arg(a[[1L]], c('original', 'ess'))
+ input <- normalizePath(a[[2L]], mustWork = TRUE)
+ expected_input_sha <- a[[3L]]
+@@ -55,6 +55,22 @@
+   identical(environmentName(environment(cellchat_compute)), 'CellChat'))
+ cellchat_expr <- function_source_expression(cellchat_source, 'computeCommunProb')
+ stopifnot(identical(body(cellchat_compute), body(eval(cellchat_expr, envir = new.env(parent = baseenv())))))
++upstream_env <- new.env(parent = cellchat_ns)
++sys.source(cellchat_source, envir = upstream_env)
++upstream_symbols <- c('computeCommunProb', 'triMean', 'computeExpr_LR',
++  'computeExpr_complex', 'computeExpr_coreceptor', 'computeExpr_agonist',
++  'computeExpr_antagonist', 'aggregateNet')
++upstream_checks <- do.call(rbind, lapply(upstream_symbols, function(symbol) {
++  pinned <- get(symbol, envir = upstream_env, inherits = FALSE)
++  loaded <- get(symbol, envir = cellchat_ns, inherits = FALSE)
++  data.frame(symbol = symbol,
++    formals_match = identical(formals(pinned), formals(loaded)),
++    body_matches = identical(deparse(body(pinned)), deparse(body(loaded))),
++    loaded_body_sha256 = hash_text(fun_text(loaded)), stringsAsFactors = FALSE)
++}))
++write.table(upstream_checks, file.path(out, 'upstream_function_identity.tsv'),
++  sep = '\t', row.names = FALSE, quote = TRUE)
++stopifnot(all(upstream_checks$formals_match), all(upstream_checks$body_matches))
+ active_fun <- if (method == 'original') cellchat_compute else {
+   ess_fun <- get('computeCommunProbESS', envir = asNamespace('CellChatESS'), inherits = FALSE)
+   stopifnot(identical(ess_fun, getExportedValue('CellChatESS', 'computeCommunProbESS')),
+@@ -77,8 +93,11 @@
+ mark_stage('process_initialized', paste0('method=', method))
+ obj <- readRDS(input)
+ stopifnot(identical(obj@options$datatype, 'RNA'))
+-obj@idents <- droplevels(obj@idents)
++stopifnot(identical(obj@idents, droplevels(obj@idents)))
+ stopifnot(is.factor(obj@idents), nlevels(obj@idents) == length(unique(obj@idents)))
++stopifnot(length(obj@idents) == ncol(obj@data.signaling),
++  !is.null(colnames(obj@data.signaling)), !anyDuplicated(colnames(obj@data.signaling)),
++  is.null(names(obj@idents)) || identical(names(obj@idents), colnames(obj@data.signaling)))
+ if (identical(Sys.getenv('REQUIRE_XENIUM_FULL', '1'), '1'))
+   stopifnot(ncol(obj@data.signaling) == 1156091L, nrow(obj@data.signaling) == 648L,
+     nlevels(obj@idents) == 2357L, nrow(obj@LR$LRsig) == 627L)
+@@ -93,6 +112,8 @@
+   groups = nlevels(obj@idents), n_LR = nrow(obj@LR$LRsig),
+   expression_matrix_file_bytes = unname(file.info(input)$size),
+   expression_matrix_object_bytes = as.numeric(object.size(obj@data.signaling)),
++  prepared_CellChat_object_bytes = as.numeric(object.size(obj)),
++  cell_identifiers_and_group_labels_aligned = TRUE,
+   database_serialized_sha256 = digest::digest(obj@DB, algo = 'sha256'),
+   LRsig_serialized_sha256 = digest::digest(obj@LR$LRsig, algo = 'sha256'),
+   cell_names_sha256 = digest::digest(colnames(obj@data.signaling), algo = 'sha256'),
+@@ -160,7 +181,9 @@
+ }
+ inference_sec <- proc.time()[['elapsed']] - started
+ end_epoch <- as.numeric(Sys.time())
++random_seed_after_inference_sha256 <- digest::digest(.Random.seed, algo = 'sha256')
+ mark_stage('after_inference', paste0('function_elapsed_sec=', sprintf('%.9f', inference_sec)))
++if (method == 'ess') stopifnot(identical(as.integer(result@options$CellChatESS$threads_used), 1L))
+ prob <- result@net$prob
+ pval <- result@net$pval
+ stopifnot(identical(dim(prob), dim(pval)), identical(dimnames(prob), dimnames(pval)),
+@@ -187,6 +210,8 @@
+ run_record <- list(method = method, status = 'COMPLETED', function_call_start_epoch = start_epoch,
+   function_call_end_epoch = end_epoch, inference_function_elapsed_sec = inference_sec,
+   aggregateNet_elapsed_sec = aggregate_sec, parameters = params,
++  random_seed_after_inference_sha256 = random_seed_after_inference_sha256,
++  actual_ESS_threads_used = if (method == 'ess') result@options$CellChatESS$threads_used else NA_integer_,
+   input = input_info, outputs = list(dimensions = dim(prob), dimnames = dimnames(prob),
+     probability_object_bytes = prob_object_bytes, pvalue_object_bytes = pval_object_bytes,
+     probability_payload_bytes = prob_payload_bytes, pvalue_payload_bytes = pval_payload_bytes,
+--- /home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/audit/xenium_strict03_script_baseline/compare_xenium_paired_full627.R	2026-11-01 17:43:36.198803701 +0800
++++ /home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/reproduction/compare_xenium_paired_full627.R	2026-11-01 17:52:55.583677248 +0800
+@@ -7,11 +7,17 @@
+ targets_path <- normalizePath(a[[3L]], mustWork = TRUE)
+ out <- normalizePath(a[[4L]], mustWork = TRUE)
+ expected_lr <- as.integer(a[[5L]])
++if (!dir.exists(out)) stop('Create a fresh comparison output directory first')
++if (file.exists(file.path(out, 'full627_comparison_summary.tsv'))) stop('Refusing to overwrite an existing comparison')
+ if (!requireNamespace('jsonlite', quietly = TRUE)) stop('jsonlite required')
+ orig <- readRDS(orig_path)
+ ess <- readRDS(ess_path)
+ if (!identical(names(orig), names(ess)) || !identical(names(orig), c('prob','pval','count','groups','lr_names','parameters')))
+   stop('Saved output fields differ')
++shared_parameters <- c('type','raw.use','population.size','nboot','seed.use','Kh','n','threads','future_workers')
++if (!identical(orig$parameters[shared_parameters], ess$parameters[shared_parameters]))
++  stop('Methods do not have identical shared inference parameters')
++if (!identical(ess$parameters$algorithm, 'ess')) stop('ESS algorithm is not ess')
+ shape_ok <- identical(dim(orig$prob), dim(ess$prob)) && identical(dim(orig$pval), dim(ess$pval))
+ names_ok <- identical(dimnames(orig$prob), dimnames(ess$prob)) && identical(dimnames(orig$pval), dimnames(ess$pval)) &&
+   identical(orig$groups, ess$groups) && identical(orig$lr_names, ess$lr_names)
+@@ -32,7 +38,8 @@
+ count_ess_calc <- matrix(0, nrow=K, ncol=K, dimnames=dimnames(ess$prob)[1:2])
+ writeLines('lr_index\tlr_name\tsource_group\ttarget_group\toriginal_class\tESS_class', prob_diff_file)
+ writeLines(paste(c('lr_index','lr_name','source_group','target_group','original_value','ESS_value',
+-  'original_hex','ESS_hex','difference_kind'),collapse='\t'), pval_diff_file)
++  'original_hex','ESS_hex','difference_kind','original_observed_probability','ESS_observed_probability',
++  'original_observed_probability_hex','ESS_observed_probability_hex'),collapse='\t'), pval_diff_file)
+ value_class <- function(x) if (is.nan(x)) 'NaN' else if (is.na(x)) 'NA' else if (is.infinite(x)) if (x>0) '+Inf' else '-Inf' else 'finite'
+ to_text <- function(x) if (is.finite(x)) sprintf('%.17g',x) else as.character(x)
+ to_hex <- function(x) if (is.finite(x)) sprintf('%a',as.double(x)) else as.character(x)
+@@ -81,6 +88,10 @@
+       rows <- data.frame(lr_index=ell,lr_name=lr_names[ell],source_group=source_groups[sr[ix[,1L]]],
+         target_group=source_groups[ix[,2L]],original_value=vapply(ov,to_text,''),ESS_value=vapply(ev,to_text,''),
+         original_hex=vapply(ov,to_hex,''),ESS_hex=vapply(ev,to_hex,''),difference_kind=kinds,
++        original_observed_probability=vapply(po[p_unequal],to_text,''),
++        ESS_observed_probability=vapply(pe[p_unequal],to_text,''),
++        original_observed_probability_hex=vapply(po[p_unequal],to_hex,''),
++        ESS_observed_probability_hex=vapply(pe[p_unequal],to_hex,''),
+         stringsAsFactors=FALSE)
+       write_rows(pval_diff_file,rows)
+     }
+@@ -177,6 +188,8 @@
+         original_pvalue=sprintf('%.17g',pvo),ESS_pvalue=sprintf('%.17g',pve),
+         original_pvalue_hex=sprintf('%a',pvo),ESS_pvalue_hex=sprintf('%a',pve),
+         pvalue_identical=identical(as.double(pvo),as.double(pve)),
++        original_nReject_from_p_if_probability_positive=if (is.finite(po) && po>0) round(100*pvo) else NA_real_,
++        ESS_nReject_from_p_if_probability_positive=if (is.finite(pe) && pe>0) round(100*pve) else NA_real_,
+         original_aggregate_count_at_pair=count_orig_calc[si,ri],ESS_aggregate_count_at_pair=count_ess_calc[si,ri],
+         stringsAsFactors=FALSE)
+     })
+@@ -185,3 +198,5 @@
+ }
+ cat('Comparison complete: probability unequal=',prob_diff_n,'; max absolute difference=',sprintf('%.17g',max_abs),
+   '; p-value unequal=',pval_diff_n,'; aggregate counts identical=',count_same,'\n',sep='')
++if (!orig_count_recalc_ok || !ess_count_recalc_ok)
++  stop('Independent aggregate count recomputation disagrees with saved aggregateNet count; do not accept this comparison')
+--- /home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/audit/xenium_strict03_script_baseline/finalize_xenium_paired.py	2026-11-01 17:43:36.198853214 +0800
++++ /home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/reproduction/finalize_xenium_paired.py	2026-11-01 17:55:18.595470748 +0800
+@@ -1,7 +1,7 @@
+ #!/usr/bin/env python3
+ """Create R2 measurements, RSS gap summaries, report and checksums from completed runs."""
+ from __future__ import annotations
+-import argparse,csv,hashlib,json,re,subprocess
++import argparse,csv,hashlib,json,re,subprocess,statistics
+ from pathlib import Path
+ 
+ ROOT=Path(__file__).resolve().parents[1]
+@@ -38,7 +38,7 @@
+     t=[float(x['sample_start_epoch_ms'])/1000 for x in rows]
+     diffs=[b-a for a,b in zip(t,t[1:])]
+     return {'method':method,'n_samples':len(rows),'requested_interval_sec':1,
+-      'median_sample_spacing_sec':sorted(diffs)[len(diffs)//2] if diffs else None,
++      'median_sample_spacing_sec':statistics.median(diffs) if diffs else None,
+       'maximum_sample_gap_sec':max(diffs) if diffs else None,
+       'gaps_over_2_sec':sum(x>2 for x in diffs),'gaps_over_5_sec':sum(x>5 for x in diffs),
+       'sampling_has_no_interpolation':True}
+@@ -76,6 +76,20 @@
+           'sampled_RSS_peak_GiB':sampled_peak/1024**2 if sampled_peak is not None else None,
+           'RSS_samples':len(samples),'output_sha256':r['output_rds_sha256'],'GNU_time_exit_status':g['GNU_time_exit_status']})
+     write_tsv(out/'R2_xenium_memory_time_comparison.tsv',list(rows[0]),rows)
++    ratios={'inference_function_speed_ratio_original_over_ESS':rows[0]['inference_function_sec']/rows[1]['inference_function_sec'],
++      'full_process_wall_speed_ratio_original_over_ESS':rows[0]['GNU_time_full_process_wall_sec']/rows[1]['GNU_time_full_process_wall_sec'],
++      'GNU_time_peak_RSS_reduction_percent':100*(1-rows[1]['GNU_time_peak_RSS_GiB']/rows[0]['GNU_time_peak_RSS_GiB'])}
++    write_tsv(out/'paired_same_scope_resource_ratios.tsv',['metric','value'],[{'metric':k,'value':v} for k,v in ratios.items()])
++    stages=[]
++    for method,d in [('Original CellChat',orig_dir),('CellChatESS',ess_dir)]:
++        samples=read_tsv(d/'rss_samples.tsv')
++        for stage in dict.fromkeys(x['stage'] for x in samples):
++            selected=[x for x in samples if x['stage']==stage and x['VmRSS_kB']]
++            values=[float(x['VmRSS_kB'])/1024**2 for x in selected]
++            if values:stages.append({'method':method,'stage':stage,'n_samples':len(values),
++              'first_sample_epoch_ms':selected[0]['sample_start_epoch_ms'],'last_sample_epoch_ms':selected[-1]['sample_start_epoch_ms'],
++              'RSS_min_GiB':min(values),'RSS_median_GiB':statistics.median(values),'RSS_max_GiB':max(values)})
++    write_tsv(out/'RSS_external_stage_summary.tsv',list(stages[0]),stages)
+     gap_rows=[summarize_gaps(orig_dir/'rss_samples.tsv','Original CellChat'),summarize_gaps(ess_dir/'rss_samples.tsv','CellChatESS')]
+     write_tsv(out/'rss_sampling_gap_summary.tsv',list(gap_rows[0]),gap_rows)
+     # Preserve a flat run identity table linking installed files and source IDs.
+@@ -135,6 +149,36 @@
+       '', '## 原始输出和复现边界','',
+       '完整 RDS 输出在本目录的 `original/result.rds` 与 `ess/result.rds`。所有结论仅适用于该冻结输入、上述软件源码、硬件和参数；概率逐元素相同以外的结论需按输出报告。','']
+     (out/'Xenium_627LR_paired_report_CN.md').write_text('\n'.join(lines))
++    with (out/'Xenium_627LR_paired_report_CN.md').open('a') as report:
++        report.write('\n## 本次实测时间与 RSS\n\n')
++        report.write('| 方法 | 函数调用秒 | 全进程秒 | GNU time 峰值 GiB | 采样峰值 GiB |\n|---|---:|---:|---:|---:|\n')
++        for row in rows:report.write(f"| {row['method']} | {row['inference_function_sec']:.3f} | {row['GNU_time_full_process_wall_sec']:.3f} | {row['GNU_time_peak_RSS_GiB']:.5f} | {row['sampled_RSS_peak_GiB']:.5f} |\n")
++        report.write('\n同口径推断函数耗时比 %.6f；同口径全进程耗时比 %.6f；GNU time 峰值 RSS 降幅 %.6f%%。只针对本次各一次顺序运行，不提供重复实验置信区间。\n' % tuple(ratios.values()))
++        report.write('\n主性能构建未对函数内部临时对象作插桩，外部阶段 RSS 见 RSS_external_stage_summary.tsv。辅助 PROFILE 构建的阶段记录单独保留，不能替代本次主构建的时间/RSS，也不能把峰值 RSS 减去输出载荷解释为测得的临时工作区。独立 RSS 采样无法观察进程启动前或退出后的内存，采样缺口不会以插值补齐。\n')
++    diagnostic_script=ROOT/'reproduction/diagnose_xenium_paired_differences.py'
++    diagnostic_command=[__import__('sys').executable,str(diagnostic_script),'--output',str(out)]
++    (out/'diagnosis_command.json').write_text(json.dumps(diagnostic_command,indent=2)+'\n')
++    with (out/'diagnosis_driver.log').open('w') as f:
++        diagnostic_rc=subprocess.run(diagnostic_command,cwd=ROOT,stdout=f,stderr=subprocess.STDOUT).returncode
++    diagnostic_status_path=out/'difference_diagnostics/status.json'
++    diagnostic_status=read_json(diagnostic_status_path) if diagnostic_status_path.is_file() else {'status':'FAILED'}
++    acceptance=[
++      {'item':'Original full627 completed','status':'PASS','evidence':'original/run_status.json'},
++      {'item':'ESS full627 completed','status':'PASS','evidence':'ess/run_status.json'},
++      {'item':'dimensions/names/order','status':'PASS' if sums['dimensions_match']=='TRUE' and sums['names_and_order_match']=='TRUE' else 'FAIL','evidence':'comparison/full627_comparison_summary.tsv'},
++      {'item':'finite probability and pvalue entries','status':'PASS' if all(int(x['n'])==0 for x in read_tsv(comp/'nonfinite_summary.tsv')) else 'FAIL','evidence':'comparison/nonfinite_summary.tsv'},
++      {'item':'pvalue exact equality','status':'PASS' if p_diff_count==0 else 'FAIL','evidence':'comparison/pvalue_differences.tsv'},
++      {'item':'aggregate count independent recomputation and exact equality','status':'PASS' if count_ok else 'FAIL','evidence':'comparison/aggregate_count_differences.tsv'},
++      {'item':'five prior target pvalues','status':'PASS' if all(t['pvalue_identical']=='TRUE' for t in targets) else 'FAIL','evidence':'comparison/five_prior_targets.tsv'},
++      {'item':'difference tracing','status':'NOT_RUN' if diagnostic_status['status']=='NOT_REQUIRED' else ('PASS' if diagnostic_rc==0 and diagnostic_status['status']=='COMPLETED' else 'BLOCKED'),'evidence':'difference_diagnostics/status.json'},
++      {'item':'internal temporary object sizes in clean performance build','status':'NOT_RUN','evidence':'No internal instrumentation in main timing builds; auxiliary PROFILE stage RSS has a distinct source diff and DLL.'}]
++    write_tsv(out/'validation_acceptance.tsv',['item','status','evidence'],acceptance)
++    with (out/'Xenium_627LR_paired_report_CN.md').open('a') as report:
++        report.write('\n## 差异追踪与验收\n\n')
++        report.write('差异诊断状态：'+diagnostic_status['status']+'。若存在差异，逐 LR 的直接 bootstrap 追踪与全量输出交叉核对保存在 difference_diagnostics；目标级诊断不替代全量比较，也不用于计时。具体浮点来源需要根据直接追踪审阅，不预设为 BLAS、编译器或求和顺序。\n')
++        report.write('验收逐项状态见 validation_acceptance.tsv；未运行的内部临时对象大小测量已单列。\n')
++    if diagnostic_rc:
++        raise SystemExit('Direct difference diagnosis failed; see diagnosis_driver.log; completed full-run evidence is retained')
+     # Plot sampled RSS, keeping original raw samples and plotting source together.
+     runtime=read_json(ROOT/'server_install/runtime.json')
+     plot=ROOT/'reproduction/plot_xenium_paired_rss.R'
+--- /home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/audit/xenium_strict03_script_baseline/plot_xenium_paired_rss.R	2026-11-01 17:43:36.198899190 +0800
++++ /home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/reproduction/plot_xenium_paired_rss.R	2026-11-01 17:50:48.671431381 +0800
+@@ -10,6 +10,7 @@
+   if (!nrow(x)) stop('No RSS samples for ',method)
+   x$elapsed_min <- (as.numeric(x$sample_start_epoch_ms)-as.numeric(x$sample_start_epoch_ms[1L]))/60000
+   x$RSS_GiB <- as.numeric(x$VmRSS_kB)/1024^2
++  x$segment <- cumsum(c(TRUE, diff(as.numeric(x$sample_start_epoch_ms)) > 2500))
+   x$method <- method
+   run <- jsonlite::fromJSON(file.path(d,'run_metadata.json'),simplifyVector=FALSE)
+   x$inference_start_min <- (as.numeric(run$function_call_start_epoch)*1000-as.numeric(x$sample_start_epoch_ms[1L]))/60000
+@@ -21,7 +22,7 @@
+ stage_lines <- unique(dat[,c('method','inference_start_min','inference_end_min')])
+ write.table(dat,file=paste0(prefix,'_rss_plot_data.tsv'),sep='\t',row.names=FALSE,quote=TRUE)
+ library(ggplot2)
+-p <- ggplot(dat,aes(x=elapsed_min,y=RSS_GiB,colour=method))+
++p <- ggplot(dat,aes(x=elapsed_min,y=RSS_GiB,colour=method,group=interaction(method,segment)))+
+   geom_line(linewidth=.55,na.rm=TRUE)+geom_point(size=.65,alpha=.7,na.rm=TRUE)+
+   geom_vline(data=stage_lines,aes(xintercept=inference_start_min),linetype='dotted',linewidth=.35,inherit.aes=FALSE)+
+   geom_vline(data=stage_lines,aes(xintercept=inference_end_min),linetype='dashed',linewidth=.35,inherit.aes=FALSE)+
+@@ -34,4 +35,5 @@
+   theme_classic(base_size=11)+theme(legend.position='none',strip.background=element_blank(),
+     strip.text=element_text(face='bold'),plot.title=element_text(face='bold'))
+ ggsave(paste0(prefix,'.pdf'),p,width=8,height=7,device=cairo_pdf)
++ggsave(paste0(prefix,'.svg'),p,width=8,height=7,device=svglite::svglite)
+ ggsave(paste0(prefix,'.png'),p,width=8,height=7,dpi=300,bg='white')

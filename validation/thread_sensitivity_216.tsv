@@ -1,3 +1,0 @@
-method	version	threads	completed	median_workflow_sec	median_peak_rss_gib	max_prob_diff_vs_original	analysis_role
-CellChatESS	0.2.0	1	216/216	5.80077636241913	1.06004333496094	1.38777878078145e-16	primary one-thread benchmark
-CellChatESS conditional OpenMP	0.2.0	4	216/216	2.65961861610413	1.05825233459473	1.38777878078145e-16	resource-sensitivity analysis

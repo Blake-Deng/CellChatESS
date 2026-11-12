@@ -1,0 +1,8 @@
+"structure"	"lr_index"	"lr_name"	"ligand"	"receptor"	"co_A_receptor"	"co_I_receptor"	"agonist"	"antagonist"	"synthetic_expression_priming"
+"single_ligand_receptor"	73	"GDF15_TGFBR2"	"GDF15"	"TGFBR2"	""	""	""	""	FALSE
+"multimeric_ligand"	94	"INHBABB_ACVR1B_ACVR2A"	"Activin AB"	"ACVR1B_ACVR2A"	""	"ACTIVIN inhibition receptor"	""	"ACTIVIN antagonist"	TRUE
+"multimeric_receptor"	1	"TGFB1_TGFBR1_TGFBR2"	"TGFB1"	"TGFbR1_R2"	""	"TGFb inhibition receptor"	"TGFb agonist"	"TGFb antagonist"	FALSE
+"co_activator"	242	"WNT3_FZD2_LRP6"	"WNT3"	"FZD2_LRP6"	"WNT activation receptor"	"WNT inhibition receptor"	"WNT agonist"	"WNT antagonist"	FALSE
+"co_inhibitor"	1	"TGFB1_TGFBR1_TGFBR2"	"TGFB1"	"TGFbR1_R2"	""	"TGFb inhibition receptor"	"TGFb agonist"	"TGFb antagonist"	FALSE
+"agonist"	1	"TGFB1_TGFBR1_TGFBR2"	"TGFB1"	"TGFbR1_R2"	""	"TGFb inhibition receptor"	"TGFb agonist"	"TGFb antagonist"	FALSE
+"antagonist"	1	"TGFB1_TGFBR1_TGFBR2"	"TGFB1"	"TGFbR1_R2"	""	"TGFb inhibition receptor"	"TGFb agonist"	"TGFb antagonist"	FALSE

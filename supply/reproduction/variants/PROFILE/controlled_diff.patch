@@ -1,0 +1,94 @@
+--- final/DESCRIPTION
++++ PROFILE/DESCRIPTION
+@@ -29,3 +29,4 @@
+     Rcpp
+ SystemRequirements: OpenMP (optional)
+ RoxygenNote: 7.3.2
++Config/CellChatESS/Build: PROFILE
+--- final/R/accel_cellchat.R
++++ PROFILE/R/accel_cellchat.R
+@@ -146,13 +146,16 @@
+       n_power = n
+     )
+   }
++  .ess_resource_stage("R_after_cpp_return")
+   res$n_genes_kernel <- n_genes_kernel
+ 
+   Prob <- res$prob
+   Pval <- res$pval
+   dimnames(Prob) <- list(levels(group), levels(group), rownames(pairLRsig))
+   dimnames(Pval) <- dimnames(Prob)
++  .ess_resource_stage("R_dimnames_assigned")
+   object@net <- list(prob = Prob, pval = Pval)
++  .ess_resource_stage("R_outputs_assigned")
+   object@options$run.time <- as.numeric(Sys.time() - ptm, units = "secs")
+   object@options$parameter <- list(type.mean = type, trim = NULL, raw.use = raw.use,
+                                    population.size = population.size, nboot = nboot,
+@@ -238,3 +241,12 @@
+   colnames(avg) <- levels(labels)
+   avg
+ }
++
++.ess_resource_stage <- function(stage) {
++ path <- Sys.getenv('CELLCHATESS_STAGE_FILE','')
++ if(!nzchar(path)) return(invisible(NULL))
++ rss <- grep('^VmRSS:',readLines('/proc/self/status',warn=FALSE),value=TRUE)
++ rss <- if(length(rss)) as.numeric(strsplit(trimws(sub('^VmRSS:','',rss[1])), '[[:space:]]+')[[1]][1]) else NA_real_
++ cat(sprintf('%.0f\t%s\t%.0f\t\t\t\t\t\n',as.numeric(Sys.time())*1000,stage,rss),file=path,append=TRUE)
++ invisible(NULL)
++}
+--- final/src/cellchat_prob_cpp.cpp
++++ PROFILE/src/cellchat_prob_cpp.cpp
+@@ -1,3 +1,15 @@
++
++#include <chrono>
++#include <cstdlib>
++#include <fstream>
++#include <string>
++static inline void emit_memory_profile_stage(const std::string& stage) {
++ const char* path=std::getenv("CELLCHATESS_STAGE_FILE");
++ if(path==NULL || path[0]=='\0')return;
++ const auto now_ms=std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
++ std::ofstream out(path,std::ios::app);
++ if(out)out << now_ms << '\t' << stage << "\t\t\t\t\t\t\n";
++}
+ #include <Rcpp.h>
+ #include <algorithm>
+ #include <cmath>
+@@ -469,6 +481,7 @@
+     double n_power,
+     int threads) {
+ 
++  emit_memory_profile_stage("cpp_enter");
+   const int G = data.nrow();
+   const int C = data.ncol();
+   const int K = Rcpp::max(group);
+@@ -514,8 +527,10 @@
+   std::vector<double> tri_cache(static_cast<size_t>(U) * K * nboot, NA_REAL);
+   std::vector<unsigned char> tri_seen(static_cast<size_t>(U) * K * nboot, 0);
+ 
++  emit_memory_profile_stage("cpp_membership_cache_allocated");
+   NumericVector prob(Dimension(K, K, nLR));
+   NumericVector pval(Dimension(K, K, nLR));
++  emit_memory_profile_stage("cpp_outputs_allocated");
+   std::vector<double> L(K), R(K), ago(K), ant(K);
+   // Reuse serial scratch buffers across LR interactions.
+   std::vector<double> Lb_serial(K), Rb_serial(K), agoB_serial(K), antB_serial(K);
+@@ -528,7 +543,9 @@
+   long long streamed_lr = 0;
+   long long max_lr_genes = 0;
+ 
++  emit_memory_profile_stage("cpp_lr_traversal_start");
+   for (int lr = 0; lr < nLR; ++lr) {
++    if(lr % 50 == 0) emit_memory_profile_stage(std::string("cpp_lr_") + std::to_string(lr));
+     const bool simple_lr = !hasAgonist[lr] && !hasAntagonist[lr] &&
+       index_row_empty(coAIdx, lr) && index_row_empty(coIIdx, lr);
+     const R_xlen_t lr_offset = KK_x * lr;
+@@ -737,6 +754,7 @@
+   }
+ 
+   const long long total_pairs = static_cast<long long>(nLR) * static_cast<long long>(KK);
++  emit_memory_profile_stage("cpp_probability_complete");
+   return List::create(
+     Named("prob") = prob,
+     Named("pval") = pval,

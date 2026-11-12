@@ -1,0 +1,9 @@
+claim	status	value_or_scope	evidence
+original full 627-LR output	PASS	This frozen Xenium input only	original/run_status.json
+ess full 627-LR output	PASS	This frozen Xenium input only	ess/run_status.json
+maximum_absolute_probability_difference	MEASURED	2.2204460492503131e-16	comparison/full627_comparison_summary.tsv
+probability_different_elements	MEASURED	2318979	comparison/full627_comparison_summary.tsv
+pvalue_different_elements	MEASURED	0	comparison/full627_comparison_summary.tsv
+aggregate_counts_identical	MEASURED	TRUE	comparison/full627_comparison_summary.tsv
+original_aggregate_count_recomputed_matches_saved	MEASURED	TRUE	comparison/full627_comparison_summary.tsv
+ESS_aggregate_count_recomputed_matches_saved	MEASURED	TRUE	comparison/full627_comparison_summary.tsv

@@ -1,0 +1,20 @@
+[
+  {
+    "package": "collapse",
+    "version": "2.1.8",
+    "url": "https://cloud.r-project.org/src/contrib/collapse_2.1.8.tar.gz",
+    "bytes": 1482443,
+    "sha256": "13fd523cadfa0541b42e805da825a8c882af35ec3da1df0decf96a72488acffd",
+    "status": "CAPTURED_AFTER_RUN",
+    "scope": "Source retrieved from installation-log URL for reconstruction; original downloaded tarball was not retained, so byte identity to that transient original is unconfirmed. Actual installed dependency files hashed separately."
+  },
+  {
+    "package": "RcppDist",
+    "version": "0.1.1.1",
+    "url": "https://cloud.r-project.org/src/contrib/RcppDist_0.1.1.1.tar.gz",
+    "bytes": 143179,
+    "sha256": "aefd99dd207b9b545cf6070078bb9dd7f4ba51049063f3324e9849c7131b09ae",
+    "status": "CAPTURED_AFTER_RUN",
+    "scope": "Source retrieved from installation-log URL for reconstruction; original downloaded tarball was not retained, so byte identity to that transient original is unconfirmed. Actual installed dependency files hashed separately."
+  }
+]

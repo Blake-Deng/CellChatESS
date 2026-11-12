@@ -1,0 +1,7 @@
+{
+  "A1_dense_full_gene": "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_variants/A1_dense_full_gene/library",
+  "A3_no_cache_no_pruning": "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_variants/A3_no_cache_no_pruning/library",
+  "A4_cache_no_pruning": "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_variants/A4_cache_no_pruning/library",
+  "PROFILE": "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_variants/PROFILE/library",
+  "TRACE": "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_variants/TRACE/library"
+}

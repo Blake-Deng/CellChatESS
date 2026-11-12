@@ -1,0 +1,4 @@
+replicate	A4	A5	A4_over_A5	f_LR	dataset_id	cells	K	experiment_id
+1	2.607	1.413	1.8450106157112527	0.0916183877259891	3CA_data__SmartSeq2	1000	14	3CA_data__SmartSeq2__cells-1000__rep-2__engine-both__ablation-full
+2	2.589	1.518	1.7055335968379446	0.0916183877259891	3CA_data__SmartSeq2	1000	14	3CA_data__SmartSeq2__cells-1000__rep-2__engine-both__ablation-full
+3	2.588	1.413	1.8315640481245576	0.0916183877259891	3CA_data__SmartSeq2	1000	14	3CA_data__SmartSeq2__cells-1000__rep-2__engine-both__ablation-full

@@ -1,0 +1,14 @@
+[
+  "/usr/bin/time",
+  "-v",
+  "-o",
+  "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/results/new/xenium_target_trace/cc16/gnu_time.txt",
+  "/home/dzf/miniforge3/envs/cellchat-acceleration/bin/Rscript",
+  "--vanilla",
+  "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/reproduction/run_target_trace_CC22.R",
+  "/data/dzf/Xenium_Prime_Human_Ovary_FF/benchmark/prepared_xenium_ovary_full_grid50.rds",
+  "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/reproduction/config/xenium_five_targets.tsv",
+  "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/results/new/xenium_target_trace/cc16/output",
+  "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_variants/TRACE/library",
+  "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/cellchat16"
+]

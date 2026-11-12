@@ -1,0 +1,54 @@
+--- final/DESCRIPTION
++++ TRACE/DESCRIPTION
+@@ -29,3 +29,4 @@
+     Rcpp
+ SystemRequirements: OpenMP (optional)
+ RoxygenNote: 7.3.2
++Config/CellChatESS/Build: TRACE
+--- final/src/cellchat_prob_cpp.cpp
++++ TRACE/src/cellchat_prob_cpp.cpp
+@@ -1,3 +1,8 @@
++
++#include <cstdlib>
++#include <fstream>
++#include <cstdio>
++#include <utility>
+ #include <Rcpp.h>
+ #include <algorithm>
+ #include <cmath>
+@@ -484,6 +489,27 @@
+ #ifdef _OPENMP
+   threads_used = std::min(requested_threads, std::max(1, nboot));
+ #endif
++
++
++  const char* target_path=std::getenv("CELLCHATESS_TRACE_TARGETS");
++  const char* output_path=std::getenv("CELLCHATESS_TRACE_OUTPUT");
++  std::vector<std::pair<int,int> > trace_targets;
++  if(target_path && target_path[0]) {
++    std::ifstream input(target_path); if(!input)stop("Cannot open trace targets");
++    int lr0,pair0; while(input>>lr0>>pair0)trace_targets.emplace_back(lr0,pair0);
++  }
++  std::ofstream trace_output;
++  if(!trace_targets.empty()) {
++    if(threads_used!=1)stop("Diagnostic tracing requires one thread");
++    if(!output_path || !output_path[0])stop("Trace output path missing");
++    trace_output.open(output_path,std::ios::app);if(!trace_output)stop("Cannot open trace output");
++  }
++  auto trace_decision=[&](int lr,int idx,int b,double observed,double boot) {
++    if(std::find(trace_targets.begin(),trace_targets.end(),std::make_pair(lr,idx))==trace_targets.end())return;
++    char line[1024];
++    std::snprintf(line,sizeof(line),"%d\t%d\t%d\t%.17g\t%.17g\t%.17g\t%d\t%a\t%a\n",lr+1,idx,b+1,observed,boot,boot-observed,(boot-observed>0.0)?1:0,observed,boot);
++    trace_output<<line;
++  };
+ 
+   std::vector< std::vector<int> > boot_cells(nboot * K);
+   for (int b = 0; b < nboot; ++b) {
+@@ -674,6 +700,7 @@
+           p1 = dataLR_n / (Kh_n + dataLR_n);
+         }
+         const double val = p1 * (agoB[s] * agoB[r]) * (antB[s] * antB[r]);
++        trace_decision(lr,idx,b,pnull[idx],val);
+         if (val - pnull[idx] > 0.0) reject_local[j] += 1;
+       }
+     };

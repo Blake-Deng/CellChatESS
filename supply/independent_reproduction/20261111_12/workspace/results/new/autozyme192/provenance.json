@@ -1,0 +1,16 @@
+{
+  "candidate_source_manifest_sha256": "52fbb08f6b520e1e18c6b022b16edba5205f1bff36b991e4626fae47fe484956",
+  "candidate_version": "0.2.2",
+  "mode": "autozyme192",
+  "full_run": true,
+  "baseline": "CellChat 2.2.0.9001",
+  "jobs": 4,
+  "hostname": "user-G7466-M5",
+  "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+  "started_unix": 1794414012.3091288,
+  "worker_sha256": "924b7570c3e8d9b7f14086bca7cf0b6d3a36ec99d4a3fe601d9f18c70ab802c1",
+  "input_manifest_sha256": "ffed65b4993f6febecd033bcbf709fe13baea4c6269c9619b49f312727e0442d",
+  "runtime_sha256": "2f3c922239eb48fc2ccc629d12f1102dd42017924f4a4993b048405b906fe908",
+  "driver_sha256": "5daa99161a7ee53c4c3f36336c6c6bc6e0d513850eb1fca9bbbedbd027092c94",
+  "path_map": {}
+}

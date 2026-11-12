@@ -1,0 +1,10 @@
+[
+  "/home/dzf/miniforge3/envs/cellchat-acceleration/bin/Rscript",
+  "--vanilla",
+  "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/reproduction/compare_xenium_paired_full627.R",
+  "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/results/new/xenium_paired_full627_20261101_strict05_unrestricted/original/result.rds",
+  "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/results/new/xenium_paired_full627_20261101_strict05_unrestricted/ess/result.rds",
+  "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/reproduction/config/xenium_five_targets.tsv",
+  "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/results/new/xenium_paired_full627_20261101_strict05_unrestricted/comparison",
+  "627"
+]

@@ -1,0 +1,18 @@
+{
+  "method": "original",
+  "cwd": "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031",
+  "input_sha256_expected": "cc6155a5de127ba34b8a26e7f69e7bffc704448f976107253711623d2a88de37",
+  "MemAvailable_GiB_at_start": 406.94585037231445,
+  "safety_stop_floor_GiB": 0.0,
+  "threads": {
+    "OMP_NUM_THREADS": 1,
+    "OPENBLAS_NUM_THREADS": 1,
+    "MKL_NUM_THREADS": 1,
+    "BLIS_NUM_THREADS": 1,
+    "VECLIB_MAXIMUM_THREADS": 1,
+    "RCPP_PARALLEL_NUM_THREADS": 1,
+    "ESS_threads": 1,
+    "future_workers": 1
+  },
+  "AutoZyme": "not on R library path; AUTOZYME_DISABLED=true"
+}

@@ -1,0 +1,38 @@
+--- final/DESCRIPTION
++++ A4_cache_no_pruning/DESCRIPTION
+@@ -29,3 +29,4 @@
+     Rcpp
+ SystemRequirements: OpenMP (optional)
+ RoxygenNote: 7.3.2
++Config/CellChatESS/Build: A4_cache_no_pruning
+--- final/src/cellchat_prob_cpp.cpp
++++ A4_cache_no_pruning/src/cellchat_prob_cpp.cpp
+@@ -563,8 +563,8 @@
+     active_groups.reserve(K);
+ 
+     for (int k = 0; k < K; ++k) {
+-      if (L[k] > 0.0) active_senders.push_back(k);
+-      if (R[k] > 0.0) active_receivers.push_back(k);
++      active_senders.push_back(k);
++      active_receivers.push_back(k);
+     }
+     active_idx.reserve(active_senders.size() * active_receivers.size());
+ 
+@@ -577,7 +577,7 @@
+         const int idx = s + K * r;
+         pnull[idx] = val;
+         prob[static_cast<R_xlen_t>(idx) + lr_offset] = val;
+-        if (val != 0.0) {
++        { // Unpruned diagnostic comparator: retain every observed pair.
+           active_idx.push_back(idx);
+           if (!group_seen[s]) {
+             group_seen[s] = 1;
+@@ -728,7 +728,7 @@
+ 
+     for (int j = 0; j < static_cast<int>(active_idx.size()); ++j) {
+       const int idx = active_idx[j];
+-      pval[static_cast<R_xlen_t>(idx) + lr_offset] = static_cast<double>(reject[j]) / static_cast<double>(nboot);
++      pval[static_cast<R_xlen_t>(idx) + lr_offset] = pnull[idx] == 0.0 ? 1.0 : static_cast<double>(reject[j]) / static_cast<double>(nboot);
+     }
+ 
+     for (int g0 : lr_genes) {

@@ -1,5 +1,2 @@
 .example_lib/
-*.Rcheck/
-*.tar.gz
-.Rhistory
-.DS_Store
+results/

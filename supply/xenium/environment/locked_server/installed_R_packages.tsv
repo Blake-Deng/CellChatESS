@@ -1,0 +1,769 @@
+"Package"	"LibPath"	"Version"	"Priority"	"Depends"	"Imports"	"LinkingTo"	"Suggests"	"Enhances"	"License"	"License_is_FOSS"	"License_restricts_use"	"OS_type"	"MD5sum"	"NeedsCompilation"	"Built"
+"CellChat"	"/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/cellchat22"	"2.2.0.9001"		"R (>= 3.6.0),dplyr,igraph,ggplot2"	"future,
+future.apply,
+pbapply,
+irlba,
+NMF (>= 0.23.0),
+ggalluvial,
+stringr,
+svglite,
+Matrix,
+ggrepel,
+circlize (>= 0.4.12),
+RColorBrewer,
+cowplot,
+methods,
+ComplexHeatmap,
+RSpectra,
+Rcpp,
+reticulate,
+scales,
+sna,
+reshape2,
+FNN,
+shape,
+BiocGenerics,
+magrittr,
+patchwork,
+colorspace,
+plyr,
+ggpubr,
+ggnetwork,
+BiocNeighbors,
+plotly,shiny,bslib,
+collapse"	"Rcpp, RcppEigen"	"rmarkdown, knitr, roxygen2, Seurat (>= 4.0.0), SingleCellExperiment, SummarizedExperiment, purrr,uwot,gg.gap,wordcloud,bsicons,presto,tidyverse,tidyr,rlang"		"GPL-3"						"4.5.3"
+"CellChatESS"	"/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/ess022"	"0.2.2"		"R (>= 4.1.0)"	"Rcpp, methods"	"Rcpp"	"Matrix"		"GPL-3 + file LICENSE"					"yes"	"4.5.3"
+"autozyme"	"/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/autozyme"	"0.3.1"		"R (>= 4.0.0)"	"utils,
+methods,
+Rcpp,
+RcppParallel,
+data.table"	"Rcpp,
+RcppParallel,
+RcppArmadillo,
+BH,
+RcppEigen,
+RcppAnnoy,
+RcppDist"	"testthat (>= 3.0.0),
+RhpcBLASctl,
+yaml,
+future,
+future.apply,
+nichenetr,
+caTools,
+dplyr,
+RcppHNSW,
+Seurat,
+SeuratObject,
+Matrix,
+uwot,
+reticulate,
+sctransform,
+glmGamPoi,
+withr,
+parallelDist,
+pbapply,
+dbscan,
+SingleCellExperiment,
+scater"		"MIT + file LICENSE"						"4.5.3"
+"collapse"	"/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_dependencies"	"2.1.8"		"R (>= 4.1.0)"	"Rcpp (>= 1.0.1)"	"Rcpp"	"fastverse, data.table, magrittr, kit, xts, zoo, plm, fixest,
+vars, RcppArmadillo, RcppEigen, tibble, dplyr, ggplot2, scales,
+microbenchmark, testthat, covr, knitr, rmarkdown, withr, bit64"		"GPL (>= 2) | file LICENSE"					"yes"	"4.5.3"
+"RcppDist"	"/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_dependencies"	"0.1.1.1"		"R (>= 3.0.0)"	"Rcpp"	"Rcpp, RcppArmadillo"	"testthat, knitr, rmarkdown"		"GPL (>= 2.0)"					"yes"	"4.5.3"
+"abind"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.4-8"		"R (>= 1.5.0)"	"methods, utils"				"MIT + file LICENSE"					"no"	"4.5.1"
+"askpass"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.2.1"			"sys (>= 2.1)"		"testthat"		"MIT + file LICENSE"					"yes"	"4.5.1"
+"assertthat"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.2.1"			"tools"		"testthat, covr"		"GPL-3"					"no"	"4.5.1"
+"assorthead"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.4.0"					"knitr, rmarkdown, BiocStyle"		"MIT + file LICENSE"					"no"	"4.5.2"
+"backports"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.5.1"		"R (>= 3.0.0)"					"GPL-2 | GPL-3"					"yes"	"4.5.3"
+"base"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"4.5.3"	"base"				"methods"	"chron, date, round"	"Part of R 4.5.3"						"4.5.3"
+"base64enc"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.1-6"		"R (>= 2.9.0)"				"png"	"GPL-2 | GPL-3"					"yes"	"4.5.2"
+"BH"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.90.0-1"							"BSL-1.0"					"no"	"4.5.2"
+"bibtex"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.5.2"		"R (>= 3.0.2)"	"backports (>= 1.4.0), utils"		"testthat (>= 3.0.0)"		"GPL (>= 2)"					"no"	"4.5.2"
+"bigmemory"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"4.6.6"		"R (>= 3.2.0),"	"bigmemory.sri, methods, utils, Rcpp, uuid (>= 1.0-2)"	"BH, uuid (>= 1.0-2), Rcpp"	"testthat, remotes"	"biganalytics, bigtabulate"	"LGPL-3 | Apache License 2.0"					"yes"	"4.5.3"
+"bigmemory.sri"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.1.8"			"methods"			"bigmemory"	"LGPL-3 | Apache License 2.0"					"no"	"4.5.3"
+"Biobase"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.70.0"		"R (>= 2.10), BiocGenerics (>= 0.27.1), utils"	"methods"		"tools, tkWidgets, ALL, RUnit, golubEsets, BiocStyle, knitr,
+limma"		"Artistic-2.0"					"yes"	"4.5.2"
+"BiocGenerics"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.56.0"		"R (>= 4.0.0), methods, utils, graphics, stats, generics"	"methods, utils, graphics, stats"		"Biobase, S4Vectors, IRanges, S4Arrays, SparseArray,
+DelayedArray, HDF5Array, GenomicRanges, pwalign, Rsamtools,
+AnnotationDbi, affy, affyPLM, DESeq2, flowClust, MSnbase,
+annotate, MultiAssayExperiment, RUnit"		"Artistic-2.0"					"no"	"4.5.2"
+"BiocManager"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.30.27"			"utils"		"BiocVersion, BiocStyle, remotes, rmarkdown, testthat, withr,
+curl, knitr"		"Artistic-2.0"					"no"	"4.5.3"
+"BiocNeighbors"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.4.0"			"Rcpp, methods"	"Rcpp, assorthead"	"BiocParallel, testthat, BiocStyle, knitr, rmarkdown"		"GPL-3"					"yes"	"4.5.2"
+"bitops"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.0-9"							"GPL (>= 2)"					"yes"	"4.5.1"
+"boot"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.3-32"	"recommended"	"R (>= 3.0.0), graphics, stats"			"MASS, survival"		"Unlimited"					"no"	"4.5.1"
+"brew"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.0-10"					"testthat (>= 3.0.0)"		"GPL (>= 2)"					"no"	"4.5.1"
+"brio"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.1.5"		"R (>= 3.6)"			"covr, testthat (>= 3.0.0)"		"MIT + file LICENSE"					"yes"	"4.5.1"
+"broom"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.0.13"		"R (>= 4.1)"	"backports, cli, dplyr (>= 1.0.0), generics (>= 0.0.2), glue,
+lifecycle, purrr, rlang (>= 1.1.0), stringr, tibble (>= 3.0.0),
+tidyr (>= 1.0.0)"		"AER, AUC, bbmle, betareg (>= 3.2-1), biglm, binGroup, boot,
+btergm (>= 1.10.6), car (>= 3.1-2), carData, caret, cluster,
+cmprsk, coda, covr, drc, e1071, emmeans, epiR (>= 2.0.85), ergm
+(>= 3.10.4), fixest (>= 0.9.0), gam (>= 1.15), gee, geepack,
+ggplot2, glmnet, glmnetUtils, gmm, Hmisc, interp, irlba,
+joineRML, Kendall, knitr, ks, Lahman, lavaan (>= 0.6.18),
+leaps, lfe, lm.beta, lme4, lmodel2, lmtest (>= 0.9.38),
+lsmeans, maps, margins, MASS, mclust, mediation, metafor, mfx,
+mgcv, mlogit, modeldata, modeltests (>= 0.1.6), muhaz,
+multcomp, network, nnet, ordinal, plm, poLCA, psych, quantreg,
+rmarkdown, robust, robustbase, rsample, sandwich, spatialreg,
+spdep (>= 1.1), speedglm, spelling, stats4, survey, survival
+(>= 3.6-4), systemfit, testthat (>= 3.0.0), tseries, vars, zoo"		"MIT + file LICENSE"					"no"	"4.5.3"
+"bslib"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.11.0"		"R (>= 2.10)"	"base64enc, cachem, fastmap (>= 1.1.1), grDevices, htmltools
+(>= 0.5.8), jquerylib (>= 0.1.3), jsonlite, lifecycle, memoise
+(>= 2.0.1), mime, rlang, sass (>= 0.4.9)"		"brand.yml, bsicons, curl, fontawesome, future, ggplot2,
+knitr, lattice, magrittr, rappdirs, rmarkdown (>= 2.7), shiny
+(>= 1.11.1.9000), testthat, thematic, tools, utils, withr, yaml"		"MIT + file LICENSE"					"no"	"4.5.3"
+"cachem"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.1.0"			"rlang, fastmap (>= 1.2.0)"		"testthat"		"MIT + file LICENSE"					"yes"	"4.5.1"
+"callr"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"3.7.6"		"R (>= 3.4)"	"processx (>= 3.6.1), R6, utils"		"asciicast (>= 2.3.1), cli (>= 1.1.0), mockery, ps, rprojroot,
+spelling, testthat (>= 3.2.0), withr (>= 2.3.0)"		"MIT + file LICENSE"					"no"	"4.5.1"
+"car"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"3.1-5"		"R (>= 3.5.0), carData (>= 3.0-0)"	"abind, Formula, MASS, mgcv, nnet, pbkrtest (>= 0.4-4),
+quantreg, grDevices, utils, stats, graphics, lme4 (>=
+1.1-27.1), nlme, scales"		"alr4, boot, coxme, effects, knitr, leaps, lmtest, Matrix,
+MatrixModels, ordinal, plotrix, mvtnorm, rgl (>= 0.111.3), rio,
+sandwich, SparseM, survival, survey"		"GPL (>= 2)"					"no"	"4.5.2"
+"carData"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"3.0-6"		"R (>= 3.5.0)"			"car (>= 3.0-0)"		"GPL (>= 2)"					"no"	"4.5.2"
+"caret"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"7.0-1"		"ggplot2, lattice (>= 0.20), R (>= 3.2.0)"	"e1071, foreach, grDevices, methods, ModelMetrics (>= 1.2.2.2),
+nlme, plyr, pROC, recipes (>= 0.1.10), reshape2, stats, stats4,
+utils, withr (>= 2.0.0)"		"BradleyTerry2, covr, Cubist, dplyr, earth (>= 2.2-3),
+ellipse, fastICA, gam (>= 1.15), ipred, kernlab, klaR, knitr,
+MASS, Matrix, mda, mgcv, mlbench, MLmetrics, nnet, pamr, party
+(>= 0.9-99992), pls, proxy, randomForest, RANN, rmarkdown,
+rpart, spls, superpc, testthat (>= 0.9.1), themis (>= 0.1.3)"		"GPL (>= 2)"					"yes"	"4.5.1"
+"caTools"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.18.3"		"R (>= 3.6.0)"	"bitops"		"MASS, rpart"		"GPL-3"					"yes"	"4.5.1"
+"CellChat"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.6.1"		"R (>= 3.6.0),dplyr,igraph,ggplot2"	"future,
+future.apply,
+pbapply,
+irlba,
+NMF (>= 0.23.0),
+ggalluvial,
+stringr,
+svglite,
+Matrix,
+expm,
+Rtsne,
+ggrepel,
+circlize (>= 0.4.12),
+RColorBrewer,
+cowplot,
+methods,
+ComplexHeatmap,
+RSpectra,
+Rcpp,
+RcppEigen,
+reticulate,
+scales,
+sna,
+forcats,
+reshape2,
+FNN,
+shape,
+BiocGenerics,
+magrittr,
+patchwork,
+colorspace,
+plyr,
+ggpubr,
+ggnetwork,
+BiocNeighbors"	"Rcpp, RcppEigen"	"rmarkdown, knitr, roxygen2, Seurat (>= 4.0.0), SingleCellExperiment, SummarizedExperiment, purrr,uwot,gg.gap,wordcloud"		"GPL-3"						"4.5.3"
+"CellChatAccelRcpp"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.1.0"		"R (>= 4.1.0)"	"Rcpp,
+methods"	"Rcpp"			"GPL-3"						"4.5.3"
+"CellChatFastCpp"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.1.0"		"R (>= 4.1.0)"	"Rcpp,
+methods"	"Rcpp"			"GPL-3"						"4.5.3"
+"circlize"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.4.18"		"R (>= 4.0.0), graphics"	"GlobalOptions (>= 0.1.2), shape, grDevices, utils, stats,
+colorspace, methods, grid"		"knitr, dendextend (>= 1.0.1), ComplexHeatmap (>= 2.0.0),
+gridBase, png, markdown, bezier, covr, rmarkdown"		"MIT + file LICENSE"					"no"	"4.5.3"
+"class"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"7.3-23"	"recommended"	"R (>= 3.0.0), stats, utils"	"MASS"				"GPL-2 | GPL-3"					"yes"	"4.5.1"
+"cli"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"3.6.6"		"R (>= 3.4)"	"utils"		"callr, covr, crayon, digest, glue (>= 1.6.0), grDevices,
+htmltools, htmlwidgets, knitr, methods, processx, ps (>=
+1.3.4.9000), rlang (>= 1.0.2.9003), rmarkdown, rprojroot,
+rstudioapi, testthat (>= 3.2.0), tibble, whoami, withr"		"MIT + file LICENSE"					"yes"	"4.5.3"
+"cliapp"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.1.2"		"R (>= 3.6)"	"cli, crayon, fansi, glue (>= 1.3.0), prettycode, progress (>=
+1.2.0), R6, selectr, utils, withr, xml2"		"callr, covr, rstudioapi, testthat"		"MIT + file LICENSE"					"no"	"4.5.1"
+"clipr"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.8.1"			"utils"		"covr, knitr, rmarkdown, rstudioapi (>= 0.5), testthat (>=
+2.0.0)"		"GPL-3"					"no"	"4.5.3"
+"clock"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.7.4"		"R (>= 4.0.0)"	"cli (>= 3.6.4), lifecycle (>= 1.0.4), rlang (>= 1.1.5), tzdb
+(>= 0.5.0), vctrs (>= 0.6.5)"	"cpp11 (>= 0.5.2), tzdb (>= 0.5.0)"	"covr, knitr, magrittr, pillar, rmarkdown, slider (>= 0.3.2),
+testthat (>= 3.0.0), withr"		"MIT + file LICENSE"					"yes"	"4.5.2"
+"clue"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.3-68"		"R (>= 3.2.0)"	"stats, cluster, graphics, methods"		"e1071, lpSolve (>= 5.5.7), quadprog (>= 1.4-8), relations"	"RWeka, ape, cba, cclust, flexclust, flexmix, kernlab, mclust,
+movMF, modeltools"	"GPL-2"					"yes"	"4.5.3"
+"cluster"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.1.8.2"	"recommended"	"R (>= 3.5.0)"	"graphics, grDevices, stats, utils"		"MASS, Matrix"	"mvoutlier, fpc, ellipse, sfsmisc"	"GPL (>= 2)"					"yes"	"4.5.2"
+"coda"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.19-4.1"		"R (>= 2.14.0)"	"lattice"				"GPL (>= 2)"					"no"	"4.5.1"
+"codetools"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.2-20"	"recommended"	"R (>= 2.1)"					"GPL"					"no"	"4.5.1"
+"colorspace"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.1-2"		"R (>= 3.0.0), methods"	"graphics, grDevices, stats"		"datasets, utils, KernSmooth, MASS, kernlab, mvtnorm, vcd,
+tcltk, shiny, shinyjs, ggplot2, dplyr, scales, grid, png, jpeg,
+knitr, rmarkdown, RColorBrewer, rcartocolor, scico, viridis,
+wesanderson"		"BSD_3_clause + file LICENSE"					"yes"	"4.5.1"
+"commonmark"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.0.0"					"curl, testthat, xml2"		"BSD_2_clause + file LICENSE"					"yes"	"4.5.1"
+"compiler"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"4.5.3"	"base"						"Part of R 4.5.3"						"4.5.3"
+"ComplexHeatmap"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.26.1"		"R (>= 4.0.0), methods, grid, graphics, stats, grDevices"	"circlize (>= 0.4.14), GetoptLong, colorspace, clue,
+RColorBrewer, GlobalOptions (>= 0.1.0), png, digest, IRanges,
+matrixStats, foreach, doParallel, codetools"		"testthat (>= 1.0.0), knitr, markdown, dendsort, jpeg, tiff,
+fastcluster, EnrichedHeatmap, dendextend (>= 1.0.1), grImport,
+grImport2, glue, GenomicRanges, gridtext, pheatmap (>= 1.0.12),
+gridGraphics, gplots, rmarkdown, Cairo, magick"		"MIT + file LICENSE"					"no"	"4.5.2"
+"conquer"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.3.3"		"R (>= 3.5.0)"	"Rcpp (>= 1.0.3), Matrix, matrixStats, stats"	"Rcpp, RcppArmadillo (>= 0.9.850.1.0)"			"GPL-3"					"yes"	"4.5.1"
+"corpcor"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.6.10"		"R (>= 3.0.2)"	"stats"		""		"GPL (>= 3)"					"no"	"4.5.3"
+"corrplot"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.95"					"seriation, knitr, RColorBrewer, rmarkdown, magrittr,
+prettydoc, testthat"		"MIT + file LICENSE"					"no"	"4.5.1"
+"cowplot"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.2.0"		"R (>= 3.5.0)"	"ggplot2 (>= 3.5.2), grid, gtable, grDevices, methods, rlang,
+scales"		"Cairo, covr, dplyr, forcats, gridGraphics (>= 0.4-0), knitr,
+lattice, magick, maps, PASWR, patchwork, rmarkdown, ragg,
+testthat (>= 1.0.0), tidyr, vdiffr (>= 0.3.0), VennDiagram"		"GPL-2"					"no"	"4.5.1"
+"cpp11"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.5.5"		"R (>= 4.0.0)"			"bench, brio, callr, cli, covr, decor, desc, ggplot2, glue,
+knitr, lobstr, mockery, progress, rmarkdown, scales, Rcpp,
+testthat (>= 3.2.0), tibble, utils, vctrs, withr"		"MIT + file LICENSE"					"no"	"4.5.3"
+"crayon"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.5.3"			"grDevices, methods, utils"		"mockery, rstudioapi, testthat, withr"		"MIT + file LICENSE"					"no"	"4.5.1"
+"credentials"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.0.3"			"openssl (>= 1.3), sys (>= 2.1), curl, jsonlite, askpass"		"testthat, knitr, rmarkdown"		"MIT + file LICENSE"					"no"	"4.5.1"
+"crosstalk"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.2.2"			"htmltools (>= 0.3.6), jsonlite, lazyeval, R6"		"bslib, ggplot2, sass, shiny, testthat (>= 2.1.0)"		"MIT + file LICENSE"					"no"	"4.5.1"
+"curl"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"7.1.0"		"R (>= 3.0.0)"			"spelling, testthat (>= 1.0.0), knitr, jsonlite, later,
+rmarkdown, httpuv (>= 1.4.4), webutils"		"MIT + file LICENSE"					"yes"	"4.5.3"
+"data.table"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.17.8"		"R (>= 3.3.0)"	"methods"		"bit64 (>= 4.0.0), bit (>= 4.0.4), R.utils, xts, zoo (>=
+1.8-1), yaml, knitr, markdown"		"MPL-2.0 | file LICENSE"					"yes"	"4.5.1"
+"datasets"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"4.5.3"	"base"						"Part of R 4.5.3"						"4.5.3"
+"deldir"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.0-4"		"R (>= 3.5.0)"	"graphics, grDevices"		"polyclip"		"GPL (>= 2)"					"yes"	"4.5.1"
+"Deriv"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"4.2.0"			"methods"		"testthat (>= 0.11.0)"		"GPL (>= 3)"					"no"	"4.5.1"
+"desc"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.4.3"		"R (>= 3.4)"	"cli, R6, utils"		"callr, covr, gh, spelling, testthat, whoami, withr"		"MIT + file LICENSE"					"no"	"4.5.1"
+"devtools"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.5.2"		"R (>= 4.1), usethis (>= 3.2.1)"	"cli (>= 3.6.6), desc (>= 1.4.3), ellipsis (>= 0.3.3), fs (>=
+2.1.0), lifecycle (>= 1.0.5), memoise (>= 2.0.1), miniUI (>=
+0.1.2), pak (>= 0.9.5), pkgbuild (>= 1.4.8), pkgdown (>=
+2.2.0), pkgload (>= 1.5.2), profvis (>= 0.4.0), rcmdcheck (>=
+1.4.0), rlang (>= 1.2.0), roxygen2 (>= 7.3.3), rversions (>=
+3.0.0), sessioninfo (>= 1.2.3), testthat (>= 3.3.2), urlchecker
+(>= 1.0.1), withr (>= 3.0.2)"		"BiocManager (>= 1.30.18), callr (>= 3.7.1), covr (>= 3.5.1),
+curl (>= 4.3.2), digest (>= 0.6.29), DT (>= 0.23), foghorn (>=
+1.4.2), gh (>= 1.3.0), httr2 (>= 1.0.0), knitr (>= 1.39), lintr
+(>= 3.0.0), quarto (>= 1.5.1), remotes (>= 2.5.0), rmarkdown
+(>= 2.14), rstudioapi (>= 0.13), spelling (>= 2.2), xml2"		"MIT + file LICENSE"					"no"	"4.5.3"
+"diagram"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.6.5"		"R (>= 2.01), shape"	"stats, graphics"				"GPL (>= 2)"					"no"	"4.5.1"
+"diffobj"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.3.6"		"R (>= 3.1.0)"	"crayon (>= 1.3.2), tools, methods, utils, stats"		"knitr, rmarkdown"		"GPL-2 | GPL-3"					"yes"	"4.5.1"
+"digest"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.6.39"		"R (>= 3.3.0)"	"utils"		"tinytest, simplermarkdown, rbenchmark"		"GPL (>= 2)"					"yes"	"4.5.2"
+"doBy"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"4.7.2"		"R (>= 4.2.0), methods"	"boot, broom, cowplot, Deriv, dplyr, forecast, ggplot2, MASS,
+Matrix, modelr, rlang, purrr, tibble, tidyr,"		"geepack, knitr, lme4, markdown, rmarkdown, multcomp,
+microbenchmark, pbkrtest (>= 0.5.2), survival, testthat (>=
+2.1.0)"		"GPL (>= 2)"					"no"	"4.5.3"
+"doParallel"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.0.17"		"R (>= 2.14.0), foreach (>= 1.2.0), iterators (>= 1.0.0),
+parallel, utils"			"caret, mlbench, rpart, RUnit"	"compiler"	"GPL-2"					"no"	"4.5.1"
+"dotCall64"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.2"		"R (>= 4.0)"			"microbenchmark, RhpcBLASctl, RColorBrewer, roxygen2, spam,
+testthat,"		"GPL (>= 2)"					"yes"	"4.5.1"
+"downlit"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.4.5"		"R (>= 4.0.0)"	"brio, desc, digest, evaluate, fansi, memoise, rlang, vctrs,
+withr, yaml"		"covr, htmltools, jsonlite, MASS, MassSpecWavelet, pkgload,
+rmarkdown, testthat (>= 3.0.0), xml2"		"MIT + file LICENSE"					"no"	"4.5.2"
+"dplyr"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.2.1"		"R (>= 4.1.0)"	"cli (>= 3.6.2), generics, glue (>= 1.3.2), lifecycle (>=
+1.0.5), magrittr (>= 1.5), methods, pillar (>= 1.9.0), R6,
+rlang (>= 1.1.7), tibble (>= 3.2.0), tidyselect (>= 1.2.0),
+utils, vctrs (>= 0.7.1)"		"broom, covr, DBI, dbplyr (>= 2.2.1), ggplot2, knitr, Lahman,
+lobstr, nycflights13, purrr, rmarkdown, RSQLite, stringi (>=
+1.7.6), testthat (>= 3.1.5), tidyr (>= 1.3.0), withr"		"MIT + file LICENSE"					"yes"	"4.5.3"
+"dqrng"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.3.2"		"R (>= 3.5.0)"	"Rcpp (>= 0.12.16)"	"Rcpp, BH (>= 1.64.0-1), sitmo (>= 2.0.0)"	"testthat, knitr, rmarkdown, mvtnorm (>= 1.2-3), bench, sitmo"		"AGPL-3 | file LICENSE"					"yes"	"4.5.1"
+"e1071"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.7-17"			"graphics, grDevices, class, stats, methods, utils, proxy"		"cluster, mlbench, nnet, randomForest, rpart, SparseM, xtable,
+Matrix, MASS, slam"		"GPL-2 | GPL-3"					"yes"	"4.5.2"
+"ellipsis"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.3.3"		"R (>= 3.2)"	"rlang (>= 1.1.7)"		"covr, testthat"		"MIT + file LICENSE"					"no"	"4.5.3"
+"evaluate"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.0.5"		"R (>= 3.6.0)"			"callr, covr, ggplot2 (>= 3.3.6), lattice, methods, pkgload,
+ragg (>= 1.4.0), rlang (>= 1.1.5), knitr, testthat (>= 3.0.0),
+withr"		"MIT + file LICENSE"					"no"	"4.5.1"
+"expm"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.0-0"		"Matrix"	"methods"		"RColorBrewer, sfsmisc, Rmpfr"		"GPL (>= 2)"					"yes"	"4.5.1"
+"fansi"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.0.7"		"R (>= 3.1.0)"	"grDevices, utils"		"unitizer, knitr, rmarkdown"		"GPL-2 | GPL-3"					"yes"	"4.5.2"
+"farver"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.1.2"					"covr, testthat (>= 3.0.0)"		"MIT + file LICENSE"					"yes"	"4.5.1"
+"fastDummies"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.7.6"		"R (>= 2.10)"	"data.table, tibble, stringr"		"testthat (>= 2.1.0), knitr, rmarkdown, covr, spelling, dplyr"		"MIT + file LICENSE"					"no"	"4.5.3"
+"fastICA"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.2-7"		"R (>= 4.0.0)"			"MASS"		"GPL-2 | GPL-3"					"yes"	"4.5.3"
+"fastmap"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.2.0"					"testthat (>= 2.1.1)"		"MIT + file LICENSE"					"yes"	"4.5.1"
+"filelock"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.0.3"		"R (>= 3.4)"			"callr (>= 2.0.0), covr, testthat (>= 3.0.0)"		"MIT + file LICENSE"					"yes"	"4.5.1"
+"fitdistrplus"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.2-6"		"R (>= 3.5.0), MASS, grDevices, survival, methods"	"stats, rlang"		"actuar, rgenoud, mc2d, gamlss.dist, knitr, ggplot2,
+GeneralizedHyperbolic, rmarkdown, Hmisc, bookdown"		"GPL (>= 2)"					"no"	"4.5.2"
+"FNN"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.1.4.1"		"R (>= 4.0.0)"			"chemometrics, mvtnorm"		"GPL (>= 2)"					"yes"	"4.5.1"
+"fontawesome"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.5.3"		"R (>= 3.3.0)"	"rlang (>= 1.0.6), htmltools (>= 0.5.1.1)"		"covr, dplyr (>= 1.0.8), gt (>= 0.9.0), knitr (>= 1.31),
+testthat (>= 3.0.0), rsvg"		"MIT + file LICENSE"					"no"	"4.5.1"
+"forcats"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.0.1"		"R (>= 4.1)"	"cli (>= 3.4.0), glue, lifecycle, magrittr, rlang (>= 1.0.0),
+tibble"		"covr, dplyr, ggplot2, knitr, readr, rmarkdown, testthat (>=
+3.0.0), withr"		"MIT + file LICENSE"					"no"	"4.5.1"
+"foreach"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.5.2"		"R (>= 2.5.0)"	"codetools, utils, iterators"		"randomForest, doMC, doParallel, testthat, knitr, rmarkdown"		"Apache License (== 2.0)"					"no"	"4.5.1"
+"forecast"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"9.0.2"		"R (>= 4.1.0)"	"colorspace, fracdiff, generics (>= 0.1.2), ggplot2 (>= 3.4.0),
+graphics, lmtest, magrittr, nnet, parallel, Rcpp (>= 0.12.4),
+stats, timeDate, urca, withr, zoo"	"Rcpp (>= 0.12.4), RcppArmadillo (>= 0.2.35)"	"forecTheta, knitr, methods, rmarkdown, rticles, scales,
+seasonal, testthat (>= 3.3.0), uroot"		"GPL-3"					"yes"	"4.5.3"
+"Formula"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.2-5"		"R (>= 2.0.0), stats"					"GPL-2 | GPL-3"					"no"	"4.5.1"
+"fracdiff"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.5-4"			"stats"		"longmemo, forecast, urca"		"GPL (>= 2)"					"yes"	"4.5.3"
+"fs"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.1.0"		"R (>= 4.1)"	"methods"		"covr, crayon, knitr, pillar (>= 1.0.0), rmarkdown, spelling,
+testthat (>= 3.0.0), tibble (>= 1.1.0), vctrs (>= 0.3.0), withr"		"MIT + file LICENSE"					"yes"	"4.5.3"
+"future"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.70.0"		"R (>= 3.2.0)"	"digest, globals (>= 0.18.0), listenv (>= 0.8.0), parallel,
+parallelly (>= 1.44.0), tools, utils"		"methods, RhpcBLASctl, R.rsp, markdown"		"LGPL (>= 2.1)"					"no"	"4.5.3"
+"future.apply"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.20.2"		"R (>= 3.2.0), future (>= 1.49.0)"	"globals, parallel, utils"		"datasets, stats, tools, listenv, R.rsp, markdown"		"GPL (>= 2)"					"no"	"4.5.2"
+"gbRd"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.4.12"			"tools"				"GPL (>= 2)"					"no"	"4.5.1"
+"generics"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.1.4"		"R (>= 3.6)"	"methods"		"covr, pkgload, testthat (>= 3.0.0), tibble, withr"		"MIT + file LICENSE"					"no"	"4.5.1"
+"gert"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.3.1"			"askpass, credentials (>= 1.2.1), openssl (>= 2.0.3),
+rstudioapi (>= 0.11), sys, zip (>= 2.1.0)"		"spelling, knitr, rmarkdown, testthat"		"MIT + file LICENSE"					"yes"	"4.5.2"
+"GetoptLong"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.1.1"		"R (>= 4.0.0)"	"rjson, GlobalOptions (>= 0.1.0), methods, crayon"		"testthat (>= 1.0.0), knitr, markdown, rmarkdown"		"MIT + file LICENSE"					"no"	"4.5.3"
+"ggalluvial"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.12.6"		"R (>= 3.6), ggplot2 (>= 2.2)"	"stats, dplyr (>= 0.7), tidyr (>= 0.7), lazyeval, rlang,
+tidyselect"		"grid, alluvial, testthat, knitr, rmarkdown, babynames,
+sessioninfo, ggrepel, shiny (>= 1.4.0.2), htmltools, sp (>=
+1.4-0), ggfittext (>= 0.6), vdiffr (>= 0.2)"		"GPL-3"					"no"	"4.5.2"
+"ggnetwork"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.5.14"		"R (>= 3.5), ggplot2 (>= 2.0.0)"	"ggrepel (>= 0.5), network, igraph, sna, utils"		"knitr, rmarkdown, testthat"		"GPL-3"					"no"	"4.5.1"
+"ggplot2"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"4.0.3"		"R (>= 4.1)"	"cli, grDevices, grid, gtable (>= 0.3.6), isoband, lifecycle (>
+1.0.1), rlang (>= 1.1.0), S7, scales (>= 1.4.0), stats, vctrs
+(>= 0.6.0), withr (>= 2.5.0)"		"broom, covr, dplyr, ggplot2movies, hexbin, Hmisc, hms, knitr,
+mapproj, maps, MASS, mgcv, multcomp, munsell, nlme, profvis,
+quantreg, quarto, ragg (>= 1.2.6), RColorBrewer, roxygen2,
+rpart, sf (>= 0.7-3), svglite (>= 2.1.2), testthat (>= 3.1.5),
+tibble, vdiffr (>= 1.0.6), xml2"	"sp"	"MIT + file LICENSE"					"no"	"4.5.3"
+"ggpubr"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.6.3"		"R (>= 4.1.0), ggplot2 (>= 3.5.2)"	"ggrepel (>= 0.9.2), grid, ggsci, stats, utils, tidyr (>=
+1.3.0), purrr, dplyr (>= 1.1.0), cowplot (>= 1.1.1), ggsignif,
+scales, gridExtra, glue, polynom, rlang (>= 0.4.6), rstatix (>=
+0.7.2), tibble, magrittr"		"grDevices, knitr, RColorBrewer, gtable, testthat"		"GPL (>= 2)"					"no"	"4.5.2"
+"ggrepel"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.9.8"		"R (>= 4.1.0), ggplot2 (>= 3.5.2)"	"grid, Rcpp, rlang (>= 1.1.6), S7, scales (>= 1.4.0), withr (>=
+3.0.2)"	"Rcpp"	"knitr, rmarkdown, testthat, svglite, vdiffr, gridExtra, ggpp,
+patchwork, devtools, prettydoc, ggbeeswarm, dplyr, magrittr,
+readr, stringr, marquee, rsvg, sf"		"GPL-3 | file LICENSE"					"yes"	"4.5.3"
+"ggridges"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.5.7"		"R (>= 3.2)"	"ggplot2 (>= 3.5.0), grid (>= 3.0.0), scales (>= 0.4.1), withr
+(>= 2.1.1)"		"covr, dplyr, patchwork, ggplot2movies, forcats, knitr,
+rmarkdown, testthat, vdiffr"		"GPL-2 | file LICENSE"					"no"	"4.5.1"
+"ggsci"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"5.1.0"		"R (>= 3.5.0)"	"ggplot2 (>= 2.0.0), grDevices, rlang, scales"		"gridExtra, knitr, ragg, rmarkdown"		"GPL (>= 3)"					"no"	"4.5.3"
+"ggsignif"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.6.4"			"ggplot2 (>= 3.3.5)"		"knitr, rmarkdown, testthat, vdiffr (>= 1.0.2)"		"GPL-3 | file LICENSE"					"no"	"4.5.1"
+"gh"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.6.0"		"R (>= 4.1)"	"cli (>= 3.0.1), gitcreds, glue, httr2 (>= 1.0.6), ini,
+jsonlite, lifecycle, rlang (>= 1.1.0)"		"connectcreds, covr, knitr, rmarkdown, rprojroot, spelling,
+testthat (>= 3.0.0), vctrs, webfakes (>= 1.5.0), withr"		"MIT + file LICENSE"					"no"	"4.5.3"
+"gitcreds"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.1.2"		"R (>= 3.4)"			"codetools, covr, knitr, mockery, oskeyring, rmarkdown,
+testthat (>= 3.0.0), withr"		"MIT + file LICENSE"					"no"	"4.5.1"
+"GlobalOptions"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.1.4"		"R (>= 3.3.0), methods"	"utils"		"testthat (>= 1.0.0), knitr, markdown, GetoptLong, rmarkdown"		"MIT + file LICENSE"					"no"	"4.5.3"
+"globals"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.19.1"		"R (>= 3.1.2)"	"codetools"				"LGPL (>= 2.1)"					"no"	"4.5.3"
+"glue"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.8.1"		"R (>= 4.1)"	"methods"		"crayon, DBI (>= 1.2.0), dplyr, knitr, rlang, rmarkdown,
+RSQLite, testthat (>= 3.2.0), vctrs (>= 0.3.0), waldo (>=
+0.5.3), withr"		"MIT + file LICENSE"					"yes"	"4.5.3"
+"goftest"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.2-3"		"R (>= 3.3)"	"stats"				"GPL (>= 2)"					"yes"	"4.5.1"
+"gower"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.0.2"					"tinytest (>= 0.9.3),"		"GPL-3"					"yes"	"4.5.2"
+"gplots"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"3.3.0"		"R (>= 3.0)"	"gtools, stats, caTools, KernSmooth, methods"		"grid, MASS, knitr, rmarkdown, r2d2, nlme, dendextend,
+heatmaply, RColorBrewer"		"GPL-2"					"no"	"4.5.2"
+"graphics"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"4.5.3"	"base"		"grDevices"			"vcd"	"Part of R 4.5.3"					"yes"	"4.5.3"
+"grDevices"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"4.5.3"	"base"				"KernSmooth"		"Part of R 4.5.3"					"yes"	"4.5.3"
+"grid"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"4.5.3"	"base"		"grDevices, utils"				"Part of R 4.5.3"					"yes"	"4.5.3"
+"gridBase"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.4-7"		"R (>= 2.3.0)"	"graphics, grid"		"lattice"		"GPL"					"no"	"4.5.1"
+"gridExtra"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.3.1"			"gtable, grid, grDevices, graphics, utils"		"ggplot2, egg, lattice, knitr, testthat"		"GPL (>= 2)"					"no"	"4.5.3"
+"gtable"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.3.6"		"R (>= 4.0)"	"cli, glue, grid, lifecycle, rlang (>= 1.1.0), stats"		"covr, ggplot2, knitr, profvis, rmarkdown, testthat (>= 3.0.0)"		"MIT + file LICENSE"					"no"	"4.5.1"
+"gtools"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"3.9.5"		"methods, stats, utils"			"car, gplots, knitr, rstudioapi, SGP, taxize"		"GPL-2"					"yes"	"4.5.1"
+"hardhat"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.4.3"		"R (>= 4.1)"	"cli (>= 3.6.0), glue (>= 1.6.2), rlang (>= 1.1.0), sparsevctrs
+(>= 0.2.0), tibble (>= 3.2.1), vctrs (>= 0.6.0)"		"covr, crayon, devtools, knitr, Matrix, modeldata (>= 0.0.2),
+recipes (>= 1.3.0), rmarkdown (>= 2.3), roxygen2, testthat (>=
+3.0.0), usethis (>= 2.1.5), withr (>= 3.0.0)"		"MIT + file LICENSE"					"no"	"4.5.3"
+"here"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.0.2"			"rprojroot (>= 2.1.0)"		"conflicted, covr, fs, knitr, palmerpenguins, plyr, readr,
+rlang, rmarkdown, testthat, uuid, withr"		"MIT + file LICENSE"					"no"	"4.5.1"
+"hexbin"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.28.5"		"R (>= 2.0.1), methods"	"lattice, grid, graphics, grDevices, stats, utils"		"marray, affy, Biobase, limma, knitr"		"GPL-2"					"yes"	"4.5.1"
+"highr"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.12"		"R (>= 3.3.0)"	"xfun (>= 0.18)"		"knitr, markdown, testit"		"GPL"					"no"	"4.5.2"
+"hms"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.1.4"			"cli, lifecycle, methods, pkgconfig, rlang (>= 1.0.2), vctrs
+(>= 0.3.8)"		"crayon, lubridate, pillar (>= 1.1.0), testthat (>= 3.0.0)"		"MIT + file LICENSE"					"no"	"4.5.1"
+"htmltools"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.5.9"		"R (>= 2.14.1)"	"base64enc, digest, fastmap (>= 1.1.0), grDevices, rlang (>=
+1.0.0), utils"		"Cairo, markdown, ragg, shiny, testthat, withr"	"knitr"	"GPL (>= 2)"					"yes"	"4.5.2"
+"htmlwidgets"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.6.4"			"grDevices, htmltools (>= 0.5.7), jsonlite (>= 0.9.16), knitr
+(>= 1.8), rmarkdown, yaml"		"testthat"	"shiny (>= 1.1)"	"MIT + file LICENSE"					"no"	"4.5.1"
+"httpuv"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.6.17"		"R (>= 2.15.1)"	"later (>= 0.8.0), promises, R6, Rcpp (>= 1.0.7), utils"	"later, Rcpp"	"callr, curl, jsonlite, testthat (>= 3.0.0), websocket"		"GPL (>= 2) | file LICENSE"					"yes"	"4.5.3"
+"httr"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.4.8"		"R (>= 3.6)"	"curl (>= 5.1.0), jsonlite, mime, openssl (>= 0.8), R6"		"covr, httpuv, jpeg, knitr, png, readr, rmarkdown, testthat
+(>= 0.8.0), xml2"		"MIT + file LICENSE"					"no"	"4.5.2"
+"httr2"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.2.3"		"R (>= 4.1)"	"cli (>= 3.0.0), curl (>= 6.4.0), glue, lifecycle, magrittr,
+openssl, R6, rappdirs, rlang (>= 1.1.0), vctrs (>= 0.6.3),
+withr"		"askpass, bench, clipr, covr, digest, docopt, httpuv, jose,
+jsonlite, knitr, later (>= 1.4.0), nanonext, otel (>= 0.2.0),
+otelsdk (>= 0.2.0), paws.common (>= 0.8.0), promises,
+rmarkdown, testthat (>= 3.1.8), tibble, webfakes (>= 1.4.0),
+xml2"		"MIT + file LICENSE"					"no"	"4.5.3"
+"ica"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.0-3"							"GPL (>= 2)"					"no"	"4.5.1"
+"igraph"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.3.3"		"methods, R (>= 3.5.0)"	"cli, graphics, grDevices, lifecycle, magrittr, Matrix,
+pkgconfig (>= 2.0.0), rlang (>= 1.1.0), stats, utils, vctrs"	"cpp11 (>= 0.5.0)"	"ape (>= 5.7-0.1), callr, decor, digest, igraphdata, knitr,
+rgl (>= 1.3.14), rmarkdown, scales, stats4, tcltk, testthat,
+vdiffr, withr"	"graph"	"GPL (>= 2)"					"yes"	"4.5.3"
+"ini"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.3.1"					"testthat"		"GPL-3"					"no"	"4.5.1"
+"ipred"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.9-15"		"R (>= 2.10)"	"rpart (>= 3.1-8), MASS, survival, nnet, class, prodlim"		"mvtnorm, mlbench, TH.data, randomForest, party"		"GPL (>= 2)"					"yes"	"4.5.1"
+"IRanges"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.44.0"		"R (>= 4.0.0), methods, utils, stats, BiocGenerics (>= 0.53.2),
+S4Vectors (>= 0.47.6)"	"stats4"	"S4Vectors"	"XVector, GenomicRanges, Rsamtools, GenomicAlignments,
+GenomicFeatures, BSgenome.Celegans.UCSC.ce2, pasillaBamSubset,
+RUnit, BiocStyle"		"Artistic-2.0"					"yes"	"4.5.2"
+"irlba"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.3.7"		"R (>= 3.6.2), Matrix"	"stats, methods"	"Matrix"			"GPL-3"					"yes"	"4.5.2"
+"isoband"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.3.0"			"cli, grid, rlang, utils"	"cpp11"	"covr, ggplot2, knitr, magick, bench, rmarkdown, sf, testthat
+(>= 3.0.0), xml2"		"MIT + file LICENSE"					"yes"	"4.5.2"
+"iterators"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.0.14"		"R (>= 2.5.0), utils"			"RUnit, foreach"		"Apache License (== 2.0)"					"no"	"4.5.1"
+"jquerylib"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.1.4"			"htmltools"		"testthat"		"MIT + file LICENSE"					"no"	"4.5.1"
+"jsonlite"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.0.0"		"methods"			"httr, vctrs, testthat, knitr, rmarkdown, R.rsp, sf"		"MIT + file LICENSE"					"yes"	"4.5.1"
+"KernSmooth"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.23-26"	"recommended"	"R (>= 2.5.0), stats"			"MASS, carData"		"Unlimited"					"yes"	"4.5.1"
+"knitr"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.51"		"R (>= 3.6.0)"	"evaluate (>= 0.15), highr (>= 0.11), methods, tools, xfun (>=
+0.52), yaml (>= 2.1.19)"		"bslib, DBI (>= 0.4-1), digest, formatR, gifski, gridSVG,
+htmlwidgets (>= 0.7), jpeg, JuliaCall (>= 0.11.1), magick,
+litedown, markdown (>= 1.3), otel, otelsdk, png, ragg,
+reticulate (>= 1.4), rgl (>= 0.95.1201), rlang, rmarkdown,
+sass, showtext, styler (>= 1.2.0), targets (>= 0.6.0), testit,
+tibble, tikzDevice (>= 0.10), tinytex (>= 0.56), webshot,
+rstudioapi, svglite"		"GPL"					"no"	"4.5.2"
+"labeling"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.4.3"			"stats, graphics"				"MIT + file LICENSE | Unlimited"					"no"	"4.5.1"
+"later"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.4.8"		"R (>= 3.5)"	"Rcpp (>= 1.0.10), rlang"	"Rcpp"	"knitr, nanonext, promises, rmarkdown, testthat (>= 3.0.0)"		"MIT + file LICENSE"					"yes"	"4.5.2"
+"lattice"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.22-9"	"recommended"	"R (>= 4.0.0)"	"grid, grDevices, graphics, stats, utils"		"KernSmooth, MASS, latticeExtra, colorspace"	"chron, zoo"	"GPL (>= 2)"					"yes"	"4.5.2"
+"lava"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.9.2"		"R (>= 3.5.0)"	"cli, future.apply, graphics, grDevices, methods, numDeriv,
+progressr, stats, survival, SQUAREM, utils"		"KernSmooth, Rgraphviz, data.table, ellipse, fields, future,
+geepack, graph, knitr, rmarkdown, igraph (>= 0.6), lavaSearch2,
+lme4 (>= 1.1.35.1), MASS, Matrix (>= 1.6.3), mets (>= 1.1),
+nlme, optimx, polycor, quantreg, rgl, svglite, targeted (>=
+0.4), testthat (>= 0.11), vdiffr, visNetwork"		"Apache License (== 2.0)"					"no"	"4.5.3"
+"lazyeval"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.2.3"		"R (>= 3.1.0)"	"rlang"		"knitr, rmarkdown (>= 0.2.65), testthat, covr"		"GPL-3"					"yes"	"4.5.3"
+"leidenbase"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.1.36"		"R (>= 3.5.0)"	"igraph (>= 0.9.0)"		"rmarkdown, knitr, testthat (>= 3.1.0), pandoc"		"GPL-3"					"yes"	"4.5.2"
+"lifecycle"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.0.5"		"R (>= 3.6)"	"cli (>= 3.4.0), rlang (>= 1.1.0)"		"covr, knitr, lintr (>= 3.1.0), rmarkdown, testthat (>=
+3.0.1), tibble, tidyverse, tools, vctrs, withr, xml2"		"MIT + file LICENSE"					"no"	"4.5.2"
+"listenv"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.0.0"		"R (>= 3.1.2)"			"R.utils, R.rsp, markdown"		"Apache License (>= 2)"					"no"	"4.5.3"
+"lme4"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.0-1"		"R (>= 3.6), Matrix, methods, stats"	"MASS, Rdpack, boot, graphics, grid, lattice, minqa (>=
+1.1.15), nlme (>= 3.1-123), nloptr (>= 1.0.4), parallel,
+reformulas (>= 0.4.3.1), rlang, splines, utils"	"Matrix (>= 1.5-0), Rcpp (>= 0.10.5), RcppEigen (>=
+0.3.3.9.4)"	"HSAUR3, MEMSS, car, dfoptim, gamm4, ggplot2, glmmTMB, knitr,
+merDeriv, mgcv, mlmRev, numDeriv, optimx (>= 2013.8.6),
+pbkrtest, rmarkdown, rr2, semEff, statmod, testthat (>= 0.8.1),
+tibble"	"DHARMa, performance"	"GPL (>= 2)"					"yes"	"4.5.3"
+"lmtest"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.9-40"		"R (>= 3.0.0), stats, zoo"	"graphics"		"car, strucchange, sandwich, dynlm, stats4, survival, AER"		"GPL-2 | GPL-3"					"yes"	"4.5.1"
+"lpSolve"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"5.6.23"							"LGPL-2"					"yes"	"4.5.1"
+"lubridate"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.9.5"		"methods, R (>= 3.2)"	"generics, timechange (>= 0.4.0)"		"covr, knitr, rmarkdown, testthat (>= 2.1.0), vctrs (>= 0.6.5)"	"chron, data.table, timeDate, tis, zoo"	"MIT + file LICENSE"					"yes"	"4.5.2"
+"magrittr"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.0.5"		"R (>= 3.4.0)"			"covr, knitr, rlang, rmarkdown, testthat"		"MIT + file LICENSE"					"yes"	"4.5.3"
+"MASS"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"7.3-65"	"recommended"	"R (>= 4.4.0), grDevices, graphics, stats, utils"	"methods"		"lattice, nlme, nnet, survival"		"GPL-2 | GPL-3"					"yes"	"4.5.1"
+"Matrix"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.7-5"	"recommended"	"R (>= 4.4), methods"	"grDevices, graphics, grid, lattice, stats, utils"		"MASS, datasets, sfsmisc, tools"	"SparseM, graph"	"GPL (>= 2) | file LICENCE"					"yes"	"4.5.3"
+"MatrixModels"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.5-4"		"R (>= 3.6.0)"	"stats, methods, Matrix (>= 1.6-0), Matrix(< 1.8-0)"				"GPL (>= 2)"					"no"	"4.5.1"
+"matrixStats"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.5.0"		"R (>= 3.4.0)"			"utils, base64enc, ggplot2, knitr, markdown, microbenchmark,
+R.devices, R.rsp"		"Artistic-2.0"					"yes"	"4.5.1"
+"memoise"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.0.1"			"rlang (>= 0.4.10), cachem"		"digest, aws.s3, covr, googleAuthR, googleCloudStorageR, httr,
+testthat"		"MIT + file LICENSE"					"no"	"4.5.1"
+"methods"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"4.5.3"	"base"		"utils, stats"		"codetools"		"Part of R 4.5.3"					"yes"	"4.5.3"
+"mgcv"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.9-4"	"recommended"	"R (>= 4.4.0), nlme (>= 3.1-64)"	"methods, stats, graphics, Matrix, splines, utils"		"parallel, survival, MASS"		"GPL (>= 2)"					"yes"	"4.5.2"
+"microbenchmark"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.5.0"		"R (>= 3.2.0)"	"graphics, stats"		"ggplot2, multcomp, RUnit"		"BSD_2_clause + file LICENSE"					"yes"	"4.5.1"
+"mime"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.13"			"tools"				"GPL"					"yes"	"4.5.1"
+"miniUI"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.1.2"			"shiny (>= 0.13), htmltools (>= 0.3), utils"				"GPL-3"					"no"	"4.5.1"
+"minqa"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.2.8"			"Rcpp (>= 0.9.10)"	"Rcpp"			"GPL-2"					"yes"	"4.5.1"
+"ModelMetrics"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.2.2.2"		"R (>= 3.2.2)"	"Rcpp, data.table"	"Rcpp"	"testthat"		"GPL (>= 2)"					"yes"	"4.5.1"
+"modelr"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.1.11"		"R (>= 3.2)"	"broom, magrittr, purrr (>= 0.2.2), rlang (>= 1.0.6), tibble,
+tidyr (>= 0.8.0), tidyselect, vctrs"		"compiler, covr, ggplot2, testthat (>= 3.0.0)"		"GPL-3"					"no"	"4.5.1"
+"munsell"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.5.1"			"colorspace, methods"		"ggplot2, testthat"		"MIT + file LICENSE"					"no"	"4.5.1"
+"network"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.20.0"		"R (>= 2.10), utils"	"tibble, magrittr, statnet.common (>= 4.5), stats"		"sna, testthat, covr"		"GPL (>= 2)"					"yes"	"4.5.2"
+"nlme"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"3.1-169"	"recommended"	"R (>= 3.6.0)"	"graphics, stats, utils, lattice"		"MASS, SASmixed"		"GPL (>= 2)"					"yes"	"4.5.3"
+"nloptr"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.2.1"					"knitr, rmarkdown, covr, tinytest"		"LGPL (>= 3)"					"yes"	"4.5.3"
+"NMF"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.28"		"R (>= 3.0.0), methods, utils, registry, rngtools (>= 1.2.3),
+cluster"	"graphics, stats, stringr (>= 1.0.0), digest, grid, grDevices,
+gridBase, colorspace, RColorBrewer, foreach, doParallel,
+ggplot2, reshape2, Biobase, codetools, BiocManager"		"fastICA, doMPI, bigmemory (>= 4.2), synchronicity(>= 1.3.2),
+corpcor, xtable, devtools, knitr, RUnit"		"GPL (>= 2)"					"yes"	"4.5.3"
+"nnet"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"7.3-20"	"recommended"	"R (>= 3.0.0), stats, utils"			"MASS"		"GPL-2 | GPL-3"					"yes"	"4.5.1"
+"numDeriv"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2016.8-1.1"		"R (>= 2.11.1)"					"GPL-2"					"no"	"4.5.1"
+"openssl"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.4.2"			"askpass"		"curl, testthat (>= 2.1.0), digest, knitr, rmarkdown,
+jsonlite, jose, sodium"		"MIT + file LICENSE"					"yes"	"4.5.3"
+"otel"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.2.0"		"R (>= 3.6.0)"			"callr, cli, glue, jsonlite, otelsdk, processx, shiny,
+spelling, testthat (>= 3.0.0), utils, withr"		"MIT + file LICENSE"					"no"	"4.5.1"
+"pak"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.10.0"		"R (>= 3.5)"	"tools, utils"		"callr (>= 3.7.0), cli (>= 3.2.0), covr, curl (>= 4.3.2), desc
+(>= 1.4.1), filelock (>= 1.0.2), gitcreds, glue (>= 1.6.2),
+jsonlite (>= 1.8.0), keyring (>= 1.4.0), pingr, pkgbuild (>=
+1.4.2), pkgcache (>= 2.2.4), pkgdepends (>= 0.9.0), pkgload,
+pkgsearch (>= 3.1.0), processx (>= 3.8.1), ps (>= 1.6.0),
+rstudioapi, testthat (>= 3.2.0), webfakes, withr, yaml"		"GPL-3"					"yes"	"4.5.3"
+"parallel"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"4.5.3"	"base"		"tools, compiler"		"methods"	"snow, Rmpi, mirai"	"Part of R 4.5.3"					"yes"	"4.5.3"
+"parallelly"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.48.0"			"parallel, tools, utils"		"commonmark, base64enc"		"LGPL (>= 2.1)"					"yes"	"4.5.3"
+"patchwork"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.3.2"			"ggplot2 (>= 3.0.0), gtable (>= 0.3.6), grid, stats, grDevices,
+utils, graphics, rlang (>= 1.0.0), cli, farver"		"knitr, rmarkdown, gridGraphics, gridExtra, ragg, testthat (>=
+2.1.0), vdiffr, covr, png, gt (>= 0.11.0)"		"MIT + file LICENSE"					"no"	"4.5.1"
+"pbapply"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.7-4"		"R (>= 3.2.0)"	"parallel"		"shiny, future, future.apply"		"GPL (>= 2)"					"no"	"4.5.1"
+"pbkrtest"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.5.5"		"R (>= 4.2.0), lme4 (>= 1.1.31)"	"broom, dplyr, MASS, methods, numDeriv, Matrix (>= 1.2.3), doBy
+(>= 4.6.22)"		"nlme, markdown, knitr"		"GPL (>= 2)"					"no"	"4.5.1"
+"peakRAM"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.0.2"		"R (>= 3.2.2)"			"knitr, rmarkdown"		"GPL-2"					"no"	"4.5.3"
+"pillar"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.11.1"			"cli (>= 2.3.0), glue, lifecycle, rlang (>= 1.0.2), utf8 (>=
+1.1.0), utils, vctrs (>= 0.5.0)"		"bit64, DBI, debugme, DiagrammeR, dplyr, formattable, ggplot2,
+knitr, lubridate, nanotime, nycflights13, palmerpenguins,
+rmarkdown, scales, stringi, survival, testthat (>= 3.1.1),
+tibble, units (>= 0.7.2), vdiffr, withr"		"MIT + file LICENSE"					"no"	"4.5.1"
+"pkgbuild"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.4.8"		"R (>= 3.5)"	"callr (>= 3.2.0), cli (>= 3.4.0), desc, processx, R6"		"covr, cpp11, knitr, Rcpp, rmarkdown, testthat (>= 3.2.0),
+withr (>= 2.3.0)"		"MIT + file LICENSE"					"no"	"4.5.1"
+"pkgcache"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.2.4"		"R (>= 3.4)"	"callr (>= 2.0.4.9000), cli (>= 3.2.0), curl (>= 3.2),
+filelock, jsonlite, processx (>= 3.3.0.9001), R6, tools, utils"		"covr, debugme, desc, fs, keyring, pillar, pingr, rprojroot,
+sessioninfo, spelling, testthat (>= 3.2.0), webfakes (>=
+1.1.5), withr, zip"		"MIT + file LICENSE"					"yes"	"4.5.1"
+"pkgconfig"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.0.3"			"utils"		"covr, testthat, disposables (>= 1.0.3)"		"MIT + file LICENSE"					"no"	"4.5.1"
+"pkgdown"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.2.0"		"R (>= 4.1)"	"bslib (>= 0.5.1), callr (>= 3.7.3), cli (>= 3.6.1), desc (>=
+1.4.0), downlit (>= 0.4.4), fontawesome, fs (>= 1.4.0), httr2
+(>= 1.0.2), jsonlite, lifecycle, openssl, purrr (>= 1.0.0),
+ragg (>= 1.4.0), rlang (>= 1.1.4), rmarkdown (>= 2.27), tibble,
+whisker, withr (>= 2.4.3), xml2 (>= 1.3.1), yaml (>= 2.3.9)"		"covr, diffviewer, evaluate (>= 0.24.0), gert, gt, htmltools,
+htmlwidgets, knitr (>= 1.50), magick, methods, pkgload (>=
+1.0.2), quarto, rsconnect, rstudioapi, rticles, sass, testthat
+(>= 3.1.3), tools"		"MIT + file LICENSE"					"no"	"4.5.2"
+"pkgload"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.5.3"		"R (>= 3.4.0)"	"cli (>= 3.3.0), desc, fs, glue, lifecycle, methods, pkgbuild,
+processx, rlang (>= 1.1.1), rprojroot, utils"		"bitops, jsonlite, mathjaxr, pak, Rcpp, remotes, rstudioapi,
+testthat (>= 3.2.1.1), usethis, withr"		"MIT + file LICENSE"					"no"	"4.5.3"
+"pkgmaker"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.32.10"		"R (>= 3.0.0), methods, stats, registry"	"tools, grDevices, utils, graphics, codetools, digest, stringr,
+xtable, withr, assertthat"		"devtools (>= 0.8), roxygen2, RUnit, testthat, knitr,
+rmarkdown, markdown (>= 1.3), yaml, Biobase, datasets,
+rbibutils (>= 1.3)"		"GPL (>= 2)"					"no"	"4.5.1"
+"plotly"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"4.12.0"		"R (>= 3.5.0), ggplot2 (>= 3.0.0)"	"tools, scales, httr (>= 1.3.0), jsonlite (>= 1.6), magrittr,
+digest, viridisLite, base64enc, htmltools (>= 0.3.6),
+htmlwidgets (>= 1.5.2.9001), tidyr (>= 1.0.0), RColorBrewer,
+dplyr, vctrs, tibble, lazyeval (>= 0.2.0), rlang (>= 1.0.0),
+crosstalk, purrr, data.table, promises"		"MASS, maps, hexbin, ggthemes, GGally, ggalluvial, testthat,
+knitr, shiny (>= 1.1.0), shinytest2, curl, rmarkdown, Cairo,
+broom, webshot, listviewer, dendextend, sf, png, IRdisplay,
+processx, plotlyGeoAssets, forcats, withr, palmerpenguins,
+rversions, reticulate, rsvg, ggridges"		"MIT + file LICENSE"					"no"	"4.5.2"
+"plyr"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.8.9"		"R (>= 3.1.0)"	"Rcpp (>= 0.11.0)"	"Rcpp"	"abind, covr, doParallel, foreach, iterators, itertools,
+tcltk, testthat"		"MIT + file LICENSE"					"yes"	"4.5.1"
+"png"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.1-9"		"R (>= 2.9.0)"					"GPL-2 | GPL-3"					"yes"	"4.5.3"
+"polyclip"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.10-7"		"R (>= 3.5.0)"					"BSL"					"yes"	"4.5.1"
+"polynom"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.4-1"			"stats, graphics"		"knitr, rmarkdown"		"GPL-2"					"no"	"4.5.1"
+"praise"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.0.0"					"testthat"		"MIT + file LICENSE"					"no"	"4.5.1"
+"prettycode"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.1.0"			"crayon, utils"		"covr, mockery, rstudioapi, testthat, withr"		"MIT + file LICENSE"					"no"	"4.5.1"
+"prettyunits"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.2.0"		"R(>= 2.10)"			"codetools, covr, testthat"		"MIT + file LICENSE"					"no"	"4.5.1"
+"pROC"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.19.0.1"		"R (>= 2.14)"	"methods, Rcpp (>= 0.11.1)"	"Rcpp"	"tcltk, MASS, logcondens, testthat, vdiffr, ggplot2, rlang"		"GPL (>= 3)"					"yes"	"4.5.1"
+"processx"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"3.9.0"		"R (>= 3.4.0)"	"ps (>= 1.9.3), R6, utils"		"callr (>= 3.7.3), cli (>= 3.3.0), codetools, covr, curl,
+debugme, parallel, rlang (>= 1.0.2), testthat (>= 3.0.0),
+webfakes, withr"		"MIT + file LICENSE"					"yes"	"4.5.3"
+"prodlim"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2026.03.11"		"R (>= 4.1.0)"	"Rcpp (>= 0.11.5), stats, rlang, data.table, grDevices,
+ggplot2, scales, graphics, diagram, survival, KernSmooth, lava"	"Rcpp"	"tibble, ggthemes, riskRegression, testthat, etm, survey"		"GPL (>= 2)"					"yes"	"4.5.3"
+"profvis"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.4.0"		"R (>= 4.0)"	"htmlwidgets (>= 0.3.2), rlang (>= 1.1.0), vctrs"		"htmltools, knitr, rmarkdown, shiny, testthat (>= 3.0.0)"		"MIT + file LICENSE"					"yes"	"4.5.1"
+"progress"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.2.3"		"R (>= 3.6)"	"crayon, hms, prettyunits, R6"		"Rcpp, testthat (>= 3.0.0), withr"		"MIT + file LICENSE"					"no"	"4.5.1"
+"progressr"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.19.0"		"R (>= 3.5.0)"	"digest, utils"		"graphics, tcltk, beepr, cli, crayon, pbmcapply, progress,
+purrr, foreach, plyr, doFuture, future, future.apply, furrr,
+ntfy, RPushbullet, rstudioapi, shiny, commonmark, base64enc,
+tools"		"GPL (>= 3)"					"no"	"4.5.3"
+"promises"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.5.0"		"R (>= 4.1.0)"	"fastmap (>= 1.1.0), later, lifecycle, magrittr (>= 1.5), otel
+(>= 0.2.0), R6, rlang"		"future (>= 1.21.0), knitr, mirai, otelsdk (>= 0.2.0), purrr,
+Rcpp, rmarkdown, spelling, testthat (>= 3.0.0), vembedr"		"MIT + file LICENSE"					"no"	"4.5.2"
+"proxy"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.4-29"		"R (>= 3.4.0)"	"stats, utils"		"cba"		"GPL-2 | GPL-3"					"yes"	"4.5.2"
+"ps"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.9.3"		"R (>= 3.4)"	"utils"		"callr, covr, curl, pillar, pingr, processx (>= 3.1.0), R6,
+rlang, testthat (>= 3.0.0), webfakes, withr"		"MIT + file LICENSE"					"yes"	"4.5.3"
+"purrr"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.2.2"		"R (>= 4.1)"	"cli (>= 3.6.1), lifecycle (>= 1.0.3), magrittr (>= 1.5.0),
+rlang (>= 1.1.1), vctrs (>= 0.6.3)"	"cli"	"carrier (>= 0.3.0), covr, dplyr (>= 0.7.8), httr, knitr,
+lubridate, mirai (>= 2.5.1), rmarkdown, testthat (>= 3.0.0),
+tibble, tidyselect"		"MIT + file LICENSE"					"yes"	"4.5.3"
+"quadprog"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.5-8"		"R (>= 3.1.0)"					"GPL (>= 2)"					"yes"	"4.5.1"
+"quantmod"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.4.29"		"R (>= 3.2.0), xts(>= 0.9-0), zoo, TTR(>= 0.2), methods"	"curl, jsonlite(>= 1.1)"		"DBI, RMySQL, RSQLite, timeSeries, xml2, downloader, tinytest"		"GPL-3"					"no"	"4.5.3"
+"quantreg"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"6.1"		"R (>= 3.5), stats, SparseM"	"methods, graphics, Matrix, MatrixModels, survival, MASS"		"interp, rgl, logspline, nor1mix, Formula, zoo, R.rsp, conquer"		"GPL (>= 2)"					"yes"	"4.5.1"
+"R6"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.6.1"		"R (>= 3.6)"			"lobstr, testthat (>= 3.0.0)"		"MIT + file LICENSE"					"no"	"4.5.1"
+"ragg"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.5.2"			"systemfonts (>= 1.0.3), textshaping (>= 0.3.0)"	"systemfonts, textshaping"	"covr, graphics, grid, testthat (>= 3.0.0)"		"MIT + file LICENSE"					"yes"	"4.5.3"
+"RANN"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.6.2"					"testthat"		"GPL (>= 3)"					"yes"	"4.5.1"
+"rappdirs"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.3.4"		"R (>= 4.1)"			"covr, roxygen2, testthat (>= 3.2.0), withr"		"MIT + file LICENSE"					"yes"	"4.5.2"
+"rbibutils"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.4.1"		"R (>= 2.10)"	"utils, tools"		"testthat"		"GPL-2"					"yes"	"4.5.3"
+"rcmdcheck"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.4.0"			"callr (>= 3.1.1.9000), cli (>= 3.0.0), curl, desc (>= 1.2.0),
+digest, pkgbuild, prettyunits, R6, rprojroot, sessioninfo (>=
+1.1.1), utils, withr, xopen"		"covr, knitr, mockery, processx, ps, rmarkdown, svglite,
+testthat, webfakes"		"MIT + file LICENSE"					"no"	"4.5.1"
+"RColorBrewer"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.1-3"		"R (>= 2.0.0)"					"Apache License 2.0"					"no"	"4.5.1"
+"Rcpp"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.1.1-1.1"		"R (>= 3.5.0)"	"methods, utils"		"tinytest, inline, rbenchmark, pkgKitten (>= 0.1.2)"		"GPL (>= 2)"					"yes"	"4.5.3"
+"RcppAnnoy"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.0.23"		"R (>= 3.1)"	"methods, Rcpp"	"Rcpp"	"tinytest"		"GPL (>= 2)"					"yes"	"4.5.2"
+"RcppArmadillo"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"15.4.0-1"		"R (>= 3.3.0)"	"Rcpp (>= 1.1.1), stats, utils, methods"	"Rcpp"	"tinytest, Matrix (>= 1.3.0), pkgKitten, reticulate, slam"		"GPL (>= 2)"					"yes"	"4.5.3"
+"RcppEigen"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.3.4.0.2"		"R (>= 3.6.0)"	"Rcpp (>= 0.11.0), stats, utils"	"Rcpp"	"Matrix, inline, tinytest, pkgKitten, microbenchmark"		"GPL (>= 2) | file LICENSE"					"yes"	"4.5.1"
+"RcppHNSW"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.7.0"			"methods, Rcpp (>= 0.11.3)"	"Rcpp"	"covr, testthat"		"GPL (>= 3)"					"yes"	"4.5.3"
+"RcppParallel"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"5.1.11-2"		"R (>= 3.0.2)"			"Rcpp, RUnit, knitr, rmarkdown"		"GPL (>= 3)"					"yes"	"4.5.2"
+"RcppProgress"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.4.2"					"RcppArmadillo, devtools, roxygen2, testthat"		"GPL (>= 3)"					"no"	"4.5.1"
+"RcppTOML"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.2.3"		"R (>= 3.3.0)"	"Rcpp (>= 1.0.8)"	"Rcpp"	"tinytest"		"GPL (>= 2)"					"yes"	"4.5.1"
+"Rdpack"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.6.6"		"R (>= 2.15.0), methods"	"tools, utils, rbibutils (> 2.4)"		"grDevices, testthat, rstudioapi, rprojroot, gbRd"		"GPL (>= 2)"					"no"	"4.5.2"
+"recipes"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.3.3"		"dplyr (>= 1.1.0), R (>= 4.1)"	"cli, clock (>= 0.6.1), generics (>= 0.1.2), glue, gower,
+hardhat (>= 1.4.1), ipred (>= 0.9-12), lifecycle (>= 1.0.3),
+lubridate (>= 1.8.0), magrittr, Matrix, purrr (>= 1.0.0), rlang
+(>= 1.1.0), sparsevctrs (>= 0.3.3), stats, tibble, tidyr (>=
+1.0.0), tidyselect (>= 1.2.0), timeDate, utils, vctrs (>=
+0.5.0), withr"		"covr, ddalpha, dials (>= 1.2.0), dimRed, fastICA, ggplot2,
+igraph (>= 2.1.1), kernlab, knitr, methods, mixOmics, modeldata
+(>= 0.1.1), parsnip (>= 1.2.0), RANN, RcppRoll, rmarkdown,
+rpart, rsample, RSpectra, splines2, testthat (>= 3.3.0),
+workflows, xml2"		"MIT + file LICENSE"					"no"	"4.5.3"
+"reformulas"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.4.4"			"stats, methods, Matrix, Rdpack"		"lme4, tinytest, glmmTMB, Formula"		"GPL-3"					"no"	"4.5.2"
+"registry"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.5-1"		"R (>= 2.6.0)"	"utils"				"GPL-2"					"no"	"4.5.1"
+"rematch2"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.1.2"			"tibble"		"covr, testthat"		"MIT + file LICENSE"					"no"	"4.5.1"
+"remotes"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.5.0"		"R (>= 3.0.0)"	"methods, stats, tools, utils"		"brew, callr, codetools, covr, curl, git2r (>= 0.23.0), knitr,
+mockery, pingr, pkgbuild (>= 1.0.1), rmarkdown, rprojroot,
+testthat (>= 3.0.0), webfakes, withr"		"MIT + file LICENSE"					"no"	"4.5.1"
+"reshape2"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.4.5"		"R (>= 3.1)"	"plyr (>= 1.8.1), Rcpp, stringr"	"Rcpp"	"covr, lattice, testthat (>= 3.0.0)"		"MIT + file LICENSE"					"yes"	"4.5.2"
+"reticulate"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.46.0"		"R (>= 3.5)"	"Matrix, Rcpp (>= 1.0.7), RcppTOML, graphics, here, jsonlite,
+methods, png, rappdirs, utils, rlang, withr"	"Rcpp"	"callr, knitr, glue, cli, rmarkdown, pillar, testthat"		"Apache License 2.0"					"yes"	"4.5.3"
+"rjson"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.2.23"		"R (>= 4.0.0)"					"GPL-2"					"yes"	"4.5.1"
+"rlang"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.2.0"		"R (>= 4.0.0)"	"utils"		"cli (>= 3.1.0), covr, crayon, desc, fs, glue, knitr,
+magrittr, methods, pillar, pkgload, rmarkdown, stats, testthat
+(>= 3.3.2), tibble, usethis, vctrs (>= 0.2.3), withr"	"winch"	"MIT + file LICENSE"					"yes"	"4.5.3"
+"rmarkdown"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.31"		"R (>= 3.0)"	"bslib (>= 0.2.5.1), evaluate (>= 0.13), fontawesome (>=
+0.5.0), htmltools (>= 0.5.1), jquerylib, jsonlite, knitr (>=
+1.43), methods, tinytex (>= 0.31), tools, utils, xfun (>=
+0.36), yaml (>= 2.1.19)"		"digest, dygraphs, fs, rsconnect, downlit (>= 0.4.0), katex
+(>= 1.4.0), sass (>= 0.4.0), shiny (>= 1.6.0), testthat (>=
+3.0.3), tibble, vctrs, cleanrmd, withr (>= 2.4.2), xml2"		"GPL-3"					"no"	"4.5.3"
+"rngtools"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.5.2"		"R (>= 3.2.0), methods"	"digest, utils, stats, parallel"		"covr, RUnit, testthat"		"GPL-3"					"no"	"4.5.1"
+"ROCR"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.0-12"		"R (>= 3.6)"	"methods, graphics, grDevices, gplots, stats"		"testthat, knitr, rmarkdown"		"GPL (>= 2)"					"no"	"4.5.2"
+"roxygen2"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"8.0.0"		"R (>= 4.1)"	"brew, cli (>= 3.3.0), commonmark, desc (>= 1.2.0), knitr,
+lifecycle, methods, pkgload (>= 1.5.2), R6 (>= 2.1.2), rlang
+(>= 1.1.0), utils, withr, xml2"	"cpp11"	"covr, R.methodsS3, S7, R.oo, rmarkdown (>= 2.16), testthat
+(>= 3.1.2), yaml"		"MIT + file LICENSE"					"yes"	"4.5.3"
+"rpart"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"4.1.27"	"recommended"	"R (>= 2.15.0), graphics, stats, grDevices"			"survival"		"GPL-2 | GPL-3"					"yes"	"4.5.3"
+"rprojroot"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.1.1"		"R (>= 3.0.0)"			"covr, knitr, lifecycle, rlang, rmarkdown, testthat (>=
+3.2.0), withr"		"MIT + file LICENSE"					"no"	"4.5.1"
+"RSpectra"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.16-2"		"R (>= 3.0.2)"	"Matrix (>= 1.1-0), Rcpp (>= 0.11.5)"	"Rcpp, RcppEigen (>= 0.3.3.3.0)"	"knitr, rmarkdown, prettydoc"		"MPL (>= 2)"					"yes"	"4.5.1"
+"rstatix"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.7.3"		"R (>= 3.3.0)"	"stats, utils, tidyr (>= 1.0.0), purrr, broom (>= 0.7.4), rlang
+(>= 0.3.1), tibble (>= 2.1.3), dplyr (>= 0.7.1), magrittr,
+corrplot, tidyselect (>= 1.2.0), car, generics (>= 0.0.2)"		"knitr, rmarkdown, ggpubr, graphics, emmeans, coin, boot,
+testthat, spelling"		"GPL-2"					"no"	"4.5.1"
+"rstudioapi"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.19.0"					"testthat, knitr, rmarkdown, clipr, covr, curl, jsonlite, R6,
+withr"		"MIT + file LICENSE"					"no"	"4.5.3"
+"Rtsne"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.17"			"Rcpp (>= 0.11.0), stats"	"Rcpp"	"irlba, testthat"		"file LICENSE"	"yes"				"yes"	"4.5.1"
+"RUnit"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.4.33.1"		"R (>= 2.5.0), utils (>= 2.5.0), methods (>= 2.5.0), graphics
+(>= 2.5.0)"			"XML (>= 3.1.0)"		"GPL-2"					"no"	"4.5.3"
+"rversions"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"3.0.0"			"curl"		"pillar, testthat (>= 3.0.0), webfakes, withr"		"MIT + file LICENSE"					"no"	"4.5.1"
+"S4Vectors"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.48.0"		"R (>= 4.0.0), methods, utils, stats, stats4, BiocGenerics (>=
+0.53.2)"			"IRanges, GenomicRanges, SummarizedExperiment, Matrix,
+DelayedArray, ShortRead, graph, data.table, RUnit, BiocStyle,
+knitr"		"Artistic-2.0"					"yes"	"4.5.2"
+"S7"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.2.2"		"R (>= 3.5.0)"	"utils"		"bench, callr, covr, knitr, methods, rmarkdown, testthat (>=
+3.2.0), tibble"		"MIT + file LICENSE"					"yes"	"4.5.3"
+"sass"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.4.10"			"fs (>= 1.2.4), rlang (>= 0.4.10), htmltools (>= 0.5.1), R6,
+rappdirs"		"testthat, knitr, rmarkdown, withr, shiny, curl"		"MIT + file LICENSE"					"yes"	"4.5.1"
+"scales"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.4.0"		"R (>= 4.1)"	"cli, farver (>= 2.0.3), glue, labeling, lifecycle, R6,
+RColorBrewer, rlang (>= 1.1.0), viridisLite"		"bit64, covr, dichromat, ggplot2, hms (>= 0.5.0), stringi,
+testthat (>= 3.0.0)"		"MIT + file LICENSE"					"no"	"4.5.1"
+"scattermore"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.2"			"ggplot2, scales, grid, grDevices, graphics"		"covr, knitr, rmarkdown, testthat"		"GPL (>= 3)"					"yes"	"4.5.1"
+"sctransform"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.4.3"		"R (>= 3.6.0)"	"dplyr, magrittr, MASS, Matrix (>= 1.5-0), methods,
+future.apply, future, parallelly, ggplot2, reshape2, rlang,
+gridExtra, matrixStats"	"RcppArmadillo, Rcpp (>= 0.11.0)"	"irlba, testthat, knitr"	"glmGamPoi"	"GPL-3 | file LICENSE"					"yes"	"4.5.2"
+"selectr"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.6-0"		"R (>= 3.3)"	"R6"		"testthat, XML, xml2"		"BSD_3_clause + file LICENCE"					"no"	"4.5.3"
+"sessioninfo"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.2.4"		"R (>= 3.4)"	"cli (>= 3.1.0), tools, utils"		"callr, covr, gh, reticulate, rmarkdown, testthat (>= 3.2.0),
+withr"		"GPL-2"					"no"	"4.5.3"
+"Seurat"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"5.5.1"		"R (>= 4.0.0), methods, SeuratObject (>= 5.0.2)"	"cluster, cowplot, fastDummies, fitdistrplus, future,
+future.apply, generics (>= 0.1.3), ggplot2 (>= 3.3.0), ggrepel,
+ggridges, graphics, grDevices, grid, httr, ica, igraph, irlba,
+jsonlite, KernSmooth, lifecycle, lmtest, MASS, Matrix (>=
+1.5-0), matrixStats, miniUI, patchwork, pbapply, plotly (>=
+4.9.0), png, progressr, RANN, RColorBrewer, Rcpp (>= 1.0.7),
+RcppAnnoy (>= 0.0.18), RcppHNSW, reticulate, rlang, ROCR,
+RSpectra, Rtsne, scales, scattermore (>= 1.2), sctransform (>=
+0.4.1), shiny, spatstat.explore, spatstat.geom, stats, tibble,
+tools, utils, uwot (>= 0.1.10)"	"Rcpp (>= 0.11.0), RcppEigen, RcppProgress"	"ape, arrow, base64enc, Biobase, BiocGenerics, BPCells,
+data.table, DESeq2, DelayedArray, enrichR, GenomicRanges,
+GenomeInfoDb, glmGamPoi, ggrastr, harmony, hdf5r, IRanges,
+leidenbase, limma, magrittr, MAST, metap, mixtools, monocle,
+presto, rsvd, R.utils, Rfast2, rtracklayer, S4Vectors, sf (>=
+1.0.0), sp, SingleCellExperiment, SummarizedExperiment,
+testthat, VGAM"		"MIT + file LICENSE"					"yes"	"4.5.3"
+"SeuratObject"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"5.4.0"		"R (>= 4.1.0), sp (>= 1.5.0)"	"future, future.apply, generics, grDevices, grid, lifecycle,
+Matrix (>= 1.6.4), methods, progressr, Rcpp (>= 1.0.5), rlang
+(>= 0.4.7), spam, stats, tools, utils"	"Rcpp, RcppEigen"	"BPCells, DelayedArray, fs (>= 1.5.2), sf (>= 1.0.0), ggplot2,
+HDF5Array, rmarkdown, testthat"		"MIT + file LICENSE"					"yes"	"4.5.3"
+"shape"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.4.6.1"		"R (>= 2.01)"	"stats, graphics, grDevices"				"GPL (>= 3)"					"no"	"4.5.1"
+"shiny"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.14.0"		"methods, R (>= 3.1.2)"	"bslib (>= 0.6.0), cachem (>= 1.1.0), cli, commonmark (>=
+2.0.0), fastmap (>= 1.1.1), fontawesome (>= 0.4.0), glue (>=
+1.3.2), grDevices, htmltools (>= 0.5.4), httpuv (>= 1.5.2),
+jsonlite (>= 0.9.16), later (>= 1.0.0), lifecycle (>= 0.2.0),
+mime (>= 0.3), otel, promises (>= 1.5.0), R6 (>= 2.0), rlang
+(>= 0.4.10), sourcetools, tools, utils, withr, xtable"		"Cairo (>= 1.5-5), coro (>= 1.1.0), datasets, DT, dygraphs,
+future, ggplot2, knitr (>= 1.6), magrittr, markdown, mirai,
+otelsdk (>= 0.2.0), ragg, reactlog (>= 1.0.0), rmarkdown, sass,
+shinytest2, showtext, testthat (>= 3.2.1), watcher, yaml"		"MIT + file LICENSE"					"no"	"4.5.3"
+"sitmo"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.0.2"		"R (>= 3.2.0)"	"Rcpp (>= 0.12.13)"	"Rcpp"	"knitr, rmarkdown, ggplot2"		"MIT + file LICENSE"					"yes"	"4.5.1"
+"sna"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.8"		"R (>= 2.0.0), utils, statnet.common, network"			"rgl, numDeriv, SparseM"		"GPL (>= 2)"					"yes"	"4.5.1"
+"sourcetools"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.1.7-2"		"R (>= 3.0.2)"			"testthat"		"MIT + file LICENSE"					"yes"	"4.5.3"
+"sp"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.2-1"		"R (>= 3.5.0), methods"	"utils, stats, graphics, grDevices, lattice, grid"		"RColorBrewer, gstat, deldir, knitr, maps, mapview, rmarkdown,
+sf, terra, raster"		"GPL (>= 2)"					"yes"	"4.5.2"
+"spam"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.11-4"		"R (>= 4.0)"	"dotCall64, grid, methods, Rcpp (>= 1.0.8.3)"	"Rcpp"	"spam64, fields, Matrix, testthat, R.rsp, truncdist, knitr,
+rmarkdown"		"LGPL-2 | BSD_3_clause + file LICENSE"					"yes"	"4.5.3"
+"SparseM"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.84-2"		"R (>= 2.15), methods"	"graphics, stats, utils"		"knitr"		"GPL (>= 2)"					"yes"	"4.5.1"
+"sparsevctrs"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.3.6"		"R (>= 4.1)"	"cli (>= 3.4.0), rlang (>= 1.1.0), vctrs"		"knitr, Matrix, methods, rmarkdown, testthat (>= 3.0.0),
+tibble, withr"		"MIT + file LICENSE"					"yes"	"4.5.2"
+"SpatialESSV3Exact"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.1.0"		"R (>= 4.1.0)"	"future.apply,
+Matrix,
+methods,
+Rcpp"	"Rcpp"	"testthat (>= 3.0.0)"		"GPL-3"						"4.5.3"
+"spatstat.data"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"3.1-9"		"R (>= 3.5.0)"	"spatstat.utils (>= 3.1-2), Matrix"		"spatstat.geom, spatstat.random, spatstat.explore,
+spatstat.model, spatstat.linnet"		"GPL (>= 2)"					"no"	"4.5.1"
+"spatstat.explore"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"3.8-0"		"R (>= 3.5.0), spatstat.data (>= 3.1-9), spatstat.univar (>=
+3.1-7), spatstat.geom (>= 3.7-2), spatstat.random (>= 3.4-5),
+stats, graphics, grDevices, utils, methods, nlme"	"spatstat.utils (>= 3.2-2), spatstat.sparse (>= 3.1), goftest
+(>= 1.2-2), Matrix, abind"		"sm, gsl, locfit, spatial, fftwtools (>= 0.9-8),
+spatstat.linnet (>= 3.4), spatstat.model (>= 3.6), spatstat (>=
+3.5)"		"GPL (>= 2)"					"yes"	"4.5.3"
+"spatstat.geom"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"3.8-1"		"R (>= 3.5.0), spatstat.data (>= 3.1-9), spatstat.univar (>=
+3.2-0), stats, graphics, grDevices, utils, methods"	"spatstat.utils (>= 3.2-3), deldir (>= 1.0-2), polyclip (>=
+1.10)"		"spatstat.random (>= 3.4-5), spatstat.explore (>= 3.8),
+spatstat.model (>= 3.7), spatstat.linnet (>= 3.5), spatial,
+fftwtools (>= 0.9-8), spatstat (>= 3.6)"		"GPL (>= 2)"					"yes"	"4.5.3"
+"spatstat.random"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"3.4-5"		"R (>= 3.5.0), spatstat.data (>= 3.1-9), spatstat.univar (>=
+3.1-6), spatstat.geom (>= 3.7-0), stats, utils, methods,
+grDevices"	"spatstat.utils (>= 3.2-2)"		"spatial, spatstat.linnet (>= 3.4), spatstat.explore,
+spatstat.model, spatstat (>= 3.5), gsl"		"GPL (>= 2)"					"yes"	"4.5.3"
+"spatstat.sparse"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"3.2-0"		"R (>= 3.5.0), stats, utils, methods, Matrix, abind, tensor"	"spatstat.utils (>= 3.2-3)"				"GPL (>= 2)"					"yes"	"4.5.3"
+"spatstat.univar"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"3.2-0"		"R (>= 3.5.0), stats"	"spatstat.utils (>= 3.2-3), graphics"				"GPL (>= 2)"					"yes"	"4.5.3"
+"spatstat.utils"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"3.2-3"		"R (>= 3.5.0), stats, graphics, grDevices, utils, methods"			"spatstat.model"		"GPL (>= 2)"					"yes"	"4.5.3"
+"splines"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"4.5.3"	"base"		"graphics, stats"		"Matrix, methods"		"Part of R 4.5.3"					"yes"	"4.5.3"
+"SQUAREM"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2026.1"		"R (>= 4.0)"			"setRNG, interval"		"GPL (>= 2)"					"no"	"4.5.3"
+"statnet.common"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"4.13.0"		"R (>= 4.1)"	"utils, methods, coda, parallel, tools, Matrix"		"covr, roxygen2, rlang (>= 1.1.1), purrr, testthat, MASS"		"GPL-3 + file LICENSE"					"yes"	"4.5.2"
+"stats"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"4.5.3"	"base"		"utils, grDevices, graphics"		"MASS, Matrix, SuppDists, methods, stats4"	"Kendall, coin, multcomp, pcaPP, pspearman, robustbase"	"Part of R 4.5.3"					"yes"	"4.5.3"
+"stats4"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"4.5.3"	"base"		"graphics, methods, stats"				"Part of R 4.5.3"						"4.5.3"
+"stringi"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.8.7"		"R (>= 3.4)"	"tools, utils, stats"				"file LICENSE"	"yes"				"yes"	"4.5.2"
+"stringr"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.6.0"		"R (>= 4.1.0)"	"cli, glue (>= 1.6.1), lifecycle (>= 1.0.3), magrittr, rlang
+(>= 1.0.0), stringi (>= 1.5.3), vctrs (>= 0.4.0)"		"covr, dplyr, gt, htmltools, htmlwidgets, knitr, rmarkdown,
+testthat (>= 3.0.0), tibble"		"MIT + file LICENSE"					"no"	"4.5.2"
+"survival"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"3.8-6"	"recommended"	"R (>= 3.5.0)"	"graphics, Matrix, methods, splines, stats, utils"				"LGPL (>= 2)"					"yes"	"4.5.2"
+"svglite"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.2.2"		"R (>= 4.1)"	"base64enc, cli, lifecycle, rlang (>= 1.1.0), systemfonts (>=
+1.3.0), textshaping (>= 0.3.0)"	"cpp11, systemfonts, textshaping"	"covr, fontquiver (>= 0.2.0), htmltools, knitr, rmarkdown,
+testthat (>= 3.0.0), xml2 (>= 1.0.0)"		"GPL (>= 2)"					"yes"	"4.5.1"
+"synchronicity"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.3.10"			"methods, bigmemory.sri, Rcpp, uuid"	"BH, Rcpp"			"LGPL-2 | Apache License 2.0"					"yes"	"4.5.3"
+"sys"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"3.4.3"					"unix (>= 1.4), spelling, testthat"		"MIT + file LICENSE"					"yes"	"4.5.1"
+"systemfonts"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.3.2"		"R (>= 3.2.0)"	"base64enc, grid, jsonlite, lifecycle, tools, utils"	"cpp11 (>= 0.2.1)"	"covr, farver, ggplot2, graphics, knitr, ragg, rmarkdown,
+svglite, testthat (>= 2.1.0)"		"MIT + file LICENSE"					"yes"	"4.5.2"
+"tcltk"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"4.5.3"	"base"		"utils"				"Part of R 4.5.3"					"yes"	"4.5.3"
+"tensor"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.5.1"							"GPL (>= 2)"					"no"	"4.5.1"
+"testthat"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"3.3.2"		"R (>= 4.1.0)"	"brio (>= 1.1.5), callr (>= 3.7.6), cli (>= 3.6.5), desc (>=
+1.4.3), evaluate (>= 1.0.4), jsonlite (>= 2.0.0), lifecycle (>=
+1.0.4), magrittr (>= 2.0.3), methods, pkgload (>= 1.4.0),
+praise (>= 1.0.0), processx (>= 3.8.6), ps (>= 1.9.1), R6 (>=
+2.6.1), rlang (>= 1.1.6), utils, waldo (>= 0.6.2), withr (>=
+3.0.2)"		"covr, curl (>= 0.9.5), diffviewer (>= 0.1.0), digest (>=
+0.6.33), gh, knitr, otel, otelsdk, rmarkdown, rstudioapi, S7,
+shiny, usethis, vctrs (>= 0.1.0), xml2"		"MIT + file LICENSE"					"yes"	"4.5.2"
+"textshaping"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.0.5"		"R (>= 3.2.0)"	"lifecycle, stats, stringi, systemfonts (>= 1.3.0), utils"	"cpp11 (>= 0.2.1), systemfonts (>= 1.0.0)"	"covr, grDevices, grid, knitr, rmarkdown, testthat (>= 3.0.0)"		"MIT + file LICENSE"					"yes"	"4.5.2"
+"tibble"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"3.3.1"		"R (>= 3.4.0)"	"cli, lifecycle (>= 1.0.0), magrittr, methods, pillar (>=
+1.8.1), pkgconfig, rlang (>= 1.0.2), utils, vctrs (>= 0.5.0)"		"bench, bit64, blob, brio, callr, DiagrammeR, dplyr, evaluate,
+formattable, ggplot2, here, hms, htmltools, knitr, lubridate,
+nycflights13, pkgload, purrr, rmarkdown, stringi, testthat (>=
+3.0.2), tidyr, withr"		"MIT + file LICENSE"					"yes"	"4.5.2"
+"tidyr"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.3.2"		"R (>= 4.1.0)"	"cli (>= 3.4.1), dplyr (>= 1.1.0), glue, lifecycle (>= 1.0.3),
+magrittr, purrr (>= 1.0.1), rlang (>= 1.1.1), stringr (>=
+1.5.0), tibble (>= 2.1.1), tidyselect (>= 1.2.1), utils, vctrs
+(>= 0.5.2)"	"cpp11 (>= 0.4.0)"	"covr, data.table, knitr, readr, repurrrsive (>= 1.1.0),
+rmarkdown, testthat (>= 3.0.0)"		"MIT + file LICENSE"					"yes"	"4.5.2"
+"tidyselect"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.2.1"		"R (>= 3.4)"	"cli (>= 3.3.0), glue (>= 1.3.0), lifecycle (>= 1.0.3), rlang
+(>= 1.0.4), vctrs (>= 0.5.2), withr"		"covr, crayon, dplyr, knitr, magrittr, rmarkdown, stringr,
+testthat (>= 3.1.1), tibble (>= 2.1.3)"		"MIT + file LICENSE"					"yes"	"4.5.1"
+"timechange"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.4.0"		"R (>= 3.3)"		"cpp11 (>= 0.2.7)"	"testthat (>= 0.7.1.99), knitr"		"GPL (>= 3)"					"yes"	"4.5.2"
+"timeDate"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"4052.112"		"R (>= 3.6.0), methods"	"graphics, utils, stats"		"RUnit"		"GPL (>= 2)"					"no"	"4.5.2"
+"tinytex"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.60"			"xfun (>= 0.48)"		"testit, rstudioapi"		"MIT + file LICENSE"					"no"	"4.5.3"
+"tools"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"4.5.3"	"base"				"codetools, methods, xml2, curl, commonmark, knitr, xfun, mathjaxr, V8"		"Part of R 4.5.3"					"yes"	"4.5.3"
+"tseries"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.10-61"		"R (>= 3.4.0)"	"graphics, stats, utils, quadprog, zoo, quantmod (>= 0.4-9),
+jsonlite"				"GPL-2 | GPL-3"					"yes"	"4.5.3"
+"TTR"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.24.4"			"xts (>= 0.10-0), zoo, curl"	"xts"	"RUnit"	"quantmod"	"GPL (>= 2)"					"yes"	"4.5.1"
+"tzdb"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.5.0"		"R (>= 4.0.0)"		"cpp11 (>= 0.5.2)"	"covr, testthat (>= 3.0.0)"		"MIT + file LICENSE"					"yes"	"4.5.1"
+"urca"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.3-4"		"R (>= 2.0.0), methods"	"nlme, graphics, stats"				"GPL (>= 2)"					"yes"	"4.5.1"
+"urlchecker"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.0.1"		"R (>= 3.3)"	"cli, curl, tools, xml2"		"covr"		"GPL-3"					"no"	"4.5.1"
+"usethis"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"3.2.1"		"R (>= 4.1)"	"cli (>= 3.0.1), clipr (>= 0.3.0), crayon, curl (>= 2.7), desc
+(>= 1.4.2), fs (>= 1.3.0), gert (>= 1.4.1), gh (>= 1.2.1), glue
+(>= 1.3.0), jsonlite, lifecycle (>= 1.0.0), purrr, rappdirs,
+rlang (>= 1.1.0), rprojroot (>= 2.1.1), rstudioapi, stats,
+tools, utils, whisker, withr (>= 2.3.0), yaml"		"covr, knitr, magick, pkgload (>= 1.3.2.1), quarto (>= 1.5.1),
+rmarkdown, roxygen2 (>= 7.1.2), spelling (>= 1.2), testthat (>=
+3.1.8)"		"MIT + file LICENSE"					"no"	"4.5.1"
+"utf8"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.2.6"		"R (>= 2.10)"			"cli, covr, knitr, rlang, rmarkdown, testthat (>= 3.0.0),
+withr"		"Apache License (== 2.0) | file LICENSE"					"yes"	"4.5.1"
+"utils"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"4.5.3"	"base"				"methods, xml2, commonmark, knitr, jsonlite"		"Part of R 4.5.3"					"yes"	"4.5.3"
+"uuid"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.2-2"		"R (>= 2.9.0)"					"MIT + file LICENSE"					"yes"	"4.5.3"
+"uwot"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.2.4"		"Matrix"	"FNN, irlba, methods, Rcpp, RcppAnnoy (>= 0.0.17), RSpectra"	"dqrng, Rcpp, RcppAnnoy, RcppProgress"	"bigstatsr, covr, knitr, RcppHNSW, rmarkdown, rnndescent,
+testthat"		"GPL (>= 3)"					"yes"	"4.5.2"
+"vctrs"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.7.3"		"R (>= 4.0.0)"	"cli (>= 3.4.0), glue, lifecycle (>= 1.0.3), rlang (>= 1.1.7)"		"bit64, covr, crayon, dplyr (>= 0.8.5), generics, knitr,
+pillar (>= 1.4.4), pkgdown (>= 2.0.1), rmarkdown, testthat (>=
+3.0.0), tibble (>= 3.1.3), waldo (>= 0.2.0), withr, xml2,
+zeallot"		"MIT + file LICENSE"					"yes"	"4.5.3"
+"viridisLite"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.4.3"		"R (>= 2.10)"			"hexbin (>= 1.27.0), ggplot2 (>= 1.0.1), testthat, covr"		"MIT + file LICENSE"					"no"	"4.5.2"
+"waldo"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.6.2"		"R (>= 4.0)"	"cli, diffobj (>= 0.3.4), glue, methods, rlang (>= 1.1.0)"		"bit64, R6, S7, testthat (>= 3.0.0), withr, xml2"		"MIT + file LICENSE"					"no"	"4.5.1"
+"whisker"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.4.1"					"markdown"		"GPL-3"					"no"	"4.5.1"
+"withr"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"3.0.3"		"R (>= 3.6.0)"	"graphics, grDevices"		"callr, DBI, knitr, methods, rlang, rmarkdown (>= 2.12),
+RSQLite, testthat (>= 3.0.0)"		"MIT + file LICENSE"					"no"	"4.5.3"
+"xfun"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.59"		"R (>= 3.2.0)"	"grDevices, stats, tools"		"testit, parallel, codetools, methods, rstudioapi, tinytex (>=
+0.30), mime, litedown (>= 0.6), commonmark, knitr (>= 1.50),
+remotes, pak, curl, xml2, jsonlite, magick, yaml, data.table,
+qs2"		"MIT + file LICENSE"					"yes"	"4.5.3"
+"xml2"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.6.0"		"R (>= 3.6.0)"	"cli, methods, rlang (>= 1.1.0)"		"covr, curl, httr, knitr, mockery, rmarkdown, testthat (>=
+3.2.0), xslt"		"MIT + file LICENSE"					"yes"	"4.5.3"
+"xopen"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.0.1"		"R (>= 3.1)"	"processx"		"ps, testthat (>= 3.0.0)"		"MIT + file LICENSE"					"no"	"4.5.1"
+"xtable"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.8-8"		"R (>= 2.10.0)"	"stats, utils, methods"		"knitr, zoo, survival, glue, tinytex"		"GPL (>= 2)"					"no"	"4.5.2"
+"xts"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"0.14.2"		"R (>= 3.6.0), zoo (>= 1.7-12)"	"methods"	"zoo"	"timeSeries, timeDate, tseries, chron, tinytest"		"GPL (>= 2)"					"yes"	"4.5.2"
+"yaml"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"2.3.12"					"knitr, rmarkdown, testthat (>= 3.0.0)"		"BSD_3_clause + file LICENSE"					"yes"	"4.5.2"
+"zip"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"3.0.0"				"cli"	"callr, cli, curl, pillar, processx, R6, testthat, webfakes,
+withr"		"MIT + file LICENSE"					"yes"	"4.5.3"
+"zoo"	"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library"	"1.8-15"		"R (>= 3.1.0), stats"	"utils, graphics, grDevices, lattice (>= 0.20-27)"		"AER, coda, chron, ggplot2 (>= 3.5.0), mondate, scales,
+stinepack, strucchange, timeDate, timeSeries, tinyplot, tis,
+tseries, xts"		"GPL-2 | GPL-3"					"yes"	"4.5.2"

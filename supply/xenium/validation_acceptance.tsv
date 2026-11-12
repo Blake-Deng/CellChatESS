@@ -1,0 +1,11 @@
+item	status	evidence
+Original full627 completed	PASS	original/run_status.json
+ESS full627 completed	PASS	ess/run_status.json
+dimensions/names/order	PASS	comparison/full627_comparison_summary.tsv
+finite probability and pvalue entries	PASS	comparison/nonfinite_summary.tsv
+pvalue exact equality	PASS	comparison/pvalue_differences.tsv
+aggregate count independent recomputation and exact equality	PASS	comparison/aggregate_count_differences.tsv
+paper min.cells=10 count equality	PASS	comparison/aggregate_count_min_cells_10_differences.tsv
+five prior target pvalues	PASS	comparison/five_prior_targets.tsv
+difference tracing	NOT_RUN	difference_diagnostics/status.json
+internal temporary object sizes in clean performance build	NOT_RUN	No internal instrumentation in main timing builds; auxiliary PROFILE stage RSS has a distinct source diff and DLL.

@@ -1,0 +1,27 @@
+{
+  "observed_epoch": 1793530927.0519576,
+  "MemAvailable": "MemAvailable:   347998788 kB",
+  "processes_above_10GiB": [
+    {
+      "pid": 380154,
+      "comm": "python",
+      "RSS_GiB": 458.3131637573242
+    },
+    {
+      "pid": 352534,
+      "comm": "R",
+      "RSS_GiB": 130.85749053955078
+    },
+    {
+      "pid": 310338,
+      "comm": "python",
+      "RSS_GiB": 53.2498779296875
+    },
+    {
+      "pid": 51557,
+      "comm": "python",
+      "RSS_GiB": 15.861419677734375
+    }
+  ],
+  "scope": "Mid-run external resource context only; no command lines or credentials collected"
+}

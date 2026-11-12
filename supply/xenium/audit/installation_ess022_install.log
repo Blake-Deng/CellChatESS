@@ -1,0 +1,20 @@
+* installing *source* package ‘CellChatESS’ ...
+** this is package ‘CellChatESS’ version ‘0.2.2’
+** using staged installation
+** libs
+using C++ compiler: ‘x86_64-conda-linux-gnu-c++ (conda-forge gcc 15.2.0-19) 15.2.0’
+x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/home/dzf/miniforge3/envs/cellchat-acceleration/lib/R/include" -DNDEBUG  -I'/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /home/dzf/miniforge3/envs/cellchat-acceleration/include -I/home/dzf/miniforge3/envs/cellchat-acceleration/include -Wl,-rpath-link,/home/dzf/miniforge3/envs/cellchat-acceleration/lib   -fopenmp -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /home/dzf/miniforge3/envs/cellchat-acceleration/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/home/dzf/miniforge3/envs/cellchat-acceleration=/usr/local/src/conda-prefix   -c RcppExports.cpp -o RcppExports.o
+x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/home/dzf/miniforge3/envs/cellchat-acceleration/lib/R/include" -DNDEBUG  -I'/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /home/dzf/miniforge3/envs/cellchat-acceleration/include -I/home/dzf/miniforge3/envs/cellchat-acceleration/include -Wl,-rpath-link,/home/dzf/miniforge3/envs/cellchat-acceleration/lib   -fopenmp -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /home/dzf/miniforge3/envs/cellchat-acceleration/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/home/dzf/miniforge3/envs/cellchat-acceleration=/usr/local/src/conda-prefix   -c cellchat_prob_cpp.cpp -o cellchat_prob_cpp.o
+x86_64-conda-linux-gnu-c++ -std=gnu++17 -shared -L/home/dzf/miniforge3/envs/cellchat-acceleration/lib/R/lib -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/home/dzf/miniforge3/envs/cellchat-acceleration/lib -Wl,-rpath-link,/home/dzf/miniforge3/envs/cellchat-acceleration/lib -L/home/dzf/miniforge3/envs/cellchat-acceleration/lib -o CellChatESS.so RcppExports.o cellchat_prob_cpp.o -fopenmp -L/home/dzf/miniforge3/envs/cellchat-acceleration/lib/R/lib -lR
+installing to /home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/ess022/00LOCK-CellChatESS/00new/CellChatESS/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (CellChatESS)

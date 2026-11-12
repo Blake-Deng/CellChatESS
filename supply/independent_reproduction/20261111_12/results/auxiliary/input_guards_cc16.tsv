@@ -1,0 +1,6 @@
+"case"	"gene"	"expected_guard"	"status"	"error"	"CellChat_version"	"CellChatESS_version"
+"negative_ligand"	"TGFB1"	"must be non-negative"	"rejected_as_expected"	"Signaling expression matrix must be non-negative; support-set pruning assumes expression values >= 0."	"1.6.1"	"0.2.2"
+"negative_non_lr"	"TNFRSF18"	"must be non-negative"	"rejected_as_expected"	"Signaling expression matrix must be non-negative; support-set pruning assumes expression values >= 0."	"1.6.1"	"0.2.2"
+"na_ligand"	"TGFB1"	"only finite values"	"rejected_as_expected"	"Signaling expression matrix must contain only finite values; NA, NaN, and Inf are unsupported."	"1.6.1"	"0.2.2"
+"nan_ligand"	"TGFB1"	"only finite values"	"rejected_as_expected"	"Signaling expression matrix must contain only finite values; NA, NaN, and Inf are unsupported."	"1.6.1"	"0.2.2"
+"inf_ligand"	"TGFB1"	"only finite values"	"rejected_as_expected"	"Signaling expression matrix must contain only finite values; NA, NaN, and Inf are unsupported."	"1.6.1"	"0.2.2"

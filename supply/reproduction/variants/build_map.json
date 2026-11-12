@@ -1,0 +1,37 @@
+[
+  {
+    "build": "A1_dense_full_gene",
+    "release_version_base": "0.2.2",
+    "not_independent_release": true,
+    "cpp_sha256": "952e3c02c4c52f9190f1ef6b2345cec795f8c9d5fd3e9970fc15231375f59b87",
+    "R_sha256": "d0982adcb7bca5a9426f4ba0264f86ed4ba0c1c18dd64a259c81df212216326f"
+  },
+  {
+    "build": "A3_no_cache_no_pruning",
+    "release_version_base": "0.2.2",
+    "not_independent_release": true,
+    "cpp_sha256": "252edc08e2a037c5957ed144fc051c056c9f91d478177e96cae48493e7eb7dd2",
+    "R_sha256": "ef6a07988481361a83df5fd8f3db2c693c59681877d9391e0853d03e69a4acda"
+  },
+  {
+    "build": "A4_cache_no_pruning",
+    "release_version_base": "0.2.2",
+    "not_independent_release": true,
+    "cpp_sha256": "a0ea2ebfa404c1c847eb3003280326ef3eb1fa86c84dd0e09688005f42a893b4",
+    "R_sha256": "ef6a07988481361a83df5fd8f3db2c693c59681877d9391e0853d03e69a4acda"
+  },
+  {
+    "build": "PROFILE",
+    "release_version_base": "0.2.2",
+    "not_independent_release": true,
+    "cpp_sha256": "5ca56843416654d1f6d6ce0d7b49548bfe512a74aad34e7438a6b1a64f39695b",
+    "R_sha256": "7462eebb1f7d4f200c17302f91ff3b2af9c8b8e31cf2559a83a1f111a1db1672"
+  },
+  {
+    "build": "TRACE",
+    "release_version_base": "0.2.2",
+    "not_independent_release": true,
+    "cpp_sha256": "ceeb0b30175db7e2da6abf99dbcc4d0fe607d80dd91ec01311de1e9b02225733",
+    "R_sha256": "ef6a07988481361a83df5fd8f3db2c693c59681877d9391e0853d03e69a4acda"
+  }
+]

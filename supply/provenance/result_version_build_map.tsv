@@ -1,0 +1,9 @@
+result	CellChat	ESS	AutoZyme	build_scope	evidence
+Core paired benchmark	2.2.0.9001	0.2.2 final candidate	not used	Uninstrumented; 216 pairs / 432 independent method processes	supply/data/all_main_measurements_1008.tsv
+Three-method benchmark	2.2.0.9001	0.2.2 final candidate	0.3.1	Uninstrumented; 32 inputs / 192 blocks / 576 independent method processes	supply/results/autozyme192/all_measurements.tsv
+Six-stage ablation	2.2.0.9001	0.2.2 and controlled A1/A3/A4 derivatives	not used	A0 official R; A1 all-signaling-gene dense C++; A2 public dense; A3 no cache/no pruning; A4 cached/no pruning; A5 full ESS	supply/data/ablation/stage_medians.tsv
+Known-boundary direct trace	1.6.1 and 2.2.0.9001	0.2.2 plus separate TRACE instrumentation	not used	Four related LR rows, all 2,357 groups; five target entries; 500 decisions per environment	supply/data/validation/Xenium_target_summary.tsv
+Final full-627 Xenium pair	2.2.0.9001	0.2.2 final candidate	not used	Uninstrumented paired run; inference and whole process scopes distinct; default aggregateNet included only in whole-process scope	supply/xenium/R2_xenium_memory_time_comparison.tsv
+Structural/input guards and OpenMP agreement	1.6.1 and 2.2.0.9001	0.2.2 final candidate	not used	Separate validation; all main performance comparisons single-threaded	supply/data/validation/structure_tests_52.tsv
+Historical supplementary benchmark	1.6.1	0.1.1 historical build	not used	Historical records retained separately; not pooled with revised core results	supply/legacy/CC16_ESS011/benchmark_216/common_external_timer_216.tsv
+Earlier ESS-only memory profile	2.2.0.9001	0.2.2 plus PROFILE instrumentation	not used	Superseded auxiliary run, not the final paired resource result	supply/legacy/superseded_ESS_only_PROFILE/S_H_Xenium_resources.tsv

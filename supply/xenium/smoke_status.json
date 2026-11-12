@@ -1,0 +1,6 @@
+{
+  "status": "PASSED",
+  "comparison_exit_code": 0,
+  "interpretation": "Paired small-input smoke only; not Xenium evidence.",
+  "comparison_dir": "smoke/comparison_retry01"
+}

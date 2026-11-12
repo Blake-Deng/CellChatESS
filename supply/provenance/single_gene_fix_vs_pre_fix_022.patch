@@ -1,0 +1,87 @@
+--- a/src/cellchat_prob_cpp.cpp
++++ b/src/cellchat_prob_cpp.cpp
+@@ -137,23 +137,32 @@
+ 
+ static inline double avg_expr_matrix(const NumericMatrix& avg, const IntegerMatrix& idx, int row, int k) {
+   double sum_log = 0.0;
++  double single_value = NA_REAL;
+   int n = 0;
+   for (int j = 0; j < idx.ncol(); ++j) {
+     const int g = idx(row, j) - 1;
+     if (g < 0) continue;
+     const double x = avg(g, k);
+     if (NumericVector::is_na(x)) continue;
+-    sum_log += std::log(x);
++    // A single gene uses the group summary directly, as in CellChat.
++    // For multiple components, retain the original log-sum order.
++    if (n == 0) {
++      single_value = x;
++    } else {
++      if (n == 1) sum_log += std::log(single_value);
++      sum_log += std::log(x);
++    }
+     ++n;
+   }
+   if (n == 0) return NA_REAL;
+-  if (n == 1) return std::exp(sum_log);
++  if (n == 1) return single_value;
+   return std::exp(sum_log / static_cast<double>(n));
+ }
+ 
+ static inline double avg_expr_boot(const NumericVector& avgBoot, int G, int K,
+                                    const IntegerMatrix& idx, int row, int k, int b) {
+   double sum_log = 0.0;
++  double single_value = NA_REAL;
+   int n = 0;
+   const int boot_offset = G * K * b;
+   for (int j = 0; j < idx.ncol(); ++j) {
+@@ -161,11 +170,18 @@
+     if (g < 0) continue;
+     const double x = avgBoot[g + G * k + boot_offset];
+     if (NumericVector::is_na(x)) continue;
+-    sum_log += std::log(x);
++    // A single gene uses the group summary directly, as in CellChat.
++    // For multiple components, retain the original log-sum order.
++    if (n == 0) {
++      single_value = x;
++    } else {
++      if (n == 1) sum_log += std::log(single_value);
++      sum_log += std::log(x);
++    }
+     ++n;
+   }
+   if (n == 0) return NA_REAL;
+-  if (n == 1) return std::exp(sum_log);
++  if (n == 1) return single_value;
+   return std::exp(sum_log / static_cast<double>(n));
+ }
+ 
+@@ -363,6 +379,7 @@
+                                     const IntegerMatrix& idx,
+                                     int row, int k, int K) {
+   double sum_log = 0.0;
++  double single_value = NA_REAL;
+   int n = 0;
+   for (int j = 0; j < idx.ncol(); ++j) {
+     const int g0 = idx(row, j) - 1;
+@@ -371,11 +388,18 @@
+     if (local < 0) continue;
+     const double val = bootAvg[local * K + k];
+     if (NumericVector::is_na(val)) continue;
+-    sum_log += std::log(val);
++    // A single gene uses the group summary directly, as in CellChat.
++    // For multiple components, retain the original log-sum order.
++    if (n == 0) {
++      single_value = val;
++    } else {
++      if (n == 1) sum_log += std::log(single_value);
++      sum_log += std::log(val);
++    }
+     ++n;
+   }
+   if (n == 0) return NA_REAL;
+-  if (n == 1) return std::exp(sum_log);
++  if (n == 1) return single_value;
+   return std::exp(sum_log / static_cast<double>(n));
+ }
+ 

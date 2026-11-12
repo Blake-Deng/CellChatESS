@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "queues": {
+    "primary216": {
+      "completed_methods": 432,
+      "paired_output_checks": 648,
+      "max_probability_error": 1.11022302462516e-16,
+      "distinct_input_sha256": 129,
+      "fresh_median_comparator_over_ess": 28.433827744253726,
+      "archive_median_comparator_over_ess": 27.477142463471342,
+      "fresh_ess_faster": 216,
+      "fresh_ess_lower_RSS": 216
+    },
+    "autozyme192": {
+      "completed_methods": 576,
+      "paired_output_checks": 1152,
+      "max_probability_error": 1.11022302462516e-16,
+      "distinct_input_sha256": 32,
+      "fresh_median_comparator_over_ess": 1.717505911306278,
+      "archive_median_comparator_over_ess": 1.7525525210084065,
+      "fresh_ess_faster": 192,
+      "fresh_ess_lower_RSS": 192
+    }
+  },
+  "archived_arrays_checked": 3024,
+  "missing_archived_method_files": 0,
+  "different_archived_arrays": 0,
+  "changed_recorded_summary_rows": 0,
+  "fresh_acceptance_failures": 0,
+  "performance_comparison": "Measured again; raw time and RSS are observations and not exact-equality acceptance gates."
+}

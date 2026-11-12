@@ -1,0 +1,3 @@
+run	CellChat_version	CellChatESS_version	threads_requested	threads_used	elapsed_sec	prob_max_abs_diff_vs_original	pval_identical_vs_original	pathway_max_abs_diff_vs_original	weight_max_abs_diff_vs_original	count_identical_vs_original
+serial_1t	2.2.0.9001	0.2.2	1	1	0.835000000000001	6.93889390390723e-18	TRUE	0	0	TRUE
+four_threads_requested	2.2.0.9001	0.2.2	4	4	0.721999999999994	6.93889390390723e-18	TRUE	0	0	TRUE

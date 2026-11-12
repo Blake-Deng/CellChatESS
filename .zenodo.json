@@ -1,14 +1,14 @@
 {
   "title": "CellChatESS: Efficient Signal Streaming for CellChat inference",
   "upload_type": "software",
-  "description": "CellChatESS implements Efficient Signal Streaming (ESS), an Rcpp acceleration method for triMean-based CellChat RNA workflows. ESS projects expression data to genes used by ligand-receptor, complex and cofactor calculations, evaluates sender-receiver pairs from observed expression support, streams bootstrap summaries and optionally parallelizes bootstrap permutations with conditional OpenMP while preserving a true serial path and the CellChat probability model.",
+  "description": "CellChatESS 0.2.2 for triMean-based non-spatial RNA inference. The accompanying revision evidence records comparisons against original CellChat 2.2.0.9001 and AutoZyme 0.3.1, input validation, the empirical p-value checks and single-threaded performance measurements.",
   "creators": [
     {
       "name": "Deng, Zifeng",
       "affiliation": "Hainan Bielefeld University of Applied Sciences"
     }
   ],
-  "version": "0.2.1",
+  "version": "0.2.2",
   "license": "GPL-3.0",
   "keywords": [
     "CellChat",

@@ -1,0 +1,10 @@
+{
+  "method": "ess",
+  "status": "COMPLETED",
+  "exit_code": 0,
+  "safety_stop_reason": null,
+  "elapsed_sec": 2255.1836893130094,
+  "R_pid": 695530,
+  "MemAvailable_GiB_at_end": 520.5827751159668,
+  "result_rds_exists": true
+}

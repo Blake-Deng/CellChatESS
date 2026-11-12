@@ -1,42 +1,53 @@
-# Minimal reproducible example for CellChatESS v0.2.1
+# Minimal PBMC3k example
 
-This is the repository-integrated version of the 21 July 2026 reviewer demo. It
-tests the central conditional-OpenMP claim on a prepared PBMC3k CellChat object:
+This example installs the repository's CellChatESS source into a private library,
+computes a fresh reference with the installed CellChat version, and compares
+CellChatESS with one thread and with four threads requested. The prepared object
+contains fixed expression data, cell labels, database and ligand–receptor tables.
 
-> `threads = 1L` uses the serial fast path; `threads = 4L` requests OpenMP;
-> both paths produce identical CellChat-compatible outputs.
+## Run
 
-## One-command validation
-
-Prerequisites are R (>= 4.1), Rcpp and CellChat. From the repository root, run:
+Install Rcpp, Matrix and CellChat, then run from any working directory.
 
 ```sh
-Rscript examples/minimal_reproducible_example/run_review_demo.R
+Rscript /path/to/CellChatESS/examples/minimal_reproducible_example/run_review_demo.R
 ```
 
-The script installs the current repository source into the private
-`.example_lib/` directory, leaving the user's normal R library unchanged. It
-runs the one- and four-thread configurations with `nboot = 100` and
-`seed.use = 1L`, compares both with the bundled original CellChat reference,
-and writes machine-readable results under `results/`.
+Use quotation marks around the script path when it contains spaces. A private
+`.example_lib/` and a `results/` directory are created beside the script. The
+installed CellChat version is reported in the results. The revised core benchmark
+uses CellChat 2.2.0.9001. Its pinned source and environment are described in
+`../../supply/reproduction/README.md`.
 
-Expected final message:
+All three inference calls use triMean, raw.use = TRUE, population.size = FALSE,
+nboot = 100, seed.use = 1, Kh = 0.5 and n = 1. The script applies the same
+minimum-cell filter and the corresponding pathway and network aggregation to
+both implementations.
 
-```text
-PASS: serial and OpenMP results are identical; both match original CellChat.
-```
+## Checks
 
-On a build without OpenMP, the four-thread request safely falls back to one
-thread and the numerical checks still run.
+The example checks a maximum absolute difference of 1e-12 for probability,
+pathway probability and aggregate weight arrays. Empirical p-values and aggregate
+counts must agree exactly with the freshly computed original reference. All five
+outputs must also be identical between the one- and four-thread ESS requests.
 
-## Included files
+The `threads_used` column records the actual ESS thread count. Compilers without
+OpenMP support use the serial fallback. The recorded Linux validation below exercised four native threads.
 
-- `run_review_demo.R`: complete install, execution and validation workflow.
-- `data/`: prepared PBMC3k CellChat object and original CellChat reference.
-- `expected/acceptance.tsv`: explicit numerical acceptance criteria.
-- `results/`: validated v0.2.1 outputs and session information.
-- `REVIEWER_CHECKLIST.md`: short code-review route.
+`results/demo_metrics.tsv`, `results/demo_checks.tsv`, `results/parameters.R` and
+`results/sessionInfo.txt` record the run. These example times cover inference and
+the downstream steps together and are separate from the manuscript's controlled
+inference-call benchmarks.
 
-The manuscript's principal runtime and memory comparisons remain controlled
-one-thread comparisons. This example's four-thread execution is a
-resource-sensitivity validation of the optional v0.2.1 implementation.
+The prepared input has SHA256
+`1305076852f518a6cb57064e8f3678ea3b6c902290206a2463e1d07f2ca817c2`.
+Its source is the repository's PBMC3k demonstration prepared in July 2026.
+
+## Recorded Linux validation
+
+The run in `validation/linux_20261112/` used R 4.5.3, CellChat 2.2.0.9001 and
+CellChatESS 0.2.2. The one-thread request used one thread, and the four-thread
+request used four threads. Both requests had a maximum absolute probability
+difference of 6.94e-18 against the freshly computed original reference. Empirical
+p-values and aggregate counts agreed exactly. All outputs were identical between
+the two ESS thread settings.

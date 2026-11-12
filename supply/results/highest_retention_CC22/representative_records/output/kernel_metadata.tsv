@@ -1,0 +1,2 @@
+"algorithm"	"active_pairs"	"skipped_pairs"	"total_pairs"	"active_fraction"	"n_genes_full"	"n_genes_kernel"	"boot_tri_mean_evals"	"cache_hits"	"cache_genes"	"cache_slots"	"streamed_lr"	"max_lr_genes"	"threads_requested"	"threads_used"
+"ess"	274792	0	274792	1	997	771	1079400	13062000	771	1079400	1402	28	1	1

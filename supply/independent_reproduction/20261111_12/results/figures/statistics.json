@@ -1,0 +1,160 @@
+{
+  "status": "NEW_CC22_RESULTS",
+  "primary": {
+    "pooled_median": 28.433827744253726,
+    "pooled_dataset_cluster_bootstrap_95CI": [
+      22.857441101703397,
+      37.84357881923311
+    ],
+    "median_of_dataset_medians": 23.489886586655487,
+    "median_of_dataset_medians_bootstrap_95CI": [
+      20.32902513078546,
+      33.417602186753186
+    ],
+    "datasets": 12,
+    "records": 216,
+    "bootstrap_replicates": 10000,
+    "seed": 20261026,
+    "generator": "numpy.random.default_rng / PCG64"
+  },
+  "autozyme": {
+    "pooled_median": 1.717505911306278,
+    "pooled_dataset_cluster_bootstrap_95CI": [
+      1.4974609336021882,
+      2.3627168120426276
+    ],
+    "median_of_dataset_medians": 1.9963671611606815,
+    "median_of_dataset_medians_bootstrap_95CI": [
+      1.4106515259159291,
+      3.2007686752052398
+    ],
+    "datasets": 12,
+    "records": 192,
+    "bootstrap_replicates": 100000,
+    "seed": 20261027,
+    "generator": "numpy.random.default_rng / PCG64",
+    "ess_faster_blocks": 192,
+    "autozyme_faster_blocks": 0,
+    "tied_blocks": 0
+  },
+  "deduplicated_primary": {
+    "pooled_median": 39.34410112359551,
+    "pooled_dataset_cluster_bootstrap_95CI": [
+      29.90992478444322,
+      46.381322041872494
+    ],
+    "median_of_dataset_medians": 35.67595110626728,
+    "median_of_dataset_medians_bootstrap_95CI": [
+      27.828925606791557,
+      44.02908082591706
+    ],
+    "datasets": 12,
+    "records": 129,
+    "bootstrap_replicates": 10000,
+    "seed": 20261026,
+    "generator": "numpy.random.default_rng / PCG64",
+    "definition": "For each dataset/input SHA256, take the median of paired Original/ESS ratios; repeated full inputs are timing repeats. Never divide independent method-time medians."
+  },
+  "numerical": {
+    "autozyme/autozyme_vs_original/count": {
+      "max_absolute_difference": 0.0,
+      "different_elements_summed_over_runs": 0,
+      "all_elementwise_exact": true
+    },
+    "autozyme/autozyme_vs_original/prob": {
+      "max_absolute_difference": 1.11022302462516e-16,
+      "different_elements_summed_over_runs": 231882,
+      "all_elementwise_exact": false
+    },
+    "autozyme/autozyme_vs_original/pval": {
+      "max_absolute_difference": 0.0,
+      "different_elements_summed_over_runs": 0,
+      "all_elementwise_exact": true
+    },
+    "autozyme/ess_vs_original/count": {
+      "max_absolute_difference": 0.0,
+      "different_elements_summed_over_runs": 0,
+      "all_elementwise_exact": true
+    },
+    "autozyme/ess_vs_original/prob": {
+      "max_absolute_difference": 1.11022302462516e-16,
+      "different_elements_summed_over_runs": 222534,
+      "all_elementwise_exact": false
+    },
+    "autozyme/ess_vs_original/pval": {
+      "max_absolute_difference": 0.0,
+      "different_elements_summed_over_runs": 0,
+      "all_elementwise_exact": true
+    },
+    "primary/ess_vs_original/count": {
+      "max_absolute_difference": 0.0,
+      "different_elements_summed_over_runs": 0,
+      "all_elementwise_exact": true
+    },
+    "primary/ess_vs_original/prob": {
+      "max_absolute_difference": 1.11022302462516e-16,
+      "different_elements_summed_over_runs": 334629,
+      "all_elementwise_exact": false
+    },
+    "primary/ess_vs_original/pval": {
+      "max_absolute_difference": 0.0,
+      "different_elements_summed_over_runs": 0,
+      "all_elementwise_exact": true
+    }
+  },
+  "median_peak_RSS_GiB": {
+    "autozyme": 1.2194385528564453,
+    "ess": 0.9800243377685548,
+    "original": 1.797475814819336
+  },
+  "candidate_source_manifest_sha256": "52fbb08f6b520e1e18c6b022b16edba5205f1bff36b991e4626fae47fe484956",
+  "feature_associations": {
+    "rho_speedup_nonzero": -0.7571603342316386,
+    "rho_speedup_fLR": -0.36795466284910594,
+    "rho_dataset_medians": -0.7692307692307694,
+    "partial_fLR_rank_given_nonzero": -0.7119100725567287,
+    "fLR_range": [
+      0.00496320458601862,
+      0.0916183877259891
+    ],
+    "f_union_range": [
+      0.85207100591716,
+      1.0
+    ]
+  },
+  "panel_F_max_absolute_difference": 5.55111512312578e-17,
+  "panel_J_points_per_method": {
+    "CellChatESS": 73,
+    "Original CellChat": 73
+  },
+  "xenium": {
+    "original": {
+      "inference_sec": 17673.659,
+      "aggregate_sec": 420.818,
+      "wall_sec": 18582.0,
+      "peak_RSS_GiB": 234.93089294433594,
+      "input_size": 959610184,
+      "prob_payload": 27866132184,
+      "pval_payload": 27866132184,
+      "output_sha256": "3b8b5dc75c08e7cefb262f7b62a7d1ab10d780a887058e1386f3753f6ddfb349",
+      "archive_output_sha256": "3b8b5dc75c08e7cefb262f7b62a7d1ab10d780a887058e1386f3753f6ddfb349",
+      "serialization_identical": true,
+      "decoded_values_identical": true
+    },
+    "ess": {
+      "inference_sec": 1717.707,
+      "aggregate_sec": 550.919,
+      "wall_sec": 2766.4,
+      "peak_RSS_GiB": 198.57502365112305,
+      "input_size": 959610184,
+      "prob_payload": 27866132184,
+      "pval_payload": 27866132184,
+      "output_sha256": "54b0eb82a649cc203c0dcf6659798331dbe1e2273fb2f39b2e7915f9684eda46",
+      "archive_output_sha256": "54b0eb82a649cc203c0dcf6659798331dbe1e2273fb2f39b2e7915f9684eda46",
+      "serialization_identical": true,
+      "decoded_values_identical": true
+    }
+  },
+  "peak_memory_blocks_ESS_lower": 192,
+  "figure_basis": "All measurements, networks, scatter, bubble probabilities and RSS traces are from this run. Only archived display labels/order define the D/E/J visual mapping."
+}

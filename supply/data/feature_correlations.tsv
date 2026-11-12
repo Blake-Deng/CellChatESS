@@ -1,0 +1,13 @@
+analysis	feature	control	n	rho	interpretation
+Spearman, records	matrix_nonzero		216	-0.7451625961142049	Descriptive; scales and timing repeats nested in datasets
+Spearman, records	signaling_gene_cell_elements		216	-0.49685775581139	Descriptive; scales and timing repeats nested in datasets
+Spearman, records	input_R_object_bytes		216	-0.7441880032859962	Descriptive; scales and timing repeats nested in datasets
+Spearman, records	positive_L_Radj_triples		216	-0.6586599345873235	Descriptive; scales and timing repeats nested in datasets
+Spearman, records	f_LR		216	-0.3792780494497108	Descriptive; scales and timing repeats nested in datasets
+Spearman, dataset medians	f_LR		12	-0.7622377622377624	12 dataset-level medians
+Partial rank, records	f_LR	input_R_object_bytes	216	-0.7105122037403334	Pearson correlation of average-rank residuals after intercept + control rank
+Spearman, feature and scale	f_LR	input_R_object_bytes	216	-0.12322914431490356	Association of retained fraction with the scale covariate
+Partial rank, records	f_LR	matrix_nonzero	216	-0.7122056725179796	Pearson correlation of average-rank residuals after intercept + control rank
+Spearman, feature and scale	f_LR	matrix_nonzero	216	-0.12352001525880359	Association of retained fraction with the scale covariate
+Partial rank, records	f_LR	signaling_gene_cell_elements	216	-0.8182621524443308	Pearson correlation of average-rank residuals after intercept + control rank
+Spearman, feature and scale	f_LR	signaling_gene_cell_elements	216	-0.48584246616243093	Association of retained fraction with the scale covariate

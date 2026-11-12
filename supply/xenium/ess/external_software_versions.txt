@@ -1,0 +1,20 @@
+                                                                                                zlib 
+                                                                                             "1.3.2" 
+                                                                                               bzlib 
+                                                                                "1.0.8, 13-Jul-2019" 
+                                                                                                  xz 
+                                                                                             "5.8.3" 
+                                                                                          libdeflate 
+                                                                                              "1.25" 
+                                                                                                PCRE 
+                                                                                  "10.47 2025-10-21" 
+                                                                                                 ICU 
+                                                                                              "78.3" 
+                                                                                                 TRE 
+                                                                           "TRE 0.8.0 R_fixes (BSD)" 
+                                                                                               iconv 
+                                                                                 "GNU libiconv 1.18" 
+                                                                                            readline 
+                                                                                               "8.3" 
+                                                                                                BLAS 
+"/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/libopenblasp-r0.3.33.so" 

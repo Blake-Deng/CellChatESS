@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETED",
+  "purpose": "Highest retained-fraction input addendum; earlier rep1 retained under ablation_CC22",
+  "f_LR": "0.0916183877259891",
+  "experiment_id": "3CA_data__SmartSeq2__cells-1000__rep-2__engine-both__ablation-full",
+  "validation_processes": 3,
+  "timing_processes": 6,
+  "CellChat": "2.2.0.9001",
+  "ESS": "0.2.2",
+  "within_experiment_concurrency": 1
+}

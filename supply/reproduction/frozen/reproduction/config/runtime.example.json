@@ -1,0 +1,8 @@
+{
+  "rscript": "/home/dzf/miniforge3/envs/cellchat-acceleration/bin/Rscript",
+  "ess_library": "/ABSOLUTE/NEW_PRIVATE_FINAL_ESS022_LIBRARY",
+  "cellchat_22_library": "/ABSOLUTE/VERIFIED_PINNED_CELLCHAT22_LIBRARY",
+  "autozyme_library": "/ABSOLUTE/VERIFIED_AUTOZYME031_LIBRARY",
+  "dependency_library": "/ABSOLUTE/LOCKED_DEPENDENCY_LIBRARY",
+  "cellchat_16_library": "/ABSOLUTE/PINNED_CELLCHAT16_LIBRARY"
+}

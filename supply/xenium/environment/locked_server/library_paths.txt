@@ -1,0 +1,5 @@
+/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/cellchat22
+/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/ess022
+/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/autozyme
+/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_dependencies
+/data/dzf/home_migrated_20261003/miniforge3/envs/cellchat-acceleration/lib/R/library

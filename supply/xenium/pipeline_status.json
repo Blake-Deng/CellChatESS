@@ -1,0 +1,8 @@
+{
+  "status": "RESULTS_READY",
+  "stage": "finished",
+  "pvalue_different_elements": "0",
+  "aggregate_counts_identical": "TRUE",
+  "finished_epoch": 1793567769.03004,
+  "scope": "Only this frozen Xenium input, sources, parameters and actual conditions."
+}

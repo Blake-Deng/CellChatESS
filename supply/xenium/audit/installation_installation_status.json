@@ -1,0 +1,22 @@
+[
+  {
+    "software": "cellchat22",
+    "exit_code": 0,
+    "library": "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/cellchat22"
+  },
+  {
+    "software": "autozyme",
+    "exit_code": 0,
+    "library": "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/autozyme"
+  },
+  {
+    "software": "ess022",
+    "exit_code": 0,
+    "library": "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/ess022"
+  },
+  {
+    "software": "cellchat16",
+    "exit_code": 0,
+    "library": "/home/dzf/cellchat_acceleration/revision_2.2.0.9001/four_software_execution_20261031/server_install/library/cellchat16"
+  }
+]

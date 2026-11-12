@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "files_checked": 57,
+  "results": "Byte-identical supplementary/plot tables and exact summary_final.json equality",
+  "inference_rerun": false,
+  "script": "reproduction/assemble_review_tables.py"
+}

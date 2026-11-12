@@ -1,0 +1,10 @@
+group	cells	colour
+Malignant-1	230	#4C78C8
+Malignant-2	207	#55B79E
+Malignant-3	177	#E3A72F
+Malignant-4	145	#3C9A57
+Malignant-5	86	#5E4FA2
+Malignant-6	51	#D6604D
+Macrophage	49	#E48FB0
+Malignant-7	32	#E06E3B
+Malignant-8	23	#8C9BB0
