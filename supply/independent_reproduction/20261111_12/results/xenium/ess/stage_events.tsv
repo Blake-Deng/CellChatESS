@@ -1,9 +1,0 @@
-timestamp_epoch_ms	stage	detail
-1794463018596.147	process_initialized	method=ess
-1794463031681.218	before_inference	input_expression_object_bytes=959610184
-1794464749389.283	after_inference	function_elapsed_sec=1717.707000000
-1794464749390.175	before_aggregateNet	prob_object_bytes=27866570912;pval_object_bytes=27866570912
-1794465300308.590	after_aggregateNet	aggregate_elapsed_sec=550.919000000;count_bytes=44834688
-1794465300309.303	before_saveRDS	compression=gzip;output_fields=prob,pval,count,groups,lr_names,parameters
-1794465760257.022	after_saveRDS	output_bytes=1089499736
-1794465761426.588	worker_complete	all result files written

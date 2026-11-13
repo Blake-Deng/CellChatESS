@@ -57,14 +57,5 @@ The verification checks every supplied file, all 29 baseline source-manifest ent
 required row counts, mapped evidence paths and exclusions. It does not rerun the
 scientific computations. See [`reproduction/README.md`](reproduction/README.md)
 before re-execution. The large prepared expression RDS files and full output RDS
-objects require separate retrieval; their hashes and server records are retained.
-
-
-## Independent replay completed in November 2026
-
-The complete replay from 11–12 November 2026 is in
-[`independent_reproduction/20261111_12/`](independent_reproduction/20261111_12/README.md).
-It contains fresh measurements and figures, numerical comparisons with the original
-records, legacy-version checks and the reconstruction ledger for 129 distinct inputs.
-The manuscript measurements and figures remain at the locations listed above.
-The replay report labels both sets of measurements and their observed differences.
+objects are not bundled. See [INPUTS.md](../INPUTS.md) for source-data links,
+preparation steps and the request route for frozen inputs; manifests retain the expected hashes.

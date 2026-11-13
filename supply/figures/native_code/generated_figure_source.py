@@ -67,11 +67,11 @@ lo,hi=S['primary']['pooled_dataset_cluster_bootstrap_95CI'];x=S['xenium']
 
 plt.rcParams.update({'font.size':8.4,'axes.titlesize':10,'axes.labelsize':8.2,'xtick.labelsize':7.6,'ytick.labelsize':7.6,'legend.fontsize':7.6})
 fig=plt.figure(figsize=(297/25.4,210/25.4));gs=fig.add_gridspec(2,2,left=.13,right=.98,top=.93,bottom=.075,hspace=.42,wspace=.22)
-ax=fig.add_subplot(gs[0,0]);title(ax,'A','Original CellChat / ESS speedup','CellChat 2.2.0.9001 · ESS 0.2.2')
+ax=fig.add_subplot(gs[0,0]);title(ax,'A','CellChat 2.2.0.9001 / CellChatESS 0.2.2 speedup','CellChat 2.2.0.9001 · ESS 0.2.2')
 med=p.groupby('dataset_id').original_over_ess.median().sort_values();arrays=[p[p.dataset_id.eq(s)].original_over_ess.to_numpy() for s in med.index]
 box=ax.boxplot(arrays,orientation='horizontal',tick_labels=[short(s) for s in med.index],patch_artist=True,whis=1.5,showfliers=False,medianprops={'color':ORIG,'linewidth':1.2},boxprops={'facecolor':'#e6edf4','edgecolor':ESS,'linewidth':.8},whiskerprops={'color':ESS,'linewidth':.8},capprops={'color':ESS,'linewidth':.8})
 for i,v in enumerate(arrays):ax.scatter(v,i+1+np.linspace(-.18,.18,len(v)),s=8,c=ESS,alpha=.36,edgecolors='none')
-ax.set(xlabel='Original CellChat / ESS inference speedup (×)',ylabel='Dataset');ax.grid(axis='x',lw=.4,color='#eee');ax.set_axisbelow(True);ax.set_xlim(0,p.original_over_ess.max()*1.03);ax.set_ylim(-1.05,12.65)
+ax.set(xlabel='CellChat 2.2.0.9001 / CellChatESS 0.2.2 inference speedup (×)',ylabel='Dataset');ax.grid(axis='x',lw=.4,color='#eee');ax.set_axisbelow(True);ax.set_xlim(0,p.original_over_ess.max()*1.03);ax.set_ylim(-1.05,12.65)
 ax.set_ylabel('Dataset',labelpad=-8)
 ax.text(.99,.01,f'Median {S["primary"]["pooled_median"]:.2f}×; 95% dataset-cluster CI\n{lo:.2f}–{hi:.2f}×',transform=ax.transAxes,ha='right',va='bottom',size=7.5,bbox={'facecolor':'white','edgecolor':'none','pad':1.5})
 ax=fig.add_subplot(gs[0,1]);title(ax,'B','AutoZyme / ESS by dataset','CellChat 2.2.0.9001 · AutoZyme 0.3.1 · ESS 0.2.2')
@@ -86,7 +86,7 @@ ax.text(.02,.97,f'Median speedup {S["high_retention_median_speedup"]:.2f}×\nRet
 sub=gs[1,1].subgridspec(2,1,height_ratios=[1,1],hspace=.48)
 paired_sources=[]
 for i,(method,label,color) in enumerate([
-    ('original','Original CellChat',ORIG),('ess','ESS',ESS)]):
+    ('original','CellChat 2.2.0.9001',ORIG),('ess','CellChatESS 0.2.2',ESS)]):
     folder=EVIDENCE/method
     raw=pd.read_csv(folder/'rss_samples.tsv',sep='\t',float_precision='round_trip')
     stages=pd.read_csv(folder/'stage_events.tsv',sep='\t',float_precision='round_trip')
@@ -112,7 +112,8 @@ for i,(method,label,color) in enumerate([
            ylim=(0,280),ylabel='RSS (GiB)')
     ax.set_yticks([0,100,200])
     ax.tick_params(labelsize=7)
-    ax.text(.02,.95,f'{label}: GNU peak {peak:.2f} GiB',
+    separator = ' ' if method == 'original' else '\n'
+    ax.text(.02,.95,f'{label}:{separator}GNU peak {peak:.2f} GiB',
             transform=ax.transAxes,size=7.2,va='top',
             bbox={'facecolor':'white','edgecolor':'none','pad':.6})
     ax.set_xlabel('Elapsed from inference entry (min)',fontsize=7.1,labelpad=1)

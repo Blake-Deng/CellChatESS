@@ -5,7 +5,7 @@
 - Align complex, cofactor, agonist, antagonist and pathway calculations with the pinned CellChat reference.
 - Validate finite nonnegative expression input, cell identities, LR fields and scalar arguments. Check sparse expression matrices without densification.
 - Retain optional OpenMP parallelism and the serial inference path.
-- Provide manuscript results, pinned environments, source identities and a complete independent replay covering 216 main pairs, 192 three-method blocks, 627 Xenium LR interactions, 216 legacy pairs and reconstruction of 129 distinct inputs.
+- Provide manuscript results, pinned environments, source identities and reproducibility materials for the reported comparisons.
 
 # CellChatESS 0.2.1
 

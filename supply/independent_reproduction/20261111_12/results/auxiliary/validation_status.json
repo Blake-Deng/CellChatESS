@@ -1,6 +1,0 @@
-{
-  "structural_checks": 52,
-  "guard_checks": 10,
-  "openmp_exact_both_versions": true,
-  "archive_structural_rows_matched": 52
-}

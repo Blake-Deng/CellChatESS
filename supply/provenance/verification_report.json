@@ -1,7 +1,7 @@
 {
   "status": "PASS",
-  "supply_files": 5499,
-  "supply_bytes": 56062541,
+  "supply_files": 5404,
+  "supply_bytes": 49461055,
   "baseline_source_files_verified": 29,
   "unchanged_computational_source": true,
   "baseline_commit": "139a61c33d4c09568f48f4afd0a16dc57bb22f4f",

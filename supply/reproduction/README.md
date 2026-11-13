@@ -20,9 +20,10 @@ platform environment; it is not a portable macOS installer.
 
 1. Build the pinned packages in fresh separate R libraries and edit
    `reproduction/config/runtime.example.json` with the actual Rscript/library paths.
-2. Retrieve the prepared inputs separately. The input manifests retain original
-   paths and SHA256. Supply a JSON path-prefix mapping if paths have moved; do not
-   substitute different data or regenerate the DB/LR sets without labeling a new test.
+2. Follow [INPUTS.md](../../INPUTS.md) to request the frozen prepared objects,
+   verify their SHA256 values and configure a local path-prefix map. The same
+   guide identifies the included PBMC3k example, public source-study links and
+   the external source objects required by the archived preparation scripts.
 3. Run version preflight, input/structure tests and small three-method smoke tests.
 4. `run_unified.py primary216` runs 216 two-method pairs (432 method processes).
    `run_unified.py autozyme192` runs 32 inputs in six method orders (192 blocks,

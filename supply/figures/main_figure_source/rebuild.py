@@ -43,17 +43,36 @@ with tempfile.TemporaryDirectory() as tmp:
     color = stages[-1][0]
     with fitz.open(work / color / (color + ".pdf")) as doc:
         page = doc[0]
-        labels = [s for b in page.get_text("dict")["blocks"] if "lines" in b
-                  for line in b["lines"] for s in line["spans"]
-                  if s["text"] == "Glioblastoma · 1k cells · K = 9"]
-        if len(labels) != 2:
-            raise ValueError("Expected the original D and E tissue labels")
-        font = font_manager.findfont(font_manager.FontProperties(family="DejaVu Sans", weight="bold"))
-        for s in labels:
+        # The archived artwork supplies the A/F/G labels. Change only their
+        # displayed text, alongside the existing D/E tissue-label correction.
+        # Panel I's column headings are constructed in update_figure1_i.py.
+        spans = [s for b in page.get_text("dict")["blocks"] if "lines" in b
+                 for line in b["lines"] for s in line["spans"]]
+        fontfile = font_manager.findfont(font_manager.FontProperties(family="DejaVu Sans", weight="bold"))
+        font = fitz.Font(fontfile=fontfile)
+        replacements = []
+        for s in spans:
+            x, y = s["origin"]
+            size = s["size"]
+            if s["text"] == "Glioblastoma · 1k cells · K = 9":
+                lines = [(x, y, "Oligodendroglioma · 1k cells · K = 9")]
+            elif s["text"] == "Original CellChat vs ESS":
+                lines = [(x, 12.8, "CellChat 2.2.0.9001"), (x, 23.25, "vs CellChatESS 0.2.2")]
+            elif s["text"] == "Original CellChat":
+                lines = [(x, y, "CellChat 2.2.0.9001")]
+            elif s["text"] == "Original CellChat probability":
+                label = "CellChat 2.2.0.9001 probability"
+                lines = [(514.30 - font.text_length(label, fontsize=size) / 2, y, label)]
+            else:
+                continue
+            replacements.append((s, lines))
+        if len(replacements) != 6:
+            raise ValueError("Expected four archived method labels and two tissue labels")
+        for s, _ in replacements:
             page.add_redact_annot(fitz.Rect(s["bbox"]), fill=False)
         page.apply_redactions(images=0, graphics=0)
-        for s in labels:
-            page.insert_text(s["origin"], s["text"].replace("Glioblastoma", "Oligodendroglioma"),
-                             fontsize=s["size"], fontname="ReleaseLabel", fontfile=font,
-                             color=(1/3,1/3,1/3))
+        for s, lines in replacements:
+            for x, y, label in lines:
+                page.insert_text((x, y), label, fontsize=s["size"], fontname="ReleaseLabel",
+                                 fontfile=fontfile, color=fitz.sRGB_to_pdf(s["color"]))
         doc.save(out / "Figure1.pdf", garbage=4, deflate=True)

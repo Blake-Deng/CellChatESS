@@ -1,3 +1,0 @@
-"policy"	"pvalue_threshold"	"min_cells"	"excluded_groups"	"original_total_significant_LR_edges"	"ESS_total_significant_LR_edges"	"different_group_pairs"	"counts_identical"
-"aggregateNet_default"	0.05	NA	0	70162984	70162984	0	TRUE
-"filterCommunication_min_cells_10_then_aggregateNet"	0.05	10	24	69890010	69890010	0	TRUE

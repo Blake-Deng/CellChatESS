@@ -32,8 +32,7 @@ counts must agree exactly with the freshly computed original reference. All five
 outputs must also be identical between the one- and four-thread ESS requests.
 
 The `threads_used` column records the actual ESS thread count. Compilers without
-OpenMP support use the serial fallback. The recorded Linux validation below exercised four native threads.
-
+OpenMP support use the serial fallback.
 `results/demo_metrics.tsv`, `results/demo_checks.tsv`, `results/parameters.R` and
 `results/sessionInfo.txt` record the run. These example times cover inference and
 the downstream steps together and are separate from the manuscript's controlled
@@ -42,12 +41,3 @@ inference-call benchmarks.
 The prepared input has SHA256
 `1305076852f518a6cb57064e8f3678ea3b6c902290206a2463e1d07f2ca817c2`.
 Its source is the repository's PBMC3k demonstration prepared in July 2026.
-
-## Recorded Linux validation
-
-The run in `validation/linux_20261112/` used R 4.5.3, CellChat 2.2.0.9001 and
-CellChatESS 0.2.2. The one-thread request used one thread, and the four-thread
-request used four threads. Both requests had a maximum absolute probability
-difference of 6.94e-18 against the freshly computed original reference. Empirical
-p-values and aggregate counts agreed exactly. All outputs were identical between
-the two ESS thread settings.

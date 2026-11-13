@@ -92,7 +92,7 @@ def cell(col, row, lines, size, weight='DVB', align='center'):
         assert a >= left+0.8 and b <= right-0.8, (row, col, line, a, b)
         baseline += leading
 
-for c, lab in enumerate([['Measure'], ['Original', 'CellChat'], ['ESS'], ['Speedup']]):
+for c, lab in enumerate([['Measure'], ['CellChat', '2.2.0.9001'], ['ESS'], ['Speedup']]):
     cell(c, 0, lab, 6.6, align='left' if c==0 else 'center')
 rows = [(['Inference', 'call (s)'], inference), (['Full-process', 'wall time (s)'], wall),
         (['Peak RSS', '(GiB)'], (f'{rss[0]:.2f}', f'{rss[1]:.2f}', '–'))]

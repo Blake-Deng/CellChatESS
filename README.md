@@ -2,6 +2,10 @@
 
 CellChatESS implements Efficient Signal Streaming for CellChat inference. It retains sparse expression data until the required genes have been selected, reuses bootstrap expression summaries and evaluates sender–receiver pairs supported by ligand and receptor expression. The supported workflow is single-dataset, non-spatial RNA inference with `type = "triMean"` and `population.size = FALSE`.
 
+## Input data
+
+[INPUTS.md](INPUTS.md) describes the included PBMC3k example, public source studies, input-preparation commands and the request route for the frozen benchmark objects.
+
 ## Installation
 
 Install CellChat and Rcpp first. The revision comparisons use CellChat 2.2.0.9001, pinned to upstream commit `75253cd0c9e68410e6e721a6d3a0419a1d7e358f`. Exact source archives and environment specifications are described in the [reproduction guide](supply/reproduction/README.md).
@@ -59,11 +63,9 @@ The revision compares original CellChat 2.2.0.9001, AutoZyme 0.3.1 and CellChatE
 
 The [supply directory](supply/README.md) contains the original manuscript measurements, input hashes, source identities, environment specifications, numerical checks, plotting scripts and figure data. [Supplementary Data S7b](supply/data/Supplementary_Data_S7b.tsv) provides all 216 benchmark records. [Figure 1](supply/figures/Figure1.pdf) and [Figure S1](supply/figures/FigureS1.pdf) correspond to those manuscript records.
 
-A complete independent replay finished on 12 November 2026. Its [report](supply/independent_reproduction/20261111_12/results/crosscheck/REPORT.md), method measurements, regenerated figures and input reconstruction checks are supplied alongside the manuscript records. All 216 main pairs, 192 three-method blocks, the full 627-LR Xenium comparison and 216 legacy pairs completed. The 129 distinct inputs were regenerated and matched in their ordered cells, groups, expression matrices, databases and LR tables. Resaving these objects produced different file hashes, which are documented in the reconstruction ledger.
+In the routine and full-Xenium comparisons, empirical p-values and aggregate counts matched the original implementation element by element. Maximum absolute probability differences were 1.11 × 10⁻¹⁶ and 2.22 × 10⁻¹⁶, respectively.
 
-In the routine and full-Xenium comparisons, empirical p-values and aggregate counts matched the original implementation element by element. Maximum absolute probability differences were 1.11 × 10⁻¹⁶ and 2.22 × 10⁻¹⁶, respectively. Measurements from the two runs are listed together in the independent replay report, including their different observed runtimes and peak memory.
-
-The tested computational source is recorded by commit `139a61c33d4c09568f48f4afd0a16dc57bb22f4f` and numeric source ID `bb3bb6310b4af2d5ec000ace97d61339680b0e2a940508da3e072bb553f8417b`. Its [source manifest](supply/provenance/candidate_source_manifest.tsv), [original source archive](supply/provenance/archives/CellChatESS_0.2.2_source.tar.gz) and [Git bundle](supply/provenance/archives/CellChatESS_0.2.2_local.bundle) identify that snapshot. Release preparation updates the documentation and adds the independent replay evidence.
+The tested computational source is recorded by commit `139a61c33d4c09568f48f4afd0a16dc57bb22f4f` and numeric source ID `bb3bb6310b4af2d5ec000ace97d61339680b0e2a940508da3e072bb553f8417b`. Its [source manifest](supply/provenance/candidate_source_manifest.tsv), [original source archive](supply/provenance/archives/CellChatESS_0.2.2_source.tar.gz) and [Git bundle](supply/provenance/archives/CellChatESS_0.2.2_local.bundle) identify that snapshot. The release also includes documentation and reproducibility materials.
 
 Verify the deposited files and the computational source with
 
@@ -71,7 +73,7 @@ Verify the deposited files and the computational source with
 python3 supply/verify_supply.py
 ```
 
-Large raw inputs, prepared expression objects and full output tensors require separate retrieval. The [reproduction guide](supply/reproduction/README.md) records their source locations and expected hashes and explains how to reconstruct a working directory.
+See [INPUTS.md](INPUTS.md) for the PBMC3k example, public source-data links, benchmark-input preparation steps and the request route for frozen inputs. Large prepared expression objects and full output tensors are not bundled. The [reproduction guide](supply/reproduction/README.md) explains how to reconstruct a working directory once the required inputs have been obtained.
 
 ## License
 
