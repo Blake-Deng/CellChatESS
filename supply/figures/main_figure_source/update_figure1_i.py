@@ -13,7 +13,7 @@ stem = 'Figure1_CC22_Xenium_paired_20261111'
 
 with (evidence / 'R2_xenium_memory_time_comparison.tsv').open() as f:
     records = {r['method']: r for r in csv.DictReader(f, delimiter='\t')}
-orig, ess = records['Original CellChat'], records['CellChatESS']
+orig, ess = records['CellChat 2.2.0.9001'], records['CellChatESS 0.2.2']
 def values(key):
     return float(orig[key]), float(ess[key])
 

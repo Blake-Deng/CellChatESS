@@ -4,7 +4,6 @@
   "function_call_start_epoch": 1793545549.2531,
   "function_call_end_epoch": 1793562735.7657,
   "inference_function_elapsed_sec": 17186.512,
-  "aggregateNet_elapsed_sec": 385.509,
   "parameters": {
     "type": "triMean",
     "raw.use": true,

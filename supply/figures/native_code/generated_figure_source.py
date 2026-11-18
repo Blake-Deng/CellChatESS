@@ -122,7 +122,6 @@ for i,(method,label,color) in enumerate([
     stages.to_csv(D/f'R1D_{method}_paired_stages.tsv',sep='\t',index=False)
     paired_sources.append({'method':method,'input_sha256':run['input']['input_sha256'],
         'inference_sec':run['inference_function_elapsed_sec'],
-        'aggregate_sec':run['aggregateNet_elapsed_sec'],
         'GNU_peak_RSS_GiB':peak,
         'inference_end_min':infer_end,'aggregate_end_min':agg_end})
 save(fig,'FigureR1_paired_CC22_20261102')

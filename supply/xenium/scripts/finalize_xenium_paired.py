@@ -64,7 +64,7 @@ def main():
         if orig['input'][key]!=ess['input'][key]:raise SystemExit(f'Input identity mismatch: {key}')
     sums={r['check']:r['value'] for r in read_tsv(comp/'full627_comparison_summary.tsv')}
     rows=[]
-    for method,d,meta in [('Original CellChat',orig_dir,orig),('CellChatESS',ess_dir,ess)]:
+    for method,d,meta in [('CellChat 2.2.0.9001',orig_dir,orig),('CellChatESS 0.2.2',ess_dir,ess)]:
         g=gnu_summary(d/'gnu_time.txt');samples=read_tsv(d/'rss_samples.tsv')
         sampled_peak=max((float(r['VmRSS_kB']) for r in samples if r['VmRSS_kB']),default=None)
         max_os_threads=max((int(r['Threads']) for r in samples if r['Threads']),default=None)
@@ -74,7 +74,7 @@ def main():
           'probability_R_object_bytes':r['probability_object_bytes'],'probability_data_payload_bytes':r['probability_payload_bytes'],
           'pvalue_R_object_bytes':r['pvalue_object_bytes'],'pvalue_data_payload_bytes':r['pvalue_payload_bytes'],
           'aggregate_count_object_bytes':r['count_object_bytes'],'compressed_saved_output_bytes':r['output_rds_bytes'],
-          'inference_function_sec':meta['inference_function_elapsed_sec'],'aggregateNet_sec':meta['aggregateNet_elapsed_sec'],
+          'inference_function_sec':meta['inference_function_elapsed_sec'],
           'GNU_time_full_process_wall_sec':g['GNU_time_wall_sec'],'GNU_time_peak_RSS_GiB':g['GNU_time_peak_RSS_GiB'],
           'GNU_time_CPU_percent':g['GNU_time_CPU_percent'],'GNU_time_user_sec':g['GNU_time_user_sec'],
           'GNU_time_system_sec':g['GNU_time_system_sec'],'sampled_max_OS_threads':max_os_threads,

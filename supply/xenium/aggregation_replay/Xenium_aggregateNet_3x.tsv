@@ -1,0 +1,5 @@
+Round	Execution_order	CellChat_2.2.0.9001_output_aggregateNet_s	CellChatESS_0.2.2_output_aggregateNet_s	ESS_minus_CellChat_s
+1	CellChat, ESS	385.322	345.462	-39.860
+2	ESS, CellChat	341.134	329.606	-11.528
+3	CellChat, ESS	341.935	341.823	-0.112
+Median		341.935	341.823	-0.112

@@ -47,6 +47,8 @@ Temporary-array sizes estimated from allocation dimensions are theoretical paylo
 not simultaneous measured workspace and must not be summed to reconstruct RSS.
 Earlier ESS-only PROFILE values under `legacy/` describe a different scope.
 
+The [aggregation-only measurements](xenium/aggregation_replay/README.md) report three calls per set of saved outputs. Supplementary Table S6 uses the median elapsed time for each set.
+
 ## Verification and reproduction
 
 ```sh

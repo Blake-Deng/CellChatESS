@@ -120,7 +120,7 @@
     "scope": "Full 627-LR paired runs; clean performance builds",
     "methods": [
       {
-        "method": "Original CellChat",
+        "method": "CellChat 2.2.0.9001",
         "input_file_bytes": "371491648",
         "input_data_signaling_object_bytes": "959610184",
         "probability_R_object_bytes": "27866570912",
@@ -130,7 +130,6 @@
         "aggregate_count_object_bytes": "44834688",
         "compressed_saved_output_bytes": "1089493576",
         "inference_function_sec": "17186.512",
-        "aggregateNet_sec": "385.509",
         "GNU_time_full_process_wall_sec": "18092.0",
         "GNU_time_peak_RSS_GiB": "250.07667541503906",
         "GNU_time_CPU_percent": "99.0",
@@ -143,7 +142,7 @@
         "GNU_time_exit_status": "0"
       },
       {
-        "method": "CellChatESS",
+        "method": "CellChatESS 0.2.2",
         "input_file_bytes": "371491648",
         "input_data_signaling_object_bytes": "959610184",
         "probability_R_object_bytes": "27866570912",
@@ -153,7 +152,6 @@
         "aggregate_count_object_bytes": "44834688",
         "compressed_saved_output_bytes": "1089499736",
         "inference_function_sec": "1282.588",
-        "aggregateNet_sec": "473.844",
         "GNU_time_full_process_wall_sec": "2251.84",
         "GNU_time_peak_RSS_GiB": "198.61916732788086",
         "GNU_time_CPU_percent": "99.0",
