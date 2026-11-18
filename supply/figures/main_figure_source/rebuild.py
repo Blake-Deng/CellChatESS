@@ -58,7 +58,7 @@ with tempfile.TemporaryDirectory() as tmp:
                 lines = [(x, y, "Oligodendroglioma · 1k cells · K = 9")]
             elif s["text"] == "New 10X example · 1k cells · K = 12":
                 lines = [(x, y, "10X example · 1k cells · K = 12")]
-            elif s["text"] == "Example max |Δ| = 5.6e-17":
+            elif s["text"].startswith("Example max |Δ| = "):
                 lines = [(x, y - 2.5, "Example max |Δ| = 5.55×10⁻¹⁷")]
             elif s["text"] == "Original CellChat vs ESS":
                 lines = [(x, 12.8, "CellChat 2.2.0.9001"), (x, 23.25, "vs CellChatESS 0.2.2")]
