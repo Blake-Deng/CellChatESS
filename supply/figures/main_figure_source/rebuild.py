@@ -64,14 +64,16 @@ with tempfile.TemporaryDirectory() as tmp:
                 lines = [(x, 12.8, "CellChat 2.2.0.9001"), (x, 23.25, "vs CellChatESS 0.2.2")]
             elif s["text"] == "Original CellChat":
                 lines = [(x, y, "CellChat 2.2.0.9001")]
+            elif s["text"] == "CellChatESS":
+                lines = [(x, y, "CellChatESS 0.2.2")]
             elif s["text"] == "Original CellChat probability":
                 label = "CellChat 2.2.0.9001 probability"
                 lines = [(514.30 - font.text_length(label, fontsize=size) / 2, y, label)]
             else:
                 continue
             replacements.append((s, lines))
-        if len(replacements) != 8:
-            raise ValueError("Expected four method labels, two tissue labels and two panel F labels")
+        if len(replacements) != 9:
+            raise ValueError("Expected five method labels, two tissue labels and two panel F labels")
         for s, _ in replacements:
             page.add_redact_annot(fitz.Rect(s["bbox"]), fill=False)
         page.apply_redactions(images=0, graphics=0)
